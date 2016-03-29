@@ -1,0 +1,686 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+html {
+  font-family: Arial,Helvetica,sans-serif;
+  background-color: white;
+  color: black;
+}
+table {
+  border-collapse: collapse;
+  empty-cells: show;
+  margin: 1em 0em;
+  border: 1px solid black;
+}
+th, td {
+  border: 1px solid black;
+  padding: 0.1em 0.2em;
+  height: 1.5em;
+  width: 12em;
+}
+td.colspan4, th.colspan4 {
+    width: 48em;
+}
+td.colspan3, th.colspan3 {
+    width: 36em;
+}
+td.colspan2, th.colspan2 {
+    width: 24em;
+}
+th {
+  background-color: rgb(192, 192, 192);
+  color: black;
+  height: 1.7em;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+td.name {
+  background-color: rgb(240, 240, 240);
+  letter-spacing: 0.1em;
+}
+td.name, th.name {
+  width: 10em;
+}
+</style>
+<title>Emulator resources</title></head>
+<body>
+<h1>Emulator resources</h1>
+<table id="setting" border="1">
+<tbody><tr>
+<th class="name" colspan="5">Setting</th>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>Collections</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<table id="variable" border="1">
+<tbody><tr>
+<th class="name" colspan="5">Variable</th>
+</tr>
+<tr>
+<td class="name">@{EMULATOR_STATE_CHECKLIST}</td>
+<td>./HSS</td>
+<td>./MME</td>
+<td>./UPE</td>
+<td>./INET</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<table id="keyword" border="1">
+<tbody><tr>
+<th class="name" colspan="5">Keyword</th>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Initial Connection With LTE Emulator">Initial Connection With LTE Emulator</a></td>
+<td>[Arguments]</td>
+<td>${Emulator INFO}=${Emulator INFO}</td>
+<td>${Return}=False</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword used for \ make
+connection with the Emulator control PC.\n\n| Input Parameters \ | Man.
+| Description | \ \n| \ \ \ \ \ \ \ \ \ No \ \ \ \ \ \ \ \ \ \ \ \ \ \
+\ \ \ | \ \ No \ \ | \ \ \ \ \ \ \ \ No \ \ \ \ \ \ \ \
+|\n\nExample\n\n| Initial Connection With Emulator |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${Emulator_CONNECTION}</td>
+<td>Connect to ssh host</td>
+<td>${Emulator_INFO[0]}</td>
+<td>22</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${Emulator_INFO[1]}</td>
+<td>${Emulator_INFO[2]}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run keyword if</td>
+<td>${Return}==False</td>
+<td>Set Suite Variable</td>
+<td>${Emulator_CONNECTION}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Return]</td>
+<td>${Emulator CONNECTION}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Restart LTE Emulator">Restart LTE Emulator</a></td>
+<td>[Arguments]</td>
+<td>${ModifiedParams}=${Empty}</td>
+<td>${ParameterFileName}=parameters.ini</td>
+<td>${Emulator INFO}=${Emulator INFO}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${Connection}=${Emulator CONNECTION}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Login with SSH to Emulator control PC and kill emulator instance then run a new emulator instance</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch SSH connection</td>
+<td>${Connection}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Upload LTE Emulator Config file</td>
+<td>${ModifiedParams}</td>
+<td>${ParameterFileName}</td>
+<td>${Emulator INFO}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${Connection}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Stop LTE Emulator</td>
+<td>${Emulator INFO}</td>
+<td>${Connection}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${old_timeout}</td>
+<td>Set SSH Timeout</td>
+<td>20</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${DirInfo}</td>
+<td>Execute SSH command without check</td>
+<td>cd ${Emulator_INFO[3]}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${Start_instance_info}</td>
+<td>Execute SSH command without check</td>
+<td>./stop_cn_screen</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${Start_instance_info}</td>
+<td>Execute SSH command without check</td>
+<td>./start_cn_screen</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Contain</td>
+<td>${Start_instance_info}</td>
+<td>LTE Emulator started</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Set SSH Timeout</td>
+<td>${old_timeout}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Stop LTE Emulator">Stop LTE Emulator</a></td>
+<td>[Arguments]</td>
+<td>${Emulator INFO}=${Emulator INFO}</td>
+<td>${Connection}=${Emulator CONNECTION}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Login with SSH to Emulator control PC and kill emulator instance</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch SSH connection</td>
+<td>${Connection}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${old_timeout}</td>
+<td>Set SSH Timeout</td>
+<td>20</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Execute SSH command without check</td>
+<td>sudo killall runemu.sh</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td># For kill info 0 means there is emulator instance running on, processes terminated successfully.</td>
+<td>1 means there is no emulator instance running on.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${KillInfo}</td>
+<td>Execute SSH command without check</td>
+<td>echo $?</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Execute LTE Emulator Macro">Execute LTE Emulator Macro</a></td>
+<td>[Arguments]</td>
+<td>${EmuProcess}</td>
+<td>${MacroCmd}</td>
+<td>${Emulator INFO}=${Emulator INFO}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${Connection}=${Emulator CONNECTION}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Execute Macro on specficed emulator process</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch SSH connection</td>
+<td>${Connection}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${old_timeout}</td>
+<td>Set SSH Timeout</td>
+<td>20</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${ScreenInfo}</td>
+<td>Execute SSH command without check</td>
+<td>screen -ls</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Not Contain</td>
+<td>${ScreenInfo}</td>
+<td>No sockets found</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${EmuProcess}</td>
+<td>Evaluate</td>
+<td>"${EmuProcess}".lower().strip()</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td># Attach screen</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Execute SSH command Bare</td>
+<td>screen -S ${EmuProcess} -r\r</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${AttachInfo}</td>
+<td>Get SSH Recv Content</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Not Contain</td>
+<td>${AttachInfo}</td>
+<td>There is no screen</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Execute SSH command Bare</td>
+<td>${MacroCmd}\r</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${MacroInfo}</td>
+<td>Get SSH Recv Content</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Not Contain</td>
+<td>${MacroInfo}</td>
+<td>Error:</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td># Detach Screen</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${CtrlAD}</td>
+<td>Evaluate</td>
+<td>chr(int(1))</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Execute SSH command Bare</td>
+<td>${CtrlAD}d\r</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${DetachInfo}</td>
+<td>Get SSH Recv Content</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Not Contain</td>
+<td>${DetachInfo}</td>
+<td>ERROR:</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Contain</td>
+<td>${DetachInfo}</td>
+<td>[detached]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Set SSH Timeout</td>
+<td>${old_timeout}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${AttachInfo}</td>
+<td>Execute SSH command without check</td>
+<td>screen -ls</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Return]</td>
+<td>${MacroInfo}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Upload LTE Emulator Config file">Upload LTE Emulator Config file</a></td>
+<td>[Arguments]</td>
+<td>${ModifiedParams}=${Empty}</td>
+<td>${ParameterFileName}=parameters.ini</td>
+<td>${Emulator INFO}=${Emulator INFO}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${Connection}=${Emulator CONNECTION}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Modify and upload emulator config file</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch SSH connection</td>
+<td>${Connection}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>change emulator configfile</td>
+<td>${CURDIR}${/}scripts${/}${BTS NAME}${/}Emulator${/}${ParameterFileName}</td>
+<td>ModParams.ini</td>
+<td>${ModifiedParams}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Ssh Put File</td>
+<td>${CURDIR}${/}scripts${/}${BTS NAME}${/}Emulator${/}ModParams.ini</td>
+<td>${Emulator INFO[3]}/config/parameters.ini</td>
+<td></td>
+</tr>
+<tr><td></td><td>${Log Directory}</td><td>Get Target Log Directory</td><td></td><td></td></tr><tr><td></td><td>File <span class="hl">Copy</span></td><td>${CURDIR}${/}scripts${/}${BTS NAME}${/}Emulator${/}ModParams.ini</td><td>${Log Directory}</td><td></td></tr><tr>
+<td class="name"></td>
+<td>Remove File</td>
+<td>${CURDIR}${/}scripts${/}${BTS NAME}${/}Emulator${/}ModParams.ini</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Initial Connection With Emulator">Initial Connection With Emulator</a></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">DEPRECATED Use "Initial Connection
+With LTE Emulator" instead.\nThis keyword used for \ make connection
+with the Emulator control PC.\n\n| Input Parameters \ | Man. |
+Description | \ \n| \ \ \ \ \ \ \ \ \ No \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
+\ \ | \ \ No \ \ | \ \ \ \ \ \ \ \ No \ \ \ \ \ \ \ \ |\n\nExample\n\n|
+Initial Connection With Emulator |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${Emulator CONNECTION}=</td>
+<td>Connect To Host</td>
+<td>${Emulator Control PC}</td>
+<td>${TELNET_PORT}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${Emulator_USERNAME}</td>
+<td>${Emulator_PASSWORD}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Set Suite Variable</td>
+<td>${Emulator_CONNECTION}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Restart Emulator USE SCRIPT">Restart Emulator USE SCRIPT</a></td>
+<td>[Arguments]</td>
+<td>${modified parameterlist}=${EMPTY}</td>
+<td>${Connection}=${Emulator_CONNECTION}</td>
+<td>${modified emulatorconfigfile name}=parameters_tmp.ini</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${src_para_name}=parameters.ini</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">DEPRECATED Use "Restart LTE Emulator"
+instead.\nThis keyword used for restart emulator with it's emugur.sh
+script.\nDetail step: 1, change the emulator config file with your
+input parameters 2, upload new config file 3, stop emulator with
+script, 4, start it. 5, check every process of emulator\n| Input
+Parameters | Man. | Description | \ \n| modified_parameterlist | \ No |
+\ \ Parameters you want change |\n| connection \ | \ No | The
+connection to emulator control pc |\n| modified_emulatorconfigfile_name
+| No | The modified emulator config file name |\n\nExample\n| Restart
+Emulator USE SCRIPT |\n| ${modify_list} \ | Create list | IP:1.1.1.1
+|\n| Restart Emulator USE SCRIPT | ${modify_list} | TMP.CONF |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${Connection}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>change emulator configfile</td>
+<td>${CURDIR}${/}scripts${/}${BTS NAME}${/}Emulator${/}${src_para_name}</td>
+<td>${modified emulatorconfigfile name}</td>
+<td>${modified parameterlist}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>FTP Upload</td>
+<td>${Emulator Control PC}</td>
+<td>21</td>
+<td>${Emulator USERNAME}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${Emulator PASSWORD}</td>
+<td>${CURDIR}${/}scripts${/}${BtsName}${/}Emulator${/}${modified emulatorconfigfile_name}</td>
+<td>parameters.ini</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${EMULATOR FTP SERVER DIR}\/config</td>
+<td></td>
+<td></td>
+</tr>
+<tr><td></td><td>${Log Directory}</td><td>Get Target Log Directory</td><td></td><td></td></tr><tr><td></td><td>File <span class="hl">Copy</span></td><td>${CURDIR}${/}scripts${/}${BTS NAME}${/}Emulator${/}${modified emulatorconfigfile name}</td><td>${Log Directory}</td><td></td><td></td></tr><tr>
+<td class="name"></td>
+<td>Remove File</td>
+<td>${CURDIR}${/}scripts${/}${BTS NAME}${/}Emulator${/}${modified emulatorconfigfile name}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${Connection}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Stop_emulator</td>
+<td>${EMULATOR VERSION DIR}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Start_emulator</td>
+<td>${EMULATOR VERSION DIR}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check emulator process</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+</body></html>

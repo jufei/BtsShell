@@ -1,0 +1,35 @@
+
+********************************************
+*       LNT3.1 Common configuration        *
+********************************************
+
+v1.1
+2012.12.28
+-Vendor file change for LCR8.0
+    <p name="calFrameOffset">800</p>
+    <p name="calFrameOffset">880</p>
+-TxpowerScaling change to 7336 according to TD-Tech RRU spec
+-maxNumActUE, maxNumRrc, maxNumRrcEmergency change to 200
+-dlRsBoost change to 3dB
+-rootSeqIndex for 3 cell change to diffrent value
+-swconfig.txt flag 576 added for LCR8.0
+
+
+v1.0
+2012.11.14
+-Add vendor file comments
+ If TD-Tech Ir router build version is 0926
+ The below lines
+    <p name="calFrameOffset">800</p>
+    <p name="calFrameOffset">880</p>
+ should change to
+    <p name="calFrameOffset">799</p>
+    <p name="calFrameOffset">879</p>
+
+-Add flag 575 in swconfig.txt, dual/single mode selectable ready.
+
+
+2012.11.6
+- Based on RL25 common configuration V1.4
+- swconfig.txt still include debug flag since now it is only for RD useage
+- TM3 version provided

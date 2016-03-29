@@ -1,0 +1,270 @@
+# TMA Child Script
+
+#########################
+# TEST STEP: Select UEs #
+#########################
+
+# Subsequent commands are repeated as necesary for UEs
+# 170-179
+
+#####################################
+# TEST STEP: Configure NAS Register #
+#####################################
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1  
+#                     |  
+forw mte SetUEContext 170
+#----------------------------
+
+#------------------------------------------
+# Configures the NAS to register on a PLMN
+#------------------------------------------
+# PARAMETERS
+# 1. Selection Mode
+# 2. PDN Identity
+#------------------------------------------
+#                             1 2                       
+#                             | |                       
+forw mte NasConfigEmmRegister 0(0 [] [] [] [] [] [] [] )
+#------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1  
+#                     |  
+forw mte SetUEContext 171
+#----------------------------
+
+#------------------------------------------
+# Configures the NAS to register on a PLMN
+#------------------------------------------
+# PARAMETERS
+# 1. Selection Mode
+# 2. PDN Identity
+#------------------------------------------
+#                             1 2                       
+#                             | |                       
+forw mte NasConfigEmmRegister 0(0 [] [] [] [] [] [] [] )
+#------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1  
+#                     |  
+forw mte SetUEContext 172
+#----------------------------
+
+#------------------------------------------
+# Configures the NAS to register on a PLMN
+#------------------------------------------
+# PARAMETERS
+# 1. Selection Mode
+# 2. PDN Identity
+#------------------------------------------
+#                             1 2                       
+#                             | |                       
+forw mte NasConfigEmmRegister 0(0 [] [] [] [] [] [] [] )
+#------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1  
+#                     |  
+forw mte SetUEContext 173
+#----------------------------
+
+#------------------------------------------
+# Configures the NAS to register on a PLMN
+#------------------------------------------
+# PARAMETERS
+# 1. Selection Mode
+# 2. PDN Identity
+#------------------------------------------
+#                             1 2                       
+#                             | |                       
+forw mte NasConfigEmmRegister 0(0 [] [] [] [] [] [] [] )
+#------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1  
+#                     |  
+forw mte SetUEContext 174
+#----------------------------
+
+#------------------------------------------
+# Configures the NAS to register on a PLMN
+#------------------------------------------
+# PARAMETERS
+# 1. Selection Mode
+# 2. PDN Identity
+#------------------------------------------
+#                             1 2                       
+#                             | |                       
+forw mte NasConfigEmmRegister 0(0 [] [] [] [] [] [] [] )
+#------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1  
+#                     |  
+forw mte SetUEContext 175
+#----------------------------
+
+#------------------------------------------
+# Configures the NAS to register on a PLMN
+#------------------------------------------
+# PARAMETERS
+# 1. Selection Mode
+# 2. PDN Identity
+#------------------------------------------
+#                             1 2                       
+#                             | |                       
+forw mte NasConfigEmmRegister 0(0 [] [] [] [] [] [] [] )
+#------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1  
+#                     |  
+forw mte SetUEContext 176
+#----------------------------
+
+#------------------------------------------
+# Configures the NAS to register on a PLMN
+#------------------------------------------
+# PARAMETERS
+# 1. Selection Mode
+# 2. PDN Identity
+#------------------------------------------
+#                             1 2                       
+#                             | |                       
+forw mte NasConfigEmmRegister 0(0 [] [] [] [] [] [] [] )
+#------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1  
+#                     |  
+forw mte SetUEContext 177
+#----------------------------
+
+#------------------------------------------
+# Configures the NAS to register on a PLMN
+#------------------------------------------
+# PARAMETERS
+# 1. Selection Mode
+# 2. PDN Identity
+#------------------------------------------
+#                             1 2                       
+#                             | |                       
+forw mte NasConfigEmmRegister 0(0 [] [] [] [] [] [] [] )
+#------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1  
+#                     |  
+forw mte SetUEContext 178
+#----------------------------
+
+#------------------------------------------
+# Configures the NAS to register on a PLMN
+#------------------------------------------
+# PARAMETERS
+# 1. Selection Mode
+# 2. PDN Identity
+#------------------------------------------
+#                             1 2                       
+#                             | |                       
+forw mte NasConfigEmmRegister 0(0 [] [] [] [] [] [] [] )
+#------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1  
+#                     |  
+forw mte SetUEContext 179
+#----------------------------
+
+#------------------------------------------
+# Configures the NAS to register on a PLMN
+#------------------------------------------
+# PARAMETERS
+# 1. Selection Mode
+# 2. PDN Identity
+#------------------------------------------
+#                             1 2                       
+#                             | |                       
+forw mte NasConfigEmmRegister 0(0 [] [] [] [] [] [] [] )
+#------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1  
+#                     |  
+forw mte SetUEContext 170
+#----------------------------
+
+#####################################
+# TEST STEP: Activate Configuration #
+#####################################
+
+#--------------------------------
+# Activate pending configuration
+#--------------------------------
+# PARAMETERS
+# 1. Timing Type
+# 2. Activate on Frame Boundary
+#--------------------------------
+#                 1      2 
+#                 |      | 
+forw mte Activate -1 [] [1]
+#--------------------------------
+

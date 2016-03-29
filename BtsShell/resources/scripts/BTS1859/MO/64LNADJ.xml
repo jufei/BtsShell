@@ -1,0 +1,320 @@
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-0" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.0</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-1" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.1</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-2" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.2</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-3" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.3</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-4" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.4</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-5" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.5</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-6" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.6</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-7" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.7</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-8" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.8</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-9" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.9</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-10" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.10</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-11" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.11</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-12" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.12</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-13" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.13</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-14" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.14</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-15" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.15</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-16" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.16</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-17" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.17</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-18" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.18</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-19" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.19</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-20" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.20</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-21" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.21</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-22" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.22</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-23" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.23</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-24" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.24</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-25" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.25</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-26" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.26</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-27" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.27</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-28" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.28</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-29" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.29</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-30" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.30</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-31" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.31</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-32" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.32</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-33" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.33</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-34" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.34</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-35" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.35</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-36" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.36</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-37" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.37</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-38" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.38</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-39" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.39</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-40" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.40</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-41" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.41</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-42" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.42</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-43" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.43</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-44" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.44</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-45" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.45</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-46" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.46</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-47" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.47</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-48" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.48</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-49" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.49</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-50" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.50</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-51" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.51</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-52" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.52</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-53" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.53</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-54" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.54</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-55" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.55</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-56" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.56</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-57" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.57</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-58" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.58</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-59" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.59</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-60" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.60</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-61" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.61</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-62" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="cPlaneIpAddr">1.1.1.62</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1859/LNBTS-1859/LNADJ-63" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.63</p>
+<p name="rlfBasedRCRsupported">false</p>
+</managedObject>

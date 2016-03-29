@@ -1,0 +1,50 @@
+  <managedObject class="MTRACE" distName="MRBTS-1832/LNBTS-1832/CTRLTS-1/MTRACE-1" operation="create" version="LNT5.0">
+   <p name="tceCellTracePortNum">49151</p>
+   <p name="cellMaxActiveUEsTraced">10000</p>
+   <p name="cellTrcMode">true</p>
+   <p name="jobType">TraceOnly</p>
+   <p name="tceIpAddress">0.0.0.0</p>
+   <p name="traceRrcSetting">None</p>
+   <p name="traceS1Setting">None</p>
+   <p name="traceX2Setting">None</p>
+   <p name="cellMaxActiveMDTUEsTraced">100</p>
+   <list name="cellVendorSpecTracing">
+    <item>
+     <p name="cellTaTracing">false</p>
+    </item>
+   </list>
+   <list name="eutranTraceId">
+    <item>
+     <p name="eutranTraceIdMcc">262</p>
+     <p name="eutranTraceIdMnc">3</p>
+     <p name="eutranTraceIdMncLen">2</p>
+     <p name="traceId">1</p>
+     <p name="trcRecSessionRef">1</p>
+    </item>
+   </list>
+  </managedObject>
+  <managedObject class="MTRACE" distName="MRBTS-1832/LNBTS-1832/CTRLTS-1/MTRACE-2" operation="create" version="LNT5.0">
+   <p name="tceCellTracePortNum">49151</p>
+   <p name="cellMaxActiveUEsTraced">10000</p>
+   <p name="cellTrcMode">true</p>
+   <p name="jobType">TraceOnly</p>
+   <p name="tceIpAddress">0.0.0.0</p>
+   <p name="traceRrcSetting">None</p>
+   <p name="traceS1Setting">None</p>
+   <p name="traceX2Setting">None</p>
+   <p name="cellMaxActiveMDTUEsTraced">100</p>
+   <list name="cellVendorSpecTracing">
+    <item>
+     <p name="cellTaTracing">false</p>
+    </item>
+   </list>
+   <list name="eutranTraceId">
+    <item>
+     <p name="eutranTraceIdMcc">262</p>
+     <p name="eutranTraceIdMnc">3</p>
+     <p name="eutranTraceIdMncLen">2</p>
+     <p name="traceId">2</p>
+     <p name="trcRecSessionRef">1</p>
+    </item>
+   </list>
+  </managedObject>

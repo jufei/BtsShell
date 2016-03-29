@@ -1,0 +1,33 @@
+[AuthorInfo]
+Author = Zhao Libo
+MailAddress = libo-libber.zhao@nsn.com
+Team = HangZhou site : TD-LTE IV TACT Team
+TeamMail = I_EXT_NWS_LTE_RA_RD_TDD_ST_TACT_GMS DG
+
+[VersionInfo]
+CurrentVersion = 1.6.1
+
+[FunctionSupport]
+EnablePort = Enable SSH port and RD port via S1 link
+SendCmd = Send command via S1 link and get the response
+Download = Download files via S1 link(SCFC,vendor,swconfig,HWF,config, you can select in Config->ConfigItem)
+Upload = Download files via S1 link(SCFC,vendor,swconfig,HWF,config, you can select in Config->ConfigItem)
+Update = Update files via S1 link(SCFC,vendor,swconfig,HWF,config, you can select in Config->ConfigItem)
+EnableOPT = Set 0xED with value 1 in eNB RRU
+EnableVSWR = Set VSWR_Minor_Alarm_OFF and VSWR_Major_Alarm_OFF with value 0 in eNB RRU
+GetRRULog = Get RRU log to local
+
+ConfigIP = Config all the eNB ip,separated by Enter.(Config->ConfigIP)
+ConfigCmd = Config all the command you want to execute,separated by Enter.(Config->ConfigCmd)
+ConfigItem = Config File type you want to download,upload,update;config filter type you want to fetch
+RecordUptime = Execute 'uptime' command and record inforamtion in uptime.csv file(Uptime->RecordUptime)
+CheckUptime = Read uptime.csv file to table in UI(Uptime->CheckUptime)
+FetchLogs = Fetch logs with Filter Type you set in Config->ConfigItem
+AnalyzeFilter = Analyze filter logs to csv file with keywords you set in Config->ConfigItem
+
+Output = Summary for each action you have done.You can check more detail information in box or log.txt under working dir.
+
+[Tips]
+1. update process will record which folder download files saved,when doing upload process,these files in this folder will be uploaded.
+2. upload process only upload the files which saved under "upload" folder in working dir.
+3. for update vendor process, you need to input the new vendor name in UI before updating

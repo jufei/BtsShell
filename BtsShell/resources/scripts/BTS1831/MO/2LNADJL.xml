@@ -1,0 +1,62 @@
+<managedObject class="LNADJ" distName="MRBTS-1831/LNBTS-1831/LNADJ-1" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="adjEnbId">1850</p>
+<p name="cPlaneIpAddr">10.69.2.201</p>
+<list name="plmnId">
+<item>
+<p name="mcc">262</p>
+<p name="mnc">3</p>
+<p name="mncLength">2</p>
+</item>
+</list>
+</managedObject>
+<managedObject class="LNADJL" distName="MRBTS-1831/LNBTS-1831/LNADJ-1/LNADJL-1" operation="create" version="TL15A">
+<p name="fDlEarfcn">38000</p>
+<p name="ecgiLcrId">1</p>
+<p name="phyCellId">450</p>
+<p name="tac">11850</p>
+<list name="bcPlmnIdList">
+<item>
+<p name="mcc">262</p>
+<p name="mnc">3</p>
+<p name="mncLength">2</p>
+</item>
+<item>
+<p name="mcc">261</p>
+<p name="mnc">3</p>
+<p name="mncLength">2</p>
+</item>
+</list>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1831/LNBTS-1831/LNADJ-2" operation="create" version="TL15A">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="rlfBasedRCRsupported">false</p>
+<p name="adjEnbId">1853</p>
+<p name="cPlaneIpAddr">10.69.2.202</p>
+<list name="plmnId">
+<item>
+<p name="mcc">262</p>
+<p name="mnc">3</p>
+<p name="mncLength">2</p>
+</item>
+</list>
+</managedObject>
+<managedObject class="LNADJL" distName="MRBTS-1831/LNBTS-1831/LNADJ-2/LNADJL-2" operation="create" version="TL15A">
+<p name="fDlEarfcn">38000</p>
+<p name="ecgiLcrId">1</p>
+<p name="phyCellId">453</p>
+<p name="tac">11853</p>
+<list name="bcPlmnIdList">
+<item>
+<p name="mcc">262</p>
+<p name="mnc">3</p>
+<p name="mncLength">2</p>
+</item>
+<item>
+<p name="mcc">261</p>
+<p name="mnc">3</p>
+<p name="mncLength">2</p>
+</item>
+</list>
+</managedObject>

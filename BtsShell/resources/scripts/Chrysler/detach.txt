@@ -1,0 +1,5 @@
+forw mte NasAptConfigCapability
+FORW MTE NASCONFIGEMMDEREGISTER 0
+FORW MTE ACTIVATE -1
+
+

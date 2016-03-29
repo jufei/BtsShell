@@ -1,0 +1,58 @@
+#FORW L1 SETRFRXGAIN 1 -30
+setp rrc_test_disable_max_sr_transmissions 1
+SETP RRC_NUM_DL_ANTENNAS 2
+setp RRC_TEST_IGNORE_IRLC_ERROR_IND 1
+SETP RRC_PUCCH_CLOSE_LOOP_POWER_CONTROL 0
+forw mte PhySetTDDCfg 1 7
+setp RRC_TEST_ENABLE_UL_TIME_ALIGN_TIMER 0
+forw mte SetUEContext 0
+forw mte PhyConfigSysCap 2 4 4  
+forw mte SetUEContext 1
+forw mte PhyConfigSysCap 2 4 4
+forw mte SetUEContext 2 
+forw mte PhyConfigSysCap 2 4 4
+forw mte SetUEContext 0                         
+forw mte UsimConfig 1([262030020000851 2] [] [] [] []) [] [] [A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5]                             
+forw mte SetUEContext 1
+forw mte UsimConfig 1([262030020000852 2] [] [] [] []) [] [] [A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5]
+forw mte SetUEContext 2
+forw mte UsimConfig 1([262030020000853 2] [] [] [] []) [] [] [A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5]
+forw mte SetUEContext 0
+forw mte NasAptConfigCapability
+forw mte SetUEContext 1
+forw mte NasAptConfigCapability
+forw mte SetUEContext 2
+forw mte NasAptConfigCapability  
+forw mte SetUEContext 0                         
+forw mte NasAptConfigPlmnSelection 26203
+forw mte SetUEContext 1
+forw mte NasAptConfigPlmnSelection 26203
+forw mte SetUEContext 2
+forw mte NasAptConfigPlmnSelection 26203
+forw mte SetUEContext 0
+forw mte PhyConfigUlPowerOffset 32{0 80 80 [80] [],1 80 80 [80] [],2 80 80 [80] [],3 80 80 [80] [],4 80 80 [80] [],5 80 80 [80] [],6 80 80 [80] [],7 80 80 [80] [],8 80 80 [80] [],9 80 80 [80] [],10 80 80 [80] [],11 80 80 [80] [],12 80 80 [80] [],13 80 80 [80] [],14 80 80 [80] [],15 80 80 [80] [],16 80 80 [80] [],17 80 80 [80] [],18 80 80 [80] [],19 80 80 [80] [],20 80 80 [80] [],21 80 80 [80] [],22 80 80 [80] [],23 80 80 [80] [],24 80 80 [80] [],25 80 80 [80] [],26 80 80 [80] [],27 80 80 [80] [],28 80 80 [80] [],29 80 80 [80] [],30 80 80 [80] [],31 80 80 [80] []}
+forw mte SetUEContext 1
+forw mte PhyConfigUlPowerOffset 32{0 80 80 [80] [],1 80 80 [80] [],2 80 80 [80] [],3 80 80 [80] [],4 80 80 [80] [],5 80 80 [80] [],6 80 80 [80] [],7 80 80 [80] [],8 80 80 [80] [],9 80 80 [80] [],10 80 80 [80] [],11 80 80 [80] [],12 80 80 [80] [],13 80 80 [80] [],14 80 80 [80] [],15 80 80 [80] [],16 80 80 [80] [],17 80 80 [80] [],18 80 80 [80] [],19 80 80 [80] [],20 80 80 [80] [],21 80 80 [80] [],22 80 80 [80] [],23 80 80 [80] [],24 80 80 [80] [],25 80 80 [80] [],26 80 80 [80] [],27 80 80 [80] [],28 80 80 [80] [],29 80 80 [80] [],30 80 80 [80] [],31 80 80 [80] []}
+forw mte SetUEContext 2
+forw mte PhyConfigUlPowerOffset 32{0 80 80 [80] [],1 80 80 [80] [],2 80 80 [80] [],3 80 80 [80] [],4 80 80 [80] [],5 80 80 [80] [],6 80 80 [80] [],7 80 80 [80] [],8 80 80 [80] [],9 80 80 [80] [],10 80 80 [80] [],11 80 80 [80] [],12 80 80 [80] [],13 80 80 [80] [],14 80 80 [80] [],15 80 80 [80] [],16 80 80 [80] [],17 80 80 [80] [],18 80 80 [80] [],19 80 80 [80] [],20 80 80 [80] [],21 80 80 [80] [],22 80 80 [80] [],23 80 80 [80] [],24 80 80 [80] [],25 80 80 [80] [],26 80 80 [80] [],27 80 80 [80] [],28 80 80 [80] [],29 80 80 [80] [],30 80 80 [80] [],31 80 80 [80] []}
+forw mte SetUEContext 0
+forw mte RrcAptConfigCellSelection 25950 [1]             
+forw mte SetUEContext 1
+forw mte RrcAptConfigCellSelection 25950 [1]
+forw mte SetUEContext 2
+forw mte RrcAptConfigCellSelection 25950 [1]
+forw mte SetUEContext 0
+forw mte NasConfigEmmRegister 0(0 [] [] [] [] [] )
+forw mte SetUEContext 1
+forw mte NasConfigEmmRegister 0(0 [] [] [] [] [] )
+forw mte SetUEContext 2 
+forw mte NasConfigEmmRegister 0(0 [] [] [] [] [] )
+forw mte SetUEContext 0              
+forw mte RrcAptConfigCapability
+forw mte SetUEContext 1
+forw mte RrcAptConfigCapability
+forw mte SetUEContext 2
+forw mte RrcAptConfigCapability
+forw mte Activate -1 [] [1]
+
+

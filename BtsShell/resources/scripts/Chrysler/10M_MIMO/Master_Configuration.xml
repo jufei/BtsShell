@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<raml xmlns="raml21.xsd" version="2.1">
+<cmData scope="all" type="actual">
+<header>
+<log action="created" adaptationVersionMinor="" appInfo="AppName" appVersion="LN1.0" dateTime="2009-05-14T15:31:24" user="demx3bm3"/>
+</header>
+<managedObject class="LNBTS" distName="LMBTS-1/LNBTS-3" operation="create" version="LN1.0">
+<p name="cqiCompSmRi1Ol">-30</p>
+<p name="cqiCompTdRi2Ol">30</p>
+<p name="cqiCompSmRi1Cl">-30</p>
+<p name="cqiCompTdRi2Cl">30</p>
+<p name="drbPrioDl">1</p>
+<p name="maxS1ResetRetries">10</p>
+<p name="maxX2ResRetry">10</p>
+<p name="maxX2SetRetry">10</p>
+<p name="rrcGuardTimer">60</p>
+<p name="tHoOverallD">20</p>
+<p name="tDataFwdS1">50</p>
+<p name="tDataFwdX2">100</p>
+<p name="tX2RelocComp">2000</p>
+<p name="tX2RelocExcD">70</p>
+<p name="tx2RelODelta">150</p>
+<p name="tX2RelocPrep">50</p>
+<p name="tEstS1Con">10000</p>
+<p name="tHalfRrcCon">2000</p>
+<p name="tL2AckRrcRel">800</p>
+<p name="s1ResetRspTmr">100</p>
+<p name="s1SetupRspTmr">50</p>
+<p name="x2ResetRspTmr">100</p>
+<p name="x2SetupRspTmr">50</p>
+<p name="mcc">588</p>
+<p name="mnc">71</p>
+<p name="mncLength">2</p>
+<p name="dlsTputAvgT">50</p>
+<p name="ulsTputAvgT">50</p>
+<p name="localState">unblocked</p>
+<p name="enbName">eNB1</p>
+<p name="mimoClCqiAvg">10</p>
+<p name="mimoClRiAvg">10</p>
+<p name="mimoOlCqiAvg">10</p>
+<p name="mimoOlRiAvg">18</p>
+<p name="mimoOlCqiComp">30</p>
+<p name="mimoClCqiComp">30</p>
+<p name="drbAmMxRtxTh">16</p>
+<p name="tX2RelocHold">50</p>
+<p name="maxS1SetRetry">10</p>
+<p name="rlpDetMaxNoDl">0</p>
+<p name="rlpDetEndNoDl">3</p>
+<p name="rlpDetMaxTimeDl">0</p>
+<p name="enablePhichCtrlUl">true</p>
+<p name="taOffScheMarg">50</p>
+<p name="taCmdMaxRetry">10</p>
+<p name="dlamcCqiAgeing">10</p>
+<p name="dlamcTHistCqi">1000</p>
+<p name="raLargeVolUl">512</p>
+<p name="raLargeMcsUl">5</p>
+<p name="raSmallMcsUl">1</p> <!--test whether it could decrease the preamble times,-->
+<p name="maxNumPrbSr">16</p>
+<p name="prioHarqDl">1000</p>
+<p name="prioSrbDl">10</p>
+<p name="prioHarqUl">100</p>
+<p name="prioSrbUl">10</p>
+<p name="prioSrUl">50</p>
+<p name="ulamcHistMcsT">1000</p>
+<p name="ulamcCStepUp">4</p>
+<p name="ulamcUpdowngrF">24</p>
+<p name="ulamcDeltaCini">10</p>
+<p name="ulamcDeltaCmax">50</p>
+<p name="ulamcDeltaCmin">-50</p>
+<p name="ulamcInactT">100</p>
+<p name="ulatbPhrAvgF">18</p>
+<p name="ilMinDatvolUl">560</p>
+<p name="ilReacTimerUl">1500</p>
+<p name="ulpcCumpucchmin">-127</p><!-- ldf  add-->
+<p name="ulpcCumpucchmax">128</p><!-- ldf  add-->
+<p name="ulpcCumpuschmin">-127</p><!-- ldf  add-->
+<p name="ulpcCumpuschmax">128</p><!-- ldf  add-->
+<p name="ulpcRssiMin">-127</p><!-- ldf  add-->
+<p name="ulpcRssiMax">0</p><!-- ldf  add-->
+<p name="ulpcSinrMin">-40</p><!-- ldf  add-->
+<p name="ulpcSinrMax">40</p><!-- ldf  add-->
+<p name="ulpcWfPucchcell">1</p><!-- ldf  add-->
+<p name="ulpcWfPucchUe">1</p><!-- ldf  add-->
+<p name="ulpcWfPuschcell">1</p><!-- ldf  add-->
+<p name="ulpcWfPuschUe">1</p><!-- ldf  add-->
+<p name="ulpcSchavgtcont">20</p><!-- ldf  add-->
+<p name="ulpcSchavgtdisc">50</p><!-- ldf  add-->
+<p name="ulpcCchavgtcont">20</p><!-- ldf  add-->
+<p name="ulpcCchavgtdisc">50</p><!-- ldf  add-->
+<list name="rlcProf">
+<item>
+<p name="localNack">false</p>
+<p name="pollPdu">4</p>
+<p name="rlcProfileId">0</p>
+<p name="tPollRetr">500</p>
+<p name="tProhib">5</p>
+<p name="tReord">50</p>
+</item>
+<item>
+<p name="localNack">true</p>
+<p name="pollPdu">4</p>
+<p name="rlcProfileId">1</p>
+<p name="tPollRetr">500</p>
+<p name="tProhib">5</p>
+<p name="tReord">50</p>
+</item>
+</list>
+<list name="qciTab">
+<item>
+<p name="dscp">1</p>
+<p name="pdcpProfId">1</p>
+<p name="prio">1</p>
+<p name="qci">1</p>
+<p name="resType">nonGBR</p>
+<p name="rlcProfId">1</p>
+<p name="ulsPrio">1</p>
+<p name="packDelay">50ms</p>
+<p name="packLoss">10**-2</p>
+<p name="qciSupp">ENABLED</p>
+<p name="rlcMode">RLC_AM</p>
+<p name="ulsBSD">100ms</p>
+</item>
+<item>
+<p name="dscp">2</p>
+<p name="pdcpProfId">1</p>
+<p name="prio">1</p>
+<p name="qci">2</p>
+<p name="resType">nonGBR</p>
+<p name="rlcProfId">1</p>
+<p name="ulsPrio">1</p>
+<p name="packDelay">50ms</p>
+<p name="packLoss">10**-2</p>
+<p name="qciSupp">ENABLED</p>
+<p name="rlcMode">RLC_AM</p>
+<p name="ulsBSD">100ms</p>
+</item>
+<item>
+<p name="dscp">3</p>
+<p name="pdcpProfId">1</p>
+<p name="prio">1</p>
+<p name="qci">3</p>
+<p name="resType">nonGBR</p>
+<p name="rlcProfId">1</p>
+<p name="ulsPrio">1</p>
+<p name="packDelay">50ms</p>
+<p name="packLoss">10**-2</p>
+<p name="qciSupp">ENABLED</p>
+<p name="rlcMode">RLC_AM</p>
+<p name="ulsBSD">100ms</p>
+</item>
+<item>
+<p name="dscp">4</p>
+<p name="pdcpProfId">1</p>
+<p name="prio">1</p>
+<p name="qci">4</p>
+<p name="resType">nonGBR</p>
+<p name="rlcProfId">1</p>
+<p name="ulsPrio">1</p>
+<p name="packDelay">50ms</p>
+<p name="packLoss">10**-2</p>
+<p name="qciSupp">ENABLED</p>
+<p name="rlcMode">RLC_AM</p>
+<p name="ulsBSD">100ms</p>
+</item>
+<item>
+<p name="dscp">5</p>
+<p name="pdcpProfId">1</p>
+<p name="prio">1</p>
+<p name="qci">5</p>
+<p name="resType">nonGBR</p>
+<p name="rlcProfId">1</p>
+<p name="ulsPrio">1</p>
+<p name="packDelay">50ms</p>
+<p name="packLoss">10**-2</p>
+<p name="qciSupp">ENABLED</p>
+<p name="rlcMode">RLC_AM</p>
+<p name="ulsBSD">100ms</p>
+</item>
+<item>
+<p name="dscp">6</p>
+<p name="pdcpProfId">1</p>
+<p name="prio">1</p>
+<p name="qci">6</p>
+<p name="resType">nonGBR</p>
+<p name="rlcProfId">1</p>
+<p name="ulsPrio">1</p>
+<p name="packDelay">50ms</p>
+<p name="packLoss">10**-2</p>
+<p name="qciSupp">ENABLED</p>
+<p name="rlcMode">RLC_AM</p>
+<p name="ulsBSD">100ms</p>
+</item>
+<item>
+<p name="dscp">7</p>
+<p name="pdcpProfId">1</p>
+<p name="prio">1</p>
+<p name="qci">7</p>
+<p name="resType">nonGBR</p>
+<p name="rlcProfId">1</p>
+<p name="ulsPrio">1</p>
+<p name="packDelay">50ms</p>
+<p name="packLoss">10**-2</p>
+<p name="qciSupp">ENABLED</p>
+<p name="rlcMode">RLC_AM</p>
+<p name="ulsBSD">100ms</p>
+</item>
+<item>
+<p name="dscp">8</p>
+<p name="pdcpProfId">1</p>
+<p name="prio">1</p>
+<p name="qci">8</p>
+<p name="resType">nonGBR</p>
+<p name="rlcProfId">1</p>
+<p name="ulsPrio">1</p>
+<p name="packDelay">50ms</p>
+<p name="packLoss">10**-2</p>
+<p name="qciSupp">ENABLED</p>
+<p name="rlcMode">RLC_AM</p>
+<p name="ulsBSD">100ms</p>
+</item>
+<item>
+<p name="dscp">9</p>
+<p name="pdcpProfId">1</p>
+<p name="prio">1</p>
+<p name="qci">9</p>
+<p name="resType">nonGBR</p>
+<p name="rlcProfId">1</p>
+<p name="ulsPrio">1</p>
+<p name="packDelay">50ms</p>
+<p name="packLoss">10**-2</p>
+<p name="qciSupp">ENABLED</p>
+<p name="rlcMode">RLC_AM</p>
+<p name="ulsBSD">100ms</p>
+</item>
+</list>
+<list name="pdcpProf">
+<item>
+<p name="pdcpProfileId">1</p>
+<p name="statusReportReq">2</p>
+<p name="tDiscard">750</p>
+</item>
+</list>
+</managedObject>
+<managedObject class="FTM" distName="LMBTS-1/LNBTS-3/FTM-1" operation="create" version="LN1.0">
+<p name="adaptationVersionMajor">LN1.0</p>
+<p name="locationName">1</p>
+<p name="systemTitle">1</p>
+<p name="userLabel">1</p>
+</managedObject>
+<managedObject class="GTPU" distName="LMBTS-1/LNBTS-3/FTM-1/GTPU-1" operation="create" version="LN1.0">
+<p name="gtpuPathSupint">60</p>
+<p name="gtpuN3Reqs">5</p>
+<p name="gtpuT3Resp">2</p>
+</managedObject>
+<managedObject class="SCTP" distName="LMBTS-1/LNBTS-3/FTM-1/SCTP-1" operation="create" version="LN1.0">
+<p name="sctpPortNumber">49152</p>
+<p name="sctpHeartbeatInterval">30</p>
+<p name="maxInboundStreams">8</p>
+<p name="pathMaxRetrans">5</p>
+</managedObject>
+<managedObject class="IPNO" distName="LMBTS-1/LNBTS-3/FTM-1/IPNO-1" operation="create" version="LN1.0">
+<p name="btsId">3</p>
+<p name="sGWIpAddress">10.68.152.235</p>
+<p name="oamIpAddr">10.200.87.100</p>
+<p name="mPlaneNetmask">255.255.255.0</p>
+<p name="mPlaneIpAddress">10.34.129.34</p>
+<p name="mmeIpAddress">10.68.152.234</p>
+</managedObject>
+<managedObject class="ADIPNO" distName="LMBTS-1/LNBTS-3/ADIPNO-1" operation="create" version="LN1.0"> <!-- qhf  add ?-->
+<list name="sGWIpAddress">  
+<p name="sGWIpAddress">10.68.152.235</p>
+</list>
+<p name="mmeIpAddress">10.68.152.234</p>
+<list name="adjEnbIpAddressMap">
+	<item>
+		<p name="btsId">4</p>
+		<p name="adjEnbIpAddress">10.68.160.4</p> 
+		<p name="adjMacroEnbId">1025</p>
+		<p name="adjMcc">588</p>
+		<p name="adjMnc">71</p>
+		<p name="adjMncLength">2</p>
+	</item>
+</list>
+</managedObject>
+<managedObject class="IEIF" distName="LMBTS-1/LNBTS-3/FTM-1/IPNO-1/IEIF-1" operation="create" version="LN1.0">
+<p name="mtu">1500</p>
+<p name="sirShapingEnabled">true</p>
+<p name="sbsTotal">1522</p>
+<p name="sirTotal">1000000</p>
+<p name="netmask">255.255.255.255</p>
+<p name="upperLayerShaping">true</p>
+<p name="localIpAddr">10.68.160.34</p>
+</managedObject>
+<managedObject class="LNMME" distName="LMBTS-1/LNBTS-3/LNMME-2" operation="create" version="LN1.0"/>
+<managedObject class="LNCEL" distName="LMBTS-1/LNBTS-3/LNCEL-769" operation="create" version="LN1.0">
+<!-- Parameters added in LNT1.0 21.08-00-->
+
+<p name="redBwEnDl">true</p>   <!-- change from false to true sd add-->
+<p name="redBwMaxRbDl">25</p><!-- change from 100 to 25 sd add-->
+<p name="tddFrameConf">1</p>
+<p name="tddSpecSubfConf">7</p>
+<p name="sriEnable">true</p>  <!-- qhf  add-->
+<p name="a3Offset">1</p>
+<p name="a3ReportAmount">2r</p>
+<p name="a3ReportInterval">240ms</p>
+<p name="a3TimeToTrigger">1280ms</p>
+<p name="a5ReportAmount">4r</p>
+<p name="a5ReportInterval">240ms</p>
+<p name="a5Threshold1">12</p>
+<p name="a5Threshold2">12</p>
+<p name="a5TimeToTrigger">40ms</p>
+<p name="n1PucchAn">36</p>
+<p name="eCallAcBarred">true</p>
+<p name="accesBarrMtCall">true</p>
+<p name="sigAcBarAC">1</p>
+<p name="ocAcBarAC">1</p>
+<p name="addSpectrEmi">12</p>
+<p name="administrativeState">unlocked</p>
+<p name="ulpcAlpha">alpha 1</p>
+<p name="cqiAperMode">FBT2</p>
+<p name="raCrntiReuseT">20</p>
+<p name="mimoClCqiThU">110</p>
+<p name="mimoClCqiThD">90</p>
+<p name="mimoOlCqiThU">110</p>
+<p name="mimoOlCqiThD">90</p>
+<p name="cellBarred">notBarred</p>
+<p name="dlCellPwrRed">0</p>
+<p name="cellSrPeriod">5ms</p>
+<p name="cycPrefix">normal</p>
+<p name="dlTargetBler">100</p>
+<p name="dSrTransMax">64n</p>
+<p name="dlamcCqiDef">2</p>
+<p name="defPagCyc">64rf</p>
+<p name="deltaPucchShift">2</p>
+<p name="deltaPreMsg3">1</p>
+<p name="chBw">10 MHz</p>
+<!--  changed by Jack for TD-LN1.0 Inc 21
+dlMimoMode, should always use enum name but not index value. Notified by RROM guyes.
+0: SingleTX 
+1: TXDiv
+-->
+<p name="dlMimoMode">Closed Loop Mimo</p>
+ <!-- 0:SingleTX; 1:TXDiv; 2:Static Open Loop MIMO; 3:Dynamic Open Loop MIMO 4: Closed Loop Mimo  -->
+<p name="dlRBM">Localized</p>
+<p name="dlPathlossChg">6 db</p>
+<p name="dl64QamEnable">true</p>
+<p name="ulamcAllTbEn">true</p>
+<p name="cqiAperEnable">false</p>
+ 
+<p name="dlamcEnable">true</p>
+<p name="dlOlqcEnable">true</p>
+<p name="soundRsEnabled">false</p>
+<p name="ulamcEnable">true</p>
+   <!-- changed from Y to N-->
+ 
+<p name="ulamcEdgFugEn">true</p>
+<p name="ulatbEnable">true</p>
+ <!-- changed from Y to N-->
+<p name="enableBetterCellHo">true</p>
+<p name="enableCovHo">true</p>
+<p name="cqiPerSimulAck">true</p>
+<p name="filterCoeff">fc4</p>
+<p name="grpAssigPUSCH">0</p>
+<p name="hopBwPusch">2</p> <!-- changed from 1 to 2 in LNT1.0 21.08-00 -->
+<p name="hopModePusch">interSubFrame</p>
+<p name="iniMcsDl">26</p>
+ 	 <!-- changed from 28 to 10-->
+<p name="iniMcsUl">4</p>
+   <!-- changed from 10 to 20-->
+<p name="mcsLargeRaUl">1</p>
+<p name="lcrId">1</p>
+<p name="dlpcMimoComp">0</p>
+<p name="dlMimoComp">4</p>
+<p name="maxBitrateDl">170000</p>
+<p name="mbrSelector">OaM</p>
+<p name="maxBitrateUl">15000</p>
+<p name="maxCrRaDl">12</p>
+<p name="maxCrRa4Dl">12</p>
+<p name="raContResoT">64ms</p><!-- changed from 32 to 64 Linrufeng091016-->
+<p name="maxNumAUeHo">4</p>
+<p name="maxNumActUE">4</p>
+<p name="maxNumRrc">10</p>
+<p name="maxNrSymPdcch">1</p>
+<p name="pMax">430</p>
+<p name="maxCrSibDl">12</p>
+<p name="maxCrPgDl">12</p>
+<p name="harqMaxTrDl">3</p>
+<p name="harqMaxTrUl">3</p>
+<p name="harqMaxMsg3">3</p>
+<p name="minBitrateDl">30</p> <!-- need kpbs? -->
+<p name="minBitrateUl">30</p> <!-- -->
+<p name="modPeriodCoeff">8</p>
+<p name="riPerM">2</p> <!--Valid with contents value only, but not the index-->
+<p name="npdschEpreOff">0 dB</p>
+<p name="p0NomPusch">-90</p><!-- changed from -100 to test the msg3 problem -->
+<p name="p0NomPucch">-100</p>
+<p name="raNondedPreamb">40</p>
+<p name="hopSubBwPusch">2</p>
+<p name="numOfTxPorts">2</p>
+<p name="pdcchAggPreamb">4</p>
+<p name="pdcchAggPaging">4</p>
+<p name="pdcchAggRaresp">4</p>
+<p name="pdcchAggSib">4</p>
+<p name="phichRes">N = 1/2</p>
+<p name="phichDur">Normal</p>
+<p name="prachConfIndex">3</p>
+<p name="prachFreqOff">10</p>
+<p name="prachHsFlag">false</p>
+<p name="nCqiRb">2</p>
+<p name="pucchNAnCs">0</p>
+<p name="pucchRS">6</p>
+<p name="puschHopOffset">6</p>
+<p name="puschAckOffI">10</p>
+<p name="puschCqiOffI">8</p>
+<p name="puschRiOffI">3</p>
+<p name="ulpcAccuEnable">true</p>
+<p name="mcsPg">1</p>
+<p name="pagingNb">oneT</p>
+<p name="tPeriodicBsr">40ms</p>
+<p name="cqiPerMode">WidebandCqiOnly</p>
+<p name="tPeriodicPhr">200sf</p>
+<p name="cqiPerSbCycK">1</p>
+<p name="srsPwrOffset">7</p>
+<p name="p0UePucch">0</p>
+<p name="p0UePusch">7</p>
+<p name="prachPwrRamp">2dB</p>
+<p name="ulpcIniPrePwr">-94 dBm</p>  <!-- change from -104 to -90-->
+<p name="preambTxMax">5</p>
+<p name="tProhibitPhr">100sf</p>
+<p name="raMsgPoffGrB">10 dB</p>
+<p name="mcsRaDl">4</p>
+<p name="raPreGrASize">4</p>
+<p name="raRespWinSize">10</p>
+<p name="mimoClRiThU">32</p>
+<p name="mimoClRiThD">28</p>
+<p name="mimoOlRiThU">32</p>
+<p name="mimoOlRiThD">28</p>
+<p name="cqiPerNp">10ms</p>
+<p name="tReTxBsrTime">2560 ms</p>
+<p name="siWindowLenTdd">20ms</p>    <!-- change from 20 to 5  qhf--> 
+<p name="srbSchedWeightDl">10</p>
+<p name="srbSchedWeightUl">10</p>
+<p name="srsMaxUpPts">false</p>
+<p name="mcsSsi">1</p>
+<p name="ulSeqSft">1</p>
+<p name="raSmallVolUl">144 bits</p>
+<p name="srsBandwidth">0bw</p>
+<p name="srsHoppingBw">1hbw</p>
+<p name="anSrsSimulTx">false</p>
+<p name="syncSigTxMode">TxDiv</p>
+  <!--SingleTx , TxDiv  --> 
+<p name="si2MappingInfo">SIB2</p>
+<p name="si2Repetition">1</p>
+<p name="si3MappingInfo">SIB3</p>
+<p name="si3Repetition">1</p>
+<p name="si4MappingInfo">SIB4</p>
+<p name="si4Repetition">1</p>
+<p name="ulpcRarespTpc">4</p> <!-- Don;t work with value 6, why?-->
+<p name="tpcStepSize">TPC step size set -1,1</p>
+<p name="taMaxOffset">2</p>
+<p name="taTimer">1280 ms</p> <!-- 0: 500ms, 1:750ms, 2:1280ms ... 6:10240ms -->
+<p name="t302">8000</p>
+<p name="t304IntraLte">100ms</p>
+<p name="cqiAperPollT">3</p>
+<p name="txPowerScaling">3277</p>
+<p name="indefSrsDur">false</p>
+<p name="ulamcSwitchPer">10</p>
+<p name="ulTargetBler">10</p>
+<p name="ulatbEventPer">1</p>
+<p name="ulRsCs">1</p>
+<p name="ulSeqHop">false</p>
+<p name="dlsUsePartPrb">PRBs with PSS or SSS and PBCH used</p>
+<p name="cellReSelPrio">1</p>
+<p name="tReselEutr">1</p>
+<!--  p name="eutraCelld">0</p -->
+<p name="earfcn">39150</p>
+<p name="filterCenterTx">12</p>
+<p name="inactivityTimer">300</p>
+<p name="iniPrbsUl">25</p> <!-- change from 30 to 25 sd add-->
+<p name="sNonIntrsearch">2</p>
+<p name="sIntrasearch">2</p>
+<p name="ulGrpHop">0</p>
+<p name="mbsfnNbCellConf">2</p>
+<p name="maxNumUeDl">4</p>
+<p name="maxNumUeUl">4</p>
+<p name="maxNumUeDlDwPTS">4</p>
+<p name="qrxlevminintraF">-96</p>
+<p name="qrxlevmin">-110</p>
+<p name="nCellChgHigh">2</p>
+<p name="nCellChgMed">2</p>
+<p name="prachCS">12</p>
+<p name="phyCellId">1</p>
+<p name="raPowRampSetup">1</p>
+<p name="rootSeqIndex">12</p>
+<p name="raMaxPower">2</p>
+<p name="raMinPower">2</p>
+<p name="threshSrvLow">2</p>
+<p name="tac">123</p>
+<p name="localState">unblocked</p>
+<p name="riPerOffset">0</p>  <!-- require "ms"?-->
+<p name="riEnable">true</p> 
+<p name="accessClassBarrT">4 s</p>
+<p name="ocAcBarTime">8s</p>
+<p name="sigAcBarTime">8s</p>
+<p name="accessProbFactor">5</p>
+<p name="ocAcProbFac">5%</p>
+<p name="sigAcProbFac">5%</p>
+<p name="qHystSfHigh">-4 dB</p>
+<p name="qHystSfMed">-2 dB</p>
+<p name="qHyst">1dB</p>
+<p name="celResTiFHM">0.5</p>
+<p name="celResTiFMM">0.5</p>
+<p name="deltaTfEnabled">false</p>
+<p name="intrFrqCelRes">notAllowed</p>
+<p name="n311">n5</p>
+<p name="n310">n6</p>
+<p name="intraPresAntP">true</p>
+<p name="raBackoff">10</p>
+<p name="su2Repetition">80</p>
+<p name="srsSubfrConf">3sc</p>
+<p name="si2Periodicity">160</p>
+<p name="si3Periodicity">160</p>
+<p name="si4Periodicity">160</p>
+<p name="t300">600ms</p>
+<p name="t301">200ms</p>
+<p name="t310">200ms</p>
+<p name="t311">3000ms</p>
+<p name="tEvalulation">60s</p>
+<p name="tHystNormal">60s</p>
+<p name="srsSimAckNack">Disabled</p><!-- ldf  mod-->
+<p name="ulpcEnable">true</p><!-- ldf  add-->
+<p name="ulpcPucchEn">true</p><!-- ldf  add-->
+<p name="ulpcPuschEn">true</p><!-- ldf  add-->
+<p name="ulpcUplevCch">-72</p><!-- ldf  add-->
+<p name="ulpcLowlevCch">-77</p><!-- ldf  add-->
+<p name="ulpcUpqualCch">6</p><!-- ldf  add-->
+<p name="ulpcLowqualCch">2</p><!-- ldf  add-->
+<p name="ulpcUplevSch">-72</p><!-- ldf  add-->
+<p name="ulpcLowlevSch">-77</p><!-- ldf  add-->
+<p name="ulpcUpqualSch">18</p><!-- ldf  add-->
+<p name="ulpcLowqualSch">15</p><!-- ldf  add-->
+<p name="ulpcReadPeriod">50</p><!-- ldf  add-->
+<p name="srsBwConf">4bw</p>
+<list name="furtherPlmnIdL">
+<item>
+<p name="mcc">588</p>
+<p name="mnc">71</p>
+<p name="mncLength">2</p>
+</item>
+</list>
+<list name="intrFrBCList">
+<item>
+<p name="physCellIdBcl">1</p>
+<p name="startIntraPci">1</p>
+<p name="rangeIntraPci">n8</p>
+</item>
+</list>
+<list name="dFListPucch">
+<item>
+<p name="dFpucchF1">0</p>
+<p name="dFpucchF1b">1</p>
+<p name="dFpucchF2">0</p>
+<p name="dFpucchF2a">0</p>
+<p name="dFpucchF2b">0</p>
+</item>
+</list>
+<list name="intrFrNCList">
+<item>
+<p name="qOffsetCell">2 dB</p>
+<p name="physCellIdNcl">12</p>
+</item>
+</list>
+<list name="rxPowerScaling">
+<p>11752</p>
+<p>11753</p>
+</list>
+<list name="cellReserve">
+<p>Not Reserved</p>
+</list>
+</managedObject>
+</cmData>
+</raml>

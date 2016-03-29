@@ -1,0 +1,2 @@
+forw mte RrcAptConfigUeCap [[] [] [] [] [] [] [1{0 81BFF441033C10381F7834620000}]]
+forw mte Activate -1 [] [0]

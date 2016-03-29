@@ -1,0 +1,15 @@
+SETP L2_MAC_DISABLE_SR_INIT_RACH_IF_SR_NOT_CFG 1                     
+forw mte UsimConfig 1([262030020000536 2] [] [] [] []) [] [] [A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5]
+SETP RRC_NUM_DL_ANTENNAS 2
+forw mte PhyConfigSysCap 2 4 4
+FORW MTE PHYCONFIGULTIMING 0
+forw mte PhySetTDDCfg 1 7
+forw mte NasAptConfigPlmnSelection 26203
+forw mte NasAptConfigCapability
+forw mte NasConfigEmmRegister 0(0 [] [] [] [] [] )
+forw mte RrcAptConfigCapability
+forw mte RrcAptConfigCellSelection 25950
+FORW L1 SETRFRXGAIN 1 -28
+forw mte Activate -1
+
+

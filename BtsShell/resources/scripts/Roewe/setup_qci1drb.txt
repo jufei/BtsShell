@@ -1,0 +1,51 @@
+# TMA Child Script
+
+############################################
+# Test Step: Configure EPS Bearer Resource #
+############################################
+
+#-------------------------------------------------------------------------------------------
+# Configures the NAS to add/modify a Bearer Resource associated with a dedicated EPS Bearer
+#-------------------------------------------------------------------------------------------
+# PARAMETERS
+# 1.  Bearer Resource Identity
+# 2.  PDN Identity
+# 3.  Number of Packet Filters
+# 3a. Packet Filter Reference
+# 3b. Packet Filter Direction
+# 3c. Packet Filter Evaluation Precedence
+# 3d. IP Address
+# 3e. Subnet Mask
+# 3f. Protocol Identifier
+# 3g. Local Port Lower Range
+# 3h. Local Port Upper Range
+# 3i. Remote Port Lower Range
+# 3j. Remote Port Upper Range
+# 4.  QCI Label
+# 5.  Maximum bit rate for UL
+# 6.  Maximum bit rate for DL
+# 7.  Guaranteed bit rate for UL
+# 8.  Guaranteed bit rate for DL
+#-------------------------------------------------------------------------------------------
+#                                       3 3 3  3            3                 3    3 3       3 3                                     
+#                                1 2  3 a b c  d            e                 f    g h       i j                  4  5     6       7     8      
+#                                | |  | | | |  |            |                 |    | |       | |                  |  |     |       |     |      
+forw mte NasConfigBearerResource 7 0 [1{0 3 0 [10.68.152.66 255.255.255.255] [17] [1 65535] [1 65535] [] [] []}] [1 [50000 50000] [50000 50000]]
+#-------------------------------------------------------------------------------------------
+
+#####################################
+# Test Step: Activate Configuration #
+#####################################
+
+#--------------------------------
+# Activate pending configuration
+#--------------------------------
+# PARAMETERS
+# 1. Timing Type
+# 2. Activate on Frame Boundary
+#--------------------------------
+#                 1      2 
+#                 |      | 
+forw mte Activate -1 [] [0]
+#--------------------------------
+

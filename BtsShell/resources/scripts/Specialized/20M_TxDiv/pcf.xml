@@ -1,0 +1,7 @@
+<config>
+    <tag name="app.oam.oam.role" type="string">master</tag>
+    <tag name="app.oam.sync.master" type="string">TRUE</tag>
+    <tag name="app.trs.sharedSFPRole" type="string">ETH</tag>
+    <tag name="app.oam.startup.loadIndication" type="string">OBSAI</tag>
+	<tag name="ccs.service.testport.buffersize" type="u32">512000</tag>
+</config>

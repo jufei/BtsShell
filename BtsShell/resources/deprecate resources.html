@@ -1,0 +1,738 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+html {
+  font-family: Arial,Helvetica,sans-serif;
+  background-color: white;
+  color: black;
+}
+table {
+  border-collapse: collapse;
+  empty-cells: show;
+  margin: 1em 0em;
+  border: 1px solid black;
+}
+th, td {
+  border: 1px solid black;
+  padding: 0.1em 0.2em;
+  height: 1.5em;
+  width: 12em;
+}
+td.colspan4, th.colspan4 {
+    width: 48em;
+}
+td.colspan3, th.colspan3 {
+    width: 36em;
+}
+td.colspan2, th.colspan2 {
+    width: 24em;
+}
+th {
+  background-color: rgb(192, 192, 192);
+  color: black;
+  height: 1.7em;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+td.name {
+  background-color: rgb(240, 240, 240);
+  letter-spacing: 0.1em;
+}
+td.name, th.name {
+  width: 10em;
+}
+</style>
+<title>Deprecate Resources</title>
+</head>
+<body>
+<h1>Deprecate Resources</h1>
+<table border="1" id="setting">
+<tr>
+<th class="name" colspan="5">Setting</th>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>Collections</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>String</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table border="1" id="keyword">
+<tr>
+<th class="name" colspan="5">Keyword</th>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Copy File To Log Directory">Copy File To Log Directory</a></td>
+<td>[Arguments]</td>
+<td>${source_file_dir}</td>
+<td>${dest dir}=insignificance</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">DEPRECATED Use "file copy" instead.</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${path}</td>
+<td>${source file name}</td>
+<td>split path</td>
+<td>${source_file_dir}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${time}</td>
+<td>Get Timestamp</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Get Target Log Directory</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${dest_file_dir}</td>
+<td>set variable</td>
+<td>${TARGET LOG DIRECTORY}\\${time}_${source file name}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>file_copy</td>
+<td>${source_file_dir}</td>
+<td>${dest_file_dir}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_File Copy And Display Link">File Copy And Display Link</a></td>
+<td>[Arguments]</td>
+<td>${source_file_dir}</td>
+<td>${display link}=insignificance</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">DEPRECATED Use "file copy" instead.</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>copy file to log directory</td>
+<td>${source_file_dir}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Connect To TM500 External Port">Connect To TM500 External Port</a></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">DEPRECATED Use ‘Initial Connection with TM500’ keyword instead\nThis keyword just call "Initial connection with TM500"</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${connection}</td>
+<td>Initial Connection With TM500</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Return]</td>
+<td>${connection}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_UDP Log Should Contain">UDP Log Should Contain</a></td>
+<td>[Arguments]</td>
+<td>${udplog_dir}</td>
+<td>${keywords}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">DEPRECATED Use ‘File should contain’ keyword instead\nCheck Whether BTS UDP Log Contain Given Keywords</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>File Should Contain</td>
+<td>${udplog_dir}</td>
+<td>${keywords}</td>
+<td>UDPLog.log</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>UDPLog</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Get Last Modified TM500 Log and Copy2local">Get Last Modified TM500 Log and Copy2local</a></td>
+<td>[Arguments]</td>
+<td>${file_extention}</td>
+<td>${file_pattern}</td>
+<td>${local_file_name}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">DEPRECATED Use ‘Get last Modified TM500 Log’ keyword instead\nThis keyword just call 'Get last Modified TM500 Log'\n</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${last_modified_log}=</td>
+<td>Get Last Modified TM500 Log</td>
+<td>${file_extention}</td>
+<td>${file_pattern}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${BTS_CONTROL_PC_CONNECTION}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>copyfile2local</td>
+<td>${TM500_CONTROL_PC_LAN}</td>
+<td>${TM500_CONTROL_PC_USERNAME}</td>
+<td>${TM500_CONTROL_PC_PASSWORD}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${last_modified_log}</td>
+<td>${local_file_name}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TM500 Restart">TM500 Restart</a></td>
+<td>[Arguments]</td>
+<td>${TMA_version}=${TM500_APPLICATION_DIR}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">DEPRECATED Use ‘TM500 Restart Base On Version’ keyword instead\nThis keyword just call 'TM500 Restart Base On Version'</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>TM500 Restart Base on Version</td>
+<td>${TMA_version}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${value}</td>
+<td>Set Variable</td>
+<td>${NONE}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Return]</td>
+<td>${value}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TM500 Restart By Power Break">TM500 Restart By Power Break</a></td>
+<td>[Arguments]</td>
+<td>${TMA_DIR}=${TM500_APPLICATION_DIR}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">DEPRECATED Use ‘Tm500 Hardware Restart’ keyword instead\nThis keyword just call 'Tm500 Hardware Restart'</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Tm500 Hardware Restart</td>
+<td>${TMA_DIR}</td>
+<td>${BTS_CONTROL_PC_CONNECTION}</td>
+<td>${TM500_CONTROL_PC_CONNECTION}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TM500 Restart PB BAK">TM500 Restart PB BAK</a></td>
+<td>[Arguments]</td>
+<td>${TMA_version}=${TM500_APPLICATION_DIR}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">DEPRECATED Use ‘TM500 Restart Base On Version’ keyword instead\nThis keyword just call 'TM500 Restart Base On Version'</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>TM500 Restart Base on Version</td>
+<td>${TMA_version}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Get Value From Counter File">Get Value From Counter File</a></td>
+<td>[Arguments]</td>
+<td>${file_path}</td>
+<td>${key}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">DEPRECATED Use ‘Read Counter File’ keyword instead\nThis keyword just call 'Read Counter File'</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${value} =</td>
+<td>Read Counter File</td>
+<td>${file_path}</td>
+<td>${key}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Return]</td>
+<td>${value}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Start Tshark Capture">Start Tshark Capture</a></td>
+<td>[Arguments]</td>
+<td>${file_name}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">DEPRECATED Use ‘Swith Conn And Start Tshark’ keyword instead\n<br>
+‘Swith Conn And Start Tshark’ support txt and pcap type log capture.\n</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${IPSec_CONNECTION}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Stop Tshark On Linux</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Start Tshark On Linux</td>
+<td>${file_name}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Stop Tshark Capture">Stop Tshark Capture</a></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">DEPRECATED Use ‘Switch Conn And Stop Tshark’ keyword instead\n‘Switch Conn And Stop Tshark’ support wireshark log stop and copy to local PC.\n</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${IPSec_CONNECTION}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Stop Tshark On Linux</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Automatic Analysis">Automatic Analysis</a></td>
+<td>[Arguments]</td>
+<td>${ini_file_path}</td>
+<td>${log_file_path}</td>
+<td>${switch}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${a2a_path}=${CURDIR}${/}tools${/}A2A${/}Au2Analysis.exe</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">DEPRECATED Use ‘A2A Log Check’ keyword instead\nThis keyword just call "Au2Analysis", \ ‘A2A Log Check’ is more reasonable.</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Au2Analysis</td>
+<td>${a2a_path}</td>
+<td>${ini_file_path}</td>
+<td>${log_file_path}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${switch}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Tti Trace Log">Tti Trace Log</a></td>
+<td>[Arguments]</td>
+<td>${dsp_id_dl}</td>
+<td>${dsp_id_ul}</td>
+<td>${dl_trace_name}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${ul_trace_name}</td>
+<td>${dl_result_name}</td>
+<td>${ul_result_name}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${case_directory}</td>
+<td>${log_directory}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">DEPRECATED Use ‘TTiTraceDownload’ and 'TTITraceDecode' keyword instead\n</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>file copy</td>
+<td>${CURDIR}${/}tools${/}TTITrace${/}TraceConverter${/}TtiTraceConverterDl.pm</td>
+<td>${case_directory}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>file copy</td>
+<td>${CURDIR}${/}tools${/}TTITrace${/}TraceConverter${/}TtiTraceConverterUl.pm</td>
+<td>${case_directory}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>execute_shell_command</td>
+<td>cd /d ${case_directory}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword</td>
+<td>_Get_Tti_Trace_${SW_RELEASE}</td>
+<td>${dsp_id_dl}</td>
+<td>${dsp_id_ul}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${dl_trace_name}</td>
+<td>${ul_trace_name}</td>
+<td>${dl_result_name}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${ul_result_name}</td>
+<td>${case_directory}</td>
+<td>${log_directory}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword__Get_Tti_Trace_RL15">_Get_Tti_Trace_RL15</a></td>
+<td>[Arguments]</td>
+<td>${dsp_id_dl}</td>
+<td>${dsp_id_ul}</td>
+<td>${dl_trace_name}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${ul_trace_name}</td>
+<td>${dl_result_name}</td>
+<td>${ul_result_name}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${case_directory}</td>
+<td>${log_directory}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>get mac ttitrace</td>
+<td>${dsp_id_dl}</td>
+<td>${dsp_id_ul}</td>
+<td>${dl_trace_name}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${ul_trace_name}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>ttitrace decoder</td>
+<td>${dl_trace_name}</td>
+<td>${dl_result_name}</td>
+<td>${case_directory}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>ttitrace decoder</td>
+<td>${ul_trace_name}</td>
+<td>${ul_result_name}</td>
+<td>${case_directory}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>file copy</td>
+<td>${case_directory}${/}${dl_result_name}</td>
+<td>${log_directory}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>file copy</td>
+<td>${case_directory}${/}${ul_result_name}</td>
+<td>${log_directory}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword__Get_Tti_Trace_RL25">_Get_Tti_Trace_RL25</a></td>
+<td>[Arguments]</td>
+<td>${dsp_id_dl}</td>
+<td>${dsp_id_ul}</td>
+<td>${dl_trace_name}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${ul_trace_name}</td>
+<td>${dl_result_name}</td>
+<td>${ul_result_name}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${case_directory}</td>
+<td>${log_directory}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>get ttitrace use 7up</td>
+<td>${dsp_id_dl}</td>
+<td>${dsp_id_ul}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${ret}</td>
+<td>get file name in folder</td>
+<td>${case_directory}</td>
+<td>ttitrace.*${dsp_id_dl}.dat</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${dl_trace_name}</td>
+<td>String Split</td>
+<td>${ret}</td>
+<td>${/}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${ret}</td>
+<td>get file name in folder</td>
+<td>${case_directory}</td>
+<td>ttitrace.*${dsp_id_ul}.dat</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${ul_trace_name}</td>
+<td>String Split</td>
+<td>${ret}</td>
+<td>${/}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>ttitrace decoder</td>
+<td>${dl_trace_name[-1]}</td>
+<td>${dl_result_name}</td>
+<td>${case_directory}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>ttitrace decoder</td>
+<td>${ul_trace_name[-1]}</td>
+<td>${ul_result_name}</td>
+<td>${case_directory}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>file copy</td>
+<td>${case_directory}${/}${dl_result_name}</td>
+<td>${log_directory}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>file copy</td>
+<td>${case_directory}${/}${ul_result_name}</td>
+<td>${log_directory}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,237 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE Report
+[
+<!ELEMENT Report (General ,(Doc|BPT)) >
+<!ATTLIST Report ver CDATA #REQUIRED tmZone CDATA #REQUIRED>
+
+<!ELEMENT General ( DocLocation ) >
+<!ATTLIST General productName CDATA #REQUIRED productVer CDATA #REQUIRED os CDATA #REQUIRED host CDATA #REQUIRED>
+
+<!ELEMENT BPT (DName,Res,DVer?,TSet?,TInst?,NodeArgs,AdditionalInfo*,Doc*) >
+<!ATTLIST BPT rID ID #REQUIRED >
+
+<!ELEMENT Doc (DName,Res,DVer?,TSet?,TInst?,RunType?,DT?,AdditionalInfo*,Step*,DIter*,Step*,Action*,Summary?,TestMaintenanceSummary*,NodeArgs?) >
+<!ATTLIST Doc rID ID #REQUIRED type (Test|BC) "Test" productName CDATA #REQUIRED BCIter CDATA #IMPLIED >
+
+<!ELEMENT RunType ( #PCDATA )>
+<!ATTLIST RunType fmStep (False|True) "False" batch (False|True) "False" upDesc (False|True) "False" upChk (False|True) "False" upAS (False|True) "False">
+
+<!ELEMENT DName ( #PCDATA ) >
+
+<!ELEMENT Res ( #PCDATA ) >
+
+<!ELEMENT AdditionalInfo (AdditionalDataName,AdditionalDataValue ) >
+
+<!ELEMENT AdditionalDataName ( #PCDATA ) >
+
+<!ELEMENT AdditionalDataValue ( #PCDATA ) >
+
+<!ELEMENT DVer ( #PCDATA ) >
+
+<!ELEMENT TSet ( #PCDATA ) >
+
+<!ELEMENT TInst ( #PCDATA ) >
+
+<!ELEMENT DIter (Step?,Action+,Summary?,NodeArgs)>
+<!ATTLIST DIter rID ID #REQUIRED iterID CDATA #REQUIRED>
+
+<!ELEMENT DocLocation ( #PCDATA )>
+
+<!ELEMENT Action (AName,AIter*,(Step|HtmlStep|Action)*,Summary,ActionMaintenanceSummary*,NodeArgs ) >
+<!ATTLIST Action rID ID #REQUIRED>
+
+<!ELEMENT AIter ((Step|HtmlStep|Action)*,Summary?,NodeArgs) >
+<!ATTLIST AIter rID ID #REQUIRED iterID CDATA #REQUIRED>
+
+<!ELEMENT AName ( #PCDATA ) >
+
+<!ELEMENT TestMaintenanceSummary (ActionMaintenanceSummary) >
+<!ATTLIST TestMaintenanceSummary ObjectsAdded CDATA #REQUIRED ObjectsUpdated CDATA #REQUIRED StepsUpdated CDATA #REQUIRED StepsComments CDATA #REQUIRED><!ELEMENT ActionMaintenanceSummary (ObjectChange* ) >
+<!ATTLIST ActionMaintenanceSummary Action CDATA #REQUIRED Objects CDATA #REQUIRED Updated CDATA #REQUIRED LinesTotal CDATA #REQUIRED Added CDATA #REQUIRED LinesUpdated CDATA #REQUIRED>
+
+<!ELEMENT ObjectChange  (Hierarchy, PropertyChangeList* ) >
+<!ATTLIST ObjectChange Operation CDATA #IMPLIED OriginalRepository CDATA #IMPLIED>
+
+<!ELEMENT PropertyChangeList (PropertyDef) >
+
+<!ELEMENT PropertyDef (OriginalValue, NewValue) >
+<!ATTLIST PropertyDef PropName CDATA #REQUIRED OriginRegularExpression (True|False) "False" NewRegularExpression (True|False) "False" >
+
+<!ELEMENT OriginalValue ( #PCDATA )>
+
+<!ELEMENT NewValue ( #PCDATA )>
+
+<!ELEMENT Hierarchy  (ObjectName, Hierarchy*) >
+<!ATTLIST Hierarchy MicClass CDATA #REQUIRED>
+
+<!ELEMENT ObjectName  ( #PCDATA ) >
+
+<!ELEMENT Step (Obj,Details,Time,(Step|HtmlStep|Doc)*,NodeArgs) >
+<!ATTLIST Step rID ID #REQUIRED retval CDATA #IMPLIED>
+
+<!ELEMENT HtmlStep (HTML,(Step|HtmlStep|Doc)*,NodeArgs) >
+<!ATTLIST HtmlStep rID ID #REQUIRED >
+
+<!ELEMENT Obj ( #PCDATA ) >
+<!ATTLIST Obj plainTxt (False|True) "True">
+
+<!ELEMENT Details ( #PCDATA ) >
+<!ATTLIST Details plainTxt (False|True) "True">
+
+<!ELEMENT Time ( #PCDATA ) >
+
+<!ELEMENT HTML ( #PCDATA ) >
+
+<!ELEMENT Disp ( #PCDATA ) >
+
+<!ELEMENT NodeArgs (Disp,TopPane?,BtmPane?)>
+<!ATTLIST NodeArgs eType CDATA #REQUIRED icon CDATA #REQUIRED nRep CDATA #REQUIRED filter (False|True) "True">
+<!ATTLIST NodeArgs status (Passed|Failed|Done|Warning|Information) "Done">
+<!ATTLIST NodeArgs iconSel CDATA #IMPLIED nType CDATA #IMPLIED MovieMarker CDATA "">
+
+<!ELEMENT TopPane (Path)>
+
+<!ELEMENT BtmPane ( (Path|WR)?,ASHilite?)>
+<!ATTLIST BtmPane vType CDATA "HTML">
+
+<!ELEMENT Path ( #PCDATA ) >
+
+<!ELEMENT ASHilite ( #PCDATA ) >
+
+<!ELEMENT WR ( #PCDATA ) >
+
+<!ELEMENT DT (NodeArgs) >
+<!ATTLIST DT rID ID #REQUIRED>
+
+<!ELEMENT Summary (Param*)>
+<!ATTLIST Summary sTime CDATA #IMPLIED eTime CDATA #IMPLIED passed CDATA #IMPLIED failed CDATA #IMPLIED warnings CDATA #IMPLIED retval CDATA #IMPLIED stopped (False|True) "False" >
+
+<!ELEMENT Param (ParamName,ParamVal)+ >
+<!ATTLIST Param paramInOut (In|Out) "In">
+
+<!ELEMENT ParamName ( #PCDATA ) >
+
+<!ELEMENT ParamVal ( #PCDATA ) >
+
+]
+>
+<Report ver="2.0" tmZone="China Standard Time">
+<General productName="QuickTest Professional" productVer="9.5" os="Windows XP" host="9VJ7VP1"><DocLocation><![CDATA[d:\w13li\Desktop\lwtest\Login_BTSSite_Fail]]></DocLocation></General>
+<Doc rID="T1"   productName= "QuickTest Professional"  >
+<DName><![CDATA[Login_BTSSite_Fail]]></DName>
+<Res><![CDATA[Res1]]></Res>
+<DT rID="T2">
+<NodeArgs eType="Table" icon="2" nRep="4" filter="False" >
+<Disp><![CDATA[Run-Time Data Table]]></Disp>
+<BtmPane vType="Table">
+<Path><![CDATA[Default.xls]]></Path>
+</BtmPane>
+</NodeArgs>
+</DT>
+<DIter rID="T3" iterID="1" >
+<Action rID="T4">
+<AName><![CDATA[Action1]]></AName>
+<Step rID="T5">
+<Obj plainTxt="False" ><![CDATA[BTS Site Manager]]></Obj>
+<Details plainTxt="False" ><![CDATA[JavaWindow]]></Details>
+<Time><![CDATA[2012-4-6 - 16:56:51]]></Time>
+
+
+<Step rID="T6">
+<Obj plainTxt="False" ><![CDATA[CLMainView$1.Select]]></Obj>
+<Details plainTxt="False" ><![CDATA["Open Snapshot"]]></Details>
+<Time><![CDATA[2012-4-6 - 16:56:51]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="10" >
+<Disp><![CDATA[CLMainView$1.Select]]></Disp>
+</NodeArgs>
+</Step>
+
+
+<Step rID="T7">
+<Obj plainTxt="False" ><![CDATA[Look in:.ActivateRow]]></Obj>
+<Details plainTxt="False" ><![CDATA["#3"]]></Details>
+<Time><![CDATA[2012-4-6 - 16:56:57]]></Time>
+<NodeArgs eType="Replay" icon="7" nRep="12" >
+<Disp><![CDATA[Look in:.ActivateRow]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="9" >
+<Disp><![CDATA[BTS Site Manager]]></Disp>
+</NodeArgs>
+</Step>
+
+
+<Step rID="T8">
+<Obj plainTxt="False" ><![CDATA[eNB861 - 192.168.255.129]]></Obj>
+<Details plainTxt="False" ><![CDATA[JavaWindow]]></Details>
+<Time><![CDATA[2012-4-6 - 16:57:18]]></Time>
+
+<Step rID="T9">
+<Obj plainTxt="False" ><![CDATA[License Management]]></Obj>
+<Details plainTxt="False" ><![CDATA[JavaDialog]]></Details>
+<Time><![CDATA[2012-4-6 - 16:57:18]]></Time>
+<Step rID="T10">
+<Obj plainTxt="False" ><![CDATA[Close.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA["LEFT"]]></Details>
+<Time><![CDATA[2012-4-6 - 16:57:18]]></Time>
+<NodeArgs eType="Replay" icon="9" nRep="40" status="Warning" >
+<Disp><![CDATA[Close.Click]]></Disp>
+</NodeArgs>
+</Step>
+
+
+<Step rID="T11">
+<Obj plainTxt="False" ><![CDATA[Close]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot find the "Close" object's parent "eNB861 - 192.168.255.129" (class JavaWindow). Verify that parent properties match an object currently displayed in your application.]]></Details>
+<Time><![CDATA[2012-4-6 - 16:57:18]]></Time>
+<Step rID="T12">
+<Obj plainTxt="False" ><![CDATA[eNB861 - 192.168.255.129]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object's physical description:<br>to_class = JavaWindow<br>Title = eNB861 - 192.168.255.129 - [Snapshot] - BTS Site Manager<br>]]></Details>
+<Time><![CDATA[2012-4-6 - 16:57:18]]></Time>
+<NodeArgs eType="Replay" icon="10" nRep="43" status="Warning" nType="Parent description" >
+<Disp><![CDATA[eNB861 - 192.168.255.129]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Replay" icon="9" nRep="42" status="Failed" nType="Run Error" >
+<Disp><![CDATA[Close]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="8" nRep="39" status="Failed" >
+<Disp><![CDATA[License Management]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="38" status="Failed" >
+<Disp><![CDATA[eNB861 - 192.168.255.129]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T13">
+<Obj plainTxt="False" ><![CDATA[Run Error]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot find the &quot;Close&quot; object's parent &quot;eNB861 - 192.168.255.129&quot; (class JavaWindow). Verify that parent properties match an object currently displayed in your application.<BR>Line (5): &quot;JavaWindow(&quot;eNB861 - 192.168.255.129&quot;).JavaDialog(&quot;License Management&quot;).JavaButton(&quot;Close&quot;).Click&quot;. ]]></Details>
+<Time><![CDATA[2012-4-6 - 16:57:18]]></Time>
+<NodeArgs eType="Replay" icon="10" nRep="44" status="Failed" >
+<Disp><![CDATA[Run Error]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T14">
+<Obj plainTxt="False" ><![CDATA[Stop Run]]></Obj>
+<Details plainTxt="False" ><![CDATA[Run stopped by user.]]></Details>
+<Time><![CDATA[2012-4-6 - 16:57:24]]></Time>
+<NodeArgs eType="General" icon="11" nRep="45" >
+<Disp><![CDATA[Stop Run]]></Disp>
+</NodeArgs>
+</Step>
+<Summary sTime="2012-4-6 - 16:56:47" eTime="2012-4-6 - 16:57:24" passed="0" failed="2" warnings="2" ></Summary>
+<NodeArgs eType="StartAction" icon="4" nRep="7" status="Failed" >
+<Disp><![CDATA[Action1 Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="6" status="Failed" >
+<Disp><![CDATA[Login_BTSSite_Fail Iteration 1 (Row 1)]]></Disp>
+</NodeArgs>
+</DIter>
+<Summary sTime="2012-4-6 - 16:56:45" eTime="2012-4-6 - 16:57:24" passed="0" failed="2" warnings="2" ></Summary>
+<NodeArgs eType="StartTest" icon="1" nRep="3" status="Failed" >
+<Disp><![CDATA[Test Login_BTSSite_Fail Summary]]></Disp>
+</NodeArgs>
+</Doc>
+</Report>

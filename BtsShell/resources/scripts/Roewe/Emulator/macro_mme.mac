@@ -1,0 +1,510 @@
+# *********************************************************************
+#
+#  Copyright (c) Nokia 2005. All rights reserved.
+#
+# *********************************************************************/
+$CVOPS_init$
+.. Startup macro for the system. Not used by the user.
+path add ../../share/inc/
+r
+
+macro open ../macros/generic_macros.mac
+macro open ../macros/sgsn3g_macros.mac
+macro open ../macros/hlr_macros.mac
+macro open ../macros/gmlc_macros.mac
+macro open ../macros/gmsc_macros.mac
+. set tr ranap3g.con sp Mi1
+. set tr ranap3g sp i1
+. tri2gmm
+. tri1gtpiusgsn3g
+set tr sgsna3g* sp mapi5
+. set tr gmm99Sgsn* sp Mmapi5
+. set tr sccp.con sp Mi2
+. set tr sctp* sp Mmapi5
+. set tr udpif* sp Mmapi5
+set tr all sp Mmapi5
+. set tr dia* sp Mmapi5
+set tr saenas* sp Mmapi5
+set tr s1ap* sp mapi5
+set tr gtp* sp mapi5
+. set tr all off
+l o mme.log
+macro EndAndRun
+
+$CVOPS_after_init$
+.. Startup macro for the system. Not used by the user.
+.. Path_Switch_Request Failure
+. set sgsna3g.con_#0.1 variable x2_ho_fail 1
+
+.. path-switch-req --> s1 error ind
+. set sgsna3g.con_#0.1 variable x2_ho_s1_err 1
+.. Customize S1 cause
+. set_s1_cause
+
+.. suppress S1AP Setup Response
+. set sgsna3g_#0 variable s1_setup_suppress 1
+
+.. set s1ap frame to corrupt one.
+. set s1ap variable s1_bad_pdu 1
+
+.. reset s1 as response to s1 setup
+. set sgsna3g_#0 variable s1_setup_reset 1
+
+.. s1 error as response to s1 setup
+. set sgsna3g_#0 variable s1_setup_error 1
+
+.. x2 ho leads to s1 ctx release.
+. set sgsna3g.con_#0.1 variable x2_ho_s1_rel 1
+
+.. set 'handoverRestrictionList' present in init_ctx_setup
+. set saenas.con_.1 variable ho_res_flag 1
+
+.. erroneous HO Command
+. set saenas.con_.1 variable ho_res_flag 1
+
+.. set 'handoverRestrictionList' present in init_ctx_setup
+. set saenas.con_.1 variable ho_res_flag 1
+
+.. suppress the HO command 
+. set  sgsna3g.con_#0.1 variable s1_ho_suppress 1
+
+.. suppress UE context release request when S1 HO
+. set  sgsna3g.con_#0.1 variable s1_supr_rel 1
+
+macro EndAndRun
+
+$tr$ 
+.. Turns on the full trace for all tasks.
+set tr all sp Mmapi5
+ma EndAndRun
+ 
+$troff$
+.. Turns off all tracing.
+set tr all off
+ma E 
+
+$log$
+.. Opens the log file mme.log for writing.
+l o mme.log
+ma E 
+
+$logoff$ 
+.. Closes the log file mme.log.
+l c
+ma E 
+
+$s1_err_ind$
+sgsna3g_#0 sgsna3gusr_lte_error_indication
+
+1
+y
+1
+n
+y
+n
+n
+n
+n
+y
+0
+n
+
+macro EndAndRun
+
+$nwdet$
+.. Starts NW initited Detach procedure for UE 1.
+sgsna3g.con_#0.1 sgsna3gusr_nw_detach_req
+y
+1
+y
+17
+
+macro EndAndRun
+
+$nws1rel$
+.. NW initiated S1 ctx release.
+set sgsna3g.con_#0.1 variable cust_s1_cause 1
+set sgsna3g.con_#0.1 variable s1_cause_type 2
+set sgsna3g.con_#0.1 variable s1_cause_elem 2
+sgsna3g.con_#0.1 sgsna3gusr_s1_ctx_rel
+
+macro EndAndRun
+
+$update_recovery$
+.. Start updating restart counter
+gtp_mme_#0 gtp_update_restart_counter
+1
+
+ma E
+
+$create_ind$
+.. Start updating restart counter
+gtp_mme_#0 gtp_create_indirect_data_forwarding_tunnel_req
+1
+
+ma E
+
+$delete_ind$
+.. Start updating restart counter
+gtp_mme_#0 gtp_delete_indirect_data_forwarding_tunnel_req 
+1
+
+ma E
+
+$authrej$
+.. Returns Authentication Reject for the UE 1
+set sgsna3g.con_#0.1 variable auth_fail 1
+
+ma E
+
+$emmfail$
+.. Returns Attach Reject (EMM) for the UE 1
+set sgsna3g.con_#0.1 variable att_fail 1
+
+ma E
+
+$esmfail$
+.. Returns Attach Reject (ESM) for the UE 1
+set sgsna3g.con_#0.1 variable att_fail 2
+
+ma E
+
+$dbr_wrong_ebi$
+.. Returns  Reject (ESM) for the UE 1
+set sgsna3g.con_#0.1 variable dbr_wrong_ebi 1
+
+ma E
+
+$serrej$
+.. Returns  Reject (ESM) for the UE 1
+set sgsna3g.con_#0.1 variable ser_fail 1
+
+ma E
+
+$ctxflr$
+send to saenas s1ap_cn_initial_context_setup_failure_cnf
+1
+1
+1
+1
+y
+1
+N
+
+ma E
+
+$ident$
+saenas saenas_ident_req
+1
+y
+3
+
+ma E
+
+$sms$
+saenas SGsAP_DownlinkUnitData_ind
+1
+1
+
+\x0901FFFFFFFF
+
+ma E
+
+$set_s1_cause_in_nas$
+.. set s1 cause
+set saenas.con_.1 variable cust_s1_cause 1
+set saenas.con_.1 variable s1_cause_type 1
+set saenas.con_.1 variable s1_cause_elem 1
+
+ma E
+
+$set_s1_cause$
+.. set s1 cause
+set sgsna3g_#0 variable cust_s1_cause 1
+set sgsna3g_#0 variable s1_cause_type 1
+set sgsna3g_#0 variable s1_cause_elem 1
+
+ma E
+
+$unset_s1_cause$
+.. unset s1 cause
+set sgsna3g_#0 variable cust_s1_cause 0
+
+ma E
+
+$nws1relbal$
+.. NW initiated S1 ctx release. load_balancing_tau_required
+set sgsna3g.con_#0.1 variable cust_s1_cause 1
+set sgsna3g.con_#0.1 variable s1_cause_type 0
+set sgsna3g.con_#0.1 variable s1_cause_elem 22
+sgsna3g.con_#0.1 sgsna3gusr_s1_ctx_rel
+
+ma E
+
+$nws1relnor$
+.. NW initiated S1 ctx release. normal_release
+set sgsna3g.con_#0.1 variable cust_s1_cause 1
+set sgsna3g.con_#0.1 variable s1_cause_type 2
+set sgsna3g.con_#0.1 variable s1_cause_elem 0
+sgsna3g.con_#0.1 sgsna3gusr_s1_ctx_rel
+
+ma E
+
+$nws1reldet$
+.. NW initiated S1 ctx release. detach 
+set sgsna3g.con_#0.1 variable cust_s1_cause 1
+set sgsna3g.con_#0.1 variable s1_cause_type 2
+set sgsna3g.con_#0.1 variable s1_cause_elem 2
+sgsna3g.con_#0.1 sgsna3gusr_s1_ctx_rel
+
+ma E
+
+$nws1relres$
+.. NW initiated S1 ctx release. not-enough-user-plane-processing-resources
+set sgsna3g.con_#0.1 variable cust_s1_cause 1
+set sgsna3g.con_#0.1 variable s1_cause_type 4
+set sgsna3g.con_#0.1 variable s1_cause_elem 1
+sgsna3g.con_#0.1 sgsna3gusr_s1_ctx_rel
+
+ma E
+
+$s1_reset$
+.. Resets all S1-interfaces.
+sgsna3g_#0 sgsna3gusr_lte_reset
+
+1
+y
+1
+y
+0
+n
+
+macro EndAndRun
+
+$s1_reset_partly$
+.. Resets S1-interfaces partly.
+.. setup s1 cause
+set sgsna3g_#0 variable cust_s1_cause 1
+set sgsna3g_#0 variable s1_cause_type 0
+set sgsna3g_#0 variable s1_cause_elem 1
+send to sgsna3g_#0 sgsna3gusr_lte_reset
+
+1    .. enb-id
+y
+1
+n
+y
+y
+y
+1    .. mME-UE-S1AP-ID
+y
+1    .. eNB-UE-S1AP-ID
+N
+
+ma E
+
+$set_s1_bad_pdu$
+.. turn on 'corrupt S1 ASN.1 PDU'
+set s1ap variable s1_bad_pdu 1
+
+ma E
+
+$unset_s1_bad_pdu$
+.. turn off 'corrupt S1 ASN.1 PDU'
+set s1ap variable s1_bad_pdu 0
+
+ma E
+
+$frreq$
+gtp.con_mme_#0.1 gtp_forward_relocation_req
+
+macro EndAndRun
+
+$overloadStart$
+send to s1ap s1ap_cn_overload_start_req
+
+1  ;; uf-eNB-ID
+y
+1  ;; overloadAction
+macro EndAndRun
+
+$overloadStop$
+send to s1ap s1ap_cn_overload_stop_req
+
+1  ;; uf-eNB-ID
+macro EndAndRun
+
+$csfb$
+saenas saenas_cs_service_notification
+1
+1
+
+ma E
+
+$guti_realloc$
+sgsna3g_#0 sg_guti_reallocation
+1
+
+ma E
+
+
+$dbr2$
+sgsna3g.con_#0.1 sgsna3gusr_bearer_release_request_ind
+2
+1
+y
+6
+n
+n
+n
+n
+n
+n
+n
+
+ma E
+
+$pdn_del$
+sgsna3g.con_#0.1 sgsna3gusr_pdn_disconnect_ind
+y
+6
+y
+6
+y
+5
+
+ma E
+
+$MMS$
+sgsna3g_#0 sg_ue_status_imsi_mms
+
+
+ma E
+$MMO$
+sgsna3g_#0 sg_ue_status_imsi_mmo
+
+
+ma E
+
+$scr$
+gtp.con_mme_#0.1 gtp_sgsn_context_request
+
+macro EndAndRun
+
+$cr$
+gtp_mme_#0 mm_connreq
+1
+1
+1
+1
+
+macro EndAndRun
+
+$dbr_wrong_ebi$
+.. set unsupported EBI for dedicated bearer deletion 
+set sgsna3g.con_#0.1 variable dbr_wrong_ebi 1
+
+ma E
+
+$rabsu_neg1$
+msgHandler sgsna3g -ms1ap_cn_handover_required_ind
+negCase1
+macro EndAndRun
+
+$rabsu_neg2$
+msgHandler s1ap -ms1ap_cn_handover_request_req -a
+negCase2
+macro EndAndRun
+
+$negCase1$
+saenas.con_.1 saenas_activate_default_bearer_req
+y
+0
+y
+5
+y
+ggsn.nokia.com.mnc071.mcc588.gprs
+y
+1
+y
+y
+10.140.67.48
+
+y
+\x00000001
+N
+N
+
+macro EndAndRun
+
+$negCase2$
+set saenas.con_.1 variable enbIndex 1
+negCase1
+
+macro EndAndRun
+
+
+$delRabNeg$
+send to s1ap s1ap_cn_sae_bearer_release_command_req
+
+1    ;; enb-id
+1    ;; mME-UE-S1AP-ID
+126    ;; eNB-UE-S1AP-ID
+
+y
+22   ;; e-RAB-ID
+y
+0    ;; cause
+
+
+
+macro EndAndRun
+
+
+$trStart$
+sgsna3g.con_#0.1 sgsna3gusr_trace_start
+
+macro EndAndRun
+
+$trDeact$
+sgsna3g.con_#0.1 sgsna3gusr_deact_trace
+
+macro EndAndRun
+
+$mmeconfupd$
+s1ap s1ap_cn_mme_configuration_update_req
+
+y
+y
+nsn	;;MME Name
+y
+y
+y
+234	;; servedGUMMEIs.elem[0].servedPLMNs.elem[0]
+n
+y
+23	;; servedGroupIDs.elem[0]
+n
+y
+1	;; servedMMECs.elem[0]
+n
+n
+n
+y
+9	;;relativeMMECapacity
+
+macro EndAndRun
+
+
+
+$loc_ctrl$
+s1ap s1ap_cn_location_reporting_control_req
+
+1	;; MME-UE-S1AP-ID
+216	;; eNB-UE-S1AP-ID
+0	;; requestType.eventType
+0	;; requestType.reportArea
+n
+
+macro EndAndRun
+

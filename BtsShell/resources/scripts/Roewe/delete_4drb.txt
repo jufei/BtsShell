@@ -1,0 +1,33 @@
+# TMA Child Script
+
+#########################################
+# Test Step: Delete EPS Bearer Resource #
+#########################################
+
+#------------------------------
+# Delete a NAS Bearer Resource
+#------------------------------
+# PARAMETERS
+# 1. Bearer Resource Identity
+#------------------------------
+#                                1
+#                                |
+forw mte NasDeleteBearerResource 8
+#------------------------------
+
+#####################################
+# Test Step: Activate Configuration #
+#####################################
+
+#--------------------------------
+# Activate pending configuration
+#--------------------------------
+# PARAMETERS
+# 1. Timing Type
+# 2. Activate on Frame Boundary
+#--------------------------------
+#                 1      2 
+#                 |      | 
+forw mte Activate -1 [] [0]
+#--------------------------------
+

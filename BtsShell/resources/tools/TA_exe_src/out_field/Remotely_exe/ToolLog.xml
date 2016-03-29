@@ -1,0 +1,1779 @@
+<log4j:event logger="com.nokia.em.poseidon.PoseidonStarter" timestamp="1365323495024" timezone="Asia/Shanghai" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Initializing Poseidon framework]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.poseidon.PoseidonStarter" timestamp="1365323495047" timezone="Asia/Shanghai" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Poseidon package title = Poseidon, vendor = Nokia Siemens Networks, version = 4.0.87]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.poseidon.plugin.conf.ConfigurationManager" timestamp="1365323495120" timezone="Asia/Shanghai" level="ERROR" thread="main">
+<log4j:message><![CDATA[Cannot find a configuration file: poseidon.xml. Please check that the path is correcly spelled.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.poseidon.plugin.properties.ConfFilePropertyHandler" timestamp="1365323495122" timezone="Asia/Shanghai" level="DEBUG" thread="main">
+<log4j:message><![CDATA[The poseidon.xml failed to load. Poseidon tries to load this default configuration file if no configuration file or application is given as command line parameter. If the Poseidon is desired to be started this way this exception can be ignored.]]></log4j:message>
+<log4j:throwable><![CDATA[com.nokia.em.poseidon.plugin.conf.ConfigurationException: Cannot find the file: poseidon.xml. Please check that the path is correcly spelled.
+	at com.nokia.em.poseidon.plugin.conf.ConfigurationManager.parseConfiguration(ConfigurationManager.java:412)
+	at com.nokia.em.poseidon.plugin.conf.ConfigurationManager.insertConfiguration(ConfigurationManager.java:179)
+	at com.nokia.em.poseidon.plugin.properties.ConfFilePropertyHandler.invoke(ConfFilePropertyHandler.java:41)
+	at com.nokia.em.poseidon.plugin.properties.PropertyManager.checkParams(PropertyManager.java:104)
+	at com.nokia.em.poseidon.PoseidonStarter.initialize(PoseidonStarter.java:153)
+	at com.nokia.em.poseidon.PoseidonStarter.init(PoseidonStarter.java:121)
+	at com.nokia.em.bts.coreasset.application.CoreAssetToolApplication.<init>(CoreAssetToolApplication.java:69)
+	at com.nokia.em.bts.coreasset.application.CoreAssetToolApplication.main(CoreAssetToolApplication.java:705)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.poseidon.plugin.lifecycle.LifecycleManager" timestamp="1365323495130" timezone="Asia/Shanghai" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Current Poseidon Lifecycle status set: NOT_STARTED]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.poseidon.util.logging.LoggerWrapper" timestamp="1365323495166" timezone="Asia/Shanghai" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Loading configuration file: /com/nokia/em/poseidon/config/poseidon_i18n.xml com.nokia.em.poseidon.frameworks.i18n.I18nConfigurator.loadXMLAndBuildDOMTree(I18nConfigurator.java:291)]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.poseidon.plugin.properties.LookAndFeelPropertyHandler" timestamp="1365323495285" timezone="Asia/Shanghai" level="ERROR" thread="main">
+<log4j:message><![CDATA[Can not set LNF parameter: com.nokiasiemens.laf.NetLookAndFeel]]></log4j:message>
+<log4j:throwable><![CDATA[java.lang.ClassNotFoundException: com.nokiasiemens.laf.NetLookAndFeel
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:200)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:188)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:307)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:301)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:252)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:320)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:247)
+	at javax.swing.SwingUtilities.loadSystemClass(SwingUtilities.java:1848)
+	at javax.swing.UIManager.setLookAndFeel(UIManager.java:584)
+	at com.nokia.em.poseidon.plugin.properties.LookAndFeelPropertyHandler.invoke(LookAndFeelPropertyHandler.java:38)
+	at com.nokia.em.poseidon.plugin.properties.PropertyManager.checkParams(PropertyManager.java:104)
+	at com.nokia.em.poseidon.plugin.conf.ConfigurationManager.doExecuteConfiguration(ConfigurationManager.java:461)
+	at com.nokia.em.poseidon.plugin.conf.ConfigurationManager.executeCurrentConfiguration(ConfigurationManager.java:203)
+	at com.nokia.em.poseidon.PoseidonStarter.initialize(PoseidonStarter.java:161)
+	at com.nokia.em.poseidon.PoseidonStarter.init(PoseidonStarter.java:121)
+	at com.nokia.em.bts.coreasset.application.CoreAssetToolApplication.<init>(CoreAssetToolApplication.java:69)
+	at com.nokia.em.bts.coreasset.application.CoreAssetToolApplication.main(CoreAssetToolApplication.java:705)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.poseidon.gui.common.operations.LayoutInitializerOperation" timestamp="1365323495430" timezone="Asia/Shanghai" level="ERROR" thread="main">
+<log4j:message><![CDATA[LAF is probably not in the classpath]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.poseidon.gui.common.operations.LayoutInitializerOperation" timestamp="1365323495433" timezone="Asia/Shanghai" level="ERROR" thread="main">
+<log4j:message><![CDATA[MigLayout is probably not in the classpath]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.poseidon.plugin.lifecycle.LifecycleManager" timestamp="1365323495433" timezone="Asia/Shanghai" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Current Poseidon Lifecycle status set: RUNNING]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.poseidon.PoseidonStarter" timestamp="1365323495433" timezone="Asia/Shanghai" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Poseidon framework initialization finished]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSURLConnection" timestamp="1365323495578" timezone="Asia/Shanghai" level="DEBUG" thread="Thread-2">
+<log4j:message><![CDATA[new BTSURLConnection]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSMessageCreator" timestamp="1365323495589" timezone="Asia/Shanghai" level="DEBUG" thread="Thread-2">
+<log4j:message><![CDATA[btsDisconnect event received]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.CoreAsset" timestamp="1365323495597" timezone="Asia/Shanghai" level="ERROR" thread="Thread-2">
+<log4j:message><![CDATA[Cannot add snapshot saver (CoreAsset_Snapshot_Time) because snapshot manager has not been set]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.application.SiteEMFileParser" timestamp="1365323495609" timezone="Asia/Shanghai" level="DEBUG" thread="Thread-2">
+<log4j:message><![CDATA[getting SiteEM from port 6001]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.application.SiteEMFileParser" timestamp="1365323506470" timezone="Asia/Shanghai" level="ERROR" thread="Thread-2">
+<log4j:message><![CDATA[Failed to get SiteEM:]]></log4j:message>
+<log4j:throwable><![CDATA[java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:333)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:195)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:519)
+	at com.sun.net.ssl.internal.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:550)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:158)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:394)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:529)
+	at sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:271)
+	at sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:328)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:172)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:731)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:158)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(HttpsURLConnectionImpl.java:133)
+	at com.nokia.em.bts.coreasset.application.SiteEMFileParser.connect(SiteEMFileParser.java:84)
+	at com.nokia.em.bts.coreasset.application.SiteEMFileParser.getAddress(SiteEMFileParser.java:34)
+	at com.nokia.em.bts.coreasset.application.tools.ToolBase.parseBTSAddressFromSiteEMXML(ToolBase.java:541)
+	at com.nokia.em.bts.coreasset.application.tools.ToolBase.connect(ToolBase.java:310)
+	at com.nokia.em.bts.coreasset.application.tools.FilesFetcher.fetchFiles(FilesFetcher.java:199)
+	at com.nokia.em.bts.coreasset.application.tools.FileCollectorImpl$1.run(FileCollectorImpl.java:217)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.application.SiteEMFileParser" timestamp="1365323506471" timezone="Asia/Shanghai" level="DEBUG" thread="Thread-2">
+<log4j:message><![CDATA[getting SiteEM from port 80]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.application.SiteEMFileParser" timestamp="1365323516474" timezone="Asia/Shanghai" level="ERROR" thread="Thread-2">
+<log4j:message><![CDATA[Failed to get SiteEM:]]></log4j:message>
+<log4j:throwable><![CDATA[java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:333)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:195)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:519)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:158)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:394)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:529)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:233)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:306)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:323)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:790)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:731)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:656)
+	at com.nokia.em.bts.coreasset.application.SiteEMFileParser.connect(SiteEMFileParser.java:84)
+	at com.nokia.em.bts.coreasset.application.SiteEMFileParser.getAddress(SiteEMFileParser.java:42)
+	at com.nokia.em.bts.coreasset.application.tools.ToolBase.parseBTSAddressFromSiteEMXML(ToolBase.java:541)
+	at com.nokia.em.bts.coreasset.application.tools.ToolBase.connect(ToolBase.java:310)
+	at com.nokia.em.bts.coreasset.application.tools.FilesFetcher.fetchFiles(FilesFetcher.java:199)
+	at com.nokia.em.bts.coreasset.application.tools.FileCollectorImpl$1.run(FileCollectorImpl.java:217)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.application.SiteEMFileParser" timestamp="1365323516475" timezone="Asia/Shanghai" level="DEBUG" thread="Thread-2">
+<log4j:message><![CDATA[getting SiteEM from port 6000]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.application.tools.FilesFetcher" timestamp="1365323526478" timezone="Asia/Shanghai" level="ERROR" thread="Thread-2">
+<log4j:message><![CDATA[Failed to get SiteEM.xml from 10.69.71.97]]></log4j:message>
+<log4j:throwable><![CDATA[java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:333)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:195)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:519)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:158)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:394)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:529)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:233)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:306)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:323)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:790)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:731)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:656)
+	at com.nokia.em.bts.coreasset.application.SiteEMFileParser.connect(SiteEMFileParser.java:84)
+	at com.nokia.em.bts.coreasset.application.SiteEMFileParser.getAddress(SiteEMFileParser.java:48)
+	at com.nokia.em.bts.coreasset.application.tools.ToolBase.parseBTSAddressFromSiteEMXML(ToolBase.java:541)
+	at com.nokia.em.bts.coreasset.application.tools.ToolBase.connect(ToolBase.java:310)
+	at com.nokia.em.bts.coreasset.application.tools.FilesFetcher.fetchFiles(FilesFetcher.java:199)
+	at com.nokia.em.bts.coreasset.application.tools.FileCollectorImpl$1.run(FileCollectorImpl.java:217)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSURLConnection" timestamp="1365323526488" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[new connect]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323526497" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[TrustManager created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323526498" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[SSL Context created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323526499" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[RandomProvider added to security.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323526501" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[SecureRandom instance created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323526501" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[SSLContext initialized.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323526501" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[SSLSocketFactory created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323526502" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[Creating Socket to address 10.69.71.97:12000]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1" timestamp="1365323547513" timezone="Asia/Shanghai" level="WARN" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[Thread CoreAssetThread-2 construct()ed with exception.]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1" timestamp="1365323547514" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[Thread CoreAssetThread-2 has exception ]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl" timestamp="1365323547514" timezone="Asia/Shanghai" level="ERROR" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[connection not created]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl" timestamp="1365323552534" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[reConnecting]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSURLConnection" timestamp="1365323552535" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[new connect]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323552535" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[TrustManager created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323552536" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[SSL Context created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323552536" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[RandomProvider added to security.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323552537" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[SecureRandom instance created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323552537" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[SSLContext initialized.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323552537" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[SSLSocketFactory created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323552537" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[Creating Socket to address 10.69.71.97:12000]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1" timestamp="1365323573542" timezone="Asia/Shanghai" level="WARN" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[Thread CoreAssetThread-4 construct()ed with exception.]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1" timestamp="1365323573543" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[Thread CoreAssetThread-4 has exception ]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl" timestamp="1365323573544" timezone="Asia/Shanghai" level="ERROR" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[connection not created]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl" timestamp="1365323578557" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[reConnecting]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSURLConnection" timestamp="1365323578558" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[new connect]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323578558" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[TrustManager created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323578558" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[SSL Context created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323578559" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[RandomProvider added to security.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323578559" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[SecureRandom instance created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323578559" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[SSLContext initialized.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323578559" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[SSLSocketFactory created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323578559" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[Creating Socket to address 10.69.71.97:12000]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSURLConnection" timestamp="1365323586534" timezone="Asia/Shanghai" level="DEBUG" thread="Thread-8">
+<log4j:message><![CDATA[new BTSURLConnection]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSMessageCreator" timestamp="1365323586535" timezone="Asia/Shanghai" level="DEBUG" thread="Thread-8">
+<log4j:message><![CDATA[btsDisconnect event received]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.CoreAsset" timestamp="1365323586535" timezone="Asia/Shanghai" level="ERROR" thread="Thread-8">
+<log4j:message><![CDATA[Cannot add snapshot saver (CoreAsset_Snapshot_Time) because snapshot manager has not been set]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.application.SiteEMFileParser" timestamp="1365323586535" timezone="Asia/Shanghai" level="DEBUG" thread="Thread-8">
+<log4j:message><![CDATA[getting SiteEM from port 6001]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.application.SiteEMFileParser" timestamp="1365323596541" timezone="Asia/Shanghai" level="ERROR" thread="Thread-8">
+<log4j:message><![CDATA[Failed to get SiteEM:]]></log4j:message>
+<log4j:throwable><![CDATA[java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:333)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:195)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:519)
+	at com.sun.net.ssl.internal.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:550)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:158)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:394)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:529)
+	at sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:271)
+	at sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:328)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:172)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:731)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:158)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(HttpsURLConnectionImpl.java:133)
+	at com.nokia.em.bts.coreasset.application.SiteEMFileParser.connect(SiteEMFileParser.java:84)
+	at com.nokia.em.bts.coreasset.application.SiteEMFileParser.getAddress(SiteEMFileParser.java:34)
+	at com.nokia.em.bts.coreasset.application.tools.ToolBase.parseBTSAddressFromSiteEMXML(ToolBase.java:541)
+	at com.nokia.em.bts.coreasset.application.tools.ToolBase.connect(ToolBase.java:310)
+	at com.nokia.em.bts.coreasset.application.tools.FilesFetcher.fetchFiles(FilesFetcher.java:199)
+	at com.nokia.em.bts.coreasset.application.tools.FileCollectorImpl$1.run(FileCollectorImpl.java:217)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.application.SiteEMFileParser" timestamp="1365323596542" timezone="Asia/Shanghai" level="DEBUG" thread="Thread-8">
+<log4j:message><![CDATA[getting SiteEM from port 80]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1" timestamp="1365323599561" timezone="Asia/Shanghai" level="WARN" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[Thread CoreAssetThread-6 construct()ed with exception.]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1" timestamp="1365323599562" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[Thread CoreAssetThread-6 has exception ]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl" timestamp="1365323599562" timezone="Asia/Shanghai" level="ERROR" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[connection not created]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl" timestamp="1365323604575" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[reConnecting]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSURLConnection" timestamp="1365323604576" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[new connect]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323604576" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[TrustManager created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323604576" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[SSL Context created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323604576" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[RandomProvider added to security.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323604577" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[SecureRandom instance created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323604577" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[SSLContext initialized.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323604577" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[SSLSocketFactory created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323604577" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[Creating Socket to address 10.69.71.97:12000]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.application.SiteEMFileParser" timestamp="1365323606544" timezone="Asia/Shanghai" level="ERROR" thread="Thread-8">
+<log4j:message><![CDATA[Failed to get SiteEM:]]></log4j:message>
+<log4j:throwable><![CDATA[java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:333)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:195)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:519)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:158)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:394)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:529)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:233)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:306)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:323)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:790)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:731)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:656)
+	at com.nokia.em.bts.coreasset.application.SiteEMFileParser.connect(SiteEMFileParser.java:84)
+	at com.nokia.em.bts.coreasset.application.SiteEMFileParser.getAddress(SiteEMFileParser.java:42)
+	at com.nokia.em.bts.coreasset.application.tools.ToolBase.parseBTSAddressFromSiteEMXML(ToolBase.java:541)
+	at com.nokia.em.bts.coreasset.application.tools.ToolBase.connect(ToolBase.java:310)
+	at com.nokia.em.bts.coreasset.application.tools.FilesFetcher.fetchFiles(FilesFetcher.java:199)
+	at com.nokia.em.bts.coreasset.application.tools.FileCollectorImpl$1.run(FileCollectorImpl.java:217)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.application.SiteEMFileParser" timestamp="1365323606545" timezone="Asia/Shanghai" level="DEBUG" thread="Thread-8">
+<log4j:message><![CDATA[getting SiteEM from port 6000]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.application.tools.FilesFetcher" timestamp="1365323616548" timezone="Asia/Shanghai" level="ERROR" thread="Thread-8">
+<log4j:message><![CDATA[Failed to get SiteEM.xml from 10.69.71.97]]></log4j:message>
+<log4j:throwable><![CDATA[java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:333)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:195)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:519)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:158)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:394)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:529)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:233)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:306)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:323)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:790)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:731)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:656)
+	at com.nokia.em.bts.coreasset.application.SiteEMFileParser.connect(SiteEMFileParser.java:84)
+	at com.nokia.em.bts.coreasset.application.SiteEMFileParser.getAddress(SiteEMFileParser.java:48)
+	at com.nokia.em.bts.coreasset.application.tools.ToolBase.parseBTSAddressFromSiteEMXML(ToolBase.java:541)
+	at com.nokia.em.bts.coreasset.application.tools.ToolBase.connect(ToolBase.java:310)
+	at com.nokia.em.bts.coreasset.application.tools.FilesFetcher.fetchFiles(FilesFetcher.java:199)
+	at com.nokia.em.bts.coreasset.application.tools.FileCollectorImpl$1.run(FileCollectorImpl.java:217)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSURLConnection" timestamp="1365323616559" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-4">
+<log4j:message><![CDATA[new connect]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323616560" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-4">
+<log4j:message><![CDATA[TrustManager created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323616561" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-4">
+<log4j:message><![CDATA[SSL Context created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323616561" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-4">
+<log4j:message><![CDATA[RandomProvider added to security.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323616561" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-4">
+<log4j:message><![CDATA[SecureRandom instance created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323616561" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-4">
+<log4j:message><![CDATA[SSLContext initialized.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323616561" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-4">
+<log4j:message><![CDATA[SSLSocketFactory created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323616561" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-4">
+<log4j:message><![CDATA[Creating Socket to address 10.69.71.97:12000]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1" timestamp="1365323625587" timezone="Asia/Shanghai" level="WARN" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[Thread CoreAssetThread-8 construct()ed with exception.]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1" timestamp="1365323625588" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[Thread CoreAssetThread-8 has exception ]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl" timestamp="1365323625588" timezone="Asia/Shanghai" level="ERROR" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[connection not created]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl" timestamp="1365323630599" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[reConnecting]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSURLConnection" timestamp="1365323630600" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[new connect]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323630600" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[TrustManager created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323630600" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[SSL Context created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323630600" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[RandomProvider added to security.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323630600" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[SecureRandom instance created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323630601" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[SSLContext initialized.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323630601" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[SSLSocketFactory created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323630601" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[Creating Socket to address 10.69.71.97:12000]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1" timestamp="1365323637576" timezone="Asia/Shanghai" level="WARN" thread="PoseidonThreadPool-Thread-4">
+<log4j:message><![CDATA[Thread CoreAssetThread-10 construct()ed with exception.]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1" timestamp="1365323637577" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-4">
+<log4j:message><![CDATA[Thread CoreAssetThread-10 has exception ]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl" timestamp="1365323637577" timezone="Asia/Shanghai" level="ERROR" thread="PoseidonThreadPool-Thread-3">
+<log4j:message><![CDATA[connection not created]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl" timestamp="1365323642588" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-3">
+<log4j:message><![CDATA[reConnecting]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSURLConnection" timestamp="1365323642589" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-3">
+<log4j:message><![CDATA[new connect]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323642589" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-3">
+<log4j:message><![CDATA[TrustManager created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323642589" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-3">
+<log4j:message><![CDATA[SSL Context created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323642589" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-3">
+<log4j:message><![CDATA[RandomProvider added to security.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323642590" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-3">
+<log4j:message><![CDATA[SecureRandom instance created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323642590" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-3">
+<log4j:message><![CDATA[SSLContext initialized.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323642590" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-3">
+<log4j:message><![CDATA[SSLSocketFactory created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323642590" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-3">
+<log4j:message><![CDATA[Creating Socket to address 10.69.71.97:12000]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1" timestamp="1365323651619" timezone="Asia/Shanghai" level="WARN" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[Thread CoreAssetThread-12 construct()ed with exception.]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1" timestamp="1365323651620" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[Thread CoreAssetThread-12 has exception ]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl" timestamp="1365323651620" timezone="Asia/Shanghai" level="ERROR" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[connection not created]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl" timestamp="1365323656632" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[reConnecting]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSURLConnection" timestamp="1365323656633" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[new connect]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323656633" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[TrustManager created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323656634" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[SSL Context created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323656634" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[RandomProvider added to security.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323656634" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[SecureRandom instance created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323656634" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[SSLContext initialized.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323656634" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[SSLSocketFactory created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323656635" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[Creating Socket to address 10.69.71.97:12000]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1" timestamp="1365323663584" timezone="Asia/Shanghai" level="WARN" thread="PoseidonThreadPool-Thread-3">
+<log4j:message><![CDATA[Thread CoreAssetThread-14 construct()ed with exception.]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1" timestamp="1365323663585" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-3">
+<log4j:message><![CDATA[Thread CoreAssetThread-14 has exception ]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl" timestamp="1365323663585" timezone="Asia/Shanghai" level="ERROR" thread="PoseidonThreadPool-Thread-4">
+<log4j:message><![CDATA[connection not created]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl" timestamp="1365323668597" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-4">
+<log4j:message><![CDATA[reConnecting]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSURLConnection" timestamp="1365323668598" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-4">
+<log4j:message><![CDATA[new connect]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323668598" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-4">
+<log4j:message><![CDATA[TrustManager created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323668603" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-4">
+<log4j:message><![CDATA[SSL Context created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323668604" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-4">
+<log4j:message><![CDATA[RandomProvider added to security.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323668604" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-4">
+<log4j:message><![CDATA[SecureRandom instance created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323668604" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-4">
+<log4j:message><![CDATA[SSLContext initialized.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323668604" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-4">
+<log4j:message><![CDATA[SSLSocketFactory created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323668605" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-4">
+<log4j:message><![CDATA[Creating Socket to address 10.69.71.97:12000]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSURLConnection" timestamp="1365323677542" timezone="Asia/Shanghai" level="DEBUG" thread="Thread-11">
+<log4j:message><![CDATA[new BTSURLConnection]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSMessageCreator" timestamp="1365323677543" timezone="Asia/Shanghai" level="DEBUG" thread="Thread-11">
+<log4j:message><![CDATA[btsDisconnect event received]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.CoreAsset" timestamp="1365323677544" timezone="Asia/Shanghai" level="ERROR" thread="Thread-11">
+<log4j:message><![CDATA[Cannot add snapshot saver (CoreAsset_Snapshot_Time) because snapshot manager has not been set]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.application.SiteEMFileParser" timestamp="1365323677544" timezone="Asia/Shanghai" level="DEBUG" thread="Thread-11">
+<log4j:message><![CDATA[getting SiteEM from port 6001]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1" timestamp="1365323677637" timezone="Asia/Shanghai" level="WARN" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[Thread CoreAssetThread-16 construct()ed with exception.]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1" timestamp="1365323677638" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[Thread CoreAssetThread-16 has exception ]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl" timestamp="1365323677638" timezone="Asia/Shanghai" level="ERROR" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[connection not created]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl" timestamp="1365323682649" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[reConnecting]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSURLConnection" timestamp="1365323682650" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[new connect]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323682650" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[TrustManager created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323682651" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[SSL Context created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323682651" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[RandomProvider added to security.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323682651" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[SecureRandom instance created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323682651" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[SSLContext initialized.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323682651" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[SSLSocketFactory created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323682651" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[Creating Socket to address 10.69.71.97:12000]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.application.SiteEMFileParser" timestamp="1365323687548" timezone="Asia/Shanghai" level="ERROR" thread="Thread-11">
+<log4j:message><![CDATA[Failed to get SiteEM:]]></log4j:message>
+<log4j:throwable><![CDATA[java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:333)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:195)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:519)
+	at com.sun.net.ssl.internal.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:550)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:158)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:394)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:529)
+	at sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:271)
+	at sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:328)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:172)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:731)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:158)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(HttpsURLConnectionImpl.java:133)
+	at com.nokia.em.bts.coreasset.application.SiteEMFileParser.connect(SiteEMFileParser.java:84)
+	at com.nokia.em.bts.coreasset.application.SiteEMFileParser.getAddress(SiteEMFileParser.java:34)
+	at com.nokia.em.bts.coreasset.application.tools.ToolBase.parseBTSAddressFromSiteEMXML(ToolBase.java:541)
+	at com.nokia.em.bts.coreasset.application.tools.ToolBase.connect(ToolBase.java:310)
+	at com.nokia.em.bts.coreasset.application.tools.FilesFetcher.fetchFiles(FilesFetcher.java:199)
+	at com.nokia.em.bts.coreasset.application.tools.FileCollectorImpl$1.run(FileCollectorImpl.java:217)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.application.SiteEMFileParser" timestamp="1365323687549" timezone="Asia/Shanghai" level="DEBUG" thread="Thread-11">
+<log4j:message><![CDATA[getting SiteEM from port 80]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1" timestamp="1365323689619" timezone="Asia/Shanghai" level="WARN" thread="PoseidonThreadPool-Thread-4">
+<log4j:message><![CDATA[Thread CoreAssetThread-18 construct()ed with exception.]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1" timestamp="1365323689620" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-4">
+<log4j:message><![CDATA[Thread CoreAssetThread-18 has exception ]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl" timestamp="1365323689620" timezone="Asia/Shanghai" level="ERROR" thread="PoseidonThreadPool-Thread-3">
+<log4j:message><![CDATA[connection not created]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl" timestamp="1365323694631" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-3">
+<log4j:message><![CDATA[reConnecting]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSURLConnection" timestamp="1365323694632" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-3">
+<log4j:message><![CDATA[new connect]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323694632" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-3">
+<log4j:message><![CDATA[TrustManager created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323694633" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-3">
+<log4j:message><![CDATA[SSL Context created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323694633" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-3">
+<log4j:message><![CDATA[RandomProvider added to security.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323694633" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-3">
+<log4j:message><![CDATA[SecureRandom instance created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323694633" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-3">
+<log4j:message><![CDATA[SSLContext initialized.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323694633" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-3">
+<log4j:message><![CDATA[SSLSocketFactory created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323694633" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-3">
+<log4j:message><![CDATA[Creating Socket to address 10.69.71.97:12000]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.application.SiteEMFileParser" timestamp="1365323697552" timezone="Asia/Shanghai" level="ERROR" thread="Thread-11">
+<log4j:message><![CDATA[Failed to get SiteEM:]]></log4j:message>
+<log4j:throwable><![CDATA[java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:333)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:195)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:519)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:158)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:394)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:529)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:233)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:306)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:323)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:790)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:731)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:656)
+	at com.nokia.em.bts.coreasset.application.SiteEMFileParser.connect(SiteEMFileParser.java:84)
+	at com.nokia.em.bts.coreasset.application.SiteEMFileParser.getAddress(SiteEMFileParser.java:42)
+	at com.nokia.em.bts.coreasset.application.tools.ToolBase.parseBTSAddressFromSiteEMXML(ToolBase.java:541)
+	at com.nokia.em.bts.coreasset.application.tools.ToolBase.connect(ToolBase.java:310)
+	at com.nokia.em.bts.coreasset.application.tools.FilesFetcher.fetchFiles(FilesFetcher.java:199)
+	at com.nokia.em.bts.coreasset.application.tools.FileCollectorImpl$1.run(FileCollectorImpl.java:217)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.application.SiteEMFileParser" timestamp="1365323697553" timezone="Asia/Shanghai" level="DEBUG" thread="Thread-11">
+<log4j:message><![CDATA[getting SiteEM from port 6000]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1" timestamp="1365323703654" timezone="Asia/Shanghai" level="WARN" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[Thread CoreAssetThread-20 construct()ed with exception.]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1" timestamp="1365323703655" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[Thread CoreAssetThread-20 has exception ]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl" timestamp="1365323703655" timezone="Asia/Shanghai" level="ERROR" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[connection not created]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.application.tools.FilesFetcher" timestamp="1365323707556" timezone="Asia/Shanghai" level="ERROR" thread="Thread-11">
+<log4j:message><![CDATA[Failed to get SiteEM.xml from 10.69.71.97]]></log4j:message>
+<log4j:throwable><![CDATA[java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:333)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:195)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:519)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:158)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:394)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:529)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:233)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:306)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:323)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:790)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:731)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:656)
+	at com.nokia.em.bts.coreasset.application.SiteEMFileParser.connect(SiteEMFileParser.java:84)
+	at com.nokia.em.bts.coreasset.application.SiteEMFileParser.getAddress(SiteEMFileParser.java:48)
+	at com.nokia.em.bts.coreasset.application.tools.ToolBase.parseBTSAddressFromSiteEMXML(ToolBase.java:541)
+	at com.nokia.em.bts.coreasset.application.tools.ToolBase.connect(ToolBase.java:310)
+	at com.nokia.em.bts.coreasset.application.tools.FilesFetcher.fetchFiles(FilesFetcher.java:199)
+	at com.nokia.em.bts.coreasset.application.tools.FileCollectorImpl$1.run(FileCollectorImpl.java:217)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSURLConnection" timestamp="1365323707632" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[new connect]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323707633" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[TrustManager created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323707633" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[SSL Context created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323707633" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[RandomProvider added to security.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323707633" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[SecureRandom instance created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323707633" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[SSLContext initialized.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323707633" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[SSLSocketFactory created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323707634" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[Creating Socket to address 10.69.71.97:12000]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl" timestamp="1365323708670" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-5">
+<log4j:message><![CDATA[reConnecting]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSURLConnection" timestamp="1365323708672" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-5">
+<log4j:message><![CDATA[new connect]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323708672" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-5">
+<log4j:message><![CDATA[TrustManager created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323708673" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-5">
+<log4j:message><![CDATA[SSL Context created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323708673" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-5">
+<log4j:message><![CDATA[RandomProvider added to security.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323708673" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-5">
+<log4j:message><![CDATA[SecureRandom instance created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323708673" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-5">
+<log4j:message><![CDATA[SSLContext initialized.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323708673" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-5">
+<log4j:message><![CDATA[SSLSocketFactory created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323708674" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-5">
+<log4j:message><![CDATA[Creating Socket to address 10.69.71.97:12000]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1" timestamp="1365323715648" timezone="Asia/Shanghai" level="WARN" thread="PoseidonThreadPool-Thread-3">
+<log4j:message><![CDATA[Thread CoreAssetThread-22 construct()ed with exception.]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1" timestamp="1365323715649" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-3">
+<log4j:message><![CDATA[Thread CoreAssetThread-22 has exception ]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl" timestamp="1365323715650" timezone="Asia/Shanghai" level="ERROR" thread="PoseidonThreadPool-Thread-4">
+<log4j:message><![CDATA[connection not created]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl" timestamp="1365323720660" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-4">
+<log4j:message><![CDATA[reConnecting]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSURLConnection" timestamp="1365323720661" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-4">
+<log4j:message><![CDATA[new connect]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323720661" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-4">
+<log4j:message><![CDATA[TrustManager created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323720661" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-4">
+<log4j:message><![CDATA[SSL Context created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323720661" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-4">
+<log4j:message><![CDATA[RandomProvider added to security.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323720662" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-4">
+<log4j:message><![CDATA[SecureRandom instance created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323720662" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-4">
+<log4j:message><![CDATA[SSLContext initialized.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323720662" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-4">
+<log4j:message><![CDATA[SSLSocketFactory created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323720662" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-4">
+<log4j:message><![CDATA[Creating Socket to address 10.69.71.97:12000]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1" timestamp="1365323728630" timezone="Asia/Shanghai" level="WARN" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[Thread CoreAssetThread-24 construct()ed with exception.]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1" timestamp="1365323728631" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[Thread CoreAssetThread-24 has exception ]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl" timestamp="1365323728632" timezone="Asia/Shanghai" level="ERROR" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[connection not created]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1" timestamp="1365323729680" timezone="Asia/Shanghai" level="WARN" thread="PoseidonThreadPool-Thread-5">
+<log4j:message><![CDATA[Thread CoreAssetThread-26 construct()ed with exception.]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1" timestamp="1365323729681" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-5">
+<log4j:message><![CDATA[Thread CoreAssetThread-26 has exception ]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl" timestamp="1365323729681" timezone="Asia/Shanghai" level="ERROR" thread="PoseidonThreadPool-Thread-6">
+<log4j:message><![CDATA[connection not created]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl" timestamp="1365323733643" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-6">
+<log4j:message><![CDATA[reConnecting]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSURLConnection" timestamp="1365323733644" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-6">
+<log4j:message><![CDATA[new connect]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323733644" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-6">
+<log4j:message><![CDATA[TrustManager created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323733644" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-6">
+<log4j:message><![CDATA[SSL Context created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323733644" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-6">
+<log4j:message><![CDATA[RandomProvider added to security.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323733645" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-6">
+<log4j:message><![CDATA[SecureRandom instance created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323733645" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-6">
+<log4j:message><![CDATA[SSLContext initialized.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323733645" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-6">
+<log4j:message><![CDATA[SSLSocketFactory created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323733645" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-6">
+<log4j:message><![CDATA[Creating Socket to address 10.69.71.97:12000]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl" timestamp="1365323734693" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[reConnecting]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSURLConnection" timestamp="1365323734694" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[new connect]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323734694" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[TrustManager created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323734694" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[SSL Context created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323734695" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[RandomProvider added to security.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323734696" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[SecureRandom instance created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323734696" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[SSLContext initialized.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323734696" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[SSLSocketFactory created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323734696" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[Creating Socket to address 10.69.71.97:12000]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1" timestamp="1365323741671" timezone="Asia/Shanghai" level="WARN" thread="PoseidonThreadPool-Thread-4">
+<log4j:message><![CDATA[Thread CoreAssetThread-28 construct()ed with exception.]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1" timestamp="1365323741671" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-4">
+<log4j:message><![CDATA[Thread CoreAssetThread-28 has exception ]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl" timestamp="1365323741672" timezone="Asia/Shanghai" level="ERROR" thread="PoseidonThreadPool-Thread-3">
+<log4j:message><![CDATA[connection not created]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl" timestamp="1365323746685" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-3">
+<log4j:message><![CDATA[reConnecting]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSURLConnection" timestamp="1365323746686" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-3">
+<log4j:message><![CDATA[new connect]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323746686" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-3">
+<log4j:message><![CDATA[TrustManager created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323746686" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-3">
+<log4j:message><![CDATA[SSL Context created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323746686" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-3">
+<log4j:message><![CDATA[RandomProvider added to security.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323746687" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-3">
+<log4j:message><![CDATA[SecureRandom instance created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323746687" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-3">
+<log4j:message><![CDATA[SSLContext initialized.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323746687" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-3">
+<log4j:message><![CDATA[SSLSocketFactory created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323746687" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-3">
+<log4j:message><![CDATA[Creating Socket to address 10.69.71.97:12000]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1" timestamp="1365323754643" timezone="Asia/Shanghai" level="WARN" thread="PoseidonThreadPool-Thread-6">
+<log4j:message><![CDATA[Thread CoreAssetThread-30 construct()ed with exception.]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1" timestamp="1365323754644" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-6">
+<log4j:message><![CDATA[Thread CoreAssetThread-30 has exception ]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl" timestamp="1365323754645" timezone="Asia/Shanghai" level="ERROR" thread="PoseidonThreadPool-Thread-5">
+<log4j:message><![CDATA[connection not created]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1" timestamp="1365323755690" timezone="Asia/Shanghai" level="WARN" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[Thread CoreAssetThread-32 construct()ed with exception.]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1" timestamp="1365323755691" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-1">
+<log4j:message><![CDATA[Thread CoreAssetThread-32 has exception ]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl" timestamp="1365323755692" timezone="Asia/Shanghai" level="ERROR" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[connection not created]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl" timestamp="1365323759662" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[reConnecting]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSURLConnection" timestamp="1365323759663" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[new connect]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323759663" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[TrustManager created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323759664" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[SSL Context created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323759664" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[RandomProvider added to security.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323759664" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[SecureRandom instance created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323759664" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[SSLContext initialized.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323759664" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[SSLSocketFactory created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323759665" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-2">
+<log4j:message><![CDATA[Creating Socket to address 10.69.71.97:12000]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl" timestamp="1365323760703" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-5">
+<log4j:message><![CDATA[reConnecting]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSURLConnection" timestamp="1365323760704" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-5">
+<log4j:message><![CDATA[new connect]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323760704" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-5">
+<log4j:message><![CDATA[TrustManager created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323760704" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-5">
+<log4j:message><![CDATA[SSL Context created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323760705" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-5">
+<log4j:message><![CDATA[RandomProvider added to security.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323760705" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-5">
+<log4j:message><![CDATA[SecureRandom instance created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323760705" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-5">
+<log4j:message><![CDATA[SSLContext initialized.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323760705" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-5">
+<log4j:message><![CDATA[SSLSocketFactory created.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.HttpImpl" timestamp="1365323760705" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-5">
+<log4j:message><![CDATA[Creating Socket to address 10.69.71.97:12000]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1" timestamp="1365323767701" timezone="Asia/Shanghai" level="WARN" thread="PoseidonThreadPool-Thread-3">
+<log4j:message><![CDATA[Thread CoreAssetThread-34 construct()ed with exception.]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1" timestamp="1365323767701" timezone="Asia/Shanghai" level="DEBUG" thread="PoseidonThreadPool-Thread-3">
+<log4j:message><![CDATA[Thread CoreAssetThread-34 has exception ]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+
+<log4j:event logger="com.nokia.em.bts.coreasset.connection.BTSConnectionImpl" timestamp="1365323767702" timezone="Asia/Shanghai" level="ERROR" thread="PoseidonThreadPool-Thread-4">
+<log4j:message><![CDATA[connection not created]]></log4j:message>
+<log4j:throwable><![CDATA[java.io.IOException: Cannot create connection.
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.createSocket(HttpImpl.java:333)
+	at com.nokia.em.bts.coreasset.connection.HttpImpl.connect(HttpImpl.java:407)
+	at com.nokia.em.bts.coreasset.connection.BTSURLConnection.connect(BTSURLConnection.java:529)
+	at com.nokia.em.bts.coreasset.connection.BTSConnectionImpl$3$1.construct(BTSConnectionImpl.java:1390)
+	at com.nokia.em.bts.coreasset.scenario.tool.CoreAssetThread.run(CoreAssetThread.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+]]></log4j:throwable>
+</log4j:event>
+

@@ -1,0 +1,36 @@
+FILTER
+
+  PROPERTIES
+    Title   = "";
+    TypeId  = "BTS message";
+  ENDPROPERTIES
+
+  SCRIPT
+  //Add filter criterias here
+   if(__MSGNBR__ == "0x24AF")
+      if( :ueResp[0].rssi  == 0x01FFFFF6)
+
+         //Shows object matching if rule
+         show
+
+      endif
+
+    else
+      if((__MSGNBR__ == "0x24B1") AND ( :uePuschResp[0].rssi  == 0x01FFFFF6))
+
+           //Shows object matching if rule
+           show
+
+       endif
+       //Shows object matching if rule
+
+    endif
+
+
+
+
+
+  ENDSCRIPT
+
+
+ENDFILTER

@@ -1,0 +1,94 @@
+SETP RRC_NUM_DL_ANTENNAS 2
+forw mte PhySetTDDCfg 1 7
+forw mte SetUEContext 0
+forw mte PhyConfigSysCap 2 4 4
+forw mte SetUEContext 1
+forw mte PhyConfigSysCap 2 4 4
+forw mte SetUEContext 2
+forw mte PhyConfigSysCap 2 4 4
+forw mte SetUEContext 3
+forw mte PhyConfigSysCap 2 4 4
+forw mte SetUEContext 4
+forw mte PhyConfigSysCap 2 4 4
+forw mte SetUEContext 0
+forw mte UsimConfig 1([262030020000851 2]) [] [] [A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5]
+forw mte SetUEContext 1
+forw mte UsimConfig 1([262030020000852 2]) [] [] [A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5]
+forw mte SetUEContext 2
+forw mte UsimConfig 1([262030020000853 2]) [] [] [A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5]
+forw mte SetUEContext 3
+forw mte UsimConfig 1([262030020000854 2]) [] [] [A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5]
+forw mte SetUEContext 4
+forw mte UsimConfig 1([262030020000855 2]) [] [] [A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5]
+forw mte SetUEContext 0
+forw mte NasAptConfigCapability [] [224] [224]
+forw mte SetUEContext 1
+forw mte NasAptConfigCapability [] [224] [224]
+forw mte SetUEContext 2
+forw mte NasAptConfigCapability [] [224] [224]
+forw mte SetUEContext 3
+forw mte NasAptConfigCapability [] [224] [224]
+forw mte SetUEContext 4
+forw mte NasAptConfigCapability [] [224] [224]
+forw mte SetUEContext 0
+forw mte NasAptConfigPlmnSelection 26203
+forw mte SetUEContext 1
+forw mte NasAptConfigPlmnSelection 26203
+forw mte SetUEContext 2
+forw mte NasAptConfigPlmnSelection 26203
+forw mte SetUEContext 3
+forw mte NasAptConfigPlmnSelection 26203
+forw mte SetUEContext 4
+forw mte NasAptConfigPlmnSelection 26203
+forw mte PhyConfigUlPowerOffset 32{0 70 70 [70],1 70 70 [70],2 70 70 [70],3 70 70 [70],4 70 70 [70],5 70 70 [70],6 70 70 [70],7 70 70 [70],8 70 70 [70],9 70 70 [70],10 70 70 [70],11 70 70 [70],12 70 70 [70],13 70 70 [70],14 70 70 [70],15 70 70 [70],16 70 70 [70],17 70 70 [70],18 70 70 [70],19 70 70 [70],20 70 70 [70],21 70 70 [70],22 70 70 [70],23 70 70 [70],24 70 70 [70],25 70 70 [70],26 70 70 [70],27 70 70 [70],28 70 70 [70],29 70 70 [70],30 70 70 [70],31 70 70 [70]}
+forw mte SetUEContext 0
+forw mte RrcAptConfigCellSelection 23500 [1]
+forw mte SetUEContext 1
+forw mte RrcAptConfigCellSelection 23500 [1]
+forw mte SetUEContext 2
+forw mte RrcAptConfigCellSelection 23500 [1]
+forw mte SetUEContext 3
+forw mte RrcAptConfigCellSelection 23500 [1]
+forw mte SetUEContext 4
+forw mte RrcAptConfigCellSelection 23500 [1]
+forw mte SetUEContext 0
+forw mte NasConfigEmmRegister 0(0 [0] [0] [0] [0])
+forw mte SetUEContext 1
+forw mte NasConfigEmmRegister 0(0 [0] [0] [0] [0])
+forw mte SetUEContext 2
+forw mte NasConfigEmmRegister 0(0 [0] [0] [0] [0])
+forw mte SetUEContext 3
+forw mte NasConfigEmmRegister 0(0 [0] [0] [0] [0])
+forw mte SetUEContext 4
+forw mte NasConfigEmmRegister 0(0 [0] [0] [0] [0])
+forw mte SetUEContext 0
+forw mte RrcAptConfigCapability [2]
+forw mte SetUEContext 1
+forw mte RrcAptConfigCapability [2]
+forw mte SetUEContext 2
+forw mte RrcAptConfigCapability [2]
+forw mte SetUEContext 3
+forw mte RrcAptConfigCapability [2]
+forw mte SetUEContext 4
+forw mte RrcAptConfigCapability [2]
+forw mte SetUEContext 0
+SETP L2_MAC_DISABLE_SR_INIT_RACH_IF_SR_NOT_CFG 1
+forw mte SetUEContext 1
+SETP L2_MAC_DISABLE_SR_INIT_RACH_IF_SR_NOT_CFG 1
+forw mte SetUEContext 2
+SETP L2_MAC_DISABLE_SR_INIT_RACH_IF_SR_NOT_CFG 1
+forw mte SetUEContext 3
+SETP L2_MAC_DISABLE_SR_INIT_RACH_IF_SR_NOT_CFG 1
+forw mte SetUEContext 4
+SETP L2_MAC_DISABLE_SR_INIT_RACH_IF_SR_NOT_CFG 1
+forw mte SetUEContext 0
+SETP RRC_DISABLE_ACCESS_CONTROL_BARRING_CHECKS 1
+forw mte SetUEContext 1
+SETP RRC_DISABLE_ACCESS_CONTROL_BARRING_CHECKS 1
+forw mte SetUEContext 2
+SETP RRC_DISABLE_ACCESS_CONTROL_BARRING_CHECKS 1
+forw mte SetUEContext 3
+SETP RRC_DISABLE_ACCESS_CONTROL_BARRING_CHECKS 1
+forw mte SetUEContext 4
+SETP RRC_DISABLE_ACCESS_CONTROL_BARRING_CHECKS 1
+forw mte Activate -1 [] [1]

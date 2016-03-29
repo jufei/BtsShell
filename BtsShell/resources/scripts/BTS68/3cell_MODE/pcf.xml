@@ -1,0 +1,6 @@
+<config>
+    <tag name="app.oam.oam.role" type="string">master</tag>
+    <tag name="app.oam.sync.master" type="string">TRUE</tag>
+    <tag name="app.trs.sharedSFPRole" type="string">RP301</tag>
+    <tag name="app.oam.startup.loadIndication" type="string">OBSAI</tag>
+</config>

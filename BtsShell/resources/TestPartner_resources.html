@@ -1,0 +1,5033 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+html {
+  font-family: Arial,Helvetica,sans-serif;
+  background-color: white;
+  color: black;
+}
+table {
+  border-collapse: collapse;
+  empty-cells: show;
+  margin: 1em 0em;
+  border: 1px solid black;
+}
+th, td {
+  border: 1px solid black;
+  padding: 0.1em 0.2em;
+  height: 1.5em;
+  width: 12em;
+}
+td.colspan4, th.colspan4 {
+    width: 48em;
+}
+td.colspan3, th.colspan3 {
+    width: 36em;
+}
+td.colspan2, th.colspan2 {
+    width: 24em;
+}
+th {
+  background-color: rgb(192, 192, 192);
+  color: black;
+  height: 1.7em;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+td.name {
+  background-color: rgb(240, 240, 240);
+  letter-spacing: 0.1em;
+}
+td.name, th.name {
+  width: 10em;
+}
+</style>
+<title>TestPartner resources</title>
+</head>
+<body>
+<h1>TestPartner resources</h1>
+<table border="1" id="setting">
+<tr>
+<th class="name" colspan="5">Settings</th>
+</tr>
+<tr>
+<td class="name">Documentation</td>
+<td class="colspan4" colspan="4">This keyword is used to logon BTS Site Manager\n<br>
+</td>
+</tr>
+<tr>
+<td class="name">Resource</td>
+<td>Common_resource.html</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table border="1" id="keyword">
+<tr>
+<th class="name" colspan="5">Keywords</th>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner PC Operation">TestPartner PC Operation</a></td>
+<td>[Arguments]</td>
+<td>${input_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used for PC operation\n<br>
+\n<br>
+Input:\n<br>
+| Input Parameters \ | Mandatory | Description |\n<br>
+| ${input_list} | Yes | A list including pc_acton and other necessary info |\n<br>
+\n<br>
+Usage:\n<br>
+| TestPartner PC Operation | ${input_list} |\n<br>
+\n<br>
+\n<br>
+Note:\n<br>
+1) The input list should include the parameter pc_action which indicate which action will be taken.\n<br>
+2) If pc_action=MODIFY_LOCALLY_ADMINISTERED_ADDRESS, the paremeter locally_administered_address is required.\n<br>
+\n<br>
+Here's the examples for the input list\n<br>
+1) Modify locally administered address\n<br>
+| ${input_list} | pc_action=MODIFY_LOCALLY_ADMINISTERED_ADDRESS | locally_administered_address=1.2.3.4 |\n<br>
+\n<br>
+\n<br>
+2) Set TCP/IP to be obtained automatically\n<br>
+| ${input_list} | pc_action=SET_TCP_IP_AUTOMATICALLY |\n<br>
+\n<br>
+\n<br>
+3) Check FTM system information\n<br>
+| ${input_list} | pc_action=CHECK_FTM_SYSTEM_INFORMATION |\n<br>
+\n<br>
+\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${input_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run TestPartner Command</td>
+<td>PC_Operation</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SM BTS Commissioning">TestPartner SM BTS Commissioning</a></td>
+<td>[Arguments]</td>
+<td>${input_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used to do BTS Commissioning in Site Manager\n<br>
+\n<br>
+Input:\n<br>
+\ | Input Parameters \ | Mandatory | Description |\n<br>
+\ | ${input_list} \ | Yes \ | a list including necessary info |\n<br>
+\n<br>
+\n<br>
+Usage:\n<br>
+| TestPartner SM BTS Commissioning | ${input_list} |\n<br>
+\n<br>
+\n<br>
+Note:\n<br>
+1) The input list should include the parameter BTS_page which specify the page to be updated, such as TRS_page=BTS_Settings\n<br>
+2) If you want to update multiple pages, you need to indicate it in BTS_page as follows\n<br>
+\ \ \ BTS_page=LTE_Carriers:BTS_Settings:Cell_Resources\n<br>
+3) If there's BTS_Settings in BTS_page, you need to input the field and value via the following parameters\n<br>
+\ \ \ BTS_Settings_field=BTS_name\n<br>
+\ \ \ BTS_Settings_value=BTS66\n<br>
+Similarly, if there's LTE_Carriers in BTS_page, you need to input the field and value via the following parameters\n<br>
+\ \ LTE_Carriers_field=Bandwidth\n<br>
+\ \ LTE_Carriers_value=20 MHz\n<br>
+Same for other pages.\n<br>
+4) In the same page, if you want to update multiple fields, conjoin them with ":".\n<br>
+5) On Cell_Resources page, Cell_Resources_field specify the cells to be updated. \n<br>
+\ \ \ \ Cell_Resources_field=Localcell1\n<br>
+\ \ \ Cell_Resources_value specify the field/value to be upated for the corresponding cell\n<br>
+\ \ \ \ \ Cell_Resources_field=field1=value1,field2=value2,field3=values\n<br>
+\ \ \ \ \ For multiple fields in a cell, conjoin them with ",".\n<br>
+\ \ \ \ \ For multiple cells, conjoin them with ":" just as the common field.\n<br>
+6) Not all fields for BTS commissioning have been added in this script.\n<br>
+\n<br>
+\n<br>
+Here's some examples for the input list\n<br>
+1) BTS Settings\n<br>
+1.1) Update BTS_name\n<br>
+\ \ \ BTS_page=BTS_Settings\n<br>
+\ \ \ BTS_Settings_field=BTS_name\n<br>
+\ \ \ BTS_Settings_value=BTS66\n<br>
+\n<br>
+2) Cell Resources\n<br>
+2.1) Update MIMO type\n<br>
+a) For single cell\n<br>
+\ \ \ BTS_page=Cell_Resources\n<br>
+\ \ \ Cell_Resources_field=Localcell1\n<br>
+\ \ \ Cell_Resources_value=MIMO_type=TXDiv\n<br>
+b) For 3 cell\n<br>
+\ \ \ BTS_page=Cell_Resources\n<br>
+\ \ \ Cell_Resources_field=Localcell1:Localcell2:Localcell3\n<br>
+\ \ \ Cell_Resources_value=MIMO_type=TXDiv:MIMO_type=Static Open Loop MIMO:MIMO_type=Closed Loop Mimo\n<br>
+c) For any cells\n<br>
+\ \ \ \ BTS_page=Cell_Resources\n<br>
+\ \ \ Cell_Resources_field=Localcell2:Localcell1\n<br>
+\ \ \ Cell_Resources_value=MIMO_type=TXDiv:MIMO_type=Static Open Loop MIMO\n<br>
+d) for multiple fields in multiple cells\n<br>
+\ \ \ \ BTS_page=Cell_Resources\n<br>
+\ \ \ Cell_Resources_field=Localcell1:Localcell2\n<br>
+\ \ \ Cell_Resources_value=MIMO_type=TXDiv,Power=5:MIMO_type=Static Open Loop MIMO,Power=5\n<br>
+2.2) Support the following fields as well\n<br>
+Power\n<br>
+\n<br>
+3) LTE Carriers\n<br>
+3.1) \ Update Bandwidth and EARFCN\n<br>
+\ \ BTS_page=LTE_Carriers\n<br>
+\ \ LTE_Carriers_field=Bandwidth:EARFCN\n<br>
+\ \ LTE_Carriers_value=10 MHz:1-38000,2-38000,3-38000\n<br>
+\n<br>
+\n<br>
+4) Update all the above fields\n<br>
+\ \ BTS_page=LTE_Carriers:BTS_Settings:Cell_Resources\n<br>
+\ \ BTS_Settings_field=BTS_name\n<br>
+\ \ BTS_Settings_value=BTS66\n<br>
+\ \ LTE_Carriers_field=Bandwidth:EARFCN\n<br>
+\ \ LTE_Carriers_value=10 MHz:1-38000,2-38000,3-38000\n<br>
+\ \ Cell_Resources_field=Localcell1\n<br>
+\ \ Cell_Resources_value=MIMO_type=TXDiv\n<br>
+\n<br>
+\n<br>
+5) Module Settings\n<br>
+5.1) Update Climate control profilling table. Click 'In use' and update Profile for FZNI 1.1.1;Update Profile for FZNI 1.3.1\n<br>
+BTS_page=Module_Settings\n<br>
+Module_Settings_field=Climate control profilling\n<br>
+Module_Settings_value=FZNI 1.1.1-1-Linear&amp;FZNI 1.3.1-N-Linear\n<br>
+Note: 1) For multiple rows, conjoin with "&amp;"\n<br>
+\ \ \ \ \ \ \ 2) N means ignore the responding column\n<br>
+\ \ \ \ \ \ \ 3) Colomn format\n<br>
+\ \ \ \ \ \ \ \ \ \ \ \ Module-In use-Profile</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${input_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run TestPartner Command</td>
+<td>BTS_Commissioning</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SM BTS Commissioning Check">TestPartner SM BTS Commissioning Check</a></td>
+<td>[Arguments]</td>
+<td>${input_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used to check BTS Commissioning in Site Manager\n<br>
+\n<br>
+Input:\n<br>
+\ | Input Parameters \ | Mandatory | Description |\n<br>
+\ | ${input_list} \ | Yes \ | a list including necessary info |\n<br>
+\n<br>
+\n<br>
+Usage:\n<br>
+| TestPartner SM BTS Commissioning | ${input_list} |\n<br>
+\n<br>
+\n<br>
+Note:\n<br>
+1) The input list should include the parameter BTS_page which specify the page to be updated, such as TRS_page=BTS_Settings\n<br>
+2) If you want to check multiple pages, you need to indicate it in BTS_page as follows\n<br>
+\ \ \ BTS_page=LTE_Carriers:BTS_Settings:Cell_Resources\n<br>
+3) If there's BTS_Settings in BTS_page, you need to input the field and value via the following parameters\n<br>
+\ \ \ BTS_Settings_field=BTS_name\n<br>
+\ \ \ BTS_Settings_value=BTS66\n<br>
+Similarly, if there's Cell_Resources in BTS_page, you need to input the field and value via the following parameters\n<br>
+\ \ Cell_Resources_field=MIMO_type\n<br>
+\ \ Cell_Resources_value=TXDiv\n<br>
+Same for other pages.\n<br>
+4) In the same page, if you want to check multiple fields, conjoin them with ":".\n<br>
+5) On Cell_Resources page, Cell_Resources_field specify the cells to be checked. \n<br>
+\ \ \ \ Cell_Resources_field=Localcell1\n<br>
+\ \ \ Cell_Resources_value specify the field/value to be upated for the corresponding cell\n<br>
+\ \ \ \ \ Cell_Resources_field=field1=value1,field2=value2,field3=values\n<br>
+\ \ \ \ \ For multiple fields in a cell, conjoin them with ",".\n<br>
+\ \ \ \ \ For multiple cells, conjoin them with ":" just as the common field.\n<br>
+6) Not all fields for BTS commissioning have been added in this script.\n<br>
+\n<br>
+\n<br>
+Here's some examples for the input list\n<br>
+1) Check "BTS name" on BTS_Settings page\n<br>
+\ \ \ BTS_page=BTS_Settings\n<br>
+\ \ \ BTS_Settings_field=BTS_name\n<br>
+\ \ \ BTS_Settings_value=BTS66\n<br>
+\n<br>
+2) Check MIMO type on Cell_Resources page\n<br>
+2.1) For single cell\n<br>
+\ \ \ BTS_page=Cell_Resources\n<br>
+\ \ \ Cell_Resources_field=Localcell1\n<br>
+\ \ \ Cell_Resources_value=MIMO_type=TXDiv\n<br>
+2.2) For 3 cell\n<br>
+\ \ \ BTS_page=Cell_Resources\n<br>
+\ \ \ Cell_Resources_field=Localcell1:Localcell2:Localcell3\n<br>
+\ \ \ Cell_Resources_value=MIMO_type=TXDiv:MIMO_type=Static Open Loop MIMO:MIMO_type=Closed Loop Mimo\n<br>
+2.3) For any cells\n<br>
+\ \ \ \ BTS_page=Cell_Resources\n<br>
+\ \ \ Cell_Resources_field=Localcell2:Localcell1\n<br>
+\ \ \ Cell_Resources_value=MIMO_type=TXDiv:MIMO_type=Static Open Loop MIMO\n<br>
+\n<br>
+4) Check all the above fields\n<br>
+\ \ BTS_page=BTS_Settings:Cell_Resources\n<br>
+\ \ BTS_Settings_field=BTS_name\n<br>
+\ \ BTS_Settings_value=BTS66\n<br>
+\ \ Cell_Resources_field=Localcell1\n<br>
+\ \ Cell_Resources_value=MIMO_type=TXDiv\n<br>
+\n<br>
+5) Check Bandwidth and EARFCN on LTE_Carriers page\n<br>
+\ \ BTS_page=LTE_Carriers\n<br>
+\ \ LTE_Carriers_field=Bandwidth:EARFCN\n<br>
+\ \ LTE_Carriers_value=10 MHz:1-38000,2-38000,3-38000\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${input_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run TestPartner Command</td>
+<td>BTS_Commissioning_Check</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SM BTS HW Action">TestPartner SM BTS HW Action</a></td>
+<td>[Arguments]</td>
+<td>${button_name}</td>
+<td>${action_name}</td>
+<td>${option_name}=${Empty}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used for the actions of BTS Hardware on Site Manager. You need to input the action name and the button name where the action is taken. For the RF Block Module action, users can input the specific option (such as Block Module and Cells) on the pop-up window via the parameter option_name\n<br>
+\n<br>
+Input:\n<br>
+| Input Parameters \ | Mandatory | Description |\n<br>
+| button_name \ | Yes \ | The button name where the field to be checked |\n<br>
+| action_name | Yes \ \ | The name of the acton to be taken |\n<br>
+| option_name \ | No \ \ | The option on the pop-up windon. Default is empty |\n<br>
+\n<br>
+\n<br>
+Usage:\n<br>
+| TestPartner SM BTS HW Action | button_name | action_name | option_name(optional) |\n<br>
+\n<br>
+Action includes:\n<br>
+Block BTS\n<br>
+Unblock BTS\n<br>
+Reset Site\n<br>
+Block Module\n<br>
+Unblock Module\n<br>
+Reset Module\n<br>
+Block Local Cell\n<br>
+Unblock Local Cell\n<br>
+\n<br>
+Here's the button name for reference\n<br>
+LTE Flexi BTS\n<br>
+FZHA1.1.1\n<br>
+FZOB1.1.1\n<br>
+FZNC1.1.1\n<br>
+FYGA\n<br>
+FSMF1\n<br>
+LocalCell1\n<br>
+FZFD1.1.1\n<br>
+FZND1.1.1\n<br>
+FZNK1.1.1\n<br>
+FZFA1.1.1\n<br>
+FZNI1.1.1\n<br>
+FZNB1.1.1\n<br>
+\n<br>
+\n<br>
+\n<br>
+The followings are the examples for useing this keyword\n<br>
+1) Block BTS\n<br>
+| TestPartner SM BTS HW Action | LTE Flexi BTS | Block BTS |\n<br>
+\n<br>
+\n<br>
+2) Block Module for FZHA1.1.1. Select "Block Module" on the pop-up window by default\n<br>
+| TestPartner SM BTS HW Action | FZHA1.1.1 | Block Module |\n<br>
+\n<br>
+\n<br>
+3) Block Module for FZHA1.1.1. Select "Block Module and Cells" or "Block Cells and Module" on the pop-up window.\n<br>
+| TestPartner SM BTS HW Action | FZHA1.1.1 | Block Module | Block Module and Cells | or\n<br>
+| TestPartner SM BTS HW Action | FZHA1.1.1 | Block Module | Block Cells and Module |\n<br>
+\n<br>
+\n<br>
+4) Block Local Cell\n<br>
+| TestPartner SM BTS HW Action | LocalCell1 | Block Local Cell |\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${para_list}</td>
+<td>Create List</td>
+<td>button_name=${button_name}</td>
+<td>action_name=${action_name}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>option_name=${option_name}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${para_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>run_testpartner_command</td>
+<td>BTS_HW_action</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SM Certificate Management">TestPartner SM Certificate Management</a></td>
+<td>[Arguments]</td>
+<td>${list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used for the action on menu Configuraton-&gt;Certificate Management.\n<br>
+\n<br>
+\n<br>
+Input:\n<br>
+\ | Input Parameters \ | Mandatory | Description |\n<br>
+\ | ${input_list} \ | Yes \ | a list including necessary info |\n<br>
+\n<br>
+\n<br>
+Usage:\n<br>
+| TestPartner SM Certification Management | ${input_list} |\n<br>
+\n<br>
+\n<br>
+The input list should include the following information\n<br>
+1) certification_action to indicate which action needs to be taken\n<br>
+2) The necessary info to take the specific action\n<br>
+\n<br>
+\n<br>
+Here are the examples for the input list\n<br>
+1) Update fields on Automatic Management tab and click Send and 'Initialize Certificates and CRL', then empty fields of CMP/CA server and click Send\n<br>
+certification_action=Certificate Management\n<br>
+and\n<br>
+and some of the followings\n<br>
+CMP_CA_server_address=10.8.207.54\n<br>
+CMP_CA_server_address_port=28\n<br>
+CA_subject_name=C=FI, O=NSN, CN=MRTAmpereNewRootCA\n<br>
+Reference_number=123\n<br>
+Pre_shared_key=456\n<br>
+CA_certificate_and_trust_anchor=200\n<br>
+BTS_certificate=40\n<br>
+CRL_update_interval=10\n<br>
+\n<br>
+2) Update fields on Automatic Management tab and click send, "Initialize Certificates and CRL" and "Update CRL", then empty fields of CMP/CA server and click Send\n<br>
+certification_action=Certificate CRL Management\n<br>
+and some of the followings\n<br>
+CMP_CA_server_address=10.8.207.54\n<br>
+CMP_CA_server_address_port=28\n<br>
+CA_subject_name=C=FI, O=NSN, CN=MRTAmpereNewRootCA\n<br>
+Reference_number=123\n<br>
+Pre_shared_key=456\n<br>
+CA_certificate_and_trust_anchor=200\n<br>
+BTS_certificate=40\n<br>
+CRL_update_interval=10\n<br>
+\n<br>
+3) Delete CA certificates on BTS Certificates tab\n<br>
+certification_action=Delete CA Certificate\n<br>
+certificate_name=IV 4096\n<br>
+\n<br>
+4) Add certificate on Element Manager Certificates tab\n<br>
+certification_action=Add Certificate\n<br>
+certificate_file=D:\\Testpartner\\test\\cert1.pem\n<br>
+\n<br>
+5) Delete certificate on Element Manager Certificates tab\n<br>
+certification_action=Delete Certificate\n<br>
+certificate_name=IV 4096\n<br>
+\n<br>
+6) Update the fields on Automatic Management tab and send the updates\n<br>
+certification_action=Update Automatic Configuration\n<br>
+and some of the followings\n<br>
+CMP_CA_server_address=10.8.207.54\n<br>
+CMP_CA_server_address_port=28\n<br>
+CA_subject_name=C=FI, O=NSN, CN=MRTAmpereNewRootCA\n<br>
+Reference_number=123\n<br>
+Pre_shared_key=456\n<br>
+CA_certificate_and_trust_anchor=200\n<br>
+BTS_certificate=40\n<br>
+CRL_update_interval=10\n<br>
+\n<br>
+7) Validate the input on Automatic Management tab\n<br>
+certification_action=Validate Automatic Configuration\n<br>
+and one of the followings\n<br>
+Reference_number=123\n<br>
+CA_subject_name=""\n<br>
+Pre_shared_key=111\n<br>
+\n<br>
+8) Set the CMP/CA Server information back to null on Automatic Management tab and send the updates\n<br>
+certification_action=Recover Automatic Configuration\n<br>
+and some of the followings\n<br>
+CMP_CA_server_address=1\n<br>
+CA_subject_name=1\n<br>
+Reference_number=1\n<br>
+Pre_shared_key=1\n<br>
+\n<br>
+9) Click "Update CRL" and check CRL\n<br>
+certification_action=Update CRL\n<br>
+\n<br>
+10) Validate CA Certificate on BTS Certificates tab\n<br>
+certification_action=Validate CA Certificate\n<br>
+CA_certificate_file=D:\\Testpartner\\test\\cert1.pem\n<br>
+\n<br>
+11) Validate BTS Certificate on BTS Certificates tab\n<br>
+certification_action=Validate BTS Certificate\n<br>
+BTS_certificate_file=D:\\Testpartner\\test\cert2.pem\n<br>
+Private_key=D:\\Testpartner\\test\\privkey1.pem\n<br>
+\n<br>
+12) Install CA Certificate\n<br>
+certification_action=Install CA Certificate\n<br>
+CA_certificate_file=D:\\Testpartner\\testoot_cert_011db249_54b18c55.pem\n<br>
+\n<br>
+13) Install BTS Certificate\n<br>
+certification_action=Install BTS Certificate\n<br>
+BTS_certificate_file=D:\\Testpartner\\test\\cert1.pem\n<br>
+Private_key=D:\\Testpartner\\test\\privkey1.pem\n<br>
+\n<br>
+14) Install Certificate\n<br>
+certification_action=Install Certificate\n<br>
+BTS_certificate_file=D:\\Testpartner\\test\\cert1.pem\n<br>
+Private_key=D:\\Testpartner\\test\\privkey1.pem\n<br>
+CA_certificate_file=D:\\Testpartner\\testoot_cert_011db249_54b18c55.pem\n<br>
+\n<br>
+15) Click Initialize Certificates and CRL button\n<br>
+certification_action=Initialize Certificates CRL\n<br>
+\n<br>
+16) Click Initialization Certificates and CRL multiple time to check CRL information\n<br>
+certification_action=Multiple Check CRL\n<br>
+and some of the followings\n<br>
+CMP_CA_server_address=10.8.207.54\n<br>
+CMP_CA_server_address_port=28\n<br>
+CA_subject_name=C=FI, O=NSN, CN=MRTAmpereNewRootCA\n<br>
+Reference_number=123\n<br>
+Pre_shared_key=456\n<br>
+CA_certificate_and_trust_anchor=200\n<br>
+BTS_certificate=40\n<br>
+CRL_update_interval=10\n<br>
+\n<br>
+17) Check certificate lifetime\n<br>
+certification_action=Check Certificate Lifetime\n<br>
+BTS_certificate_file=D:\\Testpartner\\test\\cert1.pem\n<br>
+Private_key=D:\\Testpartner\\test\\privkey1.pem\n<br>
+CA_certificate_file=D:\\Testpartner\\testoot_cert_011db249_54b18c55.pem\n<br>
+certificate_valid_from=15-Jan-2013\n<br>
+certificate_valid_to=13-Jan-2013\n<br>
+\n<br>
+18) Check certificates in the table under "BTS Certificates"\n<br>
+certification_action=Check Certificates Exist\n<br>
+check_column=Issued to:Serial number:Valid from\n<br>
+check_certificates=IV 4096:1a 9b 42 80:14-Jan-2012&amp;FtmFlexiNodeSerialNoRY110409745:1b 67 8b 6e:15-Jan-2012\n<br>
+Note:1) check_column specify which column needs to be checked, for multiple column, conjoin it with ":"\n<br>
+2) check_certificates specify the desired cell value in table. For multiple rows, conjoin it with "&amp;"\n<br>
+3) The above examples means to check the certificates where Issued to is IV 4096 and Serial number is 1a 9b 42 80 and Valid from is 14-Jan-2012 and the certificates where Issued to is FtmFlexiNodeSerialNoRY110409745 and Serial number is 1b 67 8b 6e and Valid from is 15-Jan-2012 exist\n<br>
+\n<br>
+19) Update fields on Automatic Management tab and click Send and 'Initialize Certificates and CRL'\n<br>
+certification_action=Update and Initialize Certificates\n<br>
+and\n<br>
+and some of the followings\n<br>
+CMP_CA_server_address=10.8.207.54\n<br>
+CMP_CA_server_address_port=28\n<br>
+CA_subject_name=C=FI, O=NSN, CN=MRTAmpereNewRootCA\n<br>
+Reference_number=123\n<br>
+Pre_shared_key=456\n<br>
+CA_certificate_and_trust_anchor=200\n<br>
+BTS_certificate=40\n<br>
+CRL_update_interval=10\n<br>
+\n<br>
+20) Check BTS certificate in the table under "BTS Certificates"\n<br>
+certification_action=Check BTS Certificate Exists\n<br>
+check_column=Issued by:Issued to:Valid from:Valid to:Serial number:Fingerprint\n<br>
+check_certificates=CRL_BYNAME:FtmFlexiNodeSerialNoL1114500818:15-Jan-2013:05-Feb-2013:03 fa 46 ee:0b 5b 2c\n<br>
+\n<br>
+21)Check Certificate invlid character\n<br>
+1)check textfield CA_subject_name\n<br>
+certification_action=Check Certificate Invalid Character\n<br>
+CA_subject_name=}\n<br>
+2)check textfield Reference_number\n<br>
+certification_action=Check Certificate Invalid Character\n<br>
+Reference_number=]\n<br>
+3)check textfield Pre_shared_key\n<br>
+certification_action=Check Certificate Invalid Character\n<br>
+Pre_shared_key=@\n<br>
+\n<br>
+22) Check Certificates exist in 'Element Manager Certificates' tab\n<br>
+certification_action=Check Element Manager Certificates Exist\n<br>
+check_column=Issued to:Serial number:Valid from\n<br>
+check_certificates=IV 4096:1a 9b 42 80:14-Jan-2012 &amp; FtmFlexiNodeSerialNoRY110409745:1b 67 8b 6e:15-Jan-2012\n<br>
+\n<br>
+23) Check CRL info on 'Automatic Management' tab\n<br>
+certification_action=Check CRL Info\n<br>
+check_CRL_field=CRL issuer:Updated:Nextupdate:Revoked certificates\n<br>
+check_CRL_value=a:b:c:0\n<br>
+\n<br>
+24) Check Automatic Renewal Info on "Automatic Management" tab\n<br>
+certification_action=Check Automatic Renewal\n<br>
+check_renewal_field=Trust anchor expiry alarm:BTS certificate:CRL update interval\n<br>
+check_renewal_value=180:30:25\n<br>
+\n<br>
+25) Validate Automatic Renewal Info on "Automatic Management" tab\n<br>
+25.1) Input is valid\n<br>
+certification_action=Validate Automatic Renewal\n<br>
+check_renewal_field=Trust anchor expiry alarm:BTS certificate:CRL update interval\n<br>
+check_renewal_value=180:30:25\n<br>
+validation_type=1\n<br>
+25.2) Input is invalid\n<br>
+certification_action=Validate Automatic Renewal\n<br>
+check_renewal_field=Trust anchor expiry alarm:BTS certificate:CRL update interval\n<br>
+check_renewal_value=0:5000:8761\n<br>
+validation_type=0\n<br>
+\n<br>
+26) Update fields on Automatic Management tab and click send,'Initialize Certificates and CRL' and 'Update CRL' \ -------- in RL35_CMCC\n<br>
+Update fields on Automatic Management tab and click send,'Initialize Certificates' and 'CMP Key Update' \ -------- in RL35\n<br>
+certification_action=Automatic Management\n<br>
+and some of the followings\n<br>
+CMP_CA_server_address=10.8.207.54\n<br>
+CMP_CA_server_address_port=28\n<br>
+CA_subject_name=C=FI, O=NSN, CN=MRTAmpereNewRootCA\n<br>
+Reference_number=123\n<br>
+Pre_shared_key=456\n<br>
+CA_certificate_and_trust_anchor=200\n<br>
+BTS_certificate=40\n<br>
+CRL_update_interval=10\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run TestPartner Command</td>
+<td>Certificate_Management</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SM Check Alarm">TestPartner SM Check Alarm</a></td>
+<td>[Arguments]</td>
+<td>${input_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used to check the alram information in Site Manager\n<br>
+\n<br>
+Input:\n<br>
+\ | Input Parameters \ | Mandatory | Description |\n<br>
+\ | ${input_list} \ | Yes \ | a list including necessary info |\n<br>
+\n<br>
+\n<br>
+Usage:\n<br>
+| TestPartner SM Check Alarm | ${input_list} |\n<br>
+\n<br>
+\n<br>
+Note:\n<br>
+1) The input list must include the parameter alarm_check_way\n<br>
+2) Till now, only Check_Info_Not_Exist and Check_Info_Exist are available for alarm_check_way\n<br>
+3) When alarm_check_way is Check_Info_Not_Exist or Check_Info_Exist, the parameter alarm_check_info is also required. This parameter is used to specify the information to be checked.\n<br>
+\n<br>
+Examples for the list:\n<br>
+1) Check the info "Automatic BTS Operator Certificate retrieval u" doesn't exist in Alarm table\n<br>
+| alarm_check_way=Check_Info_Not_Exist | alarm_check_info=Automatic BTS Operator Certificate retrieval u |\n<br>
+2) Check the info "Automatic BTS Operator Certificate retrieval u" exists in Alarm table\n<br>
+| alarm_check_way=Check_Info_Exist | alarm_check_info=Automatic BTS Operator Certificate retrieval u |\n<br>
+3) Check there's no fault existing\n<br>
+| alarm_check_way=Check_No_Alarm | \n<br>
+4) Save alarm file\n<br>
+| TestPartner SM Check Alarm | alarm_check_way=Check_No_Alarm | FileName=D:\abc.txt |\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${input_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run TestPartner Command</td>
+<td>Check_Alarm</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SM Check BTS HW Status">TestPartner SM Check BTS HW Status</a></td>
+<td>[Arguments]</td>
+<td>${button_name}</td>
+<td>${check_field}</td>
+<td>${check_value}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${check_same_flag}=True</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used to check the status on BTS Hardware button.\n<br>
+\n<br>
+Input:\n<br>
+| Input Parameters \ | Mandatory | Description |\n<br>
+| button_name \ | Yes \ | The button name where the field to be checked |\n<br>
+| check_field | Yes \ \ | The field name to be checked |\n<br>
+| check_value \ | Yes \ \ | The value name to be checked |\n<br>
+| check_same_flag | No | Indicate to check the field should not be in a status | \n<br>
+\n<br>
+\n<br>
+Here's some examples\n<br>
+1) Check the "BTS operational state" on "LTE Flexi BTS" button\n<br>
+| TestPartner SM Check BTS HW Status | LTE Flexi BTS | BTS operational state | On air |\n<br>
+\n<br>
+\n<br>
+2) Check the "Working state" on FZHA1.1.1 button\n<br>
+| TestPartner SM Check BTS HW Status | FZHA1.1.1 | Working state | Working |\n<br>
+\n<br>
+\n<br>
+3) Check the "Operational state" on cell 1\n<br>
+| TestPartner SM Check BTS HW Status | LocalCell1 | Operational state | Enabled |\n<br>
+\n<br>
+4) Check "BTS operational state" not in "On air" status\n<br>
+| TestPartner SM Check BTS HW Status | LTE Flexi BTS | BTS operational state | On air | False |\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${para_list}</td>
+<td>Create List</td>
+<td>button_name=${button_name}</td>
+<td>check_field=${check_field}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>check_value=${check_value}</td>
+<td>check_same_flag=${check_same_flag}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Write Parameters To File For TP</td>
+<td>${para_list}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>run_testpartner_command</td>
+<td>Check_BTS_HW_Status</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${ret}</td>
+<td>set variable if</td>
+<td>'${check_same_flag}' =='True'</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>QTP SiteMan Check BTS HW Status</td>
+<td>${button_name}</td>
+<td>${check_field}</td>
+<td>${check_value}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${ret}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SM Check Commissioning RNC">TestPartner SM Check Commissioning RNC</a></td>
+<td>[Arguments]</td>
+<td>${input_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used to check the fields on Radio Network Configuration page of Site Manager.\n<br>
+DEPRECATED\n<br>
+Please use "QTP SiteMan CheckParaValue"\n<br>
+\n<br>
+Input:\n<br>
+\ | Input Parameters \ | Mandatory | Description |\n<br>
+\ | ${input_list} \ | Yes \ | a list including necessary info |\n<br>
+\n<br>
+\n<br>
+Usage:\n<br>
+| TestPartner SM Check Commissioning RNC | ${input_list} |\n<br>
+\n<br>
+\n<br>
+Note:\n<br>
+1) The input list must include the following parameters\n<br>
+\ | RNC_MO | The MO to be updated. Currently, following are the valid MO name: MRBTS,LNBTS,ADIPNO,LNADJ,LNCEL,QCI |\n<br>
+\ | RNC_field | The field to be updated |\n<br>
+\ | RNC_value | The value to be updated |\n<br>
+2) For MO LNADJ, you must include the parameter LNADJ in the input list. If the field is on LNADJL, you must include the parameter LNADJL as well.\n<br>
+3) For MO QCI, you must include the parameter QCI_MO in the input list. QCI_MO specify the lowest MO, such as QCI translation table QCI 8-1\n<br>
+4) For MO LNCEL, If the field is on the following sub mo, you need to input the sub mo name too.\n<br>
+\ \ IRFIM\n<br>
+\ \ LNHOIF\n<br>
+\ \ LNREL\n<br>
+\ \ Blacklisted_cell_list\n<br>
+Besides, if you don't input the parameter LNCEL, it means the first cell by default.\n<br>
+5) If you need to check the different value rather than the same value, please add the parameter Check_Different and assign it to be 1\n<br>
+\n<br>
+5) If you want to check multiple fileds on the same MO, you can conjoin them with ":" in the RNC_field and RNC_value, such as, check the field A=1 and field B= 2, you can input as below\n<br>
+RNC_field=A:B\n<br>
+RNC_value=1:2\n<br>
+\n<br>
+Examples for input list\n<br>
+1) Check field on MRBTS\n<br>
+| ${input_list} | RNC_MO=MRBTS | RNC_field=Reset multiradio flexi BTS to test dedicated state | RNC_value=true |\n<br>
+\n<br>
+\n<br>
+2) Check field on LNBTS\n<br>
+| ${input_list} | RNC_MO=LNBTS | RNC_field=Activation status of S1 flex feature | RNC_value=true |\n<br>
+\n<br>
+\n<br>
+3) Check field on ADIPNO\n<br>
+| ${input_list} | RNC_MO=ADIPNO | RNC_field=Primary IP address of main MME | RNC_value=1.2.3.4 |\n<br>
+\n<br>
+\n<br>
+4) Check field on LNADJ\n<br>
+4.1) on LNADJ mo\n<br>
+| ${input_list} | RNC_MO=LNADJ | RNC_field=C-Plane IP address control | RNC_value=oamControlled | LNADJ=LNADJ-62 |\n<br>
+4.2) on LNADJL mo\n<br>
+| ${input_list} | RNC_MO=LNADJ | RNC_field=Downlink EARFCN of LTE cell served by neighbor eNB | RNC_value=38000 | LNADJ=LNADJ-62 | LNADJL=LNADJL-5 |\n<br>
+\n<br>
+\n<br>
+5) Check field on QCI \n<br>
+| ${input_list} | RNC_MO=QCI | RNC_field=DRX profile index | RNC_value=4 | QCI_MO=QCI translation table QCI 7-1 |\n<br>
+\n<br>
+6) Check field on LNCEL\n<br>
+6.1) on LNCEL\n<br>
+| ${input_list} | RNC_MO=LNCEL | RNC_field=Enable reduced bandwidth DL | RNC_value=true |\n<br>
+6.2) on IRFIM\n<br>
+| ${input_list} | RNC_MO=LNCEL | RNC_field=Allowed measurement bandwidth | RNC_value=6mbw | IRFIM=IRFIM-1 |\n<br>
+6.3) on Periodic UE measurements\n<br>
+| ${input_list} | RNC_MO=LNCEL | RNC_field=Report amount | RNC_value=32 |\n<br>
+6.4) on DeltaF PUCCH list\n<br>
+| ${input_list} | RNC_MO=LNCEL | RNC_field=DeltaF PUCCH format 1 | RNC_value=2 |\n<br>
+6.5) on LNREL\n<br>
+| ${input_list} | RNC_MO=LNCEL | RNC_field=Cell individual offset of neighbour cells | RNC_value=10dB | LNREL=LNREL-1 | \n<br>
+6.6) on Blacklisted cell for intra and inter freq HO list\n<br>
+| ${input_list} | RNC_MO=LNCEL | RNC_field=Range of physical cell id range | RNC_value=n64 | Blacklisted_cell_list=Blacklisted cell for intra and inter freq HO list-1 |\n<br>
+6.7) on LNHOIF\n<br>
+| ${input_list} | RNC_MO=LNCEL | RNC_field=LNHOIF Related hysteresis of thresholds th3 and th3a for RSRP | RNC_value=4.0 | \ LNHOIF=LNHOIF-1 |\n<br>
+\n<br>
+7) Check A3 offset is not 3.o\n<br>
+| ${input_list} | RNC_MO=LNCEL | RNC_field=A3 offset | RNC_value=3.0 | Check_Different=1 |\n<br>
+\n<br>
+8) Check fields on LNMME MO\n<br>
+| ${input_list} | RNC_MO=LNMME | RNC_field=LTE mobility management entity identifier:Primary IPv4 address:Primary IPv6 address:Transport network identifier:MME name:Relative MME capacity:Secondary IPv4/v6 address | RNC_value=2:1.1.1.1:2.2.2.2:4:value set by the system:125:value set by the systema | LNMME=LNMME-2 |\n<br>
+\n<br>
+9) Check the fields on MODPR\n<br>
+| ${input_list} | RNC_MO=MODPR | RNC_field=Auto adaptation to freq. layers of all neighbour cells:Percentage of UE for idle mode load balancing | RNC_value=false:11 |\n<br>
+\n<br>
+10) check the fields on MOPR\n<br>
+10.1) UTRA TDD carrier list for idle mode load balancing\n<br>
+| ${input_list} | RNC_MO=MOPR | RNC_field=UTRA TDD carrier freq for idle mode load balancing:UTRA TDD carrier freq prio for idle mode load balancing | RNC_value=3:6 | MOPR=MOPR-1 | MOIMP=MOIMP-1 | UTRA_TDD_carrier_list=UTRA TDD carrier list for idle mode load balancing-1 |\n<br>
+10.2) EUTRA carrier list for idle mode load balancing\n<br>
+| ${input_list} | RNC_MO=MOPR | RNC_field=EUTRA carrier freq for idle mode load balancing:EUTRA carrier freq prio for idle mode load balancing | RNC_value=99:7 | MOPR=MOPR-1 | MOIMP=MOIMP-1 | EUTRA_carrier_list=EUTRA carrier list for idle mode load balancing-1 |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Transmit Parameters To TestPartner</td>
+<td>${input_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run TestPartner Command</td>
+<td>Check_Commissioning_RNC</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SM Check IP View">TestPartner SM Check IP View</a></td>
+<td>[Arguments]</td>
+<td>${input_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used to check the fields under the IP button in Site Manager.\n<br>
+The start page is the main page on Site Manager.\n<br>
+\n<br>
+Input:\n<br>
+\ | Input Parameters \ | Mandatory | Description |\n<br>
+\ | ${input_list} \ | Yes \ | a list including the tab name, the field/value to be checked and other necessary information. |\n<br>
+\n<br>
+\n<br>
+Usage: \n<br>
+| TestPartner SM Check IP View | ${input_list} |\n<br>
+\n<br>
+\n<br>
+Here's some Examples for the input list\n<br>
+1. IP Addresses\n<br>
+1.1) Check the field "BTS_subnet_interface"\n<br>
+| IP_tab=IP Addresses | IP_check_field=BTS_subnet_interface | IP_check_value=1.2.3.4 |\n<br>
+1.2) Check multiple fields\n<br>
+| IP_tab=IP Addresses | IP_check_field=BTS_subnet_interface:Primary_OAM_system | IP_check_value=1.2.3.4:1.1.1.1 |\n<br>
+1.3) The fields include\n<br>
+BTS_ID\n<br>
+BTS_subnet_interface\n<br>
+BTS_subnet_mask\n<br>
+Primary_OAM_system\n<br>
+Secondary_OAM_system\n<br>
+OAM_system_preference\n<br>
+NTP_server\n<br>
+Primary_DNS_server\n<br>
+Secondary_DNS_server\n<br>
+Serving OAM system\n<br>
+1.4) Check System Time\n<br>
+| IP_tab=IP Addresses | IP_check_field=System Time | IP_check_value=10.56.126.23-Not in use(GPS used),1.2.3.4-n |\n<br>
+\n<br>
+2. Security\n<br>
+2.1) Check the checkbox "Allow_only_secure_connection" is checked\n<br>
+| IP_tab=IP Addresses | IP_check_field=Allow_only_secure_connection | IP_check_value=1 |\n<br>
+note: 1 means the checkbox is checked, 0 means the checkbox is not checked.\n<br>
+2.2) Check the OAM_connection_status field on Security tab\n<br>
+a) The displayed status should be the 'Not secured'\n<br>
+| IP_tab=Security | IP_check_field=OAM_connection_status | IP_check_value=Not secured |\n<br>
+b) Check the status per Mode\n<br>
+| IP_tab=Security | IP_check_field=OAM_connection_status | IP_check_value=per Mode |\n<br>
+2.3) Check multiple fields on the Security tab at a time\n<br>
+| IP_tab=Security | IP_check_field=Allow_only_secure_connection:Mode:OAM_connection_status \ | IP_check_value=1:Forced:Secured |\n<br>
+2.4) The fields include\n<br>
+Allow_only_secure_connection\n<br>
+LDAP_Address\n<br>
+LDAP_Port\n<br>
+Mode\n<br>
+OAM_connection_status\n<br>
+Enable_ping_and_traceroute\n<br>
+\n<br>
+3. IP Interfaces\n<br>
+3.1) Check fiields on TAC 1\n<br>
+| IP_tab=IP Interfaces | IP_check_field=TAC 1 | IP_check_value=Exclude_layer2_overhead_in_calculations=0,Overbooking activity factor=1.00 |\n<br>
+The fields include the belows. For multiple fields, conjoin them with ","\n<br>
+Exclude_layer2_overhead_in_calculations\n<br>
+Overbooking_activity_factor\n<br>
+Limit_for_normal_GBR_connections\n<br>
+Limit_for_GBR_handovers\n<br>
+Limit_for_GBR_emergency_connections\n<br>
+Average_packet_size_for_QCI_value2\n<br>
+Average_packet_size_for_QCI_value3\n<br>
+Average_packet_size_for_QCI_value4\n<br>
+3.2) Check fields on Transport Ethernet interface\n<br>
+| IP_tab=IP Interfaces | IP_check_field=Transport Ethernet interface | IP_check_value=Address_IP=1.2.3.4,Address_mask=26 |\n<br>
+The fields include the belows. For multiple fields, conjoin them with ","\n<br>
+Address_IP\n<br>
+Address_mask\n<br>
+Traffic_shaping_type\n<br>
+Total_shaper_information_rate\n<br>
+Total_shaper_burst_size\n<br>
+Shaper_information_rate\n<br>
+Shaper_burst_size\n<br>
+WFQ_scheduler_queue_weight\n<br>
+Enable_QoS\n<br>
+Include_Ethernet_overhead\n<br>
+MTU\n<br>
+Total_shaper_information_rate_editable\n<br>
+Total_shaper_burst_size_editable\n<br>
+Shaper_information_rate_editable\n<br>
+Shaper_burst_size_editable\n<br>
+WFQ_scheduler_queue_weight_editable\n<br>
+Enable_QoS_editable\n<br>
+Include_Ethernet_overhead_editable\n<br>
+3.3) Check fields on VLAN\n<br>
+| IP_tab=IP Interfaces | IP_check_field=VLAN 300 | IP_check_value=VLAN_ID=300 |\n<br>
+The fields include the belows. For multiple fields, conjoin them with ","\n<br>
+VLAN_ID\n<br>
+Address_IP\n<br>
+Address_mask\n<br>
+Shaper_information_rate\n<br>
+Shaper_burst_size\n<br>
+WFQ_scheduler_queue_weight\n<br>
+Enable_QoS\n<br>
+Shaper_information_rate_editable(whether this field is editable, 1 for enable and 0 for disable)\n<br>
+Shaper_burst_size_editable(whether this field is editable, 1 for enable and 0 for disable)\n<br>
+3.4) Check fields on BFD\n<br>
+| IP_tab=IP Interfaces | IP_check_field=BFD 1 | IP_check_value=BFD_session_in_use=1 |\n<br>
+The fields include the belows. For multiple fields, conjoin them with ","\n<br>
+BFD_session_in_use\n<br>
+Destination_address\n<br>
+Source_address\n<br>
+UDP_source_port\n<br>
+Enable_faults\n<br>
+BFD_group\n<br>
+BFD_type\n<br>
+Desired_minimun_transmit_interval\n<br>
+Required_minimum_receive_interval\n<br>
+Detection_multiplier\n<br>
+3.5) Check multiple fields on different node\n<br>
+| IP_tab=IP Interfaces | IP_check_field=BFD 1:TAC 1:Transport Ethernet interface:VLAN 300 |IP_check_value=BFD_session_in_use=1:Exclude_layer2_overhead_in_calculations=0,Overbooking activity factor=1.00:Address_IP=1.2.3.4,Address_mask=26:VLAN_ID=300 |\n<br>
+3.6) check invalid IPv6 address IP\n<br>
+3.6.1) input :: for IP\n<br>
+| IP_tab=IP Interfaces | IP_check_field=Invalid_IPv6_Address_IP | IP_check_value=:: |\n<br>
+3.6.2) input :: for IP and 123 for mask\n<br>
+| IP_tab=IP Interfaces | IP_check_field=Invalid_IPv6_Address_IP | IP_check_value=::\\123 |\n<br>
+3.6.3) check IP on VLAN\n<br>
+| IP_tab=IP Interfaces | IP_check_field=Invalid_IPv6_Address_IP | IP_check_value=:: | VLAN=VLAN 500 |\n<br>
+3.7) check invalid IPv6 address mask\n<br>
+3.7.1) on Transport Ethernet interface\n<br>
+| IP_tab=IP Interfaces | IP_check_field=Invalid_IPv6_Address_Mask | IP_check_value=128 |\n<br>
+3.7.2) on VLAN\n<br>
+| IP_tab=IP Interfaces | IP_check_field=Invalid_IPv6_Address_Mask | IP_check_value=128 | VLAN=VLAN 500 |\n<br>
+\n<br>
+Note:\n<br>
+1) 4 valid values for the parameter IP_check_field\n<br>
+TAC 1\n<br>
+Transport Ethernet interface\n<br>
+VLAN *\n<br>
+BFD *\n<br>
+2) For the parameter IP_check_value, conjoin with ":" for different IP_check_field, conjoin with "," for multiple fields on the same IP_check_field\n<br>
+3) For checkbox, 1 means it's checked and 0 means it's not checked.\n<br>
+\n<br>
+4. Quality of Service\n<br>
+4.1) Check the "Traffic type settings" table\n<br>
+| IP_tab=Quality of Service | IP_check_field=Traffic_type_settings | IP_check_value=CPLANE-46,ICMP-10,IKE-34 |\n<br>
+note: if you need to check multiple rows, conjoin it with ",". In a row, each cell is conjoined by "-".\n<br>
+4.2) Check the mapping of DSCP to VLAN priority\n<br>
+| IP_tab=Quality of Service | IP_check_field=DSCP_to_VLAN_priority_mapping | IP_check_value=46-6,36-5,20-4 |\n<br>
+note: if you need to check multiple rows, conjoin it with ",". In a row, each cell is conjoined by "-".\n<br>
+4.3) Check the mpaaing of DSCP to pHB and VLAN priority\n<br>
+| IP_tab=Quality of Service | IP_check_field=DSCP_to_PHB_and_VLAN_priority_mapping | IP_check_value=46-Expedited Forwarding-6,36-Assured Forwarding 43-5,20-Assured Forwarding 43-4 |\n<br>
+note: if you need to check multiple rows, conjoin it with ",". In a row, each cell is conjoined by "-".\n<br>
+4.4) Check the "Queue_weights" table\n<br>
+| IP_tab=Quality of Service | IP_check_field=Queue_weights | IP_check_value=Expedited Forwarding-Strict,Assured Forwarding 4-10000,Assured Forwarding 3-1000,Assured Forwarding 2-100,Assured Forwarding 1-10,Best Effort-1 |\n<br>
+4.5) Check multiple fields on the "Quality of Service" tab\n<br>
+| IP_tab=Quality of Service | IP_check_field=Traffic_type_settings:DSCP_to_VLAN_priority_mapping | IP_check_value=CPLANE-46,ICMP-10,IKE-34:46-6,36-5,20-4 |\n<br>
+\n<br>
+\n<br>
+5. Application Addresses\n<br>
+5.1) Check single field\n<br>
+| IP_tab=Application Addresses | IP_check_field=User_plane | IP_check_value=10.68.160.46 |\n<br>
+5.2) Check multiple fields\n<br>
+| IP_tab=Application Addresses | IP_check_field=User_plane:Control_plane:Management_plane:Synchronization_plane | IP_check_value=10.68.160.46:10.68.160.46:10.68.160.46:10.68.160.49 |\n<br>
+\n<br>
+\n<br>
+6. RTT Measurement\n<br>
+6.1) Check the checkbox "RTT_measurement_in_use"\n<br>
+| IP_tab=RTT Measurement | IP_check_field=RTT_measurement_in_use |IP_check_value=0 |\n<br>
+6.2) Check the field "Reflector_port"\n<br>
+| IP_tab=RTT Measurement | IP_check_field=Reflector_port |IP_check_value=5000 |\n<br>
+6.3) Check the field "Message_rate"\n<br>
+| IP_tab=RTT Measurement | IP_check_field=Message_rate |IP_check_value=10 |\n<br>
+6.4) Check the fields on Session 1\n<br>
+| IP_tab=RTT Measurement | \ IP_check_field=Session 1 | IP_check_value=In_use=0,Source_IP_address=10.68.160.46 - TRS ETH IF,Destination_IP_address=1.2.3.4,Destination_port=5000,DSCP=35,Message_size=100,15min_packet_loss_ratio_fault_threshold=100.00,1min_round_trip_time_fault_threshold=1000000 |\n<br>
+6.5) Check multiple fields\n<br>
+| IP_tab=RTT Measurement | IP_check_field=RTT_measurement_in_use:Reflector_port:Message_rate:Session 1 | IP_check_value=0:5000:10:In_use=0,Source_IP_address=10.68.160.46 - TRS ETH IF,Destination_IP_address=1.2.3.4,Destination_port=5000,DSCP=35,Message_size=100,15min_packet_loss_ratio_fault_threshold=100.00,1min_round_trip_time_fault_threshold=1000000 |\n<br>
+6.6)Check invalid value in new session\n<br>
+| IP_tab=RTT Measurement | \ IP_check_field=Check_Invalid_Value_in_NewSession \ | IP_check_value=Destination port=65540,DSCP=65,Message size=1410,15 min packet loss ratio fault threshold=101.00,1 min round trip time fault threshold=1000100 |\n<br>
+6.7) Check Invalid_Reflector_port\n<br>
+IP_check_field=Invalid_Reflector_Port\n<br>
+IP_tab=RTT Measurement\n<br>
+IP_check_value=0\n<br>
+6.8) Input some value in Reflector port and send, the field keep the old value\n<br>
+IP_check_field=Keep_Reflector_Port\n<br>
+IP_tab=RTT Measurement\n<br>
+IP_check_value=7\n<br>
+6.9) Check the value of Transmitted_TWAMP_messages is greater than the one of Lost_TWAMP_messages on Session\n<br>
+IP_check_field=Session 1\n<br>
+IP_tab=RTT Measurement\n<br>
+IP_check_value=Transmitted_TWAMP_messages_greater_than_Lost=1(o for less than)\n<br>
+6.10 ) Check the value of Transmitted_TWAMP_messages is greater than the input value\n<br>
+IP_check_field=Session 1\n<br>
+IP_tab=RTT Measurement\n<br>
+IP_check_value=Transmitted_TWAMP_messages_greater_than_input_value=76543\n<br>
+6.11 ) Check the value of Transmitted_TWAMP_messages is less than the input value\n<br>
+IP_check_field=Session 1\n<br>
+IP_tab=RTT Measurement\n<br>
+IP_check_value=Transmitted_TWAMP_messages_less_than_input_value=76543\n<br>
+6.12 ) Check the value of Lost_TWAMP_messages is greater than the input value\n<br>
+IP_check_field=Session 1\n<br>
+IP_tab=RTT Measurement\n<br>
+IP_check_value=Lost_TWAMP_messages_greater_than_input_value=76543\n<br>
+6.13 ) Check the value of Lost_TWAMP_messages is less than the input value\n<br>
+IP_check_field=Session 1\n<br>
+IP_tab=RTT Measurement\n<br>
+IP_check_value=Lost_TWAMP_messages_less_than_input_value=76543\n<br>
+6.14) Check change Source_IP_address not permitted\n<br>
+IP_check_field=Session 1\n<br>
+IP_tab=RTT Measurement\n<br>
+IP_check_value=Change_Source_IP_address_Not_Permitted=2.2.2.2 - VLAN 600\n<br>
+6.15) Check change Destination_IP_address not permitted\n<br>
+IP_check_field=Session 1\n<br>
+IP_tab=RTT Measurement\n<br>
+IP_check_value=Change_Destination_IP_address_Not_Permitted=1.1.1.2\n<br>
+6.16) Check Destination_port not permitted\n<br>
+IP_check_field=Session 1\n<br>
+IP_tab=RTT Measurement\n<br>
+IP_check_value=Change_Destination_port_Not_Permitted=200\n<br>
+6.17) Check Incorrect_Reflector_port. Input reflector port and send, it should display the message for Incorrect Reflector Port.\n<br>
+IP_check_field=Incorrect_Reflector_Port\n<br>
+IP_tab=RTT Measurement\n<br>
+IP_check_value=7\n<br>
+\n<br>
+7. Routing\n<br>
+7.1 ) Check single field on BFD\n<br>
+| IP_tab=Routing | IP_check_field=BFD 1 | IP_check_value=BFD_session_in_use=0 |\n<br>
+7.2) Check multiple fields on BFD\n<br>
+| IP_tab=Routing | IP_check_field=BFD 1 | IP_check_value=BFD_session_in_use=0,Destination_address=1.2.3.4 |\n<br>
+7.3) Check the checkbox Enable_fast_IP_rerouting\n<br>
+| IP_tab=Routing | IP_check_field=Enable_fast_IP_rerouting | IP_check_value=1 |\n<br>
+\n<br>
+8. IP Security\n<br>
+8.1) Check New Policy option\n<br>
+IP_tab=IP Security\n<br>
+IP_check_field=New_Policy_option\n<br>
+IP_check_value=Unfilled,U-plane,M-plane,C-plane,Authentication LDAP,NTP,CMP,BFD single hop DLs,BFD single hop UL</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${input_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run TestPartner Command</td>
+<td>Check_IP_View</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SM Check Logon Warning">TestPartner SM Check Logon Warning</a></td>
+<td>[Arguments]</td>
+<td>${check_logon_type}=${empty}</td>
+<td>${IP_address}=Local</td>
+<td>${User_name}=Nemuadmin</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${Password}=nemuuser</td>
+<td>${Certificate_option}=Once</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used to check the warning information on the Site Manager Logon window.\n<br>
+\n<br>
+\n<br>
+Input:\n<br>
+\ | Input Parameters \ | Mandatory | Description |\n<br>
+\ | check_logon_type \ | No | default is empty |\n<br>
+\ | IP_address \ | No \ | BTS IP .default Local |\n<br>
+\ | User_name \ | No \ \ | default Nemuadmin |\n<br>
+\ | Password \ | No \ \ | default nemuuser |\n<br>
+\ | Certificate_option \| No | default Once | \n<br>
+\n<br>
+\n<br>
+Examples:\n<br>
+1) Check legal notice\n<br>
+| TestPartner SM Check Logon Warning |\n<br>
+\n<br>
+\n<br>
+2) Check warning info when logon SM with second connection\n<br>
+| TestPartner SM Check Logon Warning | Existed | \n<br>
+or\n<br>
+| TestPartner SM Check Logon Warning | Existed | Local | Nemuadmin | nemuuser | Once |\n<br>
+\n<br>
+\n<br>
+3) Check warning info when logon SM illegally\n<br>
+| TestPartner SM Check Logon Warning | Illegal | \n<br>
+or\n<br>
+| TestPartner SM Check Logon Warning | Illegal | Local | Nemuadmin | nemuuser | Once |\n<br>
+\n<br>
+4) Check the specified info after try to logon SM\n<br>
+| TestPartner SM Check Logon Warning | Unexpected error |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${list}</td>
+<td>create list</td>
+<td>check_logon_type=${check_logon_type}</td>
+<td>IP_address=${IP_address}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>User_name=${User_name}</td>
+<td>SM_Password=${Password}</td>
+<td>Certificate_option=${Certificate_option}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>run_testpartner_command</td>
+<td>check_sm_logon_warning</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SM Check TRS Hardware">TestPartner SM Check TRS Hardware</a></td>
+<td>[Arguments]</td>
+<td>${TRS_tab}</td>
+<td>${TRS_field}</td>
+<td>${TRS_value}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This script is used to check the fields and tables on TRS Hardware button of Site Manager\n<br>
+\n<br>
+Input:\n<br>
+| Input Parameters | Mandatory | Description |\n<br>
+| TRS_tab | Yes | The tab name on TRS Hardware |\n<br>
+| TRS_field | Yes | The field name to be checked |\n<br>
+| TRS_value | Yes | The value to be checked |\n<br>
+\n<br>
+\n<br>
+Usage:\n<br>
+| TestPartner SM Check TRS Hardware | TRS_tab | TRS_field | TRS_value |\n<br>
+\n<br>
+Examples:\n<br>
+1) Check the table "DSCP to priority queue mapping" on \ "Ethernet Switching" tab\n<br>
+| TestPartner SM Check TRS Hardware | Ethernet Switching | DSCP_to_priority_queue_mapping | 1-46,48&amp;2-34,36,38 |\n<br>
+note: If need to check multiple rows, conjoin it with "&amp;". \n<br>
+\ \ \ \ \ \ \ \ 1-46,48 means Quene 1 mapps to DSCP 46,48\n<br>
+\n<br>
+2) Check the field Mode on "Ethernet Switching" tab\n<br>
+| TestPartner SM Check TRS Hardware | Mode | DSCP |\n<br>
+\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${para_list}</td>
+<td>Create List</td>
+<td>TRS_tab=${TRS_tab}</td>
+<td>TRS_field=${TRS_field}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>TRS_value=${TRS_value}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${para_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>run_testpartner_command</td>
+<td>Check_TRS_Hardware</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SM Commissioning Backup">TestPartner SM Commissioning Backup</a></td>
+<td>[Arguments]</td>
+<td>${backup_path_file}=${TEST_LOG_DIRECTORY}\\commissioning_backup.xml</td>
+<td>${BTS_site}=BTS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used to backup commissioning file.\n<br>
+The start page is the main page of Site Manager\n<br>
+\n<br>
+Input:\n<br>
+| Input Parameters \ | Mandatory | Description |\n<br>
+| backup_path_file \ \ | No \ | The full file path and file name to backup. Default is ${TEST_LOG_DIRECTORY}\\commissioning_backup.xml |\n<br>
+| BTS_site | No | Default is BTS. Valid value is BTS, TRS and BTS&amp;TRS |\n<br>
+\n<br>
+\n<br>
+Usage:\n<br>
+| TestPartner SM Commissioning Backup | backup_path_file | BTS_site |\n<br>
+\n<br>
+\n<br>
+Here's the example\n<br>
+1) \ Backup BTS commissioning file to ${TEST_LOG_DIRECTORY}\\commissioning_backup.xml\n<br>
+| TestPartner SM Commissioning Backup |\n<br>
+\n<br>
+\n<br>
+2) Backup BTS commissioning file to D:\\abc\\backup.xml\n<br>
+| TestPartner SM Commissioning Backup | D:\\abc\\backup.xml |\n<br>
+or\n<br>
+| TestPartner SM Commissioning Backup | D:\\abc\\backup.xml | BTS |\n<br>
+\n<br>
+\n<br>
+3) Backup TRS comissioning file to \ D:\\abc\\backup.xml\n<br>
+| TestPartner SM Commissioning Backup | D:\\abc\\backup.xml | TRS |\n<br>
+\n<br>
+\n<br>
+4) Backup both BTS andTRS comissioning file to \ D:\\abc\\backup.xml\n<br>
+| TestPartner SM Commissioning Backup | D:\\abc\\backup.xml | BTS&amp;TRS |\n<br>
+\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${para_list}</td>
+<td>Create List</td>
+<td>backup_path_file=${backup_path_file}</td>
+<td>BTS_site=${BTS_site}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${para_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>run_testpartner_command</td>
+<td>Commissioning_Backup</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SM Create New MO">TestPartner SM Create New MO</a></td>
+<td>[Arguments]</td>
+<td>${input_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used to create new module object in site manager.\n<br>
+DEPRECATED\n<br>
+Please use "QTP SiteMan UpdateParaValue"\n<br>
+\n<br>
+\n<br>
+Input:\n<br>
+\ | Input Parameters \ | Mandatory | Description |\n<br>
+\ | ${input_list} \ | Yes \ | a list including necessary info |\n<br>
+\n<br>
+\n<br>
+Usage:\n<br>
+| TestPartner SM Create New MO | ${input_list} |\n<br>
+The input list should includes the below info\n<br>
+1) the name of the new MO to be created:new_mo_name=LNADJL\n<br>
+2) the necessary info to locate the parent MO:LNADJ=LNADJ-62\n<br>
+3) the fields and values to fill out the new MO and its sub MO:field=value\n<br>
+\n<br>
+Here are some examples for the input list\n<br>
+1) Add new LNADJ MO\n<br>
+1.1) create the sub mo LNADJL as well\n<br>
+new_mo_name=LNADJ\n<br>
+MCC_of_primary_PLMN_identity_of_neighbour_ENB_in_ECGI=200\n<br>
+MNC_length_of_primary_PLMN_ID_of_neighnour_ENB_in_ECGI=3\n<br>
+MNC_of_primary_PLMN_identity_of_neighnour_ENB_in_ECGI=500\n<br>
+MCC_in_broadcast_PLMN_identity=160\n<br>
+MNC_in_broadcast_PLMN_identity=340\n<br>
+MNC_length_in_broadcast_PLMN_identity=2\n<br>
+Neighbor_LTE_cell_identifier=4\n<br>
+Downlink_EARFCN_of_LTE_cell_served_by_neighbor_eNB=88\n<br>
+Identity_of_neighbor_eNB_in_ECGI=660\n<br>
+Local_cell_resource_ID_of_related_neighnor_cell=99\n<br>
+Physical_cell_ID_of_cell_served_by_neighbor_eNB=120\n<br>
+Tracking_area_code_of_cell_served_by_neighbor_eNB=700\n<br>
+Neighbour_eNB_identifier=33\n<br>
+C_Plane_IP_address_control=oamControlled\n<br>
+C_plane_IP_address_of_neighbor_eNB=1.2.3.4\n<br>
+1.2) Only create the mo LNADJ itself\n<br>
+new_mo_name=LNADJ\n<br>
+LNADJ_Sub_MO=0\n<br>
+Neighbour_eNB_identifier=45\n<br>
+\n<br>
+2) Add new LNADJL MO\n<br>
+new_mo_name=LNADJL\n<br>
+LNADJ=LNADJ-62\n<br>
+MCC_of_primary_PLMN_identity_of_neighbour_ENB_in_ECGI=200\n<br>
+MNC_length_of_primary_PLMN_ID_of_neighnour_ENB_in_ECGI=3\n<br>
+MNC_of_primary_PLMN_identity_of_neighnour_ENB_in_ECGI=500\n<br>
+MCC_in_broadcast_PLMN_identity=160\n<br>
+MNC_in_broadcast_PLMN_identity=340\n<br>
+MNC_length_in_broadcast_PLMN_identity=2\n<br>
+Neighbor_LTE_cell_identifier=4\n<br>
+Downlink_EARFCN_of_LTE_cell_served_by_neighbor_eNB=88\n<br>
+Identity_of_neighbor_eNB_in_ECGI=660\n<br>
+Local_cell_resource_ID_of_related_neighnor_cell=99\n<br>
+Physical_cell_ID_of_cell_served_by_neighbor_eNB=120\n<br>
+Tracking_area_code_of_cell_served_by_neighbor_eNB=700\n<br>
+\n<br>
+3) Add new QCI translation table operator specific QCIs MO\n<br>
+new_mo_name=QCI translation table operator specific QCIs\n<br>
+Counter_group=2\n<br>
+DRX_profile_index=1\n<br>
+DSCP=35\n<br>
+Logical_channel_group_identifier=3\n<br>
+PDCP_profile_index=4\n<br>
+QCI=200\n<br>
+QCI_support=ENABLE\n<br>
+RLC_profile_index=2\n<br>
+Scheduling_bucket_size_duration=100ms\n<br>
+Scheduling_priority=10\n<br>
+Scheduling_weight=50\n<br>
+\n<br>
+4) Create new MME IP address list\n<br>
+new_mo_name=MME IP address list\n<br>
+Primary_MME_IP_address=1.2.3.4\n<br>
+\n<br>
+5) Create Trace Mo under MTRACE\n<br>
+new_mo_name=Trace RRC UE spec msg list\n<br>
+MTRACE=MTRACE-10\n<br>
+Trace_spec_msg_list=5562\n<br>
+\n<br>
+6) Create MTRACE MO\n<br>
+new_mo_name=MTRACE\n<br>
+MCC=18\n<br>
+MNC=66\n<br>
+MNC_length=2\n<br>
+Trace_ID=999\n<br>
+Trace_recording_session_reference=1234\n<br>
+Cell_trace_session_identifier=7\n<br>
+Trace_collection_entity_IP_address=1.2.3.4\n<br>
+Third_party_tool_cell_trace_port_number=8888\n<br>
+Cell_identifier=111\n<br>
+Cell_maximum_active_UEs_trace=99\n<br>
+Cell_trace_mode=false\n<br>
+Cell_TA_tracing=true\n<br>
+\n<br>
+7) Create IRFIM MO\n<br>
+new_mo_name=IRFIM\n<br>
+IRFIM_identifier=4\n<br>
+Allowed_measurement_bandwidth=15mbw\n<br>
+Carrier_frequency_priority_for_idle_mode_load_balancing=6\n<br>
+EUTRA_carrier_frequency_absolute_priority=8\n<br>
+EUTRA_cell_reselection_timer=1\n<br>
+EUTRA_frequency_specific_offset=1 dB\n<br>
+EUTRA_frequency_value=11\n<br>
+EUTRA_inter_frequency_threshold_high=22\n<br>
+EUTRA_inter_frequendy_threshold_low=2\n<br>
+EUTRA_presence_antenna_port1=true\n<br>
+Minimum_required_rx_RSRP_level=-138\n<br>
+Pmax_neighbouring_EUTRA_cells=33\n<br>
+\n<br>
+8) Create sub MOs under MODIMP\n<br>
+8.1) Create GERAN band parameters for idle mode load balancing and GERAN carrier freq list for idle mode load balancing\n<br>
+new_mo_name=GERAN\n<br>
+MODIMP=MODIMP-2\n<br>
+GERAN_carrier_freq_band_for_idle_mode_load_balancing=gsm1800\n<br>
+GERAN_carrier_freq_prio_for_idle_mode_load_balancing=6\n<br>
+GERAN_carrier_freq_list_for_idle_mode_load_balancing=8\n<br>
+8.2) Create UTRA FDD carrier list for idle mode load balancing\n<br>
+new_mo_name=UTRAFDD\n<br>
+MODIMP=MODIMP-2\n<br>
+UTRA_FDD_carrier_freq_for_idle_mode_load_balancing=1\n<br>
+UTRA_FDD_carrier_freq_prio_for_idle_mode_load_balancing=2\n<br>
+8.3) Create UTRA TDD carrier list for idle mode load balancing\n<br>
+new_mo_name=UTRATDD\n<br>
+MODIMP=MODIMP-2\n<br>
+UTRA_TDD_carrier_freq_for_idle_mode_load_balancing=1\n<br>
+UTRA_TDD_carrier_freq_prio_for_idle_mode_load_balancing=2\n<br>
+8.4) Create EUTRA carrier list for idle mode load balancing\n<br>
+new_mo_name=EUTRA\n<br>
+MODIMP=MODIMP-2\n<br>
+EUTRA_carrier_freq_for_idle_mode_load_balancing=8\n<br>
+EUTRA_carrier_freq_prio_for_idle_mode_load_balancing=6\n<br>
+\n<br>
+9) Create LNMME\n<br>
+new_mo_name=LNMME\n<br>
+LTE_mobility_management_entity_identifier=1\n<br>
+Primary_IPv4_address=1.1.1.1\n<br>
+Primary_IPv6_address=2.2.2.2\n<br>
+Transport_network_identifier=2\n<br>
+\n<br>
+10) Create MOPR\n<br>
+new_mo_name=MOPR\n<br>
+Mobility_profile_identifier=2\n<br>
+Percentage_of_UE_for_idle_mode_load_balancing=10\n<br>
+\n<br>
+11) Create MORED\n<br>
+new_mo_name=MORED\n<br>
+Mobility_profile_identifier_for_redirection=0\n<br>
+Add_GSM_system_information_to_redirection_message=redir\n<br>
+GERAN_band_indicator=gsm1800\n<br>
+RAT_for_redirection=eutra\n<br>
+Redirection_priority_for_CS_fallback_with_redirection=0\n<br>
+Redirection_priority_for_UE_context_release=1\n<br>
+Redirection_priority_for_emerfency_call=2\n<br>
+UTRA_frequency=2\n<br>
+eUTRA_frequency=8\n<br>
+MOPR=MOPR-1\n<br>
+GERAN_ARFCN_values_list=1(to create sub MO "GERAN ARFCN values list" as well)\n<br>
+\n<br>
+12) Create REDRT\n<br>
+new_mo_name=REDRT\n<br>
+Redirection_target_configuration_identifier=2\n<br>
+Add_GSM_system_information_to_redirection_message=redir\n<br>
+CDMA_band=bc11\n<br>
+CDMA_frequency=88\n<br>
+GERAN_band_indicator=gsm1800\n<br>
+RAT_for_redirection=eutra\n<br>
+Redirection_priority_for_CS_fallback_with_redirection=0\n<br>
+Redirection_priority_for_UE_context_release=1\n<br>
+Redirection_priority_for_emerfency_call=2\n<br>
+UTRA_frequency=2\n<br>
+eUTRA_frequency=8\n<br>
+MOPR=MOPR-1\n<br>
+GERAN_ARFCN_values_list=1(to create sub MO "GERAN ARFCN values list" as well)\n<br>
+\n<br>
+13) Create MODPR\n<br>
+new_mo_name=MODPR\n<br>
+Auto_adaptation_to_freq_layers_of_all_neighbour_cells=false (optional)\n<br>
+Percentage_of_UE_for_idle_mode_load_balancing=10 (optional)\n<br>
+\n<br>
+14) Create MODRED\n<br>
+new_mo_name=MODRED\n<br>
+MODPR=MODPR-0\n<br>
+Mobility_default_profile_identifier_for_redirection=1\n<br>
+Add_GSM_system_information_to_redirection_message=redir (optional)\n<br>
+GERAN_band_indicator=gsm1800 (optional)\n<br>
+RAT_for_redirection=eutra\n<br>
+Redirection_priority_for_CS_fallback_with_redirection=0\n<br>
+Redirection_priority_for_UE_context_release=1\n<br>
+Redirection_priority_for_emerfency_call=2\n<br>
+UTRA_frequency=2 (optional)\n<br>
+eUTRA_frequency=8 (optional)\n<br>
+GERAN_ARFCN_values_list=1 (to create sub MO "GERAN ARFCN values list" as well)\n<br>
+\n<br>
+15) Create MOIMP\n<br>
+new_mo_name=MOIMP\n<br>
+Idle_mode_mobility_profile_identifier=5\n<br>
+\n<br>
+16) Create sub MO under MOIMP\n<br>
+16.1) Create GERAN band parameters for idle mode load balancing and GERAN carrier freq list for idle mode load balancing\n<br>
+MOPR=MOPR-1\n<br>
+MOIMP=MOIMP-1\n<br>
+new_mo_name=MOIMP_GERAN\n<br>
+GERAN_carrier_freq_band_for_idle_mode_load_balancing=gsm1800\n<br>
+GERAN_carrier_freq_prio_for_idle_mode_load_balancing=6\n<br>
+GERAN_carrier_freq_list_for_idle_mode_load_balancing=8\n<br>
+16.2) Create UTRA FDD carrier list for idle mode load balancing\n<br>
+MOPR=MOPR-1\n<br>
+MOIMP=MOIMP-1\n<br>
+new_mo_name=MOIMP_UTRAFDD\n<br>
+UTRA_FDD_carrier_freq_for_idle_mode_load_balancing=1\n<br>
+UTRA_FDD_carrier_freq_prio_for_idle_mode_load_balancing=2\n<br>
+16.3) Create UTRA TDD carrier list for idle mode load balancing\n<br>
+MOPR=MOPR-1\n<br>
+MOIMP=MOIMP-1\n<br>
+new_mo_name=MOIMP_UTRATDD\n<br>
+UTRA_TDD_carrier_freq_for_idle_mode_load_balancing=1\n<br>
+UTRA_TDD_carrier_freq_prio_for_idle_mode_load_balancing=2\n<br>
+16.4) Create EUTRA carrier list for idle mode load balancing\n<br>
+MOPR=MOPR-1\n<br>
+MOIMP=MOIMP-1\n<br>
+new_mo_name=MOIMP_EUTRA\n<br>
+EUTRA_carrier_freq_for_idle_mode_load_balancing=8\n<br>
+EUTRA_carrier_freq_prio_for_idle_mode_load_balancing=6\n<br>
+\n<br>
+17) Create sub MO CTRLTS\n<br>
+new_mo_name=CTRLTS\n<br>
+NetAct_IP_address=1.2.3.4\n<br>
+\n<br>
+18) Create sub MO under GERAN carrier freq list for idle mode load balancing\n<br>
+new_mo_name=MOIMP_GERAN_carrier_list\n<br>
+GERAN_carrier_freq_list_for_idle_mode_load_balancing=10\n<br>
+MOPR=MOPR-1\n<br>
+MOIMP=MOIMP-1\n<br>
+\n<br>
+19) Create sub MO under UTRA FDD carrier list for idle mode load balancing\n<br>
+new_mo_name=MOIMP_UTRAFDD_carrier_list\n<br>
+UTRA_FDD_carrier_freq_for_idle_mode_load_balancing=12\n<br>
+UTRA_FDD_carrier_freq_prio_for_idle_mode_load_balancing=5\n<br>
+MOPR=MOPR-1\n<br>
+MOIMP=MOIMP-1\n<br>
+\n<br>
+20) Create sub MO under UTRA TDD carrier list for idle mode load balancing\n<br>
+new_mo_name=MOIMP_UTRATDD_carrier_list\n<br>
+UTRA_TDD_carrier_freq_for_idle_mode_load_balancing=12\n<br>
+UTRA_TDD_carrier_freq_prio_for_idle_mode_load_balancing=5\n<br>
+MOPR=MOPR-1\n<br>
+MOIMP=MOIMP-1\n<br>
+\n<br>
+21) Create sub MO under EUTRA carrier list for idle mode load balancing\n<br>
+new_mo_name=MOIMP_EUTRA_carrier_list\n<br>
+EUTRA_carrier_freq_for_idle_mode_load_balancing=12\n<br>
+EUTRA_carrier_freq_prio_for_idle_mode_load_balancing=5\n<br>
+MOPR=MOPR-1\n<br>
+MOIMP=MOIMP-1\n<br>
+\n<br>
+22) Create GTPU under LNBTS\n<br>
+new_mo_name=GTPU\n<br>
+SGW_IP_address=1.2.3.4\n<br>
+Transport_network_identifier=4\n<br>
+below is optional\n<br>
+GTPU_configuration_identifier=1\n<br>
+GTPU_path_supervision_interval=80\n<br>
+Maximum_number_of_unanswered_N3_request=10\n<br>
+T3_maximum_waiting_time_for_GTPU_responses=16\n<br>
+\n<br>
+23) Create Further PLMN identity list\n<br>
+new_mo_name=Further PLMN identity list\n<br>
+Mobile_country_code=10\n<br>
+Mobile_network_code=20\n<br>
+Mobile_network_code_length=2\n<br>
+\n<br>
+\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Transmit Parameters To TestPartner</td>
+<td>${input_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run TestPartner Command</td>
+<td>create_new_mo</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SM Delete MO">TestPartner SM Delete MO</a></td>
+<td>[Arguments]</td>
+<td>${input_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used to delete module object on "Radio Network Configuration" page in site manager.\n<br>
+DEPRECATED\n<br>
+Please use "QTP SiteMan DeleteStructure MRBTS"\n<br>
+\n<br>
+Input:\n<br>
+\ | Input Parameters \ | Mandatory | Description |\n<br>
+\ | ${input_list} \ | Yes \ | a list including necessary info |\n<br>
+\n<br>
+\n<br>
+Usage:\n<br>
+| TestPartner SM Delete MO | ${input_list} |\n<br>
+The input list should includes the below info\n<br>
+1) the name of the MO to be deleted:delete_mo_name=LNADJL\n<br>
+2) the necessary info to locate the parent MO:LNADJ=LNADJ-62\n<br>
+\n<br>
+Here are some examples for the input list\n<br>
+1) Delete LNADJ MO\n<br>
+delete_mo_name=LNADJ-62\n<br>
+\n<br>
+2) Delete LNADJL MO\n<br>
+delete_mo_name=LNADJL-5\n<br>
+LNADJ=LNADJ-62\n<br>
+\n<br>
+3) Delete LNREL MO\n<br>
+delete_mo_name=LNREL-1\n<br>
+If you need to specify the cell, input the parameter as follows\n<br>
+LNCEL=LNCEL-2\n<br>
+Otherwise, it will look for the first cell.\n<br>
+\n<br>
+4) Delete MME IP address list MO\n<br>
+delete_mo_nam=MME IP address list\n<br>
+\n<br>
+5) Delete IRFIM\n<br>
+delete_mo_name=IRFIM-1\n<br>
+If you need to specify the cell, input the parameter as follows\n<br>
+LNCEL=LNCEL-2\n<br>
+Otherwise, it will look for the first cell.\n<br>
+\n<br>
+6) Delete GFIM\n<br>
+delete_mo_name=GFIM-1\n<br>
+If you need to specify the cell, input the parameter as follows\n<br>
+LNCEL=LNCEL-2\n<br>
+Otherwise, it will look for the first cell.\n<br>
+\n<br>
+7) Delete PCI-IP address mapping table\n<br>
+delete_mo_name=PCI-IP address mapping table\n<br>
+\n<br>
+8) Delete MTRACE\n<br>
+delete_mo_name=MTRACE-1\n<br>
+\n<br>
+9) Delete multiple MOs\n<br>
+9.1) Delete GFIM-1 and IRFIM-1 under LNCEL1\n<br>
+delete_mo_name=GFIM-1:IRFIM-1\n<br>
+9.2) Delete MTRACE-1,MTRACE-2,MTRACE-3 and MTRACE-4\n<br>
+delete_mo_name=MTRACE-1:MTRACE-2:MTRACE-3:MTRACE-4\n<br>
+9.3) Delete LNREL-1 under LNCEL-2 and LNADJL-5 under LNADJ-62\n<br>
+delete_mo_name=LNREL-1:LNADJL-5\n<br>
+LNCEL=LNCEL-2\n<br>
+LNADJ=LNADJ-62\n<br>
+Note:\n<br>
+a) For multiple MOs, conjoin each mo with ":"\n<br>
+b) It's not supported when the parent MO has the same MO name but different identifier. Such as, to delete LNADJL-5 under LNADJ-62 and LNADJL-1 under LNADJ-63, you must run the script separately.\n<br>
+\n<br>
+10) Delete sub MOs under MODIMP\n<br>
+delete_mo_name=UTRA FDD carrier list for idle mode load balancing:GERAN band parameters for idle mode load balancing:EUTRA carrier list for idle mode load balancing:UTRA TDD carrier list for idle mode load balancing:GERAN carrier freq list for idle mode load balancing\n<br>
+MODIMP=MODIMP-2\n<br>
+\n<br>
+11) Delete MODIMP\n<br>
+delete_mo_name=MODIMP-2\n<br>
+\n<br>
+12) Delete MOIMP\n<br>
+delete_mo_name=MOIMP-1\n<br>
+MOPR=MOPR-1\n<br>
+\n<br>
+13) Delete LNMME\n<br>
+delete_mo_name=LNMME-1:LNMME-2\n<br>
+\n<br>
+14) Delete REDRT\n<br>
+delete_mo_name=REDRT-1\n<br>
+LNCEL=LNCEL-1\n<br>
+\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Transmit Parameters To TestPartner</td>
+<td>${input_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run TestPartner Command</td>
+<td>delete_mo</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SM Go To Commissioning Page">TestPartner SM Go To Commissioning Page</a></td>
+<td>[Arguments]</td>
+<td>${page_name}</td>
+<td>${BTS_site}=BTS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used to go to a specified commissioning page from the main page in Site Manager.\n<br>
+\n<br>
+\n<br>
+Input:\n<br>
+\ | Input Parameters \ | Mandatory | Description |\n<br>
+\ | ${page_name} \ | Yes \ | Page name , such as Radio Network Configuration |\n<br>
+\ | ${BTS_site} \ | No | BTS or TRS, BTS by default |\n<br>
+\n<br>
+\n<br>
+Usage:\n<br>
+| TestPartner SM Go To Commissioning Page | ${page_name} | ${BTS_site} |\n<br>
+\n<br>
+\n<br>
+Examples:\n<br>
+1) Go to "Radio Network Configuration" page for BTS commissioning\n<br>
+| TestPartner SM Go To Commissioning Page| Radio Network Configuration |\n<br>
+or\n<br>
+| TestPartner SM Go To Commissioning Page| Radio Network Configuration | BTS |\n<br>
+\n<br>
+\n<br>
+2) Go to Security page for TRS commissioning\n<br>
+| TestPartner SM Go To Commissioning Page| Security | TRS |\n<br>
+\n<br>
+\n<br>
+3) Go to 'Site Properties' for both BTS and TRS commissioning\n<br>
+| TestPartner SM Go To Commissioning Page| Site Properties | Both |\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${list}</td>
+<td>create list</td>
+<td>page_name=${page_name}</td>
+<td>BTS_site=${BTS_site}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Write Parameters To File For TP</td>
+<td>${list}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Run TestPartner Command</td>
+<td>goto_commissioning_page</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>QTP SiteMan Go To Commissioning Page</td>
+<td>${page_name}</td>
+<td>${BTS_site}</td>
+<td>N</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>Reconfiguration</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SM Logon">TestPartner SM Logon</a></td>
+<td>[Arguments]</td>
+<td>${IP_address}=Local</td>
+<td>${User_name}=Nemuadmin</td>
+<td>${Password}=nemuuser</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${Certificate_option}=Once</td>
+<td>${logon_from_existing_window}=0</td>
+<td>${CloseSEM}=N</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used to log on BTS Site Manager via TestPartner\n<br>
+\n<br>
+Input:\n<br>
+\ | Input Parameters \ | Mandatory | Description |\n<br>
+\ | IP_address \ | No \ | BTS IP .default Local |\n<br>
+\ | User_name \ | No \ \ | default Nemuadmin |\n<br>
+\ | Password \ | No \ \ | default nemuuser |\n<br>
+\ | Certificate_option \| No | default Once | \n<br>
+\ | logon_from_existing_window | No | default Y |\n<br>
+\n<br>
+\n<br>
+Examples\n<br>
+1.Call keyword by default. Not input any parameter\n<br>
+\ | TestPartner SM Logon \ | \n<br>
+\n<br>
+\n<br>
+2.Call keyword with parameters\n<br>
+| TestPartner SM Logon | Local | Nemuadmin | nemuuser |\n<br>
+| TestPartner SM Logon | Local | Nemuadmin | nemuuser | Always |\n<br>
+\n<br>
+\n<br>
+3. Login from the openned login window\n<br>
+| TestPartner SM Logon | Local | Nemuadmin | nemuuser | Once | 1 | \n<br>
+\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>run keyword if</td>
+<td>'${CloseSEM}'=='Y'</td>
+<td>Kill SiteManager Process</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>remove_files</td>
+<td>C:\\Program Files\\Nokia Siemens Networks\\Managers\\BTS Site\\BTS Site Manager\\Poseidon.properties</td>
+<td>C:\\Program Files\\Nokia Siemens Networks\\Managers\\BTS Site\\BTS Site Manager\\ArielTrsEm.properties</td>
+<td>C:\\Program Files\\Nokia Siemens Networks\\Managers\\BTS Site\\BTS Site Manager\\BTSManager.properties</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>C:\\Program Files\\Nokia Siemens Networks\\Managers\\BTS Site\\BTS Site Manager\\CL.properties</td>
+<td>C:\\Program Files\\NSN\\Managers\\BTS Site\\BTS Site Manager\\Poseidon.properties</td>
+<td>C:\\Program Files\\NSN\\Managers\\BTS Site\\BTS Site Manager\\ArielTrsEm.properties</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>C:\\Program Files\\NSN\\Managers\\BTS Site\\BTS Site Manager\\BTSManager.properties</td>
+<td>C:\\Program Files\\NSN\\Managers\\BTS Site\\BTS Site Manager\\CL.properties</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${para_list}</td>
+<td>Create List</td>
+<td>IP_address=${IP_address}</td>
+<td>User_name=${User_name}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>SM_Password=${Password}</td>
+<td>Certificate_option=${Certificate_option}</td>
+<td>logon_from_existing_window=${logon_from_existing_window}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>QTP SiteMan Login</td>
+<td>${IP_address}</td>
+<td>${User_name}</td>
+<td>${Password}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Write Parameters To File For TP</td>
+<td>${para_list}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>run_testpartner_command</td>
+<td>sm_logon</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SM Menu Operation">TestPartner SM Menu Operation</a></td>
+<td>[Arguments]</td>
+<td>${input_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used for the operation on menu of Site Manager\n<br>
+\n<br>
+Input:\n<br>
+\ | Input Parameters \ | Mandatory | Description |\n<br>
+\ | ${input_list} \ | Yes \ | a list including necessary info |\n<br>
+\n<br>
+\n<br>
+Usage:\n<br>
+| TestPartner SM Menu Operation | ${input_list} |\n<br>
+\n<br>
+\n<br>
+Note:\n<br>
+1) The input list should include the parameter menu_action\n<br>
+2) If menu_action is CHANGE_LOCAL_ACCOUNT, the following parameters are required.\n<br>
+\ \ \ User_name\n<br>
+\ \ \ Password\n<br>
+\ \ \ Confirm_password\n<br>
+3) If menu_action is IP_CONNECTIVITY_TEST, the parameter IP_Connectivity_Address is required and the parameter Scope is optional\n<br>
+4) If menu_action is UPDATE_SW_TO_BTS_SITE, the parameter SW_file is required.\n<br>
+\n<br>
+\n<br>
+Examples for input list:\n<br>
+1) Change local account\n<br>
+| ${input_list} | menu_action=Change_Local_Account | User_name=QwEr123 | Password=ZxCv7896 | Confirm_password=ZxCv7896 |\n<br>
+\n<br>
+\n<br>
+2) IP Connectivity Test. Check at lease one IP is connected.\n<br>
+| ${input_list} | menu_action=IP_Connectivity_Test | IP_Connectivity_Address=1.2.3.4 | Test_result=Not connected |\n<br>
+| ${input_list} | menu_action=IP_Connectivity_Test | Scope=All configured hosts | Test_result=Connected |\n<br>
+Note: If you don't input Test_result, it will check Connected status by default.\n<br>
+\n<br>
+\n<br>
+3) Update Software to BTS Site\n<br>
+| ${input_list} | menu_action=Update_SW_to_BTS_Site | SW_file=D:\Test\btssw.zip |\n<br>
+\n<br>
+\n<br>
+4) Check site informaton\n<br>
+| ${input_list} | menu_action=Check_Site_Information | site_check_field=IPsec in use | site_check_value=No |\n<br>
+\n<br>
+\n<br>
+5) Enter BTS Test State\n<br>
+| ${input_list} | menu_action=Enter_BTS_Test_State | enter_state_action=Reset |\n<br>
+\n<br>
+\n<br>
+6) Exit BTS Test State\n<br>
+| ${input_list} | menu_action=Exit_BTS_Test_State |\n<br>
+\n<br>
+\n<br>
+7)BTS Test Models\n<br>
+7.1) RX_Throughput_Test\n<br>
+| ${input_list} | menu_action=RX_Throughput_Test | Local_cell=1 |\n<br>
+7.2) TX_Test\n<br>
+| ${input_list} | menu_action=TX_Test | TX_Test_action=Start |\n<br>
+7.3) RX_Throughput_Test\n<br>
+| ${input_list} | menu_action=RX_Throughput_Test | RX_Throughput_Test_action=Stop |\n<br>
+\n<br>
+8) Ethernet Port Security\n<br>
+| ${input_list} | menu_action=Ethernet_Port_Security | ethernet_port_security=Enable |\n<br>
+\n<br>
+9) Site Test\n<br>
+| ${input_list} | menu_action=Site_Test | Radio_Module=FZHA 1.1.1 |\n<br>
+\n<br>
+10) Validate Password\n<br>
+| ${input_list} | menu_action=Validate_Password | User_name=Nemuadmin | SM_Password=123 \n<br>
+|\n<br>
+\n<br>
+11) IP Connectivity Test. Check all IPs are connected.\n<br>
+| ${input_list} | menu_action=Check_IP_All_Connected | Scope=All configured hosts |\n<br>
+\n<br>
+12) No Automatic Disconnection. File-&gt;Preferences\n<br>
+| ${input_list} | menu_action=No_Automatic_Disconnection |\n<br>
+\n<br>
+13) Close connection to BTS site\n<br>
+| ${input_list} | menu_action=Close_connection_to_BTS_site |\n<br>
+\n<br>
+14) Click automatic disconnection and se wait minutes\n<br>
+| ${input_list} | menu_action=Automatic_Disconnection | wait_minutes=45 |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${input_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run TestPartner Command</td>
+<td>Menu_Operation</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SM Save Snapshot">TestPartner SM Save Snapshot</a></td>
+<td>[Arguments]</td>
+<td>${SnapshotType}=3</td>
+<td>${Exit}=True</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used to save snapshot in Site Manger\n<br>
+\n<br>
+| Input Parameters \ | Man. | Description | \ \n<br>
+| SnapshotType | No | the snapshot type, defualt value is 3 |\n<br>
+| Exit | No | True means relogin SM, False means not close SM. Default is True |\n<br>
+Note:\n<br>
+| SnapshotType | Type |\n<br>
+| 1 | Current data in BTS Site Manager |\n<br>
+| 2 | Fetch most important data from elements |\n<br>
+| 3 | Fetch all data from elements |\n<br>
+\n<br>
+Usage:\n<br>
+1. snapshot ---- all data\n<br>
+| TestPartner SM Save Snapshot | \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\n<br>
+| return value | snapshot full path |\n<br>
+\n<br>
+2. snapshot --- current data\n<br>
+| TestPartner SM Save Snapshot | 1 |\n<br>
+step :\n<br>
+| 1 | kill sitemanager process |\n<br>
+| 2 | sitemanager login |\n<br>
+| 3 | execute snapshot |\n<br>
+| 4 | kill sitemanager process |\n<br>
+\n<br>
+3. snapshot --- not exit site manager\n<br>
+| TestPartner SM Save Snapshot | 3 | False |\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>run_keyword_if</td>
+<td>'${Exit}'=='True'</td>
+<td>Kill SiteManager Process</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>run_keyword_if</td>
+<td>'${Exit}'=='True'</td>
+<td>TestPartner SM Logon</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Get Target Log Directory</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${sn_time}</td>
+<td>Get Timestamp</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${Snapshot_full_path}</td>
+<td>Set Variable</td>
+<td>${TARGET LOG DIRECTORY}${/}${sn_time} snapshot.zip</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Set Test Variable</td>
+<td>${Snapshot_full_path}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${para_list}</td>
+<td>Create List</td>
+<td>snapshot_path_file=${Snapshot_full_path}</td>
+<td>SnapshotType=${SnapshotType}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${para_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>run_testpartner_command</td>
+<td>capture_snapshot</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Kill SiteManager Process</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Return]</td>
+<td>${Snapshot_full_path}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SM Planned Commissioning">TestPartner SM Planned Commissioning</a></td>
+<td>[Arguments]</td>
+<td>${commissioning_file}</td>
+<td>${BTS_site}=${Empty}</td>
+<td>${send_all_parameters}=${Empty}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${need_reset}=${Empty}</td>
+<td>${save_parameters_path}=${Empty}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used to do planned commissioning. \n<br>
+The start page is the main page of Site Manager\n<br>
+\n<br>
+Input:\n<br>
+| Input Parameters \ | Mandatory | Description |\n<br>
+| commissioning_file \ \ | Yes \ | The full file path and name to be configured |\n<br>
+| BTS_site | No | BTS by dafault |\n<br>
+\ | ${send_all_parameters} \ | No \ | 1 means to send all parameters and 0 means to send only changes. Default value is empty, that means not to select send way, just send it by default. |\n<br>
+\| ${need_reset} | No | Default is empty which means not check reset. 1 means need reset and 0 means don't need reset |\n<br>
+\| ${save_parameters_path} | No | if input, it will save parameter |\n<br>
+\n<br>
+\n<br>
+Usage:\n<br>
+| TestPartner SM Planned Commissioning | commissioning_file |\n<br>
+\n<br>
+\n<br>
+Here's the example\n<br>
+1) BTS planned commissioning, send parameters by default, don't need to save parameters\n<br>
+| TestPartner SM Planned Commissioning | D:\\abc\\SCFC_1.xml |\n<br>
+\n<br>
+2) TRS planned commissioning, send parameters by default, don't need to save parameters\n<br>
+| TestPartner SM Planned Commissioning | D:\\abc\\SCFC_1.xml | TRS |\n<br>
+\n<br>
+3) BTS planned commissioning,send parameters by default, need to save parameters\n<br>
+| TestPartner SM Planned Commissioning | D:\\abc\\SCFC_1.xml | BTS | ${Empty} | ${Empty} | D:\\abc.xml |\n<br>
+\n<br>
+4) TRS planned commission, send all parameters, need to check reset, need to save parameters\n<br>
+| TestPartner SM Planned Commissioning | D:\\abc\\SCFC_1.xml | TRS | 1 | 1 | D:\\abc.xml |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${para_list}</td>
+<td>Create List</td>
+<td>commissioning_file=${commissioning_file}</td>
+<td>BTS_site=${BTS_site}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${para_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>run_testpartner_command</td>
+<td>planned_commissioning</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${list}</td>
+<td>create list</td>
+<td>send_all_parameters=${send_all_parameters}</td>
+<td>need_reset=${need_reset}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>save_parameters_path=${save_parameters_path}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Write Parameters To File For TP</td>
+<td>${list}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>run_testpartner_command</td>
+<td>Send_Parameters</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>QTP SiteMan Go To Commissioning Page</td>
+<td>Send Parameters</td>
+<td>BTS</td>
+<td>N</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>Planned</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>QTP SiteMan SendParameter</td>
+<td>${send_all_parameters}</td>
+<td>N</td>
+<td>Y</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${need_reset}</td>
+<td>${save_parameters_path}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SM Send Parameters">TestPartner SM Send Parameters</a></td>
+<td>[Arguments]</td>
+<td>${send_all_parameters}=${Empty}</td>
+<td>${need_reset}=${Empty}</td>
+<td>${save_parameters_path}=${Empty}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used to send parameters for commissioning in Site Manager.\n<br>
+\n<br>
+Input:\n<br>
+| Input Parameters \ | Mandatory | Description |\n<br>
+\ | ${send_all_parameters} \ | No \ | 1 means to send all parameters and 0 means to send only changes. Default value is empty, that means not to select send way, just send it by default. |\n<br>
+\| ${need_reset} | No | Default is empty which means not check reset. 1 means need reset and 0 means don't need reset |\n<br>
+\| ${save_parameters_path} | No | if input, it will save parameter |\n<br>
+\n<br>
+Usage:\n<br>
+| TestPartner SM Send Parameters | ${send_all_parameters} |\n<br>
+\n<br>
+\n<br>
+Examples:\n<br>
+1) Send the parameters by default\n<br>
+| TestPartner SM Send Parameters | \n<br>
+\n<br>
+\n<br>
+2) Select "All parameters (requires reset)" and send the parameters\n<br>
+| TestPartner SM Send Parameters | 1 |\n<br>
+\n<br>
+\n<br>
+3) Select "Only changes (may require reset)" and send the parameters\n<br>
+| TestPartner SM Send Parameters | 0 |\n<br>
+\n<br>
+4) Send the parameters by default and need to reset site\n<br>
+| TestPartner SM Send Parameters | ${empty} | 1 |\n<br>
+\n<br>
+5) Send all parameters and don't need reset site\n<br>
+| TestPartner SM Send Parameters | 1 | 0 |\n<br>
+\n<br>
+6) Send the parameters by default and ignore whether site is reset\n<br>
+| TestPartner SM Send Parameters |\n<br>
+\n<br>
+7) Send only changes and ignore whether site is reset\n<br>
+| TestPartner SM Send Parameters | 0 |\n<br>
+\n<br>
+8) Send the parameters by default and ignore whether site is reset, but need to save commissioning parameters to D:\aaa.xml\n<br>
+| TestPartner SM Send Parameters | ${Empty} | ${Empty} | D:\aaa.xml |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${list}</td>
+<td>create list</td>
+<td>send_all_parameters=${send_all_parameters}</td>
+<td>need_reset=${need_reset}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>save_parameters_path=${save_parameters_path}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Write Parameters To File For TP</td>
+<td>${list}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Run TestPartner Command</td>
+<td>Send_Parameters</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>QTP SiteMan SendParameter</td>
+<td>${send_all_parameters}</td>
+<td>N</td>
+<td>N</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${need_reset}</td>
+<td>${save_parameters_path}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SM TRS Commissioning">TestPartner SM TRS Commissioning</a></td>
+<td>[Arguments]</td>
+<td>${input_list}</td>
+<td>${need_send}=1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">TThis keyword is used to do TRS Commissioning\n<br>
+\n<br>
+Input:\n<br>
+\ | Input Parameters \ | Mandatory | Description |\n<br>
+\ | ${input_list} \ | Yes \ | a list including necessary info |\n<br>
+\ | ${need_send} | Yes | Whether or not send the parameters |\n<br>
+\n<br>
+\n<br>
+Usage:\n<br>
+| TestPartner SM TRS Commissioning | ${input_list} |\n<br>
+\n<br>
+Note:\n<br>
+1) The input list should include the parameter TRS_page, such as TRS_page=IP_Interfaces\n<br>
+2) If you want to update multiple pages, you need to indicate it in TRS_page as follows\n<br>
+\ \ \ TRS_page=IP_Interfaces:Routing:Application_Addresses\n<br>
+3) If there's IP_Interfaces in TRS_page, you need to input the field and value via the following parameters\n<br>
+\ \ IP_Interfaces_field\n<br>
+\ \ IP_Interfaces_value\n<br>
+Similarly, if there's Routing in TRS_page, you need to input the field and value via the following parameters\n<br>
+\ \ Routing_field\n<br>
+\ \ Routing_value\n<br>
+Same for other pages.\n<br>
+4) In the same page, if you want to update multiple fields, conjoin them with ":".\n<br>
+5) If you want to add multiple VLAN or Static Routes at a time, conjoin the VLAN or routes info with "&amp;"\n<br>
+6) Not all fields for TRS commissioning have been added in this script.\n<br>
+\n<br>
+Here's some examples for the input list\n<br>
+1) Update IP Interfaces page\n<br>
+1.1) Update one field \ of Transport Ethernet interface, such as "Address IP" on IP Interfaces page\n<br>
+TRS_page=IP_Interfaces\n<br>
+IP_Interfaces_field=Address_IP\n<br>
+IP_Interfaces_value=1.2.3.4\n<br>
+1.2) Update VLAN 300 on IP Interfaces page\n<br>
+TRS_page=IP_Interfaces\n<br>
+IP_Interfaces_field=VLAN 300\n<br>
+IP_Interfaces_value=Shaper_information_rate=999,Shaper_burst_size=1600\n<br>
+1.3) Create New VLAN\n<br>
+TRS_page=IP_Interfaces\n<br>
+IP_Interfaces_field=New VLAN\n<br>
+IP_Interfaces_value=VLAN_ID=400,Address_IP=1.2.3.4,Address_Mask=28\n<br>
+1.4) Delete VLAN\n<br>
+TRS_page=IP_Interfaces\n<br>
+IP_Interfaces_field=Delete VLAN\n<br>
+IP_Interfaces_value=VLAN 300\n<br>
+1.5) Update multiple fields on IP Interface page\n<br>
+TRS_page=IP_Interfaces\n<br>
+IP_Interfaces_field=Address_IP:VLAN 300:New VLAN:Shaper_information_rate\n<br>
+IP_Interfaces_value=1.2.3.4:Shaper_information_rate=999,Shaper_burst_size=1600:VLAN_ID=400,Address_IP=1.2.3.4,Address_Mask=28:999\n<br>
+1.6) New TAC\n<br>
+TRS_page=IP_Interfaces\n<br>
+IP_Interfaces_field=New TAC\n<br>
+IP_Interfaces_value=Exclude_layer_2_overhead_in_calculations=1,Overbooking_activity_factor=0.08,Limit_for_normal_GBR_connections=20,Limit_for_GBR_handovers=30,Limit_for_GBR_emergency_connections=40,Average_packet_size_for_QCI_value_2=50,Average_packet_size_for_QCI_value_3=60,Average_packet_size_for_QCI_value_4=70,Transport_network_ID=1\n<br>
+1.7) Update TAC\n<br>
+TRS_page=IP_Interfaces\n<br>
+IP_Interfaces_field=TAC 1\n<br>
+IP_Interfaces_value=Exclude_layer_2_overhead_in_calculations=1,Overbooking_activity_factor=0.08,Limit_for_normal_GBR_connections=20,Limit_for_GBR_handovers=30,Limit_for_GBR_emergency_connections=40,Average_packet_size_for_QCI_value_2=50,Average_packet_size_for_QCI_value_3=60,Average_packet_size_for_QCI_value_4=70,Transport_network_ID=1\n<br>
+1.8) Delete TAC\n<br>
+TRS_page=IP_Interfaces\n<br>
+IP_Interfaces_field=Delete TAC\n<br>
+IP_Interfaces_value=TAC 2&amp;TAC 3\n<br>
+\n<br>
+Note: on RL45\n<br>
+IPv6_Address_IP and IPv6_Address_Mask are used for IPv6 IP and Mask\n<br>
+IPv4_Address_IP and IPv4_Address_Mask are used for IPv4 IP and Mask\n<br>
+Address_IP and Address_Mask are also used for IPv4 IP and Mask so that the script is compatible to the old cases.\n<br>
+\n<br>
+\n<br>
+\n<br>
+2) Update Application Addresses page \n<br>
+2.1) Update one field\n<br>
+TRS_page=Application_Addresses\n<br>
+Application_Addresses_field=User_plane\n<br>
+Application_Addresses_value=1.1.1.1\n<br>
+2.2) Update multiple fields\n<br>
+TRS_page=Application_Addresses\n<br>
+Application_Addresses_field=User_plane:Control_plane:Management_plane\n<br>
+Application_Addresses_value=1.1.1.1:2.2.2.2:3.3.3.3\n<br>
+\n<br>
+Note: on RL45\n<br>
+User_plane_IPv4 and Control_plane_IPv4 are used for IPv4\n<br>
+User_plane_IPv6 and Control_plane_IPv6 are used for IPv6\n<br>
+User_plane and Control are also used for IPv4 so that the script is compatible to the old cases.\n<br>
+\n<br>
+\n<br>
+3) Update Routing page\n<br>
+3.1) Update Default gateway \n<br>
+TRS_page=Routing\n<br>
+Routing_field=Default_gateway\n<br>
+Routing_value=4.4.4.5\n<br>
+3.2) Add a static route\n<br>
+TRS_page=Routing\n<br>
+Routing_field=Static_routes\n<br>
+Routing_value=route_Destination=10.68.160.0,route_Netmask=255.255.255.0,route_Bits=24,route_Gateway=2.0.0.0\n<br>
+3.3) Add multiple static routes at a time\n<br>
+TRS_page=Routing\n<br>
+Routing_field=Static_routes\n<br>
+Routing_value=route_Destination=10.68.160.0,route_Netmask=255.255.255.0,route_Bits=24,route_Gateway=2.0.0.0&amp;route_Destination=1.1.1.1,route_Netmask=2.2.2.2,route_Bits=28,route_Gateway=3.0.0.0\n<br>
+3.4) Update multiple fields on Routing page\n<br>
+--RL25--\n<br>
+TRS_page=Routing\n<br>
+Routing_field=Default_gateway:Update_routes\n<br>
+Routing_value=4.4.4.5:route_Destination=10.68.160.0,route_Netmask=255.255.255.0,route_Bits=24,route_Gateway=2.0.0.0\n<br>
+--RL35--\n<br>
+TRS_page=Routing\n<br>
+Routing_field=Update_route\n<br>
+Routing_value=targetroute_Destination=1.1.1.1,targetroute_Gateway=3.3.3.3,route_Destination=.0.0.0.0,route_Gateway=7.7.7.7,route_Bits=11&amp;targetroute_Destination=2.2.2.2,targetroute_Gateway=5.5.5.5,route_Destination=4.4.4.4,route_Gateway=6.6.6.6,route_Netmask=5.5.5.5,route_Bits=11 \n<br>
+3.5)Delete route\n<br>
+TRS_page=Routing\n<br>
+Routing_field=Delete_route\n<br>
+Routing_value=route_Destination=2.0.0.0,route_Gateway=10.68.160.0\n<br>
+3.6) Create BFD\n<br>
+TRS_page=Routing\n<br>
+Routing_field=New_BFD\n<br>
+Routing_value=BFD session in use=True,Destination address=6.6.6.1,UDP source port=4784,Enable faults=True\n<br>
+3.7) Update the existing BFD\n<br>
+TRS_page=Routing\n<br>
+Routing_field=BFD 1\n<br>
+Routing_value=BFD session in use=True,Destination address=6.6.6.1,UDP source port=4784,Enable faults=True\n<br>
+\n<br>
+4) Update multiple pages at a time\n<br>
+4.1) Update "Address IP" and create new VLAN on "IP Interfaces" page, then update User_plane field on "Application Addresses" page, and then update Default_gateway field and add new static routes on Routing page\n<br>
+TRS_page=IP_Interfaces:Application_Addresses:Routing\n<br>
+IP_Interfaces_field=Address_IP:New VLAN\n<br>
+IP_Interfaces_value=1.2.3.4:VLAN_ID=400,Address_IP=1.2.3.4,Address_Mask=28\n<br>
+Application_Addresses_field=User_plane\n<br>
+Application_Addresses_value=1.1.1.1\n<br>
+Routing_field=Default_gateway:Static_routes\n<br>
+Routing_value=4.4.4.5:route_Destination=10.68.160.0,route_Netmask=255.255.255.0,route_Bits=24,route_Gateway=2.0.0.0\n<br>
+\n<br>
+5) Update Ethernet Switching page\n<br>
+5.1) Update the DSCP_to_priority_queue_mapping table\n<br>
+TRS_page=Ethernet_Switching\n<br>
+Ethernet_Switching_field=DSCP_to_priority_queue_mapping\n<br>
+Ethernet_Switching_value=1-11&amp;2-22&amp;3-33,12&amp;4-44&amp;5-55,56,61\n<br>
+Note: 1-11 means update the DSCP to 11 for the Queue 1\n<br>
+\ \ \ \ \ \ \ \ Multiple rows is conjoined with "&amp;"\n<br>
+5.2) Restore the DSCP_to_priority_queue_mapping table\n<br>
+\ \ \ \ TRS_page=Ethernet_Switching\n<br>
+\ \ \ \ Ethernet_Switching_field=DSCP_to_priority_queue_mapping_Restore\n<br>
+\ \ \ \ Ethernet_Switching_value=1\n<br>
+\n<br>
+6) Update RTT Measurement page\n<br>
+6.1) Select checkbox of RTT_measurement_in_use\n<br>
+TRS_page=RTT_Measurement\n<br>
+RTT_Measurement_field=RTT_measurement_in_use\n<br>
+RTT_Measurement_value=True\n<br>
+6.2) update Reflector_port and Add Reflector UDPecho activation\n<br>
+TRS_page=RTT_Measurement\n<br>
+RTT_Measurement_field=Reflector_port:Add_Reflector_UDPecho_activation\n<br>
+RTT_Measurement_value=4999:10.69.64.200 - TRS ETH IF,1,1\n<br>
+6.3) Delete Reflector UDPecho activation\n<br>
+TRS_page=RTT_Measurement\n<br>
+RTT_Measurement_field=Delete_Reflector_UDPecho_activation\n<br>
+RTT_Measurement_value=4999:10.69.64.200 - TRS ETH IF\n<br>
+6.4) update Message_rate\n<br>
+TRS_page=RTT_Measurement\n<br>
+RTT_Measurement_field=Message_rate\n<br>
+RTT_Measurement_value=1\n<br>
+6.5) New Session\n<br>
+TRS_page=RTT_Measurement\n<br>
+RTT_Measurement_field=New_Session\n<br>
+RTT_Measurement_value=In_use=True,Source_IP_address=10.69.71.100 - VLAN 286,Destination_IP_address=2.2.2.2,Destination_port=999,DSCP=55,Message_size=88,15_min_packet_loss_ratio_fault_threshold=96.0,1_min_round_trip_time_fault_threshold=100&amp;Destination_IP_address=3.3.3.3\n<br>
+6.6) Update Session\n<br>
+TRS_page=RTT_Measurement\n<br>
+RTT_Measurement_field=Session 1\n<br>
+RTT_Measurement_value=In_use=True,Source_IP_address=10.69.71.100 - VLAN 286,Destination_IP_address=2.2.2.2,Destination_port=999,DSCP=55,Message_size=88,15_min_packet_loss_ratio_fault_threshold=96.0,1_min_round_trip_time_fault_threshold=100\n<br>
+6.7) Delete Session\n<br>
+TRS_page=RTT_Measurement\n<br>
+RTT_Measurement_field=Delete Session\n<br>
+RTT_Measurement_value=Session 1\n<br>
+\n<br>
+7) Update Ethernet_Service_OAM page\n<br>
+7.1) update some fields\n<br>
+TRS_page=Ethernet_Service_OAM\n<br>
+Ethernet_Service_OAM_field=Ethernet_Service_OAM_in_use:WFQ_scheduler_queue_weight:Insert_received_optional_TLV_into_reply_messages\n<br>
+7.2) New Domain\n<br>
+TRS_page=Ethernet_Service_OAM\n<br>
+Ethernet_Service_OAM_field=New_Domain\n<br>
+Ethernet_Service_OAM_value=Name=bdnnd,Level=2\n<br>
+7.3) Update Domain\n<br>
+TRS_page=Ethernet_Service_OAM\n<br>
+Ethernet_Service_OAM_field=Domain 1(aaa)\n<br>
+Ethernet_Service_OAM_value=Name=bdnnd,Level=2\n<br>
+7.4) Delete Domain\n<br>
+TRS_page=Ethernet_Service_OAM\n<br>
+Ethernet_Service_OAM_field=Delete_Domain\n<br>
+Ethernet_Service_OAM_value=Domain 1(aaa)</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${a}</td>
+<td>create list</td>
+<td>need_send=${need_send}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${list}=</td>
+<td>evaluate</td>
+<td>${input_list}+${a}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run TestPartner Command</td>
+<td>TRS_Commissioning</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SM Template Commissioning">TestPartner SM Template Commissioning</a></td>
+<td>[Arguments]</td>
+<td>${commissioning_file}</td>
+<td>${BTS_site}=${Empty}</td>
+<td>${send_all_parameters}=${Empty}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${need_reset}=${Empty}</td>
+<td>${save_parameters_path}=${Empty}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used to template commissioning in Site Manager\n<br>
+\n<br>
+Input:\n<br>
+| Input Parameters \ | Mandatory | Description |\n<br>
+| commissioning_file \ \ | Yes \ | The full file path and name to be configured |\n<br>
+| BTS_site | No | BTS by dafault |\n<br>
+\ | ${send_all_parameters} \ | No \ | 1 means to send all parameters and 0 means to send only changes. Default value is empty, that means not to select send way, just send it by default. |\n<br>
+\| ${need_reset} | No | Default is empty which means not check reset. 1 means need reset and 0 means don't need reset |\n<br>
+\| ${save_parameters_path} | No | if input, it will save parameter |\n<br>
+\n<br>
+\n<br>
+\n<br>
+Usage:\n<br>
+| TestPartner SM Template Commissioning | commissioning_file |\n<br>
+\n<br>
+\n<br>
+Here's the example\n<br>
+1) BTS template commissioning, send parameters by default, don't need to save parameters\n<br>
+| TestPartner SM Template Commissioning | D:\\abc\\SCFC_1.xml |\n<br>
+\n<br>
+2) TRS template commissioning, send parameters by default, don't need to save parameters\n<br>
+| TestPartner SM Template Commissioning | D:\\abc\\SCFC_1.xml | TRS |\n<br>
+\n<br>
+3) BTS template commissioning,send parameters by default, need to save parameters\n<br>
+| TestPartner SM Template Commissioning | D:\\abc\\SCFC_1.xml | BTS | ${Empty} | ${Empty} | D:\\abc.xml |\n<br>
+\n<br>
+4) TRS template commission, send all parameters, need to check reset, need to save parameters\n<br>
+| TestPartner SM Template Commissioning | D:\\abc\\SCFC_1.xml | TRS | 1 | 1 | D:\\abc.xml |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${para_list}</td>
+<td>Create List</td>
+<td>commissioning_file=${commissioning_file}</td>
+<td>BTS_site=${BTS_site}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${para_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>run_testpartner_command</td>
+<td>template_commissioning</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${list}</td>
+<td>create list</td>
+<td>send_all_parameters=${send_all_parameters}</td>
+<td>need_reset=${need_reset}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>save_parameters_path=${save_parameters_path}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Write Parameters To File For TP</td>
+<td>${list}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>run_testpartner_command</td>
+<td>Send_Parameters</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>QTP SiteMan Go To Commissioning Page</td>
+<td>Send Parameters</td>
+<td>BTS</td>
+<td>N</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>Template</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>QTP SiteMan SendParameter</td>
+<td>${send_all_parameters}</td>
+<td>N</td>
+<td>Y</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${need_reset}</td>
+<td>${save_parameters_path}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SM Update Commissioning RNC">TestPartner SM Update Commissioning RNC</a></td>
+<td>[Arguments]</td>
+<td>${input_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used to update the fields on Radio Network Configuration page of Site Manager.\n<br>
+DEPRECATED\n<br>
+Please use "QTP SiteMan UpdateParaValue"\n<br>
+\n<br>
+Input:\n<br>
+\ | Input Parameters \ | Mandatory | Description |\n<br>
+\ | ${input_list} \ | Yes \ | a list including necessary info |\n<br>
+\n<br>
+\n<br>
+Usage:\n<br>
+| TestPartner SM Update Commissioning RNC | ${input_list} |\n<br>
+\n<br>
+\n<br>
+Note:\n<br>
+1) The input list must include the following parameters\n<br>
+\ | RNC_MO | The MO to be updated. Currently, following are the valid MO name: MRBTS,LNBTS,ADIPNO,LNADJ,LNCEL,QCI |\n<br>
+\ | RNC_field | The field to be updated |\n<br>
+\ | RNC_value | The value to be updated |\n<br>
+2) For MO LNADJ, you must include the parameter LNADJ in the input list. If the field is on LNADJL, you must include the parameter LNADJL as well.\n<br>
+3) For MO QCI, you must include the parameter QCI_MO in the input list. QCI_MO specify the lowest MO, such as QCI translation table QCI 8-1\n<br>
+4) For MO LNCEL, If the field is on the following sub mo, you need to input the sub mo name too.\n<br>
+\ \ IRFIM\n<br>
+\ \ LNHOIF\n<br>
+\ \ LNREL\n<br>
+\ \ Blacklisted_cell_list\n<br>
+Besides, if you don't input the parameter LNCEL, it means the first cell by default.\n<br>
+5) If you want to update multiple fileds on the same MO, you can conjoin them with ":" in the RNC_field and RNC_value, such as, update the field A to 1 and field B to 2, you can input as below\n<br>
+RNC_field=A:B\n<br>
+RNC_value=1:2\n<br>
+\n<br>
+Examples for input list\n<br>
+1) Update field on MRBTS\n<br>
+| ${input_list} | RNC_MO=MRBTS | RNC_field=Reset multiradio flexi BTS to test dedicated state | RNC_value=true |\n<br>
+\n<br>
+\n<br>
+2) Update field on LNBTS\n<br>
+| ${input_list} | RNC_MO=LNBTS | RNC_field=Activation status of S1 flex feature | RNC_value=true |\n<br>
+\n<br>
+\n<br>
+3) Update field on ADIPNO\n<br>
+| ${input_list} | RNC_MO=ADIPNO | RNC_field=Primary IP address of main MME | RNC_value=1.2.3.4 |\n<br>
+\n<br>
+\n<br>
+4) Update field on LNADJ\n<br>
+4.1) on LNADJ mo\n<br>
+| ${input_list} | RNC_MO=LNADJ | RNC_field=C-Plane IP address control | RNC_value=oamControlled | LNADJ=LNADJ-62 |\n<br>
+4.2) on LNADJL mo\n<br>
+| ${input_list} | RNC_MO=LNADJ | RNC_field=Downlink EARFCN of LTE cell served by neighbor eNB | RNC_value=38000 | LNADJ=LNADJ-62 | LNADJL=LNADJL-5 |\n<br>
+\n<br>
+\n<br>
+5) Update field on QCI \n<br>
+| ${input_list} | RNC_MO=QCI | RNC_field=DRX profile index | RNC_value=4 | QCI_MO=QCI translation table QCI 7-1 |\n<br>
+\n<br>
+6) Update field on LNCEL\n<br>
+Note: The default LNCEL is LNCEL1, please input the parameter LNCEL for other cell\n<br>
+6.1) on LNCEL\n<br>
+| ${input_list} | RNC_MO=LNCEL | RNC_field=Enable reduced bandwidth DL | RNC_value=true |\n<br>
+6.2) on IRFIM\n<br>
+| ${input_list} | RNC_MO=LNCEL | RNC_field=Allowed measurement bandwidth | RNC_value=6mbw | IRFIM=IRFIM-1 |\n<br>
+6.3) on Periodic UE measurements\n<br>
+| ${input_list} | RNC_MO=LNCEL | RNC_field=Report amount | RNC_value=32 |\n<br>
+6.4) on DeltaF PUCCH list\n<br>
+| ${input_list} | RNC_MO=LNCEL | RNC_field=DeltaF PUCCH format 1 | RNC_value=2 |\n<br>
+6.5) on LNREL\n<br>
+| ${input_list} | RNC_MO=LNCEL | RNC_field=Cell individual offset of neighbour cells | RNC_value=10dB | LNREL=LNREL-1 | \n<br>
+6.6) on Blacklisted cell for intra and inter freq HO list\n<br>
+| ${input_list} | RNC_MO=LNCEL | RNC_field=Range of physical cell id range | RNC_value=n64 | Blacklisted_cell_list=Blacklisted cell for intra and inter freq HO list-1 |\n<br>
+6.7) on LNHOIF\n<br>
+| ${input_list} | RNC_MO=LNCEL | RNC_field=LNHOIF Related hysteresis of thresholds th3 and th3a for RSRP | RNC_value=4.0 | \ LNHOIF=LNHOIF-1 |\n<br>
+6.8 ) on IRFIM\n<br>
+| ${input_list} \ | RNC_MO=LNCEL | RNC_field=IRFIM identifier:Allowed measurement bandwidth:Carrier frequency priority for idle mode load balancing:EUTRA carrier frequency absolute priority:EUTRA cell reselection timer:EUTRA frequency specific offset:EUTRA frequency value:EUTRA inter frequency threshold high:EUTRA inter frequendy threshold low:EUTRA presence antenna port1:Minimum required rx RSRP level:Pmax neighbouring EUTRA cells | RNC_value=2:15mbw:6:8:7:1 dB:999:19:2:true:-138:33 | IRFIM=IRFIM-2 |\n<br>
+6.9) on UFFIM\n<br>
+| ${input_list} | RNC_MO=LNCEL | RNC_field=UTRA cell reselection timer:UTRA Carrier Frequency Absolute Priority:UTRA Inter Frequency Threshold High:UTRA Inter Frequency Threshold low:UTRA Maximum Allowed Transmit Power:UTRA Minimum Required Receive Level:UTRA downlink frequency as ARFCN value | RNC_value=6:8:30:44:33:-26:888 |\n<br>
+6.10) on Mobility profiles mapping list\n<br>
+Mobility_profiles_mapping_list=Mobility profiles mapping list-1\n<br>
+RNC_field=Last subscriber profile ID of a range:Mobility profile ID:Subscriber profile ID\n<br>
+RNC_value=3:4:5\n<br>
+6.11) on CDFIM\n<br>
+a) on CDMFA-1\n<br>
+RNC_MO=LNCEL\n<br>
+RNC_field=CDMA search window size:CDMA2000 1xRTT cell reselection timer:CDMA2000 HRPD cell reselection timer\n<br>
+RNC_value=15:0:1\n<br>
+b) on CDMA2000 1xRTT band class list\n<br>
+RNC_MO=LNCEL\n<br>
+RNC_field=CDMA 1xRTT band priority for idle mode load balancing:CDMA2000 1xRTT band class BC:CDMA2000 1xRTT cell reselection priority:CDMA2000 1xRTT reselection high threshold:CDMA2000 1xRTT reselection low threshold\n<br>
+RNC_value=3:0bc:8:1.5:2.5\n<br>
+CDMA2000_1xRTT_band_class_list=CDMA2000 1xRTT band class list-1\n<br>
+c) on CDMA2000 1xRTT neighbor cell list\n<br>
+RNC_MO=LNCEL\n<br>
+RNC_field=CDMA2000 1xRTT NCL extension selector:CDMA2000 1xRTT band class (NCL):CDMA2000 1xRTT frequency:CDMA2000 1xRTT physical cell identity\n<br>
+RNC_value=R8ListPartOnly:1bc:11:22\n<br>
+CDMA2000_1xRTT_neighbor_cell_list=CDMA2000 1xRTT neighbor cell list-1\n<br>
+d) on CDMA2000 HRPD neighbor cell list\n<br>
+RNC_MO=LNCEL\n<br>
+RNC_field=CDMA2000 HRPD NCL extension selector:CDMA2000 HRPD band class (NCL):CDMA2000 HRPD frequency:CDMA2000 HRPD physical cell identity\n<br>
+RNC_value=R8ListPartOnly:1bc:11:22\n<br>
+CDMA2000_HRPD_neighbor_cell_list=CDMA2000 HRPD neighbor cell list-1\n<br>
+e) on CDMA2000 HRPD band class list\n<br>
+RNC_MO=LNCEL\n<br>
+RNC_field=CDMA HRPD band priority for idle mode load balancing:CDMA2000 HRPD band class:CDMA2000 HRPD cell reselection priority:CDMA2000 HRPD reselection high threshold:CDMA2000 HRPD reselection low threshold\n<br>
+RNC_value=5:2bc:8:9.5:11.5\n<br>
+CDMA2000_HRPD_band_class_list=CDMA2000 HRPD band class list-1\n<br>
+6.12) on REDRT\n<br>
+RNC_MO=LNCEL\n<br>
+RNC_field=Redirection target configuration identifier:Add GSM system information to redirection message:CDMA band:CDMA frequency:GERAN band indicator:RAT for redirection:Redirection priority for CS fallback with redirection:Redirection priority for UE context release:Redirection priority for emerfency call:UTRA frequency:eUTRA frequency:GERAN ARFCN values list\n<br>
+RNC_value=3:csfb:bc11:111:gsm1800:eutra:5:3:4:222:33333:88\n<br>
+REDRT=REDRT-1\n<br>
+\n<br>
+\n<br>
+7) Update the fields on LNMME\n<br>
+| ${input_list} | RNC_MO=LNMME | RNC_field=LTE mobility management entity identifier:Primary IPv4 address:Primary IPv6 address:Transport network identifier | RNC_value=2:1.1.1.1:2.2.2.2:4 | LNMME=LNMME-0 |\n<br>
+\n<br>
+8) Update the fields on MODPR\n<br>
+8.1) on MODPR itself\n<br>
+| ${input_list} | RNC_MO=MODPR | RNC_field=Auto adaptation to freq. layers of all neighbour cells:Percentage of UE for idle mode load balancing | RNC_value=false:11 |\n<br>
+8.2) on MODRED\n<br>
+RNC_MO=MODPR\n<br>
+RNC_field=Mobility default profile identifier for redirection:Add GSM system information to redirection message:GERAN band indicator:RAT for redirection:Redirection priority for CS fallback with redirection:Redirection priority for UE context release:Redirection priority for emerfency call:UTRA frequency:eUTRA frequency:GERAN ARFCN values list\n<br>
+RNC_value=2:csfb:gsm1900:eutra:2:3:4:333:444:78\n<br>
+MODRED=MODRED-1\n<br>
+8.3) on MODIMP\n<br>
+a) on CDMA 1xRTT band list for idle mode load balancing and CDMA HRPD band list for idle mode load balancing\n<br>
+RNC_MO=MODPR\n<br>
+RNC_field=CDMA 1xRTT band class for idle mode load balancing:CDMA RTT band class prio for idle mode load balancing:CDMA HRPD band class for idle mode load balancing:CDMA HRPD band class prio for idle mode load balancing\n<br>
+RNC_value=1bc:1:2bc:2\n<br>
+MODIMP=MODIMP-1\n<br>
+CDMA_1xRTT_band_list=CDMA 1xRTT band list for idle mode load balancing-1\n<br>
+CDMA_HRPD_band_list=CDMA HRPD band list for idle mode load balancing-1\n<br>
+\n<br>
+\n<br>
+\n<br>
+9) update the fields on MOPR\n<br>
+9.1) UTRA TDD carrier list for idle mode load balancing\n<br>
+| ${input_list} | RNC_MO=MOPR | RNC_field=UTRA TDD carrier freq for idle mode load balancing:UTRA TDD carrier freq prio for idle mode load balancing | RNC_value=3:6 | MOPR=MOPR-1 | MOIMP=MOIMP-1 | UTRA_TDD_carrier_list=UTRA TDD carrier list for idle mode load balancing-1 |\n<br>
+9.2) EUTRA carrier list for idle mode load balancing\n<br>
+| ${input_list} | RNC_MO=MOPR | RNC_field=EUTRA carrier freq for idle mode load balancing:EUTRA carrier freq prio for idle mode load balancing | RNC_value=99:7 | MOPR=MOPR-1 | MOIMP=MOIMP-1 | EUTRA_carrier_list=EUTRA carrier list for idle mode load balancing-1 |\n<br>
+9.3) fields on MOPR itself\n<br>
+RNC_MO=MOPR\n<br>
+MOPR=MOPR-1\n<br>
+RNC_field=Mobility profile identifier:Percentage of UE for idle mode load balancing\n<br>
+RNC_value=2:10\n<br>
+9.4) Update MORED\n<br>
+RNC_MO=MOPR\n<br>
+RNC_field=Mobility profile identifier for redirection:Add GSM system information to redirection message:GERAN band indicator:RAT for redirection:Redirection priority for CS fallback with redirection:Redirection priority for UE context release:Redirection priority for emerfency call:UTRA frequency:eUTRA frequency:GERAN ARFCN values list\n<br>
+RNC_value=3:csfb:gsm1900:eutra:2:3:4:333:444:78\n<br>
+MORED=MORED-2\n<br>
+MOPR=MOPR-1\n<br>
+9.5) on CDMA HRPD band list for idle mode load balancing and CDMA 1xRTT band list for idle mode load balancing\n<br>
+RNC_MO=MOPR\n<br>
+RNC_field=CDMA 1xRTT band class for idle mode load balancing:CDMA 1xRTT band class prio for idle mode load balancing:CDMA HRPD band class for idle mode load balancing:CDMA HRPD band class prio for idle mode load balancing\n<br>
+RNC_value=1bc:1:2bc:2\n<br>
+MOIMP=MOIMP-1\n<br>
+CDMA_1xRTT_band_list=CDMA 1xRTT band list for idle mode load balancing-1\n<br>
+CDMA_HRPD_band_list=CDMA HRPD band list for idle mode load balancing-1\n<br>
+MOPR=MOPR-2\n<br>
+\n<br>
+\n<br>
+10) Update ANRPRL\n<br>
+RNC_MO=ANRPRL\n<br>
+ANRPRL=ANRPRL-1\n<br>
+RNC_field=ANR profile for LTE identifier:ANR power level threshold for neighbor cells:ANR power level threshold for passive mode:ANR quality threshold for neighbor cells:Activate also for UE based ANR:Neighbor relation limit inter frequency:Neighbor relation limit intra frequency:Target carrier frequency\n<br>
+RNC_value=2:-1:-2:-3:false:12:55:88\n<br>
+\n<br>
+11) Update Global eNB id X2-link blacklist\n<br>
+RNC_MO=Global eNB id X2-link blacklist\n<br>
+RNC_field=X2 blacklisted eNB ID:X2 blacklisted global eNB id MCC:X2 blacklisted global eNB id MNC:X2 blacklisted global eNB MNC length\n<br>
+RNC_value=10:20:30:3\n<br>
+Global_eNB_id_X2link_blacklist=Global eNB id X2-link blacklist-1\n<br>
+\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Transmit Parameters To TestPartner</td>
+<td>${input_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run TestPartner Command</td>
+<td>Update_Commissioning_RNC</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SM Update IP View">TestPartner SM Update IP View</a></td>
+<td>[Arguments]</td>
+<td>${list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used to update the fields under the IP button in Site Manager.\n<br>
+The start page is the main page on Site Manager.\n<br>
+\n<br>
+Input:\n<br>
+\ | Input Parameters \ | Mandatory | Description |\n<br>
+\ | ${input_list} \ | Yes \ | a list including necessary info |\n<br>
+\n<br>
+\n<br>
+Usage: \n<br>
+| TestPartner SM Update IP View | ${input_list} |\n<br>
+\n<br>
+\n<br>
+Here's some Examples for the list:\n<br>
+If you cannot find the example for your case in below, please input the following normal format\n<br>
+| ${input_list} | IP_tab=tab | field=value |\n<br>
+\n<br>
+\n<br>
+1. IP Addresses\n<br>
+1.1) Update "Primary OAM system"\n<br>
+| ${input_list} | IP_tab=IP Addresses | Primary_OAM_system=10.68.152.2 |\n<br>
+\n<br>
+\n<br>
+1.2) Update BTS_subnet_interface and BTS_subnet_mask\n<br>
+| ${input_list} | IP_tab=IP Addresses | \ BTS_subnet_interface=1.2.3.4 | BTS_subnet_mask=3 |\n<br>
+\n<br>
+\n<br>
+1.3) Empty BTS_subnet_interface and BTS_subnet_mask\n<br>
+| ${input_list} | IP_tab=IP Addresses | BTS_subnet_interface="" | BTS_subnet_mask="" |\n<br>
+\n<br>
+\n<br>
+1.4) Other fields are in the same format. The fields include\n<br>
+BTS_subnet_interface\n<br>
+BTS_subnet_mask\n<br>
+Primary_OAM_system\n<br>
+Secondary_OAM_system\n<br>
+OAM_system_preference\n<br>
+NTP_server\n<br>
+Primary_DNS_server\n<br>
+Secondary_DNS_server\n<br>
+\n<br>
+1.5) Add NTP Server in System Time\n<br>
+| ${input_list} | IP_tab=IP Addresses | System_Time_Add_NTP_servers=1.1.1.1:2.2.2.2 |\n<br>
+\n<br>
+1.6) Remove NTP server in System Time\n<br>
+| ${input_list} | IP_tab=IP Addresses | System_Time_Remove_NTP_servers=1.1.1.1:2.2.2.2 |\n<br>
+\n<br>
+1.7) Remove NTP server in a specified status\n<br>
+| ${input_list} | IP_tab=IP Addresses | System_Time_Remove_NTP_servers_by_Status=Not in use (GPS used) |\n<br>
+\n<br>
+\n<br>
+\n<br>
+2. DHCP Server\n<br>
+2.1) Enable DHCP and set start and end address on "DHCP Server"\n<br>
+| ${input_list} | IP_tab=DHCP Server | \ DHCP_enable_flag=True | \ DHCP_client_address_start=1.2.1.2 | DHCP_client_address_end=1.2.4.6 |\n<br>
+\n<br>
+\n<br>
+2.2) Create DHCP table on "DHCP Server"\n<br>
+| ${input_list} \ | IP_tab=DHCP Server | DHCP_Table=DHCP_Type=Client ID,DHCP_ID=11,DHCP_IP_address=1.2.1.3&amp;DHCP_Type=Client ID,DHCP_ID=22,DHCP_IP_address=1.2.2.3&amp;DHCP_Type=HW ID,DHCP_ID=33,DHCP_IP_address=1.2.3.4 |\n<br>
+\n<br>
+\n<br>
+2.3) Delete DHCP table on "DHCP Server"\n<br>
+| ${input_list} | IP_tab=DHCP Server | DHCP_Table_Recover=1 |\n<br>
+\n<br>
+\n<br>
+\n<br>
+3. Security\n<br>
+3.1) UPdate "LDAP_Address"\n<br>
+| ${input_list} | IP_tab=Security | LDAP_Address=1.2.3.4 |\n<br>
+\n<br>
+\n<br>
+3.2) Update "Allow_only_secure_connection"\n<br>
+| ${input_list} | IP_tab=Security | Allow_only_secure_connection=True |\n<br>
+\n<br>
+\n<br>
+3.3) Same format for other fields in below\n<br>
+LDAP_Port\n<br>
+Mode\n<br>
+Enable_ping_and_traceroute\n<br>
+\n<br>
+\n<br>
+4. IP Interfaces\n<br>
+4.1) Update Address_IP on Transport Ethernet interface\n<br>
+| ${input_list} | IP_tab=IP Interfaces | Address_IP=1.2.3.4 |\n<br>
+If need to update mask as well,\n<br>
+| ${input_list} | IP_tab=IP Interfaces | Address_IP=1.2.3.4 | Address_mask=28 |\n<br>
+\n<br>
+Same format for other fields in below\n<br>
+Traffic_shaping_type\n<br>
+Total_shaper_information_rate\n<br>
+Total_shaper_burst_size\n<br>
+Shaper_information_rate\n<br>
+Shaper_burst_size\n<br>
+WFQ_scheduler_queue_weight\n<br>
+Enable_QoS\n<br>
+Include_Ethernet_overhead\n<br>
+MTU\n<br>
+IPv4_Address_IP (RL45)\n<br>
+IPv4_Address_Mask (RL45)\n<br>
+IPv6_Address_IP (RL45)\n<br>
+IPv6_Address_Mask (RL45)\n<br>
+\n<br>
+4.2) Update Address_IP on VLAN\n<br>
+| ${input_list} | IP_tab=IP Interfaces | Address_IP=1.2.3.4 | VLAN=VLAN 300 |\n<br>
+If need to update mask as well,\n<br>
+| ${input_list} | IP_tab=IP Interfaces | Address_IP=1.2.3.4 | VLAN=VLAN 300 | Address_mask=28 |\n<br>
+\n<br>
+Same format for other fields in below\n<br>
+VLAN_ID\n<br>
+Shaper_information_rate\n<br>
+Shaper_burst_size\n<br>
+WFQ_scheduler_queue_weight\n<br>
+Enable_QoS\n<br>
+IPv4_Address_IP (RL45)\n<br>
+IPv4_Address_Mask (RL45)\n<br>
+IPv6_Address_IP (RL45)\n<br>
+IPv6_Address_Mask (RL45)\n<br>
+\n<br>
+4.3) Update fields on TAC\n<br>
+| ${input_list} | IP_tab=IP Interfaces | TAC=Exclude layer 2 overhead in calculations:2.0,Overbooking activity factor:11,Limit for normal GBR connections:22,Limit for GBR handovers:33,Limit for GBR emergency connections:44,Average packet size for QCI value 2:55,Average packet size for QCI value 3:66,Average packet size for QCI value 4:77 |\n<br>
+\n<br>
+\n<br>
+4.4) New BFD\n<br>
+| ${input_list} | IP_tab=IP Interfaces | New_BFD=BFD ID:2,BFD session in use:True,Destination address:1.2.3.4,Source address:10.68.160.46 - TRS ETH IF,UDP source port:4784,Enable faults:True,BFD group:2,BFD type:Multihop,Desired minimun transmit interval:600,Required minimum receive interval:600,Detection multiplier:6 |\n<br>
+\n<br>
+\n<br>
+4.5) Update BFD\n<br>
+| ${input_list} | IP_tab=IP Interfaces | Update_BFD=BFD ID:2,BFD session in use:True,Destination address:1.2.3.4,Source address:10.68.160.46 - TRS ETH IF,UDP source port:4784,Enable faults:True,BFD group:2,BFD type:Multihop,Desired minimun transmit interval:600,Required minimum receive interval:600,Detection multiplier:6 | Target_BFD=BFD 1 |\n<br>
+\n<br>
+\n<br>
+4.6) Delete BFD\n<br>
+| ${input_list} | IP_tab=IP Interfaces | Delete_BFD=BFD 1 |\n<br>
+\n<br>
+\n<br>
+4.7) New VLAN\n<br>
+| ${input_list} | IP_tab=IP Interfaces | New_VLAN=VLAN_ID=400,Address_IP=12.3.4.3,Address_mask=23,Enable_QoS=False,Shaper_information_rate=999,Shaper_burst_size=2000,WFQ_scheduler_queue_weight=1500 |\n<br>
+\n<br>
+\n<br>
+4.8) Delete VLAN\n<br>
+| ${input_list} | IP_tab=IP Interfaces | Delete_VLAN=VLAN 123 |\n<br>
+\n<br>
+4.9) Create New TAC\n<br>
+| ${input_list} | IP_tab=IP Interfaces | New_TAC=Exclude layer 2 overhead in calculations:2.0,Overbooking activity factor:11,Limit for normal GBR connections:22,Limit for GBR handovers:33,Limit for GBR emergency connections:44,Average packet size for QCI value 2:55,Average packet size for QCI value 3:66,Average packet size for QCI value 4:77,Transport network ID:0 |\n<br>
+\n<br>
+\n<br>
+\n<br>
+5. Quality of Service\n<br>
+5.1) Update the checkbox\n<br>
+| ${input_list} | IP_tab=IP Interfaces | Overwrite_DSCP_in_Site_Support_Equipment_SSE_messages=True |\n<br>
+| ${input_list} | IP_tab=IP Interfaces | Enable_PHB_performance_counters=False |\n<br>
+\n<br>
+\n<br>
+5.2) Update PHB and VLAN priority for DSCP in the "DSCP to PHB and VLAN priority mapping" table\n<br>
+Note: 1) Use the parameter Update_PHB_and_VLAN_priority_per_DSCP to input the value\n<br>
+2) dscp-phb-vlan_priority means update PHB and VLAN Priority for DSCP\n<br>
+3) If the cell doesn't need update, indicate it with "N", dscp-N-vlan_priority means only update vlan_priority\n<br>
+4) conjoin multiple row via ","\n<br>
+a) Update PHB and VLAN Priority for DSCP 14\n<br>
+| \ ${input_list} | IP_tab=Quality of Service | Update_PHB_and_VLAN_priority_per_DSCP=14-Assured Forwarding 11-2 |\n<br>
+b) Update PHB for DSCP 14\n<br>
+| \ ${input_list} | IP_tab=Quality of Service | Update_PHB_and_VLAN_priority_per_DSCP=14-Assured Forwarding 11-N |\n<br>
+c) Update multiple rows at a time\n<br>
+| \ ${input_list} | IP_tab=Quality of Service | Update_PHB_and_VLAN_priority_per_DSCP=14-Assured Forwarding 11-N, 28-Assured Forwarding 20-6 |\n<br>
+\n<br>
+\n<br>
+5.3) Restore the Traffic_type_settings table\n<br>
+| \ ${input_list} | IP_tab=Quality of Service | Traffic_type_settings_Restore=1 |\n<br>
+\n<br>
+\n<br>
+5.4) For other fields, please see QTP keyword "QTP SiteMan Update IP View"\n<br>
+\n<br>
+\n<br>
+6. Application Addresses\n<br>
+6.1) Update fields\n<br>
+| ${input_list} | IP_tab=Application Addresses | User_plane=10.68.160.194 | Control_plane=10.68.160.194 | Management_plane=10.68.160.194 | Synchronization_plane=Synchronization_plane | Select_same_IP_interface_for_all_planes=10.68.160.194 VLAN interface 500 | Select_IP_Interface_for_User_plane=10.68.160.194 VLAN interface 500 | Select_IP_Interface_for_Control_plane=10.68.160.194 VLAN interface 500 | Select_IP_Interface_for_Management_plane=10.68.160.194 VLAN interface 500 | Select_IP_Interface_for_Synchronization_plane=10.68.160.194 VLAN interface 500 |\n<br>
+\n<br>
+Note: on RL45\n<br>
+User_plane_IPv4 and Control_plane_IPv4 are used for IPv4\n<br>
+User_plane_IPv6 and Control_plane_IPv6 are used for IPv6\n<br>
+User_plane and Control are also used for IPv4 so that the script is compatible to the old cases.\n<br>
+\n<br>
+6.2) Create New Address Set\n<br>
+IP_tab=Application Addresses\n<br>
+New_Address_Set=User plane:1.2.3.4,Control plane:2.2.2.2,Transport network ID:0\n<br>
+6.3) Update Address Set\n<br>
+IP_tab=Application Addresses\n<br>
+Target_Address_Set=Address set 1\n<br>
+Update_Address_Set=User plane:1.2.3.4,Control plane:2.2.2.2,Transport network ID:0\n<br>
+6.4) Delete Address Set\n<br>
+IP_tab=Application Addresses\n<br>
+Delete_Address_Set=Address set 1\n<br>
+\n<br>
+\n<br>
+7. RTT Measurement\n<br>
+7.1) Update the checkbox "RTT_measurement_in_use"\n<br>
+| ${input_list} | IP_tab=RTT Measurement | RTT_measurement_in_use=True |\n<br>
+\n<br>
+\n<br>
+7.2) Update Reflector\n<br>
+a) Update Reflector port\n<br>
+| ${input_list} | IP_tab=RTT Measurement | Reflector_port=5000 | \n<br>
+\n<br>
+b) Add Reflector and UDP echo activation per IP address\n<br>
+| ${input_list} | IP_tab=RTT Measurement | Add_Reflector_UDPecho_activation=10.68.160.46 - TRS ETH IF:1:0&amp;10.68.179.111 - VLAN 300:1:1 |\n<br>
+Note: 10.68.160.46 - TRS ETH IF:1:0 means - select 10.68.160.46 - TRS ETH IF as IP address, check "TWAMP reflector in use" and uncheck "UDP echo server in use"\n<br>
+\n<br>
+c) Delete Reflector and UDP echo activation per IP address\n<br>
+| ${input_list} | IP_tab=RTT Measurement | Delete_Reflector_UDPecho_activation=10.68.160.46 - TRS ETH IF&amp;10.68.179.111 - VLAN 300 |\n<br>
+\n<br>
+\n<br>
+7.3) Update Message_rate\n<br>
+| ${input_list} | IP_tab=RTT Measurement | Message_rate=1 |\n<br>
+\n<br>
+\n<br>
+7.4) Update fields on Session 1\n<br>
+| ${input_list} | IP_tab=RTT Measurement | Update_Session=In use:True,Source IP address:10.68.179.111 - VLAN 300,Destination IP address:2.2.2.2,Destination port:999,DSCP:55,Message size:88,15 min packet loss ratio fault threshold:96.0,1 min round trip time fault threshold:100 | Session=Session 1 |\n<br>
+\n<br>
+\n<br>
+7.5) New Session\n<br>
+| ${input_list} | IP_tab=RTT Measurement | New_Session=In use:True,Source IP address:10.68.179.111 - VLAN 300,Destination IP address:2.2.2.2,Destination port:999,DSCP:55,Message size:88,15 min packet loss ratio fault threshold:96.0,1 min round trip time fault threshold:100 |\n<br>
+\n<br>
+7.6) Delete Session\n<br>
+| ${input_list} | IP_tab=RTT Measurement | New_Session=Session 1 |\n<br>
+\n<br>
+\n<br>
+\n<br>
+8. IP Security\n<br>
+8.1) Create Policy\n<br>
+| ${input_list} | IP_tab=IP Security | IP_Security_New_Policy=U-plane | Policy_order_number=33 | IPsec_action=Protect | Local_IP_address=10.68.160.78 | Local_IP_address_port=23 | Local_port=2600 | Local_IPsec_tunnel_endpoint_IP_address=10.68.160.78 - TRS ETH IF | Protocol=18 | Remote_IP_address=1.2.3.4 | Remote_IP_address_port=11 | Remote_port=3000 | Remote_IPsec_tunnel_endpoint_IP_address=5.5.5.5 | IKE_protocol_variant=IKE_V1 | IKE_encryption_method=AES_128_CBC | ESP_encryption_method=AES_128_CBC |\n<br>
+\n<br>
+\n<br>
+8.2) Check IP Security policy\n<br>
+| ${input_list} | IP_tab=IP Security | security_associations=Established | security_associations_ip=1.1.1.1:2.2.2.2 |\n<br>
+\n<br>
+\n<br>
+8.3) Check the confilicting policy configuration\n<br>
+| ${input_list} | IP_tab=IP Security | Policy_Conflicting_Configuration=U-plane | Policy_order_number=33 | IPsec_action=Protect | Local_IP_address=10.68.160.78 | Local_IP_address_port=23 | Local_port=2600 |\n<br>
+\n<br>
+\n<br>
+8.4) Update the existing Policy\n<br>
+| ${input_list} | IP_tab=IP Security | IP_Security_Update_Policy=Policy 22 | Remote_IPsec_tunnel_endpoint_IP_address=3.3.3.3 |\n<br>
+\n<br>
+\n<br>
+8.5 ) Delete Policy\n<br>
+| ${input_list} | IP_tab=IP Security | IP_Security_Delete_Policy=Policy 22 |\n<br>
+\n<br>
+\n<br>
+8.6) Update the checkbox IPsec_in_use\n<br>
+| ${input_list} | IP_tab=IP Security | IPsec_in_use=True |\n<br>
+\n<br>
+\n<br>
+\n<br>
+9. Routing\n<br>
+9.1) Check route warning\n<br>
+| ${input_list} | IP_tab=Routing | check_route_warning=1 |\n<br>
+\n<br>
+\n<br>
+9.2) Add new BFD\n<br>
+| ${input_list} | IP_tab=Routing | New_BFD=BFD ID:1,BFD session in use:True,Destination address:1.2.3.4,Source address:10.68.160.46 - TRS ETH IF,UDP source port:4784,Enable faults:True,BFD group:2,BFD type:Multihop,Desired minimun transmit interval:600,Required minimum receive interval:600,Detection multiplier:6 |\n<br>
+\n<br>
+\n<br>
+9.3) Check/Uncheck the checkbox Enable_fast_IP_rerouting\n<br>
+| ${input_list} | IP_tab=Routing | Enable_fast_IP_rerouting=True |\n<br>
+\n<br>
+\n<br>
+9.4) Add State routes\n<br>
+| ${input_list} | IP_tab=Routing | Static_routes=route_Destination=1.1.1.1,route_Netmask=2.2.2.2,route_Bits=11,route_Gateway=3.3.3.3,route_Preference=2,route_BFD_session=BFD 1&amp;route_Destination=4.4.4.4,route_Netmask=5.5.5.5,route_Bits=11,route_Gateway=6.6.6.6 |\n<br>
+\n<br>
+\n<br>
+9.5) Set Route_reinstallation_delay\n<br>
+| ${input_list} | IP_tab=Routing | Route_reinstallation_delay=5 |\n<br>
+\n<br>
+\n<br>
+9.6)Delete route on "Routing" --- need route_Destination and route_Gateway to identify the target row\n<br>
+| ${input_list} | IP_tab=Routing | Delete_route=route_Destination=1.1.1.1,route_Gateway=3.3.3.3&amp;route_Destination=4.4.4.4,route_Gateway=6.6.6.6 |\n<br>
+\n<br>
+\n<br>
+9.7)Update route value on "Routing" --- need targetroute_Destination and targetroute_Gateway to identify the target row\n<br>
+| ${input_list} | IP_tab=Routing | Update_route=targetroute_Destination=1.1.1.1,targetroute_Gateway=3.3.3.3,route_Destination=.0.0.0.0,route_Gateway=7.7.7.7,route_Bits=11&amp;targetroute_Destination=2.2.2.2,targetroute_Gateway=5.5.5.5,route_Destination=4.4.4.4,route_Gateway=6.6.6.6,route_Netmask=5.5.5.5,route_Bits=11 |\n<br>
+\n<br>
+\n<br>
+\n<br>
+10. IP Filtering\n<br>
+10.1) Create new rule on "IP Filtering"\n<br>
+| ${input_list} | IP_tab=IP Filtering | IP_Filtering_New_Rule=IP_Filtering_Rule_Name=aaa,IP_Filtering_Adress_type=Range,IP_Filtering_Address=1.1.1.1,IP_Filtering_Subnet_mask=1.2.1.2,IP_Filtering_Subnet_mask_spinner=28&amp;IP_Filtering_Rule_Name=bbb,IP_Filtering_Address=2.2.2.2&amp;IP_Filtering_Rule_Name=ccc,IP_Filtering_Adress_type=Any |\n<br>
+\n<br>
+10.2) Delete rule on "IP Filtering"\n<br>
+| ${input_list} | IP_tab=IP Filtering | IP_Filtering_Delete_Rule=aaa |\n<br>
+\n<br>
+10.3) Restricted Mode for LMP On\n<br>
+| ${input_list} | IP_tab=IP Filtering | Restricted_Mode_for_LMP_On=1 |\n<br>
+\n<br>
+10.4) Restricted Mode for LMP Off\n<br>
+| ${input_list} | IP_tab=IP Filtering | Restricted_Mode_for_LMP_Off=1 |\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run TestPartner Command</td>
+<td>Update_IP_View</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SM Validate Commissioning File">TestPartner SM Validate Commissioning File</a></td>
+<td>[Arguments]</td>
+<td>${commissioning_type}</td>
+<td>${commissioning_file}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This script is used to validate the commissioning file.\n<br>
+When the content of the commissioning file is not correct, if site manager pops up a window to prompt it, the script will pass. Otherwise, it will fail.\n<br>
+The start page is the main page of site manager\n<br>
+The input value is the commissioning type and the absolute pathname of the invalid commissioning file\n<br>
+\n<br>
+Input:\n<br>
+| Input Parameters \ | Mandatory | Description |\n<br>
+| commissioning_type | Yes | Planned or Template |\n<br>
+| commissioning_file \ \ | Yes \ | The full file path and name to be configured |\n<br>
+\n<br>
+\n<br>
+Usage:\n<br>
+| Testpartner SM Validate Commissioning File | commissioning_type | commissioning_file |\n<br>
+\n<br>
+\n<br>
+Here's the example\n<br>
+| Testpartner SM Validate Commissioning File | Planned | \ D:\\abc\\SCFC_1.xml |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${para_list}</td>
+<td>Create List</td>
+<td>commissioning_type=${commissioning_type}</td>
+<td>commissioning_file=${commissioning_file}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${para_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>run_testpartner_command</td>
+<td>validate_commissioning_file</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SM Validate Radio Network Config">TestPartner SM Validate Radio Network Config</a></td>
+<td>[Arguments]</td>
+<td>${next_flag}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used to check the "Next" button on Radio Network Configuration page for BTS commissioning\n<br>
+\n<br>
+Input:\n<br>
+| Input Parameters \ | Mandatory | Description |\n<br>
+| next_flag | Yes | Enabled or Disabled |\n<br>
+\n<br>
+\n<br>
+Examples\n<br>
+1. Check whether the Next button is enabled\n<br>
+| TestPartner SM Validate Radio Network Config | Enabled |\n<br>
+\n<br>
+\n<br>
+2. Check whether the Next button is disabled\n<br>
+| TestPartner SM Validate Radio Network Config | Disabled |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${para_list}</td>
+<td>Create List</td>
+<td>next_flag=${next_flag}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${para_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>run_testpartner_command</td>
+<td>Validate_Radio_Network_Config</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner TRS Certificate Management">TestPartner TRS Certificate Management</a></td>
+<td>[Arguments]</td>
+<td>${list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used for the action on menu Configuraton-&gt;Certificate Management in LTE TRS Manager\n<br>
+\n<br>
+Input:\n<br>
+\ | Input Parameters \ | Mandatory | Description |\n<br>
+\ | ${input_list} \ | Yes \ | a list including necessary info |\n<br>
+\n<br>
+\n<br>
+Usage:\n<br>
+| TestPartner TRS Certification Management | ${input_list} |\n<br>
+\n<br>
+\n<br>
+The input list should include the following information\n<br>
+1) certification_action to indicate which action needs to be taken\n<br>
+2) The necessary info to take the specific action\n<br>
+\n<br>
+\n<br>
+Here are the examples for the input list\n<br>
+1) Restore vendor certificate and check there's no certificate on "BTS Certificates" tab\n<br>
+certification_action=Restore Vendor Cert Delete BTSCert\n<br>
+\n<br>
+2) Restore vendor certificate and check Revoked certificates is 0 on "Automatic Management"\n<br>
+certification_action=Restore Vendor Cert Delete CRL\n<br>
+\n<br>
+3) Install certificates on "BTS Certificates" tab\n<br>
+certification_action=Install Certificate\n<br>
+BTS_certificate_file=D:\\Testpartner\\test\\cert1.pem\n<br>
+Private_key=D:\\Testpartner\\test\\privkey1.pem\n<br>
+CA_certificate_file=D:\\Testpartner\\testoot_cert_011db249_54b18c55.pem</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run TestPartner Command</td>
+<td>TRS_Certificate_Management</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner TRS Manager Logon">TestPartner TRS Manager Logon</a></td>
+<td>[Arguments]</td>
+<td>${User_name}=Nemuadmin</td>
+<td>${Password}=nemuuser</td>
+<td>${Use_port_12000_for_BTS_connection}=1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${Connect_to_remote_host}=0</td>
+<td>${Host_address}=${Empty}</td>
+<td>${TRSMgr_Version}=2.0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used to logon TRS Manager\n<br>
+\n<br>
+Input:\n<br>
+\ | Input Parameters \ | Mandatory | Description |\n<br>
+\ | User_name \ | No \ | User Name. Default is Nemuadmin |\n<br>
+\ | Password \ | No \ | Password. Default is nemuuser |\n<br>
+\ | Use_port_12000_for_BTS_connection \ | No \ | Default is checked |\n<br>
+\ | Connect_to_remote_host \ | No \ | Default is not checked |\n<br>
+\ | Host_address \ | No \ | Default is empty |\n<br>
+\ | TRSMgr_Version \ | No | Default is 2.0 |\n<br>
+\n<br>
+\n<br>
+Usage:\n<br>
+| TestPartner TRS Manager Logon | ${User_name} | ${Password} | ${Use_port_12000_for_BTS_connection} | ${Connect_to_remote_host} | ${Host_address} |\n<br>
+\n<br>
+\n<br>
+Examples:\n<br>
+1) Logon with username="Nemuadmin" and password="nemuuser" and check "Use_port_12000_for_BTS_connection"\n<br>
+| TestPartner TRS Manager Logon |\n<br>
+\n<br>
+\n<br>
+2) Logon with username="Abcd1234" and password="ABcd1234" and check "Use_port_12000_for_BTS_connection"\n<br>
+| TestPartner TRS Manager Logon | Abcd1234 | ABcd1234 | 1 |\n<br>
+\n<br>
+\n<br>
+3) Logon with username="Nemuadmin" and password="nemuuser" and check "Connect_to_remote_host" and host address is "10.160.152.34"\n<br>
+| TestPartner TRS Manager Logon | Nemuadmin | nemuuser | 0 | 1 | 10.160.152.34 |\n<br>
+\n<br>
+4) TRS Manager version is 5.0\n<br>
+| TestPartner TRS Manager Logon | Nemuadmin | nemuuser | 1 | 0 | ${empty} | 5.0 |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${list}</td>
+<td>create list</td>
+<td>User_name=${User_name}</td>
+<td>SM_Password=${Password}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>Use_port_12000_for_BTS_connection=${Use_port_12000_for_BTS_connection}</td>
+<td>Connect_to_remote_host=${Connect_to_remote_host}</td>
+<td>Host_address=${Host_address}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>TRSMgr_Version=${TRSMgr_Version}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>run_testpartner_command</td>
+<td>TRS_Manager_Logon</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner Tassu Operation">TestPartner Tassu Operation</a></td>
+<td>[Arguments]</td>
+<td>${input_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used for Tassu operation\n<br>
+\n<br>
+Input:\n<br>
+| Input Parameters \ | Mandatory | Description |\n<br>
+| ${input_list} | Yes | A list including tassu_acton and other necessary info |\n<br>
+\n<br>
+Usage:\n<br>
+| TestPartner Tassu Operation | ${input_list} |\n<br>
+\n<br>
+\n<br>
+Note:\n<br>
+1) The input list should include the parameter tassu_action which indicate which action will be taken.\n<br>
+\n<br>
+Here's the examples for the input list\n<br>
+1) Start Tassu application\n<br>
+| ${input_list} | tassu_action=Start | \n<br>
+\n<br>
+\n<br>
+2) Close Tassu application\n<br>
+| ${input_list} | tassu_action=Close |\n<br>
+\n<br>
+\n<br>
+3) Do Configuration\n<br>
+| ${input_list} | tassu_action=Config | \ tassu_config_file=D:\\test1\\test2\\test.htm |\n<br>
+\n<br>
+\n<br>
+4) Send Alarm\n<br>
+| ${input_list} | tassu_action=Send_Alarm | tassu_send_file=C:\\Program Files\\NetHawk\\Tassu\\Headers\\LN50TD_ENV_1206_001_02_19072012\\Scripts\\Alarms\\LN30_Alarms\\0-99, 1800-1899 and 4000-4500 O&amp;M SW Faults\OAM_SW_ALARMS.htm | tassu_send_field=faultSource_board:faultSource_cpu:faultSource_task:faultLocation_board:faultLocation_cpu:faultLocation_task:faultInfo | tassu_send_value=FSM1:MHA_1:WTR_TEST_ALARM_TASK:FR3:MHA_4:WTR_TEST_ALARM_TASK:0,0,0,0,0,0,0,0,0,0,0 |\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${input_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run TestPartner Command</td>
+<td>Tassu_Operation</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner Capture Screen">TestPartner Capture Screen</a></td>
+<td>[Arguments]</td>
+<td>${PathName}=${TEST_LOG_DIRECTORY}</td>
+<td>${PicName}=${Empty}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used to capture screen.\n<br>
+\n<br>
+Input:\n<br>
+\ | Input Parameters \ | Mandatory | Description |\n<br>
+\ | PathName \ | No \ | Default is${TEST_LOG_DIRECTORY} |\n<br>
+\n<br>
+\n<br>
+Usage:\n<br>
+| TestPartner Capture Screen | ${PathName} |\n<br>
+\n<br>
+\n<br>
+Examples:\n<br>
+1) Save captured screen in Test Log directory\n<br>
+| TestPartner Capture Screen |\n<br>
+\n<br>
+\n<br>
+2) Save captured screen in the specified directory\n<br>
+| TestPartner Capture Screen | D:\\test1\\test2 |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${list}</td>
+<td>create list</td>
+<td>PathName=${PathName}</td>
+<td>PicName=${PicName}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run TestPartner Command</td>
+<td>capture_screen</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SM Return To Main Page">TestPartner SM Return To Main Page</a></td>
+<td>[Arguments]</td>
+<td>${return_type}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used to return to main page of Site Manager.\n<br>
+\n<br>
+Input:\n<br>
+| Input Parameters \ | Mandatory | Description |\n<br>
+| ${return_type} | Yes | 1-return from Commissioning |\n<br>
+\n<br>
+\n<br>
+Usage:\n<br>
+| TestPartner SM Return To Main Page | ${return_type} |\n<br>
+\n<br>
+\n<br>
+Examples:\n<br>
+1) Return to main page from commissioning\n<br>
+| TestPartner SM Return To Main Page | 1 |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${list}</td>
+<td>create list</td>
+<td>return_type=${return_type}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>run_testpartner_command</td>
+<td>return_to_main_page</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SM BTS PM">TestPartner SM BTS PM</a></td>
+<td>[Arguments]</td>
+<td>${BTS_PM_action}</td>
+<td>${BTS_PM_field}=${Empty}</td>
+<td>${BTS_PM_value}=${Empty}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used for BTS PM Operation\n<br>
+\n<br>
+Input:\n<br>
+\ | Input Parameters \ | Mandatory | Description |\n<br>
+\ | BTS_PM_action \ | Yes \ | 1-Update_MC_Interval |\n<br>
+\ | BTS_PM_field \ | Yes \ \ | the field to be updated or checked |\n<br>
+\ | BTS_PM_value \ | Yes \ \ | the value to be updated or checked |\n<br>
+\n<br>
+\n<br>
+Usage:\n<br>
+| TestPartner SM BTS PM | ${BTS_PM_action} | ${BTS_PM_field} | ${BTS_PM_value} |\n<br>
+\n<br>
+\n<br>
+Examples\n<br>
+1. Update the Interval column in Measurement Configuration table\n<br>
+| TestPartner SM BTS PM | Update_MC_Interval | LTE S1AP:LTE X2AP:LTE RRC:LTE UE state | 1 h:1 h:1 h:1 h |\n<br>
+\n<br>
+2. Sava BTS PM data to file\n<br>
+| TestPartner SM BTS PM | Save BTS PM Data | D:\abc.txt |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${input_list}</td>
+<td>create list</td>
+<td>BTS_PM_action=${BTS_PM_action}</td>
+<td>BTS_PM_field=${BTS_PM_field}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>BTS_PM_value=${BTS_PM_value}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${input_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>run_testpartner_command</td>
+<td>BTS_PM</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SiteBrowser Logon">TestPartner SiteBrowser Logon</a></td>
+<td>[Arguments]</td>
+<td>${Addresslist_file}=${Empty}</td>
+<td>${User_name}=Nemuadmin</td>
+<td>${SB_Password}=nemuuser</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used to log on BTS Site Browser\n<br>
+\n<br>
+Input:\n<br>
+\ | Input Parameters \ | Mandatory | Description |\n<br>
+\ | Addresslist_file \ | No \ | It's required when properties is not configured. Default is Empty \ |\n<br>
+\ | User_name \ | No \ \ | default Nemuadmin |\n<br>
+\ | SB_Password \ | No \ \ | default nemuuser |\n<br>
+\n<br>
+\n<br>
+Usage:\n<br>
+| TestPartner SiteBrowser Logon | Addresslist_file | User_name | SB_Password |\n<br>
+\n<br>
+\n<br>
+Examples:\n<br>
+1) Logon for the first time, specify the address list file\n<br>
+| TestPartner SiteBrowser Logon | C:\\Program Files\\Nokia Siemens Networks\\Managers\\BTS Site\\BTS Site Manager\\Addresslist.txt |\n<br>
+\n<br>
+2) Don't need to set address list file\n<br>
+| TestPartner SiteBrowser Logon |\n<br>
+\n<br>
+3) Logon with other username and no need to set address list file\n<br>
+| TestPartner SiteBrowser Logon | ${Empty} | ABcdJkL | ZX12Cv45 |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${para_list}</td>
+<td>Create List</td>
+<td>Addresslist_file=${Addresslist_file}</td>
+<td>User_name=${User_name}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>SB_Password=${SB_Password}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${para_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>run_testpartner_command</td>
+<td>SiteBrowser_Logon</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SiteBrowser Exit">TestPartner SiteBrowser Exit</a></td>
+<td>[Arguments]</td>
+<td>${NotStop}=0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used to exit BTS Site Browser\n<br>
+\n<br>
+Input:\n<br>
+\ | Input Parameters \ | Mandatory | Description |\n<br>
+\ | NotStop \ | No \ | Default is 0 \ |\n<br>
+\n<br>
+\n<br>
+Usage:\n<br>
+| TestPartner SiteBrowser Exit | NotStop |\n<br>
+\n<br>
+\n<br>
+Examples:\n<br>
+1) Exit without prompt info\n<br>
+| TestPartner SiteBrowser Exit |\n<br>
+\n<br>
+2) Prompt info appears and select Stop\n<br>
+| TestPartner SiteBrowser Exit |\n<br>
+\n<br>
+3) Prompt info appears and select Don't Stop\n<br>
+| TestPartner SiteBrowser Exit | 1 |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${para_list}</td>
+<td>Create List</td>
+<td>NotStop=${NotStop}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${para_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>run_testpartner_command</td>
+<td>SiteBrowser_Exit</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SM Exit">TestPartner SM Exit</a></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used to exit BTS Site Manager\n<br>
+\n<br>
+Input:\n<br>
+No\n<br>
+\n<br>
+\n<br>
+Usage:\n<br>
+| TestPartner SM Exit |\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>run_testpartner_command</td>
+<td>sm_exit</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SM BTS Status Monitor">TestPartner SM BTS Status Monitor</a></td>
+<td>[Arguments]</td>
+<td>${button_name}</td>
+<td>${check_field}</td>
+<td>${check_value}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${Monitor_Time}</td>
+<td>${Monitor_Type}=1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used to monitor the status on BTS Hardware button.\n<br>
+\n<br>
+Input:\n<br>
+| Input Parameters \ | Mandatory | Description |\n<br>
+| button_name \ | Yes \ | The button name where the field to be checked |\n<br>
+| check_field | Yes \ \ | The field name to be checked |\n<br>
+| check_value \ | Yes \ \ | The value name to be checked |\n<br>
+| Monitor_Time | Yes | Minute to monitor |\n<br>
+| Monitor_Type | No | 1- the value should be same with the check_value | \n<br>
+\n<br>
+\n<br>
+Here's some examples\n<br>
+1) Monitor the value of "BTS operational state" is "On air" on "LTE Flexi BTS" button within 20 minutes\n<br>
+| TestPartner SM Check BTS HW Status | LTE Flexi BTS | BTS operational state | On air | 20 |\n<br>
+\n<br>
+\n<br>
+2) Monitor the value of "Working state" is "Working" on FZHA1.1.1 button within 30 minutes\n<br>
+| TestPartner SM Check BTS HW Status | FZHA1.1.1 | Working state | Working | 30 |\n<br>
+\n<br>
+\n<br>
+Note: It supports all fields on BTS Hardware\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${para_list}</td>
+<td>Create List</td>
+<td>button_name=${button_name}</td>
+<td>check_field=${check_field}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>check_value=${check_value}</td>
+<td>Monitor_Time=${Monitor_Time}</td>
+<td>Monitor_Type=${Monitor_Type}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${para_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>run_testpartner_command</td>
+<td>BTS_Status_Monitor</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SiteBrowser Logon Validation">TestPartner SiteBrowser Logon Validation</a></td>
+<td>[Arguments]</td>
+<td>${Addresslist_file}=${Empty}</td>
+<td>${User_name}=Nemuadmin</td>
+<td>${SB_Password}=nemuuser</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${Validation_Type}=1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used to validate the prompted information when log on BTS Site Browser\n<br>
+Validation_Type 1 - Incorrect username or password\n<br>
+\n<br>
+Input:\n<br>
+\ | Input Parameters \ | Mandatory | Description |\n<br>
+\ | Addresslist_file \ | No \ | It's required when properties is not configured. Default is Empty \ |\n<br>
+\ | User_name \ | No \ \ | default Nemuadmin |\n<br>
+\ | SB_Password \ | No \ \ | default nemuuser |\n<br>
+\ | Validation_Type \ | No \ | Default 1 |\n<br>
+\n<br>
+\n<br>
+Usage:\n<br>
+| TestPartner SiteBrowser Logon | Addresslist_file | User_name | SB_Password | Validation_Type |\n<br>
+\n<br>
+\n<br>
+Examples:\n<br>
+1) Logon for the first time and need to specify the address list file. Validate the info for incorrect username or password\n<br>
+| TestPartner SiteBrowser Logon | C:\\Program Files\\Nokia Siemens Networks\\Managers\\BTS Site\\BTS Site Manager\\Addresslist.txt | aaa | 123 | 1 |\n<br>
+\n<br>
+\n<br>
+2) Logon with incorrect username or password and no need to set address list file\n<br>
+| TestPartner SiteBrowser Logon | ${Empty} | ABcdJkL | ZX12Cv45 | 1 |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${para_list}</td>
+<td>Create List</td>
+<td>Addresslist_file=${Addresslist_file}</td>
+<td>User_name=${User_name}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>SB_Password=${SB_Password}</td>
+<td>Validation_Type=${Validation_Type}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${para_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>run_testpartner_command</td>
+<td>SiteBrowser_Logon_Validation</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SM Validate MO Creation">TestPartner SM Validate MO Creation</a></td>
+<td>[Arguments]</td>
+<td>${mo_name}</td>
+<td>${new_mo}</td>
+<td>${parent_mo}=${Empty}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used to validate whether or not new mo creation is possible.\n<br>
+\n<br>
+Input:\n<br>
+| Input Parameters \ | Mandatory | Description |\n<br>
+| mo_name | Yes | The MO where new mo will be created |\n<br>
+| new_mo | Yes | True - possible to create new MO,False - impossible to create new MO |\n<br>
+\n<br>
+Usage:\n<br>
+| TestPartner SM Validate MO Creation | mo_name | new_mo |\n<br>
+\n<br>
+\n<br>
+Examples\n<br>
+1. Check it's possible to create new mo on QCI_translation_table_operator_specific_QCIs\n<br>
+| TestPartner SM Validate MO Creation | QCI_translation_table_operator_specific_QCIs | True |\n<br>
+Check it's impossible to create new mo on QCI_translation_table_operator_specific_QCIs\n<br>
+| TestPartner SM Validate MO Creation | QCI_translation_table_operator_specific_QCIs | False |\n<br>
+\n<br>
+2. Check whether it's possible to create LNADJ MO (True for possible , False for impossible)\n<br>
+| TestPartner SM Validate MO Creation | LNADJ | True |\n<br>
+| TestPartner SM Validate MO Creation | LNADJ | False |\n<br>
+\n<br>
+3. Check whether it's possible to create LNADJL MO (True for possible , False for impossible)\n<br>
+| TestPartner SM Validate MO Creation | LNADJL | True | LNADJ-62 |\n<br>
+| TestPartner SM Validate MO Creation | LNADJL | False | LNADJ-62 |\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${para_list}</td>
+<td>Create List</td>
+<td>mo_name=${mo_name}</td>
+<td>new_mo=${new_mo}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>parent_mo=${parent_mo}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Transmit Parameters To TestPartner</td>
+<td>${para_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>run_testpartner_command</td>
+<td>validate_mo_creation</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SM Check General Status">TestPartner SM Check General Status</a></td>
+<td>[Arguments]</td>
+<td>${general_status}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used to check the status showed on right bottom of Site Manager\n<br>
+\n<br>
+Input:\n<br>
+\ | Input Parameters \ | Mandatory | Description |\n<br>
+\ | ${general_status} \ | Yes \ | the status to be checked |\n<br>
+\n<br>
+\n<br>
+Usage:\n<br>
+| TestPartner SM Check General Status | ${general_status} |\n<br>
+\n<br>
+\n<br>
+Examples\n<br>
+1) Check OAM connected status\n<br>
+| TestPartner SM Check General Status | OAM connected |\n<br>
+\n<br>
+2) Check On air status\n<br>
+| TestPartner SM Check General Status | On air |\n<br>
+\n<br>
+3) Check TRS commissioned\n<br>
+| TestPartner SM Check General Status | TRS commissioned |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${list}</td>
+<td>create list</td>
+<td>general_status=${general_status}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run TestPartner Command</td>
+<td>check_general_status</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SM TRS Manual Commissioning Check">TestPartner SM TRS Manual Commissioning Check</a></td>
+<td>[Arguments]</td>
+<td>${check_page}</td>
+<td>${check_field}</td>
+<td>${check_value}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used to check TRS Manual Commissioning in Site Manager\n<br>
+\n<br>
+Input:\n<br>
+\ | Input Parameters \ | Mandatory | Description |\n<br>
+\ | ${check_page} \ | Yes \ | Page to be checked |\n<br>
+\ | ${check_field} \ | Yes \ | Field to be checked |\n<br>
+\ | ${check_value} \ | Yes \ | Value to be checked |\n<br>
+\n<br>
+\n<br>
+Usage:\n<br>
+| TestPartner SM TRS Manual Commissioning Check| ${check_page} | ${check_field} | ${check_value} |\n<br>
+\n<br>
+\n<br>
+Examples:\n<br>
+1) Check Mode=Off on Security page\n<br>
+| TestPartner SM TRS Manual Commissioning Check | Security | Mode | Off |\n<br>
+\n<br>
+2) Check AlarmInfo on Security page\n<br>
+| TestPartner SM TRS Manual Commissioning Check | Security | AlarmInfo | Probing mode should be used only in transition from unsecure to secure OAM connection in the network. Recommended modes are Forced and Off. |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${input_list}</td>
+<td>create list</td>
+<td>check_page=${check_page}</td>
+<td>check_field=${check_field}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>check_value=${check_value}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${input_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run TestPartner Command</td>
+<td>TRS_Manual_Commissioning_Check</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SM Window Select">TestPartner SM Window Select</a></td>
+<td>[Arguments]</td>
+<td>${IP_address}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used to select SM window if there are several SM window connecting to different BTS opened. It will make the selected window maxmized.\n<br>
+\n<br>
+Input:\n<br>
+\ | Input Parameters \ | Mandatory | Description |\n<br>
+\ | ${IP_address} \ | Yes \ | BTS IP to which SM is connecting |\n<br>
+\n<br>
+\n<br>
+Usage:\n<br>
+| TestPartner SM Window Select | ${IP_address} |\n<br>
+\n<br>
+\n<br>
+Examples\n<br>
+1) Select and maxmize the window connecting to BTS IP 192.168.12.3\n<br>
+| TestPartner SM Window Select | 192.168.12.3 |\n<br>
+\n<br>
+1) Select and maxmize the window connecting to Local BTS \n<br>
+| TestPartner SM Window Select | Local |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${list}</td>
+<td>create list</td>
+<td>IP_address=${IP_address}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run TestPartner Command</td>
+<td>select_SM_window</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SM Check Send Parameters Fail">TestPartner SM Check Send Parameters Fail</a></td>
+<td>[Arguments]</td>
+<td>${send_all_parameters}=${Empty}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used to check that the prompt info "The BTS Site reported that the commissioning has failed" appear after send commissioning parameters.\n<br>
+\n<br>
+Input:\n<br>
+| Input Parameters \ | Mandatory | Description |\n<br>
+\ | ${send_all_parameters} \ | No \ | 1 means to send all parameters and 0 means to send only changes. Default value is empty, that means not to select send way, just send it by default. |\n<br>
+\n<br>
+\n<br>
+Usage:\n<br>
+| TestPartner SM Check Send Parameters Fail | ${send_all_parameters} |\n<br>
+\n<br>
+\n<br>
+Examples:\n<br>
+1) Send the parameters by default\n<br>
+| TestPartner SM Check Send Parameters Fail | \n<br>
+\n<br>
+\n<br>
+2) Select "All parameters (requires reset)" and send the parameters\n<br>
+| TestPartner SM Check Send Parameters Fail | 1 |\n<br>
+\n<br>
+\n<br>
+3) Select "Only changes (may require reset)" and send the parameters\n<br>
+| TestPartner SM Check Send Parameters Fail | 0 |\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${list}</td>
+<td>create list</td>
+<td>send_all_parameters=${send_all_parameters}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run TestPartner Command</td>
+<td>Check_Send_Parameters_fail</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SM Check JavaWindow Exists">TestPartner SM Check JavaWindow Exists</a></td>
+<td>[Arguments]</td>
+<td>${window_caption}</td>
+<td>${check_field}=${Empty}</td>
+<td>${check_value}=${Empty}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used to check the whether or not the desired window exists.\n<br>
+\n<br>
+Input:\n<br>
+\ | Input Parameters \ | Mandatory | Description |\n<br>
+\ | ${window_caption} \ | Yes \ | the caption of the window to be checked |\n<br>
+\ | ${check_field} \ | No \ | Other items to be checked, such as JavaButton, JavaLabel. Default value is empty, no need to check other items |\n<br>
+\ | ${check_value} \ | No | Other items to be checked, such as JavaButton, JavaLabel. Default value is empty, no need to check other items |\n<br>
+\n<br>
+\n<br>
+Usage:\n<br>
+| TestPartner SM Check JavaWindow Exists | ${window_caption} \ | ${check_field} | ${check_value} |\n<br>
+\n<br>
+\n<br>
+Examples\n<br>
+1) Check Site Manager Login window\n<br>
+| TestPartner SM Check JavaWindow Exists | BTS Site Manager |\n<br>
+\n<br>
+2) Check Site Manager Login window. Also, check there's a button called Connect\n<br>
+| TestPartner SM Check JavaWindow Exists | BTS Site Manager | JavaButton | Connect |\n<br>
+\n<br>
+3) Check BTS site connection lost window with label BTS site connection lost\n<br>
+| TestPartner SM Check JavaWindow Exists | Connect | JavaLabel | BTS site connection lost |\n<br>
+\n<br>
+4) Check BTS Site Manager Main Window Exists\n<br>
+| TestPartner SM Check JavaWindow Exists | *- BTS Site Manager |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${list}</td>
+<td>create list</td>
+<td>window_caption=${window_caption}</td>
+<td>check_field=${check_field}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>check_value=${check_value}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run TestPartner Command</td>
+<td>check_javawindow_exists</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner FileLoader Operation">TestPartner FileLoader Operation</a></td>
+<td>[Arguments]</td>
+<td>${FileLoader_OperName}</td>
+<td>${FileLoader_Field}=${Empty}</td>
+<td>${FileLoader_Value}=${Empty}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used for FileLoader operation\n<br>
+\n<br>
+Input:\n<br>
+| Input Parameters \ | Mandatory | Description |\n<br>
+| ${FileLoader_OperName} | Yes | Operation name: Start, Update, Load Save Activate,Enable DFT and Get Output |\n<br>
+| ${FileLoader_Field} | No | Input the fields to be updated when the operation name is Update. Conjoin with ":" for multiple fields. The default value is Empty |\n<br>
+| ${FileLoader_Value} | No | Input the values to be updated when the operation name is Update. Conjoin with ":" for multiple fields. The default value is Empty |\n<br>
+\n<br>
+Usage:\n<br>
+| TestPartner FileLoader Operation | ${FileLoader_OperName} | ${FileLoader_Field} | ${FileLoader_Value} |\n<br>
+\n<br>
+Examples:\n<br>
+1) Open the application FileLoader\n<br>
+| TestPartner FileLoader Operation | Start | \n<br>
+\n<br>
+\n<br>
+2) Update some fields on FileLoader\n<br>
+| TestPartner FileLoader Operation | Update | RF HW Category:Target unit:IP address:Port | TDLTE:FZHA ( 2600 MHz ):192.168.255.69:12080 |\n<br>
+\n<br>
+\n<br>
+3) Click "Load Save Activate" button on FileLoader\n<br>
+| TestPartner FileLoader Operation | Load Save Activate | \n<br>
+\n<br>
+\n<br>
+4) Click "Enable DFT" button on FileLoader\n<br>
+| TestPartner FileLoader Operation | Enable DFT | \n<br>
+\n<br>
+\n<br>
+5) Get output from FileLoader\n<br>
+| TestPartner FileLoader Operation | Get Output |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${input_list}</td>
+<td>create list</td>
+<td>FileLoader_OperName=${FileLoader_OperName}</td>
+<td>FileLoader_Field=${FileLoader_Field}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>FileLoader_Value=${FileLoader_Value}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${input_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run TestPartner Command</td>
+<td>FileLoader_Operation</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>'${FileLoader_OperName}' == 'Get Output'</td>
+<td>get_tp_output</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner SM Operation CommissioningPage">TestPartner SM Operation CommissioningPage</a></td>
+<td>[Arguments]</td>
+<td>${PageName}</td>
+<td>${OperType}</td>
+<td>${OtherPara}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${ParaName}</td>
+<td>${ParaValue}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used to provide operation on the pages of BTS commissioning.\n<br>
+\n<br>
+| Input Parameters \ | Man. | Description | \n<br>
+| PageName | Yes | page name in Commissiong , Antenna Line Settings |\n<br>
+| OperType | Yes | like CheckValue, UpdateValue |\n<br>
+| OtherPara | Yes | Used for the page where different objects selected different fields display. Not every page needs this parameter. Please input "None" if this parameter is not needed |\n<br>
+| ParaName | Yes | The field to be updated or check. |\n<br>
+| ParaValue | Yes | The value to be updated or check. |\n<br>
+\n<br>
+\n<br>
+Examples:\n<br>
+1) BTS Settings\n<br>
+Description: \n<br>
+PageName - BTS Settings\n<br>
+OperType - Update or Check\n<br>
+OtherPara - don't need. Input None\n<br>
+ParaName - The fields name to be updated. For multiple fields, conjoin them with ":"\n<br>
+ParaValue - The value for the fields defined in ParaName. For multiple fields, conjoin them with ":"\n<br>
+\n<br>
+\n<br>
+3.1) Add Passive Units\n<br>
+| TestPartner SM Operation CommissiongPage | BTS Settings | Update | None | Add Passive Units | 1-unit one-1.1-111-abc&amp;2-unit two-1.2-456-def |\n<br>
+Note: N means to ignore the respondding column\n<br>
+3.2) Update Passive Units\n<br>
+| TestPartner SM Operation CommissiongPage | BTS Settings | Update | None | Update Passive Units | 1-unit one-N-111-abc&amp;2-unit two-1.2-456-N |\n<br>
+3.3) Delete Passive Units\n<br>
+| QTP SiteMan Operation CommissiongPage | BTS Settings | Update | None | Update Passive Units | 1&amp;2 |\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${para_list}</td>
+<td>create list</td>
+<td>PageName=${PageName}</td>
+<td>OperType=${OperType}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>OtherPara=${OtherPara}</td>
+<td>ParaName=${ParaName}</td>
+<td>ParaValue=${ParaValue}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${para_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run TestPartner Command</td>
+<td>Operation_CommissioningPage</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner NetAct Login By Firefox">TestPartner NetAct Login By Firefox</a></td>
+<td>[Arguments]</td>
+<td>${netact_username }</td>
+<td>${netact_password}</td>
+<td>${netact_url}=${netact_ip}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used to open NetAct website via Firefox and login\n<br>
+\n<br>
+Input:\n<br>
+\ | Input Parameters \ | Mandatory | Description |\n<br>
+\ | netact_username \ | Yes \ | username |\n<br>
+\ | netact_passworde \ | Yes \ \ | netact_password |\n<br>
+\n<br>
+\n<br>
+Examples\n<br>
+1. Login from <a href="https://sprintlab317vm11.netact.nsn-rdnet.net/startpage/\n<br>
+">https://sprintlab317vm11.netact.nsn-rdnet.net/startpage/\n<br>
+</a> | TestPartner NetAct Login By Firefox | omc2 | zhouhang2 |\n<br>
+\n<br>
+\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${para_list}</td>
+<td>Create List</td>
+<td>netact_username=${netact_username}</td>
+<td>netact_password=${netact_password}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>netact_url=${netact_url}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${para_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>run_testpartner_command</td>
+<td>NetAct_Login_Firefox</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner NetAct Launch Application">TestPartner NetAct Launch Application</a></td>
+<td>[Arguments]</td>
+<td>${netact_link }</td>
+<td>${netact_app}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used to launch application on NetAct\n<br>
+\n<br>
+Input:\n<br>
+\ | Input Parameters \ | Mandatory | Description |\n<br>
+\ | netact_link \ | Yes \ | folder name on NetAct |\n<br>
+\ | netact_app \ | Yes \ \ | application name under the folder |\n<br>
+\n<br>
+\n<br>
+Examples\n<br>
+1. Launch CM Editor under Configuration\n<br>
+| TestPartner NetAct Launch Application | Configuration | CM Editor \ |\n<br>
+\n<br>
+\n<br>
+2. Launch Software Manager under Configuration\n<br>
+| TestPartner NetAct Launch Application | Configuration | Software Manager \ |\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${para_list}</td>
+<td>Create List</td>
+<td>netact_link=${netact_link}</td>
+<td>netact_app=${netact_app}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${para_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>run_testpartner_command</td>
+<td>NetAct_Launch_Application</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner NetAct SWManager New Task">TestPartner NetAct SWManager New Task</a></td>
+<td>[Arguments]</td>
+<td>${netact_mo_type}</td>
+<td>${netact_mo_dn}</td>
+<td>${netact_task_name}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${netact_frequency}</td>
+<td>${netact_task_para}=${Empty}</td>
+<td>${netact_frequency_para}=${Empty}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used to take New Task operation on NetAct\n<br>
+\n<br>
+Input:\n<br>
+\ | Input Parameters \ | Mandatory | Description |\n<br>
+\ | netact_mo_type \ | Yes \ | MO Type, such as OMS |\n<br>
+\ | netact_app \ | Yes \ \ | MO DN, such as PLMN-PLMN/OMS-251 |\n<br>
+\ | netact_task_name | Yes | Task Name, such as BF-NMS, Upload |\n<br>
+\ | netact_frequency | Yes | Frequency: Immediately, Once, Periodically |\n<br>
+\ | netact_task_para | No | Parameters on the New Task page: Alarm, Task description |\n<br>
+\ | netact_frequency_para | No | Parameters for some frequency |\n<br>
+\n<br>
+\n<br>
+Examples\n<br>
+1. Upload for OMS-&gt;PLMN-PLMN/OMS-251, select Immediately for frequency\n<br>
+| TestPartner NetAct SWManager NewTask | OMS | PLMN-PLMN/OMS-251 | Upload | Immediately | alarm=True, task_description=ddd |\n<br>
+\n<br>
+\n<br>
+2. BF-NMS for OMS-&gt;PLMN-PLMN/OMS-253, select Once for frequency and set start_date as\n<br>
+2014-01-06 15:06\n<br>
+| TestPartner NetAct SWManager NewTask | OMS | PLMN-PLMN/OMS-253 | BF-NMS | Once | None | start_date=2014-01-06 15:06 |\n<br>
+\n<br>
+3. BF-NMS for OMS-&gt;PLMN-PLMN/OMS-253, select Periodically for frequency and set time as 05:08 and period as Every day\n<br>
+| TestPartner NetAct SWManager NewTask | OMS | PLMN-PLMN/OMS-253 | BF-NMS | Once | None | time_hour=05,time_minute=08,period=Every day |\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${para_list}</td>
+<td>Create List</td>
+<td>netact_mo_type=${netact_mo_type}</td>
+<td>netact_mo_dn=${netact_mo_dn}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>netact_task_name=${netact_task_name}</td>
+<td>netact_frequency=${netact_frequency}</td>
+<td>netact_task_para=${netact_task_para}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>netact_frequency_para=${netact_frequency_para}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${para_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>run_testpartner_command</td>
+<td>NetAct_SWManager_NewTask</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TestPartner NetAct SWManager Check Task">TestPartner NetAct SWManager Check Task</a></td>
+<td>[Arguments]</td>
+<td>${netact_mo_type}</td>
+<td>${netact_mo_dn}</td>
+<td>${netact_task_name}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${netact_task_para}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is used to take New Task operation on NetAct\n<br>
+\n<br>
+Input:\n<br>
+\ | Input Parameters \ | Mandatory | Description |\n<br>
+\ | netact_mo_type \ | Yes \ | MO Type, such as OMS |\n<br>
+\ | netact_app \ | Yes \ \ | MO DN, such as PLMN-PLMN/OMS-251 |\n<br>
+\ | netact_task_name | Yes | Task Name, such as BF-NMS, Upload |\n<br>
+\ | netact_task_para | No | Parameters on the Task Details page: Status, Progress |\n<br>
+\n<br>
+\n<br>
+Examples\n<br>
+1. Check Status=Successfully and Progress is 100%compelete for OMS-&gt;PLMN-PLMN/OMS-251 Upload task\n<br>
+| TestPartner NetAct SWManager Check NewTask | OMS | PLMN-PLMN/OMS-251 | Upload | Status=Successfully,Progress=complete |\n<br>
+\n<br>
+2. Check Status=Successfully and Progress is 100%compelete for OMS-&gt;PLMN-PLMN/OMS-251 BF-NMS task\n<br>
+| TestPartner NetAct SWManager Check NewTask | OMS | PLMN-PLMN/OMS-251 | BF-NMS | Status=Successfully,Progress=complete |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${para_list}</td>
+<td>Create List</td>
+<td>netact_mo_type=${netact_mo_type}</td>
+<td>netact_mo_dn=${netact_mo_dn}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>netact_task_name=${netact_task_name}</td>
+<td>netact_task_para=${netact_task_para}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Write Parameters To File For TP</td>
+<td>${para_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>run_testpartner_command</td>
+<td>NetAct_SWManager_CheckTask</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</body>
+</html>

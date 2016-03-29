@@ -1,0 +1,26 @@
+FILTER
+
+  PROPERTIES
+    Title   = "";
+    TypeId  = "BTS message";
+  ENDPROPERTIES
+
+  SCRIPT
+  //Add filter criterias here
+
+     if( ( __MSGNBR__ == "0x2104"))
+
+         //Shows object matching if rule
+         show
+
+      endif                                                                                                                                       
+                                                                                                                                                    
+
+
+
+  ENDSCRIPT                                                                  
+
+
+
+
+ENDFILTER

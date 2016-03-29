@@ -1,0 +1,33 @@
+# TMA Child Script
+
+#####################################################
+# Test Step: Trigger RRC Connection Reestablishment #
+#####################################################
+
+#-----------------------------------------
+# Trigger RRC Connection Re-establishment
+#-----------------------------------------
+# PARAMETERS
+# 1. Trigger event
+# 2. Number of measurement reports
+#-----------------------------------------
+#                                                        1  2  
+#                                                        |  |  
+forw mte RrcAptTriggerRrcReestablishmentReq [] [] [] [] [15(8)]
+#-----------------------------------------
+
+#####################################
+# Test Step: Activate Configuration #
+#####################################
+
+#--------------------------------
+# Activate pending configuration
+#--------------------------------
+# PARAMETERS
+# 1. Timing Type
+#--------------------------------
+#                 1 
+#                 | 
+forw mte Activate -1
+#--------------------------------
+

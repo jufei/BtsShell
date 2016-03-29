@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?><raml xmlns="raml21.xsd" version="2.1">
+    <cmData scope="all" type="actual">
+      <header>
+        <log action="modified" appInfo="AppName" appVersion="LNTT3.0" dateTime="2011-07-06T11:49:46" user="lteulmcpci"/>
+      </header>
+      <managedObject class="LNBTS" distName="LNBTS-*" operation="update" version="LNT3.0 11.07">
+        <list name="calibrationParameters">
+          <item>
+            <p name="calibrationAntennaCarrier">2</p>
+            <p name="calibrationParametersId">1</p>
+            <p name="calibrationSetId0">0</p>
+            <p name="calibrationSetId1">1</p>
+            <p name="calibrationSetId2">2</p>
+            <p name="calibrationSetId3">3</p>
+            <p name="calibrationSetId4">4</p>
+            <p name="calibrationSetId5">5</p>
+            <p name="calibrationSetId6">6</p>
+            <p name="calibrationSetId7">7</p>
+            <p name="rxCalSwitchingDuration">30720</p>
+            <p name="txCalSwitchingDuration">2480</p>
+          </item>
+          <item>
+            <p name="calibrationAntennaCarrier">2</p>
+            <p name="calibrationParametersId">4</p>
+            <p name="calibrationSetId0">0</p>
+            <p name="calibrationSetId1">1</p>
+            <p name="calibrationSetId2">2</p>
+            <p name="calibrationSetId3">10</p>
+            <p name="calibrationSetId4">9999</p>
+            <p name="calibrationSetId5">9999</p>
+            <p name="calibrationSetId6">9999</p>
+            <p name="calibrationSetId7">9999</p>
+            <p name="rxCalSwitchingDuration">15975</p>
+            <p name="txCalSwitchingDuration">3687</p>
+          </item>
+          <item>
+            <p name="calibrationAntennaCarrier">6</p>
+            <p name="calibrationParametersId">2</p>
+            <p name="calibrationSetId0">0</p>
+            <p name="calibrationSetId1">1</p>
+            <p name="calibrationSetId2">2</p>
+            <p name="calibrationSetId3">3</p>
+            <p name="calibrationSetId4">4</p>
+            <p name="calibrationSetId5">5</p>
+            <p name="calibrationSetId6">6</p>
+            <p name="calibrationSetId7">7</p>
+            <p name="rxCalSwitchingDuration">15975</p>
+            <p name="txCalSwitchingDuration">3687</p>
+          </item>
+          <item>
+            <p name="calibrationAntennaCarrier">6</p>
+            <p name="calibrationParametersId">3</p>
+            <p name="calibrationSetId0">0</p>
+            <p name="calibrationSetId1">1</p>
+            <p name="calibrationSetId2">2</p>
+            <p name="calibrationSetId3">3</p>
+            <p name="calibrationSetId4">4</p>
+            <p name="calibrationSetId5">5</p>
+            <p name="calibrationSetId6">6</p>
+            <p name="calibrationSetId7">7</p>
+            <p name="rxCalSwitchingDuration">64960</p>
+            <p name="txCalSwitchingDuration">18400</p>
+          </item>
+        </list>
+        <list name="calibrationSet">
+          <item>
+            <p name="antennaBitMap">0</p>
+            <p name="calFrameOffset">0</p>
+            <p name="calRxTxFlag">not valid</p>
+            <p name="calibrationSetID">9999</p>
+            <p name="halfFrameIndication">subframe 1</p>
+          </item>
+          <item>
+            <p name="antennaBitMap">129</p>
+            <p name="calFrameOffset">15</p>
+            <p name="calRxTxFlag">Tx calibration</p>
+            <p name="calibrationSetID">6</p>
+            <p name="halfFrameIndication">subframe 1</p>
+          </item>
+          <item>
+            <p name="antennaBitMap">15</p>
+            <p name="calFrameOffset">3</p>
+            <p name="calRxTxFlag">Rx calibration</p>
+            <p name="calibrationSetID">10</p>
+            <p name="halfFrameIndication">subframe 1</p>
+          </item>
+          <item>
+            <p name="antennaBitMap">17</p>
+            <p name="calFrameOffset">12</p>
+            <p name="calRxTxFlag">Tx calibration</p>
+            <p name="calibrationSetID">3</p>
+            <p name="halfFrameIndication">subframe 1</p>
+          </item>
+          <item>
+            <p name="antennaBitMap">255</p>
+            <p name="calFrameOffset">8</p>
+            <p name="calRxTxFlag">Rx calibration</p>
+            <p name="calibrationSetID">7</p>
+            <p name="halfFrameIndication">subframe 1</p>
+          </item>
+          <item>
+            <p name="antennaBitMap">33</p>
+            <p name="calFrameOffset">13</p>
+            <p name="calRxTxFlag">Tx calibration</p>
+            <p name="calibrationSetID">4</p>
+            <p name="halfFrameIndication">subframe 1</p>
+          </item>
+          <item>
+            <p name="antennaBitMap">3</p>
+            <p name="calFrameOffset">9</p>
+            <p name="calRxTxFlag">Tx calibration</p>
+            <p name="calibrationSetID">0</p>
+            <p name="halfFrameIndication">subframe 1</p>
+          </item>
+          <item>
+            <p name="antennaBitMap">5</p>
+            <p name="calFrameOffset">10</p>
+            <p name="calRxTxFlag">Tx calibration</p>
+            <p name="calibrationSetID">1</p>
+            <p name="halfFrameIndication">subframe 1</p>
+          </item>
+          <item>
+            <p name="antennaBitMap">65</p>
+            <p name="calFrameOffset">14</p>
+            <p name="calRxTxFlag">Tx calibration</p>
+            <p name="calibrationSetID">5</p>
+            <p name="halfFrameIndication">subframe 1</p>
+          </item>
+          <item>
+            <p name="antennaBitMap">9</p>
+            <p name="calFrameOffset">11</p>
+            <p name="calRxTxFlag">Tx calibration</p>
+            <p name="calibrationSetID">2</p>
+            <p name="halfFrameIndication">subframe 1</p>
+          </item>
+        </list>
+        <list name="dlInterferenceBFWeightSet">
+          <item>
+            <p name="beamIdOfWeight">1</p>
+            <p name="imagPartofWeighforAnt0">0</p>
+            <p name="imagPartofWeighforAnt1">0</p>
+            <p name="imagPartofWeighforAnt2">0</p>
+            <p name="imagPartofWeighforAnt3">0</p>
+            <p name="realPartofWeighforAnt0">5000</p>
+            <p name="realPartofWeighforAnt1">5000</p>
+            <p name="realPartofWeighforAnt2">5000</p>
+            <p name="realPartofWeighforAnt3">5000</p>
+          </item>
+          <item>
+            <p name="beamIdOfWeight">2</p>
+            <p name="imagPartofWeighforAnt0">0</p>
+            <p name="imagPartofWeighforAnt1">0</p>
+            <p name="imagPartofWeighforAnt2">0</p>
+            <p name="imagPartofWeighforAnt3">0</p>
+            <p name="realPartofWeighforAnt0">5000</p>
+            <p name="realPartofWeighforAnt1">5000</p>
+            <p name="realPartofWeighforAnt2">5000</p>
+            <p name="realPartofWeighforAnt3">5000</p>
+          </item>
+          <item>
+            <p name="beamIdOfWeight">3</p>
+            <p name="imagPartofWeighforAnt0">0</p>
+            <p name="imagPartofWeighforAnt1">0</p>
+            <p name="imagPartofWeighforAnt2">0</p>
+            <p name="imagPartofWeighforAnt3">0</p>
+            <p name="realPartofWeighforAnt0">5000</p>
+            <p name="realPartofWeighforAnt1">5000</p>
+            <p name="realPartofWeighforAnt2">5000</p>
+            <p name="realPartofWeighforAnt3">5000</p>
+          </item>
+          <item>
+            <p name="beamIdOfWeight">4</p>
+            <p name="imagPartofWeighforAnt0">0</p>
+            <p name="imagPartofWeighforAnt1">0</p>
+            <p name="imagPartofWeighforAnt2">0</p>
+            <p name="imagPartofWeighforAnt3">0</p>
+            <p name="realPartofWeighforAnt0">5000</p>
+            <p name="realPartofWeighforAnt1">5000</p>
+            <p name="realPartofWeighforAnt2">5000</p>
+            <p name="realPartofWeighforAnt3">5000</p>
+          </item>
+        </list>
+        <list name="dlSectorBeamformingWeight">
+          <item>
+            <p name="dlSectorBeamformingWeightModeId">0</p>
+            <p name="weightId0forAntenna0">0</p>
+            <p name="weightId1forAntenna1">1</p>
+            <p name="weightId2forAntenna2">2</p>
+            <p name="weightId3forAntenna3">3</p>
+          </item>
+          <item>
+            <p name="dlSectorBeamformingWeightModeId">1</p>
+            <p name="weightId0forAntenna0">1</p>
+            <p name="weightId1forAntenna1">1</p>
+            <p name="weightId2forAntenna2">1</p>
+            <p name="weightId3forAntenna3">1</p>
+          </item>
+          <item>
+            <p name="dlSectorBeamformingWeightModeId">2</p>
+            <p name="weightId0forAntenna0">1</p>
+            <p name="weightId1forAntenna1">3</p>
+            <p name="weightId2forAntenna2">3</p>
+            <p name="weightId3forAntenna3">3</p>
+          </item>
+          <item>
+            <p name="dlSectorBeamformingWeightModeId">3</p>
+            <p name="weightId0forAntenna0">1</p>
+            <p name="weightId1forAntenna1">1</p>
+            <p name="weightId2forAntenna2">3</p>
+            <p name="weightId3forAntenna3">3</p>
+          </item>
+        </list>
+        <list name="pdcchUlDlPrio">
+          <item>
+            <p name="pdcchUlDlPrioTag1">91</p>
+            <p name="pdcchUlDlPrioTag10">37</p>
+            <p name="pdcchUlDlPrioTag11">31</p>
+            <p name="pdcchUlDlPrioTag12">25</p>
+            <p name="pdcchUlDlPrioTag13">19</p>
+            <p name="pdcchUlDlPrioTag14">13</p>
+            <p name="pdcchUlDlPrioTag15">7</p>
+            <p name="pdcchUlDlPrioTag2">85</p>
+            <p name="pdcchUlDlPrioTag3">79</p>
+            <p name="pdcchUlDlPrioTag4">73</p>
+            <p name="pdcchUlDlPrioTag5">67</p>
+            <p name="pdcchUlDlPrioTag6">61</p>
+            <p name="pdcchUlDlPrioTag7">55</p>
+            <p name="pdcchUlDlPrioTag8">49</p>
+            <p name="pdcchUlDlPrioTag9">43</p>
+          </item>
+        </list>
+        <list name="rxPowerScalingFor10MHz">
+          <p>13320</p>
+          <p>13320</p>
+        </list>
+        <list name="rxPowerScalingFor15MHz">
+          <p>13320</p>
+          <p>13320</p>
+        </list>
+        <list name="rxPowerScalingFor1_4MHz">
+          <p>13320</p>
+          <p>13320</p>
+        </list>
+        <list name="rxPowerScalingFor20MHz">
+          <p>13320</p>
+          <p>13320</p>
+        </list>
+        <list name="rxPowerScalingFor3MHz">
+          <p>13320</p>
+          <p>13320</p>
+        </list>
+        <list name="rxPowerScalingFor5MHz">
+          <p>13320</p>
+          <p>13320</p>
+        </list>
+        <list name="weightConfigurationParameters">
+          <item>
+            <p name="imaginaryPartofWeight">0</p>
+            <p name="realPartofWeight">-10000</p>
+            <p name="weightId">1</p>
+          </item>
+          <item>
+            <p name="imaginaryPartofWeight">0</p>
+            <p name="realPartofWeight">-2000</p>
+            <p name="weightId">3</p>
+          </item>
+          <item>
+            <p name="imaginaryPartofWeight">0</p>
+            <p name="realPartofWeight">6500</p>
+            <p name="weightId">0</p>
+          </item>
+          <item>
+            <p name="imaginaryPartofWeight">3090</p>
+            <p name="realPartofWeight">-9511</p>
+            <p name="weightId">2</p>
+          </item>
+        </list>
+        <p name="actFlexBbUsage">false</p>
+        <p name="actIMSEmerSessFWAUEs">false</p>
+        <p name="actImmHRPD">false</p>
+        <p name="actImmXrtt">false</p>
+        <p name="actNonGbrQci234">true</p>
+        <p name="anrLTEIntraNbCellRSRQThres">16</p>
+        <p name="anrLTEIntraRscReportAmount">2</p>
+        <p name="anrLTEIntraRscReportInterval">1024ms</p>
+        <p name="anrLTEIntraTReportCGI">1200ms</p>
+        <p name="b1SupervisionOffset">100</p>
+        <p name="calibrationEnabled">true</p>
+        <p name="calibrationPeriod">16</p>
+        <p name="cqiAperPollT">10</p>
+        <p name="cqiCompSmRi1Cl">-30</p>
+        <p name="cqiCompSmRi1Ol">-30</p>
+        <p name="cqiCompTdRi2Cl">30</p>
+        <p name="cqiCompTdRi2Ol">30</p>
+        <p name="cqiPerMode">WidebandCqiOnly</p>
+        <p name="cycPrefix">normal</p>
+        <p name="deploymentInformation">2_pipe</p>
+        <p name="dlOlqcDeltaCqiIni">-5</p>
+        <p name="dlOlqcDeltaCqiMin">-135</p>
+        <p name="dlOlqcDeltaCqiStepUp">60</p>
+        <p name="dlSynchBoost">false</p>
+        <p name="dlamcTHistCqi">1000</p>
+        <p name="dlsFdPfSchAvgC">200</p>
+        <p name="dlsOldtcStepUp">5</p>
+        <p name="dlsTputAvgT">50</p>
+        <p name="drbAmMxRtxTh">16</p>
+        <p name="drbIdThreshold">2</p>
+        <p name="emergencyArp">1</p>
+        <p name="enaDrxRepGra">true</p>
+        <p name="enaDrxWactDl">true</p>
+        <p name="enaDrxWactUl">true</p>
+        <p name="enaDrxWcqiDl">true</p>
+        <p name="enablePhichCtrlUl">true</p>
+        <p name="ilMinDatvolUl">4000</p>
+        <p name="maxMRnoIntraPciToResolve">50</p>
+        <p name="maxNumPrbSr">32</p>
+        <p name="maxS1ResetRetries">10</p>
+        <p name="maxS1SetRetry">10</p>
+        <p name="maxX2ResRetry">10</p>
+        <p name="maxX2SetRetry">10</p>
+        <p name="mimoClCqiAvg">10</p>
+        <p name="mimoClCqiComp">30</p>
+        <p name="mimoClRiAvg">10</p>
+        <p name="mimoOlCqiAvg">10</p>
+        <p name="mimoOlCqiComp">30</p>
+        <p name="mimoOlRiAvg">10</p>
+        <p name="nCqiDtx">50</p>
+        <p name="nCqiRec">2</p>
+        <p name="npdschEpreOff">0 dB</p>
+        <p name="p0UePucch">0</p>
+        <p name="p0UePusch">0</p>
+        <p name="pdcchClComp">30</p>
+        <p name="pdcchCqiAvg">10</p>
+        <p name="pdcchCqiHist">50</p>
+        <p name="pdcchLowAggTh">10</p>
+        <p name="pdcchOlComp">30</p>
+        <p name="pdcchPcBoost">40</p>
+        <p name="pdcchPcRed">60</p>
+        <p name="pdcchPcReloc">30</p>
+        <p name="prioHarqDl">1000</p>
+        <p name="prioHarqUl">100</p>
+        <p name="prioSrUl">50</p>
+        <p name="prioSrbDl">10</p>
+        <p name="prioSrbUl">10</p>
+        <p name="qci1GbrLimit">250</p>
+        <p name="qciWeightAlignDl">10</p>
+        <p name="qciWeightAlignUl">10</p>
+        <p name="raCrntiReuseT">20</p>
+        <p name="raLargeVolUl">512</p>
+        <p name="rcAvCstDl">1000</p>
+        <p name="rcAvCstUl">1000</p>
+        <p name="rlpDetEndNUl">3</p>
+        <p name="rlpDetEndNoDl">3</p>
+        <p name="rlpDetMaxNUl">1000</p>
+        <p name="rlpDetMaxNoDl">1000</p>
+        <p name="rlpDetMaxTUl">0</p>
+        <p name="rlpDetMaxTimeDl">0</p>
+        <p name="rohcFullContextCount">1</p>
+        <p name="rohcFullHdCount">3</p>
+        <p name="rohcHdDecomOmodeEnable">true</p>
+        <p name="rohcHdRefreshPeriod">256</p>
+        <p name="rohcK1">1</p>
+        <p name="rohcK2">2</p>
+        <p name="rohcN1">1</p>
+        <p name="rohcN2">2</p>
+        <p name="rrcGuardTimer">20</p>
+        <p name="s1ResetRspTmr">300</p>
+        <p name="s1SetupRspTmr">900</p>
+        <p name="schedulWeightnonGbrQci234">100</p>
+        <p name="sysTimeCorrectValue">10</p>
+        <p name="tDataFwdEpc">500</p>
+        <p name="tDataFwdS1">250</p>
+        <p name="tDataFwdX2">250</p>
+        <p name="tEstS1Con">16000</p>
+        <p name="tHalfRrcCon">2000</p>
+        <p name="tHoOverallD">500</p>
+        <p name="tL2AckRrcRel">2000</p>
+        <p name="tS1RelCanL">2000</p>
+        <p name="tS1RelCanU">2000</p>
+        <p name="tS1RelExecDeltL">500</p>
+        <p name="tS1RelOvDeltL">500</p>
+        <p name="tS1RelOvDeltU">1000</p>
+        <p name="tX2RelocComp">500</p>
+        <p name="tX2RelocExcD">70</p>
+        <p name="tX2RelocHold">500</p>
+        <p name="tX2RelocPrep">500</p>
+        <p name="taCmdMaxRetry">10</p>
+        <p name="taOffScheMarg">20</p>
+        <p name="tagMarginAM">0</p>
+        <p name="tagMarginUM">0</p>
+        <p name="teNACCDelta">100</p>
+        <p name="tx2RelODelta">150</p>
+        <p name="ulGrpHop">false</p>
+        <p name="ulSeqHop">false</p>
+        <p name="ulamcCStepUp">4</p>
+        <p name="ulamcDeltaCini">0</p>
+        <p name="ulamcDeltaCmax">50</p>
+        <p name="ulamcDeltaCmin">-50</p>
+        <p name="ulamcHistMcsT">1000</p>
+        <p name="ulamcInactT">200</p>
+        <p name="ulamcUpdowngrF">24</p>
+        <p name="ulatbPhrAvgF">18</p>
+        <p name="ulpcAccuEnable">true</p>
+        <p name="ulpcCchavgtcont">200</p>
+        <p name="ulpcCchavgtdisc">500</p>
+        <p name="ulpcCumpucchmax">127</p>
+        <p name="ulpcCumpucchmin">-127</p>
+        <p name="ulpcCumpuschmax">127</p>
+        <p name="ulpcCumpuschmin">-127</p>
+        <p name="ulpcRssiMax">0</p>
+        <p name="ulpcRssiMin">-127</p>
+        <p name="ulpcSchavgtcont">200</p>
+        <p name="ulpcSchavgtdisc">500</p>
+        <p name="ulpcSinrMax">40</p>
+        <p name="ulpcSinrMin">-40</p>
+        <p name="ulpcWfPucchUe">1</p>
+        <p name="ulpcWfPucchcell">1</p>
+        <p name="ulpcWfPuschUe">1</p>
+        <p name="ulpcWfPuschcell">1</p>
+        <p name="ulpcWfSrsUe">1</p>
+        <p name="ulpcWfSrscell">1</p>
+        <p name="ulsInterferenceCst">100</p>
+        <p name="ulsNumSchedAreaUl">3</p>
+        <p name="ulsSidVolRohcComp">26</p>
+        <p name="ulsSidVolUncomp">83</p>
+        <p name="ulsSrelFilterCst">240</p>
+        <p name="ulsTputAvgT">50</p>
+        <p name="ulsTxPowDenConst">18</p>
+        <p name="ulsVoipOverhead">10</p>
+        <p name="waitTimeEstCtrlX2Lnk">150s</p>
+        <p name="x2ResetRspTmr">100</p>
+        <p name="x2SetupRspTmr">50</p>
+      </managedObject>
+    </cmData>
+  </raml>

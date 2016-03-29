@@ -1,0 +1,235 @@
+#hw related debug
+#0 = 5
+#DSP CPU speed
+#0x2004B=1044480000
+
+0x1A0020=1
+
+#Disable AppDef.txt checking
+#0x10063=1
+
+#add by yangan for Dbg
+149=1
+#8x=2 4x=1 AMC=0
+0x19000C=2
+
+0x2003f=0
+
+0x10=1000
+0x1003f=1
+0x10040=1
+0x10041=5
+#0x10042=0x0A691891
+0x10042=0xC0A8FF7E
+0x10043=51000
+0x1007C=0
+
+#=======Debug tag for CC&S===============
+#Debug tag for AaSysCom
+#0x10000=1
+#Debug tag for AaUdpcpGen
+#0x10008=1
+#Debug tag for AaSysComGw
+#0x1000c=1
+#Debug tag for AaSysComGwRoute
+#0x10034=1
+0x1003b=1
+
+
+#================OAM prints==================
+#FEAT_DBG_PrintFilter
+6=5
+#DBG: 1- enable SW download prints
+7=2
+#ADET
+9=1
+#FEAT_DBG_Tune DBG: 1- enable Tune debug print; 2- enable sample print
+#13=1
+13=2
+#FEAT_DBG_FaultDiganostics 9=disable FD
+15=3
+#FEAT_DBG_Clic
+16=2
+#FEAT_DBG_DB_Change_Log, usually no need
+48=2
+#FEAT_DBG_Stup
+62=2
+#FEAT_DBG_HGW
+65=1
+#FEAT_DBG_HWAPI_SW_DL
+74=1
+#FEAT_DBG_HWAPI_AIF
+75=1
+#FEAT_DBG_HWAPI_Init
+76=1
+#FEAT_DBG_HWAPI_GENIO
+77=1
+#FEAT_DBG_HWAPI_I2C
+78=1
+#FEAT_DBG_HWAPI_INET
+79=1
+
+#FEAT_DBG_HWAPI_AUTO_DET
+82=1
+#FEAT_DBG_HWAPI_RP_RAM_Prints
+83=1
+#FEAT_DBG_HWAPI_Perf_Mon_prints
+84=1
+
+#FEAT_DBG_HWAPI_HEAP
+94=1
+
+#FEAT_DBG_HWAPI_BIST
+96=1
+#FEAT_DBG_HWAPI_SELF_TEST
+97=1
+
+
+#FEAT_DBG_Widm
+137=1
+#FEAT_DBG_Swmg
+136=1
+#FEAT_DBG_FORE_SM
+144=1
+
+#FEAT_DBG_RAR_Reset_cnt
+212=0
+#FEAT_DBG_Para
+222=1
+#FEAT_DBG_AUTH_DISABLED
+244=1
+#FEAT_DBG_Rpmag
+245=2
+# ADSER
+247=1
+#FEAT_DBG_SWMAG
+249=1
+#FEAT_DBG_BTSOM_Enable_SoapTrace
+250=5000000
+#FEAT_DBG_BTSOM_APW
+252=1
+#FEAT_DBG_PM
+271=1
+#FEAT_DBG_BTSOM_BBC
+275=2
+#FEAT_DBG_BTSOM_OPT_Enabled
+#291=0
+#FEAT_DBG_BTSOM_HWAPI_IF_PRN
+307=1
+#FSM_Creator
+311=1
+#FEAT_DBG_BTSOM_SPMAG_PRN
+312=5
+#FEAT_DBG_BTSOM_ALMAG
+317=1
+#FEAT_DBG_BTSOM_DSP_IF_PRN
+#319=5
+#FEAT_DBG_CLOCK_PRN
+330=1
+#FEAT_DBG_BTSOM_GPS_PRN
+428=1
+#FEAT_DBG_BTSOM_Mediator_PRN
+434=1
+#FEAT_DBG_BTSOM_RROM_PRN
+451=2
+#FEAT_DBG_BBOAM_SWMG_Enabled
+#460=1
+#FEAT_DBG_BTSOM_PRN_GPW
+544=1
+#FEAT_DBG_BTSOM_CFM_PRN
+548=1
+
+#FEAT_DBG_BBOAM_FM_Enabled
+461=1
+#debug from RROM
+
+#0x12000e = 1
+
+#Flag for Gain
+389=1
+
+
+##--------------------------------------------------------
+## Debug Logging UEC
+##--------------------------------------------------------
+## TUecRadDebugLogEnabledGlobal
+0x00130020 = 1
+# 
+## TUecRadDebugLogEnabledUec
+0x00130021 = 1
+# 
+##TUecRadDebugLogEnabledCommon
+0x0013001E = 1
+# 
+##TUecRadDebugLogEnabledCommonCodec
+0x0013001F = 1 
+# 
+##--------------------------------------------------------
+## Debug Logging CELLC
+##--------------------------------------------------------
+## TCellcRadDebugLogEnabledCommon
+0xf0010 = 1
+# 
+## TCellcRadDebugLogEnabledCommonCodec
+0xf0011 = 1
+# 
+##TCellcRadDebugLogEnabledGlobal
+0xf000e = 1
+# 
+##TCellcRadDebugLogEnabledCellc
+0xf000f = 1 
+##1-16paging records
+0xf0006 = 1
+# 
+##--------------------------------------------------------
+## Debug Logging ENBC
+##--------------------------------------------------------
+## TEnbcRadDebugLogEnabledCommon
+0x110003 = 1
+# 
+## TEnbcRadDebugLogEnabledCommonCodec
+0x110004 = 1
+# 
+##TEnbcRadDebugLogEnabledGlobal
+0x110001 = 1
+# 
+##TEnbcRadDebugLogEnabledEnbc
+0x110002 = 1 
+# 
+##--------------------------------------------------------
+## Debug Logging RROM
+##--------------------------------------------------------
+## TRromRadDebugLogEnabledGlobal
+0x00120004 = 1
+# 
+## TRromRadDebugLogEnabledRrom
+0x00120005 = 1
+# 
+## TRromRadDebugLogEnabledCommon
+0x00120006 = 1
+# 
+#--------------------------------------------------------
+# Debug Logging TUPC
+#--------------------------------------------------------
+## TTupcRadDebugLogEnabledGlobal
+0x00150001 = 1
+# 
+## TTupcRadDebugLogEnabledTupc
+0x00150002 = 1
+# 
+## TTupcRadDebugLogEnabledCommon
+0x00150004 = 1
+# 
+## TTupcRadDebugLogEnabledCommonCodec
+0x00150003 = 1
+
+#ERadULPHY_CalibrationLog
+0x00160011 = 1
+
+##calibration print
+0x00160013 = 1
+
+##UlCombineMode (PBCH Print)
+0x16000F = 1
+
+

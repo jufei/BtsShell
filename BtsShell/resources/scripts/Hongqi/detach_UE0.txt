@@ -1,0 +1,20 @@
+# TMA Child Script
+
+##############################
+# Test Step: Select UE Group #
+##############################
+
+# Subsequent commands are repeated as necesary for UEs
+# 0
+
+#######################################
+# Test Step: Configure NAS Deregister #
+#######################################
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+forw mte SetUEContext 0
+forw mte NasConfigEmmDeregister 0
+forw mte Activate -1

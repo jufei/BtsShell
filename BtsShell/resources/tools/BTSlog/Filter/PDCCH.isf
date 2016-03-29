@@ -1,0 +1,32 @@
+FILTER
+
+  PROPERTIES
+    Title   = "";
+    TypeId  = "BTS message";
+  ENDPROPERTIES
+
+  SCRIPT
+  //Add filter criterias here
+   if(__MSGNBR__ == "0x2102")
+      if((:numOfDci <> 0x00000000) AND (:dciInfo[0].crnti  <> 0x0000FFFF)) 
+
+       //Shows object matching if rule
+       show
+
+       endif
+
+    else
+      if(( __MSGNBR__ == "0x2103") AND (:crnti <> 0x0000FFFF))
+
+       //Shows object matching if rule
+       show
+
+      endif
+
+    endif
+
+
+  ENDSCRIPT
+
+
+ENDFILTER

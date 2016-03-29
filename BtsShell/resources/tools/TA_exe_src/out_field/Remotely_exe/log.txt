@@ -1,0 +1,980 @@
+=========================2013-4-24    12:18:31=========================
+
+=========================2013-4-24    12:18:48=========================
+
+=========================2013-4-24    12:19:23=========================
+
+=========================2013-4-24    12:19:29=========================
+
+
+Pinging 10.69.71.97 with 32 bytes of data:
+Reply from 10.69.71.97: bytes=32 time=1ms TTL=250
+Reply from 10.69.71.97: bytes=32 time=2ms TTL=250
+
+Ping statistics for 10.69.71.97:
+    Packets: Sent = 2, Received = 2, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 1ms, Maximum = 2ms, Average = 1ms
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="cache-control" content="public,no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    </head>
+    <body bgcolor="#E7E7E7">
+
+    <bgcolor="#00FF00" text="#000000" link="#A00000" vlink="#600000" alink="#A00000">
+
+    <h3><FONT face="Arial, Helvetica, sans-serif">
+<p><h3>SSH Service Enabled Successfully</h3>
+</p></body>
+</html>
+RemoteAction is used to support action you want to do via S1 port
+Current version is 1.5.0 (support FileCollectorTool to fetch logs)
+search file and check exist only
+search file is enabled!
+read file name and path from config file ok!
+2
+file name number is equal to file path number!
+2
+execute subprocess successfully
+ping is ok,ip:10.69.71.97
+execute subprocess successfully
+enable ssh is ok,ip:10.69.71.97
+->Send: ls /flash/trs_data/db|grep persist.db
+<-Receive: persist.db
+
+->Send: ls /flash/trs_data/db|grep persist.bak
+<-Receive: persist.bak
+
+RemoteAction is used to support action you want to do via S1 port
+Current version is 1.5.0 (support FileCollectorTool to fetch logs)
+@action done@
+
+=========================2013-4-24    12:22:15=========================
+
+read content from output.txt successfully!
+Write content to search.csv successfully!
+@action done@
+
+=========================2013-4-24    12:22:15=========================
+
+read content from output.txt successfully!
+Write content to search.csv successfully!
+@action done@
+
+=========================2013-4-24    12:23:42=========================
+
+=========================2013-4-24    12:24:5=========================
+
+=========================2013-4-24    12:24:5=========================
+
+=========================2013-4-24    13:0:55=========================
+
+=========================2013-4-24    13:1:12=========================
+
+=========================2013-4-24    13:1:27=========================
+
+=========================2013-4-24    13:1:27=========================
+
+=========================2013-4-24    13:10:16=========================
+
+=========================2013-4-24    13:10:24=========================
+
+=========================2013-4-24    13:10:24=========================
+
+=========================2013-4-24    13:51:6=========================
+
+=========================2013-4-24    13:51:14=========================
+
+=========================2013-4-24    13:51:15=========================
+
+=========================2013-4-24    13:51:36=========================
+
+=========================2013-4-24    13:53:18=========================
+
+=========================2013-4-24    13:53:34=========================
+
+
+Pinging 10.69.71.97 with 32 bytes of data:
+Reply from 10.69.71.97: bytes=32 time=2ms TTL=250
+Reply from 10.69.71.97: bytes=32 time=1ms TTL=250
+
+Ping statistics for 10.69.71.97:
+    Packets: Sent = 2, Received = 2, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 1ms, Maximum = 2ms, Average = 1ms
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="cache-control" content="public,no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    </head>
+    <body bgcolor="#E7E7E7">
+
+    <bgcolor="#00FF00" text="#000000" link="#A00000" vlink="#600000" alink="#A00000">
+
+    <h3><FONT face="Arial, Helvetica, sans-serif">
+<p><h3>SSH Service Enabled Successfully</h3>
+</p></body>
+</html>
+RemoteAction is used to support action you want to do via S1 port
+Current version is 1.5.0 (support FileCollectorTool to fetch logs)
+Creat directory d:\Personal_zlb\files\Program\Remotely\download__2013_4_24_13_53_19 OK
+download all files with your selection!
+execute subprocess successfully
+ping is ok,ip:10.69.71.97
+execute subprocess successfully
+enable ssh is ok,ip:10.69.71.97
+Creat directory d:\Personal_zlb\files\Program\Remotely\download__2013_4_24_13_53_19\10.69.71.97 OK
+d:\Personal_zlb\files\Program\Remotely\download__2013_4_24_13_53_19\10.69.71.97
+transport is ok, host:'10.69.71.97', port:'22'
+sftp connect to '10.69.71.97', username:'toor4nsn' is ok
+/var/log/sysinfo
+sftp get file size '/var/log/sysinfo' is 58KB
+sftp download from '/var/log/sysinfo' to 'd:\Personal_zlb\files\Program\Remotely\download__2013_4_24_13_53_19\10.69.71.97\sysinfo' is ok.
+sftp close is ok
+1
+file name number is equal to path number!
+transport is ok, host:'10.69.71.97', port:'22'
+sftp connect to '10.69.71.97', username:'toor4nsn' is ok
+/flash/FileDirectory.xml
+sftp get file size '/flash/FileDirectory.xml' is 14KB
+sftp download from '/flash/FileDirectory.xml' to 'd:\Personal_zlb\files\Program\Remotely\download__2013_4_24_13_53_19\10.69.71.97\FileDirectory.xml' is ok.
+sftp close is ok
+RemoteAction is used to support action you want to do via S1 port
+Current version is 1.5.0 (support FileCollectorTool to fetch logs)
+@action done@
+
+=========================2013-4-24    13:54:9=========================
+
+Write content to sysinfo_SFP.csv successfully!
+@action done@
+
+=========================2013-4-24    13:54:9=========================
+
+Write content to sysinfo_SFP.csv successfully!
+@action done@
+
+=========================2013-4-25    16:39:3=========================
+
+=========================2013-4-25    16:39:53=========================
+
+=========================2013-4-25    16:40:26=========================
+
+
+Pinging 10.69.71.97 with 32 bytes of data:
+Reply from 10.69.71.97: bytes=32 time=3ms TTL=250
+Reply from 10.69.71.97: bytes=32 time=5ms TTL=250
+
+Ping statistics for 10.69.71.97:
+    Packets: Sent = 2, Received = 2, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 3ms, Maximum = 5ms, Average = 4ms
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="cache-control" content="public,no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    </head>
+    <body bgcolor="#E7E7E7">
+
+    <bgcolor="#00FF00" text="#000000" link="#A00000" vlink="#600000" alink="#A00000">
+
+    <h3><FONT face="Arial, Helvetica, sans-serif">
+<p><h3>SSH Service Enabled Successfully</h3>
+</p></body>
+</html>
+RemoteAction is used to support action you want to do via S1 port
+Current version is 1.5.0 (support FileCollectorTool to fetch logs)
+Creat directory d:\Personal_zlb\files\Program\Remotely\download__2013_4_25_16_39_55 OK
+download all files with your selection!
+execute subprocess successfully
+ping is ok,ip:10.69.71.97
+execute subprocess successfully
+enable ssh is ok,ip:10.69.71.97
+Creat directory d:\Personal_zlb\files\Program\Remotely\download__2013_4_25_16_39_55\10.69.71.97 OK
+d:\Personal_zlb\files\Program\Remotely\download__2013_4_25_16_39_55\10.69.71.97
+transport is ok, host:'10.69.71.97', port:'22'
+sftp connect to '10.69.71.97', username:'toor4nsn' is ok
+/var/log/sysinfo
+sftp get file size '/var/log/sysinfo' is 58KB
+sftp download from '/var/log/sysinfo' to 'd:\Personal_zlb\files\Program\Remotely\download__2013_4_25_16_39_55\10.69.71.97\sysinfo' is ok.
+sftp close is ok
+2
+file name number is equal to path number!
+transport is ok, host:'10.69.71.97', port:'22'
+sftp connect to '10.69.71.97', username:'toor4nsn' is ok
+/flash/FileDirectory.xml
+sftp get file size '/flash/FileDirectory.xml' is 14KB
+sftp download from '/flash/FileDirectory.xml' to 'd:\Personal_zlb\files\Program\Remotely\download__2013_4_25_16_39_55\10.69.71.97\FileDirectory.xml' is ok.
+sftp close is ok
+transport is ok, host:'10.69.71.97', port:'22'
+sftp connect to '10.69.71.97', username:'toor4nsn' is ok
+/
+sftp get file size '/' is wrong: not a file or not exist
+sftp close is ok
+RemoteAction is used to support action you want to do via S1 port
+Current version is 1.5.0 (support FileCollectorTool to fetch logs)
+@action done@
+
+=========================2013-4-25    16:41:23=========================
+
+Write content to sysinfo_SFP.csv successfully!
+@action done@
+
+=========================2013-4-25    16:41:23=========================
+
+Write content to sysinfo_SFP.csv successfully!
+@action done@
+
+=========================2013-4-25    17:0:55=========================
+
+=========================2013-4-25    17:1:38=========================
+
+=========================2013-4-25    17:17:16=========================
+
+
+Pinging 10.69.71.97 with 32 bytes of data:
+Reply from 10.69.71.97: bytes=32 time=4ms TTL=250
+Reply from 10.69.71.97: bytes=32 time=4ms TTL=250
+
+Ping statistics for 10.69.71.97:
+    Packets: Sent = 2, Received = 2, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 4ms, Maximum = 4ms, Average = 4ms
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="cache-control" content="public,no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    </head>
+    <body bgcolor="#E7E7E7">
+
+    <bgcolor="#00FF00" text="#000000" link="#A00000" vlink="#600000" alink="#A00000">
+
+    <h3><FONT face="Arial, Helvetica, sans-serif">
+<p><h3>SSH Service Enabled Successfully</h3>
+</p></body>
+</html>
+RemoteAction is used to support action you want to do via S1 port
+Current version is 1.5.0 (support FileCollectorTool to fetch logs)
+Creat directory d:\Personal_zlb\files\Program\Remotely\download__2013_4_25_17_1_38 OK
+download all files with your selection!
+execute subprocess successfully
+ping is ok,ip:10.69.71.97
+execute subprocess successfully
+enable ssh is ok,ip:10.69.71.97
+Creat directory d:\Personal_zlb\files\Program\Remotely\download__2013_4_25_17_1_38\10.69.71.97 OK
+d:\Personal_zlb\files\Program\Remotely\download__2013_4_25_17_1_38\10.69.71.97
+transport is ok, host:'10.69.71.97', port:'22'
+sftp connect to '10.69.71.97', username:'toor4nsn' is ok
+/var/log/sysinfo
+sftp get file size '/var/log/sysinfo' is 58KB
+sftp download from '/var/log/sysinfo' to 'd:\Personal_zlb\files\Program\Remotely\download__2013_4_25_17_1_38\10.69.71.97\sysinfo' is ok.
+sftp close is ok
+RemoteAction is used to support action you want to do via S1 port
+Current version is 1.5.0 (support FileCollectorTool to fetch logs)
+@action done@
+
+=========================2013-4-25    17:25:33=========================
+
+
+Pinging 10.69.71.97 with 32 bytes of data:
+Reply from 10.69.71.97: bytes=32 time=3ms TTL=250
+Reply from 10.69.71.97: bytes=32 time=4ms TTL=250
+
+Ping statistics for 10.69.71.97:
+    Packets: Sent = 2, Received = 2, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 3ms, Maximum = 4ms, Average = 3ms
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="cache-control" content="public,no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    </head>
+    <body bgcolor="#E7E7E7">
+
+    <bgcolor="#00FF00" text="#000000" link="#A00000" vlink="#600000" alink="#A00000">
+
+    <h3><FONT face="Arial, Helvetica, sans-serif">
+<p><h3>SSH Service Enabled Successfully</h3>
+</p></body>
+</html>
+RemoteAction is used to support action you want to do via S1 port
+Current version is 1.5.0 (support FileCollectorTool to fetch logs)
+Creat directory d:\Personal_zlb\files\Program\Remotely\download__2013_4_25_17_17_17 OK
+download all files with your selection!
+execute subprocess successfully
+ping is ok,ip:10.69.71.97
+execute subprocess successfully
+enable ssh is ok,ip:10.69.71.97
+RemoteAction is used to support action you want to do via S1 port
+Current version is 1.5.0 (support FileCollectorTool to fetch logs)
+@action done@
+
+=========================2013-4-25    17:25:40=========================
+
+=========================2013-4-25    17:51:43=========================
+
+
+Pinging 10.69.71.97 with 32 bytes of data:
+Reply from 10.69.71.97: bytes=32 time=4ms TTL=250
+Reply from 10.69.71.97: bytes=32 time=6ms TTL=250
+
+Ping statistics for 10.69.71.97:
+    Packets: Sent = 2, Received = 2, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 4ms, Maximum = 6ms, Average = 5ms
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="cache-control" content="public,no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    </head>
+    <body bgcolor="#E7E7E7">
+
+    <bgcolor="#00FF00" text="#000000" link="#A00000" vlink="#600000" alink="#A00000">
+
+    <h3><FONT face="Arial, Helvetica, sans-serif">
+<p><h3>SSH Service Enabled Successfully</h3>
+</p></body>
+</html>
+RemoteAction is used to support action you want to do via S1 port
+Current version is 1.5.0 (support FileCollectorTool to fetch logs)
+Creat directory d:\Personal_zlb\files\Program\Remotely\download__2013_4_25_17_25_40 OK
+download all files with your selection!
+execute subprocess successfully
+ping is ok,ip:10.69.71.97
+execute subprocess successfully
+enable ssh is ok,ip:10.69.71.97
+RemoteAction is used to support action you want to do via S1 port
+Current version is 1.5.0 (support FileCollectorTool to fetch logs)
+@action done@
+
+=========================2013-4-25    17:52:39=========================
+
+
+Pinging 10.69.71.97 with 32 bytes of data:
+Reply from 10.69.71.97: bytes=32 time=6ms TTL=250
+Reply from 10.69.71.97: bytes=32 time=12ms TTL=250
+
+Ping statistics for 10.69.71.97:
+    Packets: Sent = 2, Received = 2, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 6ms, Maximum = 12ms, Average = 9ms
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="cache-control" content="public,no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    </head>
+    <body bgcolor="#E7E7E7">
+
+    <bgcolor="#00FF00" text="#000000" link="#A00000" vlink="#600000" alink="#A00000">
+
+    <h3><FONT face="Arial, Helvetica, sans-serif">
+<p><h3>SSH Service Enabled Successfully</h3>
+</p></body>
+</html>
+RemoteAction is used to support action you want to do via S1 port
+Current version is 1.5.0 (support FileCollectorTool to fetch logs)
+Creat directory d:\Personal_zlb\files\Program\Remotely\download__2013_4_25_17_51_48 OK
+download all files with your selection!
+execute subprocess successfully
+ping is ok,ip:10.69.71.97
+execute subprocess successfully
+enable ssh is ok,ip:10.69.71.97
+RemoteAction is used to support action you want to do via S1 port
+Current version is 1.5.0 (support FileCollectorTool to fetch logs)
+@action done@
+
+=========================2013-4-25    18:1:1=========================
+
+
+Pinging 10.69.71.97 with 32 bytes of data:
+Reply from 10.69.71.97: bytes=32 time=5ms TTL=250
+Reply from 10.69.71.97: bytes=32 time=4ms TTL=250
+
+Ping statistics for 10.69.71.97:
+    Packets: Sent = 2, Received = 2, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 4ms, Maximum = 5ms, Average = 4ms
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="cache-control" content="public,no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    </head>
+    <body bgcolor="#E7E7E7">
+
+    <bgcolor="#00FF00" text="#000000" link="#A00000" vlink="#600000" alink="#A00000">
+
+    <h3><FONT face="Arial, Helvetica, sans-serif">
+<p><h3>SSH Service Enabled Successfully</h3>
+</p></body>
+</html>
+RemoteAction is used to support action you want to do via S1 port
+Current version is 1.5.0 (support FileCollectorTool to fetch logs)
+Creat directory d:\Personal_zlb\files\Program\Remotely\download__2013_4_25_17_52_40 OK
+download all files with your selection!
+execute subprocess successfully
+ping is ok,ip:10.69.71.97
+execute subprocess successfully
+enable ssh is ok,ip:10.69.71.97
+RemoteAction is used to support action you want to do via S1 port
+Current version is 1.5.0 (support FileCollectorTool to fetch logs)
+@action done@
+
+=========================2013-4-25    18:1:2=========================
+
+
+Pinging 10.69.71.97 with 32 bytes of data:
+Reply from 10.69.71.97: bytes=32 time=5ms TTL=250
+Reply from 10.69.71.97: bytes=32 time=4ms TTL=250
+
+Ping statistics for 10.69.71.97:
+    Packets: Sent = 2, Received = 2, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 4ms, Maximum = 5ms, Average = 4ms
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="cache-control" content="public,no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    </head>
+    <body bgcolor="#E7E7E7">
+
+    <bgcolor="#00FF00" text="#000000" link="#A00000" vlink="#600000" alink="#A00000">
+
+    <h3><FONT face="Arial, Helvetica, sans-serif">
+<p><h3>SSH Service Enabled Successfully</h3>
+</p></body>
+</html>
+RemoteAction is used to support action you want to do via S1 port
+Current version is 1.5.0 (support FileCollectorTool to fetch logs)
+Creat directory d:\Personal_zlb\files\Program\Remotely\download__2013_4_25_17_52_40 OK
+download all files with your selection!
+execute subprocess successfully
+ping is ok,ip:10.69.71.97
+execute subprocess successfully
+enable ssh is ok,ip:10.69.71.97
+RemoteAction is used to support action you want to do via S1 port
+Current version is 1.5.0 (support FileCollectorTool to fetch logs)
+@action done@
+
+=========================2013-4-25    18:1:28=========================
+
+=========================2013-4-25    18:1:53=========================
+
+=========================2013-4-26    8:43:58=========================
+
+
+Pinging 10.69.71.97 with 32 bytes of data:
+Reply from 10.69.71.97: bytes=32 time=1ms TTL=250
+Reply from 10.69.71.97: bytes=32 time=1ms TTL=250
+
+Ping statistics for 10.69.71.97:
+    Packets: Sent = 2, Received = 2, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 1ms, Maximum = 1ms, Average = 1ms
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="cache-control" content="public,no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    </head>
+    <body bgcolor="#E7E7E7">
+
+    <bgcolor="#00FF00" text="#000000" link="#A00000" vlink="#600000" alink="#A00000">
+
+    <h3><FONT face="Arial, Helvetica, sans-serif">
+<p><h3>SSH Service Enabled Successfully</h3>
+</p></body>
+</html>
+RemoteAction is used to support action you want to do via S1 port
+Current version is 1.5.0 (support FileCollectorTool to fetch logs)
+Creat directory d:\Personal_zlb\files\Program\Remotely\download__2013_4_25_18_1_53 OK
+download all files with your selection!
+execute subprocess successfully
+ping is ok,ip:10.69.71.97
+execute subprocess successfully
+enable ssh is ok,ip:10.69.71.97
+RemoteAction is used to support action you want to do via S1 port
+Current version is 1.5.0 (support FileCollectorTool to fetch logs)
+@action done@
+
+=========================2013-4-26    8:43:58=========================
+
+
+Pinging 10.69.71.97 with 32 bytes of data:
+Reply from 10.69.71.97: bytes=32 time=1ms TTL=250
+Reply from 10.69.71.97: bytes=32 time=1ms TTL=250
+
+Ping statistics for 10.69.71.97:
+    Packets: Sent = 2, Received = 2, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 1ms, Maximum = 1ms, Average = 1ms
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="cache-control" content="public,no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    </head>
+    <body bgcolor="#E7E7E7">
+
+    <bgcolor="#00FF00" text="#000000" link="#A00000" vlink="#600000" alink="#A00000">
+
+    <h3><FONT face="Arial, Helvetica, sans-serif">
+<p><h3>SSH Service Enabled Successfully</h3>
+</p></body>
+</html>
+RemoteAction is used to support action you want to do via S1 port
+Current version is 1.5.0 (support FileCollectorTool to fetch logs)
+Creat directory d:\Personal_zlb\files\Program\Remotely\download__2013_4_25_18_1_53 OK
+download all files with your selection!
+execute subprocess successfully
+ping is ok,ip:10.69.71.97
+execute subprocess successfully
+enable ssh is ok,ip:10.69.71.97
+RemoteAction is used to support action you want to do via S1 port
+Current version is 1.5.0 (support FileCollectorTool to fetch logs)
+@action done@
+
+=========================2013-5-6    13:27:58=========================
+
+=========================2013-5-6    13:28:9=========================
+
+=========================2013-5-6    13:28:17=========================
+
+You can edit bbuip box now...!
+Save command.txt successfully!
+
+=========================2013-5-6    13:28:22=========================
+
+=========================2013-5-6    13:44:46=========================
+
+
+Pinging 10.69.71.97 with 32 bytes of data:
+Reply from 10.69.71.97: bytes=32 time=1ms TTL=250
+Reply from 10.69.71.97: bytes=32 time=1ms TTL=250
+
+Ping statistics for 10.69.71.97:
+    Packets: Sent = 2, Received = 2, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 1ms, Maximum = 1ms, Average = 1ms
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="cache-control" content="public,no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    </head>
+    <body bgcolor="#E7E7E7">
+
+    <bgcolor="#00FF00" text="#000000" link="#A00000" vlink="#600000" alink="#A00000">
+
+    <h3><FONT face="Arial, Helvetica, sans-serif">
+<p><h3>SSH Service Enabled Successfully</h3>
+</p></body>
+</html>
+RemoteAction is used to support action you want to do via S1 port
+Current version is 1.5.0 (support FileCollectorTool to fetch logs)
+command only
+execute subprocess successfully
+ping is ok,ip:10.69.71.97
+execute subprocess successfully
+enable ssh is ok,ip:10.69.71.97
+->Send: ll -F /var/log |grep sysinfo
+<-Receive: 
+RemoteAction is used to support action you want to do via S1 port
+Current version is 1.5.0 (support FileCollectorTool to fetch logs)
+@action done@
+
+=========================2013-5-6    13:44:56=========================
+
+You can edit bbuip box now...!
+Save command.txt successfully!
+
+=========================2013-5-6    13:45:4=========================
+
+
+Pinging 10.69.71.97 with 32 bytes of data:
+Reply from 10.69.71.97: bytes=32 time=1ms TTL=250
+Reply from 10.69.71.97: bytes=32 time=1ms TTL=250
+
+Ping statistics for 10.69.71.97:
+    Packets: Sent = 2, Received = 2, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 1ms, Maximum = 1ms, Average = 1ms
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="cache-control" content="public,no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    </head>
+    <body bgcolor="#E7E7E7">
+
+    <bgcolor="#00FF00" text="#000000" link="#A00000" vlink="#600000" alink="#A00000">
+
+    <h3><FONT face="Arial, Helvetica, sans-serif">
+<p><h3>SSH Service Enabled Successfully</h3>
+</p></body>
+</html>
+RemoteAction is used to support action you want to do via S1 port
+Current version is 1.5.0 (support FileCollectorTool to fetch logs)
+command only
+execute subprocess successfully
+ping is ok,ip:10.69.71.97
+execute subprocess successfully
+enable ssh is ok,ip:10.69.71.97
+->Send: ls /var/log/sysinfo.txt
+<-Receive: 
+RemoteAction is used to support action you want to do via S1 port
+Current version is 1.5.0 (support FileCollectorTool to fetch logs)
+@action done@
+
+=========================2013-5-6    13:45:12=========================
+
+You can edit bbuip box now...!
+Save command.txt successfully!
+
+=========================2013-5-6    13:46:33=========================
+
+
+Pinging 10.69.71.97 with 32 bytes of data:
+Reply from 10.69.71.97: bytes=32 time=1ms TTL=250
+Reply from 10.69.71.97: bytes=32 time=1ms TTL=250
+
+Ping statistics for 10.69.71.97:
+    Packets: Sent = 2, Received = 2, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 1ms, Maximum = 1ms, Average = 1ms
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="cache-control" content="public,no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    </head>
+    <body bgcolor="#E7E7E7">
+
+    <bgcolor="#00FF00" text="#000000" link="#A00000" vlink="#600000" alink="#A00000">
+
+    <h3><FONT face="Arial, Helvetica, sans-serif">
+<p><h3>SSH Service Enabled Successfully</h3>
+</p></body>
+</html>
+RemoteAction is used to support action you want to do via S1 port
+Current version is 1.5.0 (support FileCollectorTool to fetch logs)
+command only
+execute subprocess successfully
+ping is ok,ip:10.69.71.97
+execute subprocess successfully
+enable ssh is ok,ip:10.69.71.97
+->Send: ls /var/log/sysinfo
+<-Receive: /var/log/sysinfo
+
+RemoteAction is used to support action you want to do via S1 port
+Current version is 1.5.0 (support FileCollectorTool to fetch logs)
+@action done@
+
+=========================2013-5-6    13:46:33=========================
+
+
+Pinging 10.69.71.97 with 32 bytes of data:
+Reply from 10.69.71.97: bytes=32 time=1ms TTL=250
+Reply from 10.69.71.97: bytes=32 time=1ms TTL=250
+
+Ping statistics for 10.69.71.97:
+    Packets: Sent = 2, Received = 2, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 1ms, Maximum = 1ms, Average = 1ms
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="cache-control" content="public,no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    </head>
+    <body bgcolor="#E7E7E7">
+
+    <bgcolor="#00FF00" text="#000000" link="#A00000" vlink="#600000" alink="#A00000">
+
+    <h3><FONT face="Arial, Helvetica, sans-serif">
+<p><h3>SSH Service Enabled Successfully</h3>
+</p></body>
+</html>
+RemoteAction is used to support action you want to do via S1 port
+Current version is 1.5.0 (support FileCollectorTool to fetch logs)
+command only
+execute subprocess successfully
+ping is ok,ip:10.69.71.97
+execute subprocess successfully
+enable ssh is ok,ip:10.69.71.97
+->Send: ls /var/log/sysinfo
+<-Receive: /var/log/sysinfo
+
+RemoteAction is used to support action you want to do via S1 port
+Current version is 1.5.0 (support FileCollectorTool to fetch logs)
+@action done@
+
+=========================2013-5-6    13:47:21=========================
+
+=========================2013-5-6    13:47:23=========================
+
+=========================2013-5-6    13:47:31=========================
+
+You can edit bbuip box now...!
+Save command.txt successfully!
+
+=========================2013-5-6    13:53:8=========================
+
+
+Pinging 10.69.71.97 with 32 bytes of data:
+Reply from 10.69.71.97: bytes=32 time=1ms TTL=250
+Reply from 10.69.71.97: bytes=32 time=1ms TTL=250
+
+Ping statistics for 10.69.71.97:
+    Packets: Sent = 2, Received = 2, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 1ms, Maximum = 1ms, Average = 1ms
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="cache-control" content="public,no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    </head>
+    <body bgcolor="#E7E7E7">
+
+    <bgcolor="#00FF00" text="#000000" link="#A00000" vlink="#600000" alink="#A00000">
+
+    <h3><FONT face="Arial, Helvetica, sans-serif">
+<p><h3>SSH Service Enabled Successfully</h3>
+</p></body>
+</html>
+RemoteAction is used to support action you want to do via S1 port
+Current version is 1.5.0 (support FileCollectorTool to fetch logs)
+command only
+execute subprocess successfully
+ping is ok,ip:10.69.71.97
+execute subprocess successfully
+enable ssh is ok,ip:10.69.71.97
+->Send: ls /var/log/sysinfo.txt
+<-Receive: 
+RemoteAction is used to support action you want to do via S1 port
+Current version is 1.5.0 (support FileCollectorTool to fetch logs)
+@action done@
+
+=========================2013-5-6    13:53:8=========================
+
+
+Pinging 10.69.71.97 with 32 bytes of data:
+Reply from 10.69.71.97: bytes=32 time=1ms TTL=250
+Reply from 10.69.71.97: bytes=32 time=1ms TTL=250
+
+Ping statistics for 10.69.71.97:
+    Packets: Sent = 2, Received = 2, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 1ms, Maximum = 1ms, Average = 1ms
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="cache-control" content="public,no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    </head>
+    <body bgcolor="#E7E7E7">
+
+    <bgcolor="#00FF00" text="#000000" link="#A00000" vlink="#600000" alink="#A00000">
+
+    <h3><FONT face="Arial, Helvetica, sans-serif">
+<p><h3>SSH Service Enabled Successfully</h3>
+</p></body>
+</html>
+RemoteAction is used to support action you want to do via S1 port
+Current version is 1.5.0 (support FileCollectorTool to fetch logs)
+command only
+execute subprocess successfully
+ping is ok,ip:10.69.71.97
+execute subprocess successfully
+enable ssh is ok,ip:10.69.71.97
+->Send: ls /var/log/sysinfo.txt
+<-Receive: 
+RemoteAction is used to support action you want to do via S1 port
+Current version is 1.5.0 (support FileCollectorTool to fetch logs)
+@action done@
+
+=========================2013-5-6    14:6:13=========================
+
+=========================2013-5-6    14:6:17=========================
+
+=========================2013-5-6    14:6:43=========================
+
+You can edit bbuip box now...!
+Save command.txt successfully!
+
+=========================2013-5-6    14:7:52=========================
+
+
+Pinging 10.69.71.97 with 32 bytes of data:
+Reply from 10.69.71.97: bytes=32 time=1ms TTL=250
+Reply from 10.69.71.97: bytes=32 time=1ms TTL=250
+
+Ping statistics for 10.69.71.97:
+    Packets: Sent = 2, Received = 2, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 1ms, Maximum = 1ms, Average = 1ms
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="cache-control" content="public,no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    </head>
+    <body bgcolor="#E7E7E7">
+
+    <bgcolor="#00FF00" text="#000000" link="#A00000" vlink="#600000" alink="#A00000">
+
+    <h3><FONT face="Arial, Helvetica, sans-serif">
+<p><h3>SSH Service Enabled Successfully</h3>
+</p></body>
+</html>
+RemoteAction is used to support action you want to do via S1 port
+Current version is 1.5.0 (support FileCollectorTool to fetch logs)
+Creat directory d:\Personal_zlb\files\Program\Remotely\download__2013_5_6_14_6_44 OK
+download all files with your selection!
+execute subprocess successfully
+ping is ok,ip:10.69.71.97
+execute subprocess successfully
+enable ssh is ok,ip:10.69.71.97
+->Send: ls /var/log/sysinfo.txt
+<-Receive: 
+/var/log/sysinfo.txt isn't existed!
+->Send: ls /var/log/sysinfo
+<-Receive: /var/log/sysinfo
+
+/var/log/sysinfo is existed!
+Creat directory d:\Personal_zlb\files\Program\Remotely\download__2013_5_6_14_6_44\10.69.71.97 OK
+transport is ok, host:'10.69.71.97', port:'22'
+sftp connect to '10.69.71.97', username:'toor4nsn' is ok
+/var/log/sysinfo
+sftp get file size '/var/log/sysinfo' is 58KB
+sftp download from '/var/log/sysinfo' to 'd:\Personal_zlb\files\Program\Remotely\download__2013_5_6_14_6_44\10.69.71.97\sysinfo' is ok.
+sftp close is ok
+RemoteAction is used to support action you want to do via S1 port
+Current version is 1.5.0 (support FileCollectorTool to fetch logs)
+@action done@
+
+=========================2013-5-6    14:8:59=========================
+
+
+Pinging 10.69.71.97 with 32 bytes of data:
+Request timed out.
+Reply from 10.69.71.97: bytes=32 time=1ms TTL=250
+
+Ping statistics for 10.69.71.97:
+    Packets: Sent = 2, Received = 1, Lost = 1 (50% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 1ms, Maximum = 1ms, Average = 1ms
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="cache-control" content="public,no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    </head>
+    <body bgcolor="#E7E7E7">
+
+    <bgcolor="#00FF00" text="#000000" link="#A00000" vlink="#600000" alink="#A00000">
+
+    <h3><FONT face="Arial, Helvetica, sans-serif">
+<p><h3>SSH Service Enabled Successfully</h3>
+</p></body>
+</html>
+RemoteAction is used to support action you want to do via S1 port
+Current version is 1.5.0 (support FileCollectorTool to fetch logs)
+Creat directory d:\Personal_zlb\files\Program\Remotely\download__2013_5_6_14_7_53 OK
+download all files with your selection!
+execute subprocess successfully
+ping is ok,ip:10.69.71.97
+execute subprocess successfully
+enable ssh is ok,ip:10.69.71.97
+->Send: ls /var/log/sysinfo.txt
+<-Receive: /var/log/sysinfo.txt
+
+/var/log/sysinfo.txt is existed!
+Creat directory d:\Personal_zlb\files\Program\Remotely\download__2013_5_6_14_7_53\10.69.71.97 OK
+transport is ok, host:'10.69.71.97', port:'22'
+sftp connect to '10.69.71.97', username:'toor4nsn' is ok
+/var/log/sysinfo.txt
+sftp get file size '/var/log/sysinfo.txt' is 58KB
+sftp download from '/var/log/sysinfo.txt' to 'd:\Personal_zlb\files\Program\Remotely\download__2013_5_6_14_7_53\10.69.71.97\sysinfo.txt' is ok.
+sftp close is ok
+RemoteAction is used to support action you want to do via S1 port
+Current version is 1.5.0 (support FileCollectorTool to fetch logs)
+@action done@
+
+=========================2013-5-6    14:10:1=========================
+
+support RL25 sysinfo.txt analyze!
+Write content to sysinfo_SFP.csv successfully!
+@action done@
+
+=========================2013-5-6    14:11:5=========================
+
+support RL35 sysinfo analyze!
+Write content to sysinfo_SFP.csv successfully!
+@action done@
+
+=========================2013-5-6    14:11:6=========================
+
+support RL35 sysinfo analyze!
+Write content to sysinfo_SFP.csv successfully!
+@action done@
+
+=========================2013-5-6    14:12:36=========================
+
+=========================2013-5-6    14:12:38=========================
+
+=========================2013-5-6    14:12:39=========================
+
+=========================2013-5-6    14:13:4=========================
+
+=========================2013-5-6    14:13:5=========================
+
+=========================2013-5-6    14:13:5=========================
+

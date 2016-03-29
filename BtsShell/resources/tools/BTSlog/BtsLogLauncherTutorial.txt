@@ -1,0 +1,19 @@
+		BTSLog_launcher.exe
+
+A helper command line tool for sending start/stop/clear commands for Btslog > 1.0-93. 
+	
+Tool takes the following command line arguments:
+
+start_udplog
+start_bssigrec
+start_both
+stop_udplog
+stop_bssigrec
+stop_both
+clear
+
+BTSLog_launcher sends registered windows messages to Btslog, 
+which handles the calls like corresponding buttons were pressed.
+
+BTSLog_launcher.exe has to be located in the same dir with BTSlog.exe. 
+

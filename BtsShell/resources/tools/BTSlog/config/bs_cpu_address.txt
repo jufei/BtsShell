@@ -1,0 +1,133 @@
+#  30.8.2007 TeNi, first version of node name list for BTSlo, ref glo_bs.h		
+
+# Node ID (SIC node id, cpu & board treated as one 16-bit address		
+Node_list		
+#Node	Name	Description
+# All NID's use board/cpu in WN5.0, later possible 16-bit node ID's, ie currently no nodes		
+
+
+BoardList		
+# UI notation board/cpu - for example WAM_10/C, WSP_12/R4		
+# Board (hex)	Name	Description
+10	WAM_10	WAM2 in Supreme (WAM1 in Triple and Metro)
+11	WAM_11	WAM1 in Supreme
+20	WAM_20	WAM4 in Supreme
+21	WAM_21	WAM3 in Supreme
+30	WAM_30	WAM6 in Supreme
+31	WAM_31	WAM5 in Supreme
+#		
+40	WTR_10	WTR1
+41	WTR_11	WTR2
+42	WTR_20	WTR3
+43	WTR_21	WTR4
+44	WTR_30	WTR5
+45	WTR_31	WTR6
+#		
+50	WPA_10	WPA1
+51	WPA_11	WPA2
+52	WPA_20	WPA3
+53	WPA_21	WPA4
+54	WPA_30	WPA5
+55	WPA_31	WPA6
+#		
+12	WSP_12	WSP6
+13	WSP_13	WSP5
+14	WSP_14	WSP4
+15	WSP_15	WSP3
+16	WSP_16	WSP2
+17	WSP_17	WSP1
+#		
+22	WSP_22	WSP12
+23	WSP_23	WSP11
+24	WSP_24	WSP10
+25	WSP_25	WSP9
+26	WSP_26	WSP8
+27	WSP_27	WSP7
+#		
+32	WSP_32	WSP18
+33	WSP_33	WSP17
+34	WSP_34	WSP16
+35	WSP_35	WSP15
+36	WSP_36	WSP14
+37	WSP_37	WSP13
+#		
+57	RNC-NBAP	
+58	AXU	
+59	RNC	Used by CNBAP and DNBAP links
+
+9D	FR1	Radio module1
+9E	FR2	Radio module2
+9F	FR3	Radio module3
+		
+AD	FSM1	System module
+AE	FSM2	System module
+AF	FSM3	System module
+		
+C6	WOM_10	Rack 1, Wideband Optical Module
+C7	WOM_20	Rack 2, Wideband Optical Module
+C8	WOM_30	Rack 3, Wideband Optical Module
+D9	WOM_40	Rack 4, Wideband Optical Module, MetroAIR
+		
+DB	FR1_FF1	Radio module1, filter 1
+DC	FR1_FF2	Radio module1, filter 2
+DD	FR2_FF1	Radio module2, filter 1
+DE	FR2_FF2	Radio module2, filter 2
+DF	FR3_FF1	Radio module3, filter 1
+E0	FR3_FF2	Radio module3, filter 2
+E1	FTM	FTM - transport sub-module
+
+
+
+
+		
+		
+		
+		
+CpuList	Cpu (hex)	
+# Cpu (hex)	Name	Description
+1	R1	RAKE_1
+2	R2	RAKE_2
+3	R3	RAKE_3
+4	R4	RAKE_4
+5	C1	CODEC_1
+6	C2	CODEC_2
+7	C3	CODEC_3
+8	C4	CODEC_4
+D	MCU	WSP/FSP MCU
+		
+		
+11	C	WAM control MCU
+12	DNBAP	
+13	CNBAP	
+14	AH	WAM ATM host
+15	AAL2S	
+17	AM1	AMT MCU 1
+1A	AM2	AMT MCU 2
+1D	AM3	AMT MCU 3
+20	MCU	WTR MCU
+21	MCU	WPA MCU
+22	AXU	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+	
+	
+	
+	
+	

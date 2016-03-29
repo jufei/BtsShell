@@ -1,0 +1,174 @@
+# TMA Child Script
+
+###############################
+# TEST STEP: Raw Text Command #
+###############################
+
+#--
+SETP RRC_TEST_DISABLE_MAX_SR_TRANSMISSIONS 1
+#--
+
+###############################
+# TEST STEP: Raw Text Command #
+###############################
+
+#--
+SETP L2_MAC_DISABLE_SR_INIT_RACH_IF_SR_NOT_CFG 1
+#--
+
+#############################
+# TEST STEP: Configure USIM #
+#############################
+
+#---------------------
+# Configures the USIM
+#---------------------
+# PARAMETERS
+# 1. USIM Type
+# 2. IMSI
+# 3. MNC Length
+# 4. Authentication Key
+#---------------------
+#                   1  2               3                      4                                
+#                   |  |               |                      |                                
+forw mte UsimConfig 1([262030020000626 2] [] [] [] []) [] [] [A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5]
+#---------------------
+
+###############################
+# TEST STEP: Raw Text Command #
+###############################
+
+#--
+SETP RRC_NUM_DL_ANTENNAS 2
+#--
+
+#########################################
+# TEST STEP: Configure PHY Capabilities #
+#########################################
+
+#-------------------------------------------
+# Configure the physical layer capabilities
+#-------------------------------------------
+# PARAMETERS
+# 1. Number of UE downlink antennae
+# 2. DL UE category
+# 3. UL UE category
+#-------------------------------------------
+#                        1 2 3
+#                        | | |
+forw mte PhyConfigSysCap 2 4 4
+#-------------------------------------------
+
+###############################
+# TEST STEP: Raw Text Command #
+###############################
+
+#--
+FORW MTE PHYCONFIGULTIMING 0
+#--
+
+############################
+# TEST STEP: Configure TDD #
+############################
+
+#-----------------------
+# Set TDD Configuration
+#-----------------------
+# PARAMETERS
+# 1. Subframe Assignment
+# 2. Special Subframe Patterns
+#-----------------------
+#                     1 2
+#                     | |
+forw mte PhySetTDDCfg 2 5
+#-----------------------
+
+###########################################
+# TEST STEP: Configure NAS PLMN Selection #
+###########################################
+
+#----------------------------------------------
+# Configures the NAS to select a specific PLMN
+#----------------------------------------------
+# PARAMETERS
+# 1. Force PLMN
+#----------------------------------------------
+#                                  1    
+#                                  |    
+forw mte NasAptConfigPlmnSelection 26203
+#----------------------------------------------
+
+#########################################
+# TEST STEP: Configure NAS Capabilities #
+#########################################
+
+#--------------------------------------------------------------------------------
+# Configures the NAS capabilities, including authentication and security options
+#--------------------------------------------------------------------------------
+# PARAMETERS
+# 1. Supported Ciphering Algorithms
+# 2. Supported Integrity Algorithms
+#--------------------------------------------------------------------------------
+#                                   1     2   
+#                                   |     |   
+forw mte NasAptConfigCapability [] [224] [224]
+#--------------------------------------------------------------------------------
+
+#####################################
+# TEST STEP: Configure NAS Register #
+#####################################
+
+#------------------------------------------
+# Configures the NAS to register on a PLMN
+#------------------------------------------
+# PARAMETERS
+# 1. Selection Mode
+# 2. PDN Identity
+# 3. PDN Type
+#------------------------------------------
+#                             1 2  3                       
+#                             | |  |                       
+forw mte NasConfigEmmRegister 0(0 [0] [] [] [] [] [] [] [])
+#------------------------------------------
+
+#########################################
+# TEST STEP: Configure RRC Capabilities #
+#########################################
+
+#-------------------------------------------------------------
+# Configures the RRC capabilities, including security options
+#-------------------------------------------------------------
+#                              
+forw mte RrcAptConfigCapability
+#-------------------------------------------------------------
+
+###########################################
+# TEST STEP: Configure RRC Cell Selection #
+###########################################
+
+#----------------------------------------------
+# Configures the RRC to select a specific cell
+#----------------------------------------------
+# PARAMETERS
+# 1. Downlink Carrier Frequency
+#----------------------------------------------
+#                                  1    
+#                                  |    
+forw mte RrcAptConfigCellSelection 18900
+#----------------------------------------------
+
+#####################################
+# TEST STEP: Activate Configuration #
+#####################################
+
+#--------------------------------
+# Activate pending configuration
+#--------------------------------
+# PARAMETERS
+# 1. Timing Type
+#--------------------------------
+#                 1 
+#                 | 
+forw mte Activate -1
+#--------------------------------
+

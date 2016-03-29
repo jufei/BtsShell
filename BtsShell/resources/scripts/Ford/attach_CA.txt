@@ -1,0 +1,233 @@
+################################
+# TEST STEP: UE Capability set #
+################################
+
+SETP L2_MAC_ENABLE_CR379_R2_094167 1
+
+SETP L2_MAC_ENABLE_REL_9_CR409 1
+
+SETP RRC_ENABLE_RELEASE_10 1
+
+SETP NAS_ENABLE_R10 1
+
+
+
+################################
+# TEST STEP: Override RRC Band #
+################################
+
+#-------------------------------------------------------------------------
+# Overrides/Add to the EUTRA band information to be used by the TM500 RRC
+#-------------------------------------------------------------------------
+# PARAMETERS
+# 1.  Number of bands
+# 2.  Band
+# 2a. FDD/TDD
+# 2b. DL Frequency Start
+# 2c. DL EARFCN Start
+# 2d. DL Frequency Bandwidth
+# 2e. UL Frequency Start
+# 2f. UL EARFCN Start
+# 2g. UL Frequency Bandwidth
+# 2h. Radio Context
+# 3.  Report Radio Card Bands
+#-------------------------------------------------------------------------
+#                                        2 2     2     2   2     2     2
+#                                  1 2   a b     c     d   e     f     g         3
+#                                  | |   | |     |     |   |     |     |         |
+forw mte RrcAptOverrideBandSupport 1{38 [1 25700 37750 500 25700 37750 500] []} [0]
+#-------------------------------------------------------------------------
+
+#####################################
+# TEST STEP: Activate Configuration #
+#####################################
+
+#--------------------------------
+# Activate pending configuration
+#--------------------------------
+# PARAMETERS
+# 1. Timing Type
+# 2. Activate on Frame Boundary
+#--------------------------------
+#                 1      2
+#                 |      |
+forw mte Activate -1 [] [1]
+#--------------------------------
+
+###############################
+# TEST STEP: Raw Text Command #
+###############################
+
+#--
+forw l1 MapFreqToRadioContext 1 1 25950 26150
+#--
+
+###############################
+# TEST STEP: Raw Text Command #
+###############################
+
+#--
+forw l1 MapFreqToRadioContext 0 1 25750 25950
+#--
+
+###############################
+# TEST STEP: Raw Text Command #
+###############################
+
+#--
+SETP RRC_NUM_DL_ANTENNAS 2
+#--
+
+############################
+# TEST STEP: Configure TDD #
+############################
+
+#-----------------------
+# Set TDD Configuration
+#-----------------------
+# PARAMETERS
+# 1. Subframe Assignment
+# 2. Special Subframe Patterns
+#-----------------------
+#                     1 2
+#                     | |
+forw mte PhySetTDDCfg 1 7
+#-----------------------
+
+#############################
+# TEST STEP: Configure USIM #
+#############################
+
+#---------------------
+# Configures the USIM
+#---------------------
+# PARAMETERS
+# 1.  USIM Type
+# 2.  IMSI
+# 3.  MNC Length
+# 4.  Last RPLMN Indication
+# 5.  Authentication Key
+# 6.  OP
+# 7.  C1
+# 8.  C2
+# 9.  C3
+# 10. C4
+# 11. C5
+# 12. R1
+# 13. R2
+# 14. R3
+# 15. R4
+# 16. R5
+#---------------------
+#                                                                                                                                                                                                                                     1                                1                                1  1 1  1  1
+#                   1  2               3      4                5                                  6                                7                                8                                9                                0                                1                                2  3 4  5  6
+#                   |  |               |      |                |                                  |                                |                                |                                |                                |                                |                                |  | |  |  |
+forw mte UsimConfig 1([262030020000200 2] [] [1] [] []) [] [] [A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5] [CDC202D5123E20F62B6D676AC72CB318 00000000000000000000000000000000 00000000000000000000000000000001 00000000000000000000000000000002 00000000000000000000000000000004 00000000000000000000000000000008 64 0 32 64 96]
+#---------------------
+
+#########################################
+# TEST STEP: Configure PHY Capabilities #
+#########################################
+
+#-------------------------------------------
+# Configure the physical layer capabilities
+#-------------------------------------------
+# PARAMETERS
+# 1. Number of UE downlink antennae
+# 2. DL UE category
+# 3. UL UE category
+#-------------------------------------------
+#                        1 2 3
+#                        | | |
+forw mte PhyConfigSysCap 2 6 6
+#-------------------------------------------
+
+#########################################
+# TEST STEP: Configure RRC Capabilities #
+#########################################
+
+#-------------------------------------------------------------
+# Configures the RRC capabilities, including security options
+#-------------------------------------------------------------
+#
+forw mte RrcAptConfigCapability
+#-------------------------------------------------------------
+
+#########################################
+# TEST STEP: Configure NAS Capabilities #
+#########################################
+
+#--------------------------------------------------------------------------------
+# Configures the NAS capabilities, including authentication and security options
+#--------------------------------------------------------------------------------
+# PARAMETERS
+# 1. Supported Ciphering Algorithms
+# 2. Supported Integrity Algorithms
+#--------------------------------------------------------------------------------
+#                                   1     2
+#                                   |     |
+forw mte NasAptConfigCapability [] [224] [224]
+#--------------------------------------------------------------------------------
+
+###########################################
+# TEST STEP: Configure RRC Cell Selection #
+###########################################
+
+#----------------------------------------------
+# Configures the RRC to select a specific cell
+#----------------------------------------------
+# PARAMETERS
+# 1. Downlink Carrier Frequency
+#----------------------------------------------
+#                                  1
+#                                  |
+forw mte RrcAptConfigCellSelection 25850
+#----------------------------------------------
+
+###########################################
+# TEST STEP: Configure NAS PLMN Selection #
+###########################################
+
+#----------------------------------------------
+# Configures the NAS to select a specific PLMN
+#----------------------------------------------
+# PARAMETERS
+# 1. Force PLMN
+#----------------------------------------------
+#                                  1
+#                                  |
+forw mte NasAptConfigPlmnSelection 26203
+#----------------------------------------------
+
+#####################################
+# TEST STEP: Configure NAS Register #
+#####################################
+
+#------------------------------------------
+# Configures the NAS to register on a PLMN
+#------------------------------------------
+# PARAMETERS
+# 1. Selection Mode
+# 2. PDN Identity
+# 3. PDN Type
+#------------------------------------------
+#                             1 2  3
+#                             | |  |
+forw mte NasConfigEmmRegister 0(0 [0] [] [] [] [] [] [] [])
+#------------------------------------------
+
+#####################################
+# TEST STEP: Activate Configuration #
+#####################################
+
+#--------------------------------
+# Activate pending configuration
+#--------------------------------
+# PARAMETERS
+# 1. Timing Type
+#--------------------------------
+#                 1
+#                 |
+forw mte Activate -1
+#--------------------------------
+

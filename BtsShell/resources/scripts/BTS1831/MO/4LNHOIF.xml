@@ -1,0 +1,72 @@
+<managedObject class="LNHOIF" distName="MRBTS-1831/LNBTS-1831/LNCEL-7937/LNHOIF-1" operation="create" version="TL15A">
+<p name="a5ReportIntervalInterFreq">120ms</p>
+<p name="a5TimeToTriggerInterFreq">40ms</p>
+<p name="eutraCarrierInfo">38100</p>
+<p name="offsetFreqInter">-6dB</p>
+<p name="measurementBandwidth">mbw100</p>
+<p name="measQuantInterFreq">rsrp</p>
+<p name="interPresAntP">true</p>
+<p name="hysThreshold3InterFreq">7</p>
+<p name="threshold3InterFreq">65</p>
+<p name="threshold3aInterFreq">70</p>
+<p name="a3OffsetRsrpInterFreq">50</p>
+<p name="a3ReportIntervalRsrpInterFreq">120ms</p>
+<p name="a3TimeToTriggerRsrpInterFreq">480ms</p>
+<p name="hysA3OffsetRsrpInterFreq">6</p>
+<p name="thresholdRsrpIFLBFilter">-100</p>
+<p name="thresholdRsrqIFLBFilter">-100</p>
+</managedObject>
+<managedObject class="LNHOIF" distName="MRBTS-1831/LNBTS-1831/LNCEL-7937/LNHOIF-2" operation="create" version="TL15A">
+<p name="a5ReportIntervalInterFreq">120ms</p>
+<p name="a5TimeToTriggerInterFreq">40ms</p>
+<p name="eutraCarrierInfo">37950</p>
+<p name="offsetFreqInter">-6dB</p>
+<p name="measurementBandwidth">mbw100</p>
+<p name="measQuantInterFreq">rsrp</p>
+<p name="interPresAntP">true</p>
+<p name="hysThreshold3InterFreq">7</p>
+<p name="threshold3InterFreq">65</p>
+<p name="threshold3aInterFreq">70</p>
+<p name="a3OffsetRsrpInterFreq">50</p>
+<p name="a3ReportIntervalRsrpInterFreq">120ms</p>
+<p name="a3TimeToTriggerRsrpInterFreq">480ms</p>
+<p name="thresholdRsrpIFLBFilter">-100</p>
+<p name="thresholdRsrqIFLBFilter">-100</p>
+<p name="hysA3OffsetRsrpInterFreq">6</p>
+</managedObject>
+<managedObject class="LNHOIF" distName="MRBTS-1831/LNBTS-1831/LNCEL-7937/LNHOIF-3" operation="create" version="TL15A">
+<p name="a5ReportIntervalInterFreq">120ms</p>
+<p name="a5TimeToTriggerInterFreq">40ms</p>
+<p name="eutraCarrierInfo">38050</p>
+<p name="offsetFreqInter">-6dB</p>
+<p name="measurementBandwidth">mbw100</p>
+<p name="measQuantInterFreq">rsrp</p>
+<p name="interPresAntP">true</p>
+<p name="hysThreshold3InterFreq">7</p>
+<p name="threshold3InterFreq">65</p>
+<p name="threshold3aInterFreq">70</p>
+<p name="a3OffsetRsrpInterFreq">50</p>
+<p name="a3ReportIntervalRsrpInterFreq">120ms</p>
+<p name="a3TimeToTriggerRsrpInterFreq">480ms</p>
+<p name="thresholdRsrpIFLBFilter">-100</p>
+<p name="thresholdRsrqIFLBFilter">-100</p>
+<p name="hysA3OffsetRsrpInterFreq">6</p>
+</managedObject>
+<managedObject class="LNHOIF" distName="MRBTS-1831/LNBTS-1831/LNCEL-7937/LNHOIF-4" operation="create" version="TL15A">
+<p name="a5ReportIntervalInterFreq">120ms</p>
+<p name="a5TimeToTriggerInterFreq">40ms</p>
+<p name="eutraCarrierInfo">15000</p>
+<p name="offsetFreqInter">-6dB</p>
+<p name="measurementBandwidth">mbw100</p>
+<p name="measQuantInterFreq">rsrp</p>
+<p name="interPresAntP">true</p>
+<p name="hysThreshold3InterFreq">7</p>
+<p name="threshold3InterFreq">65</p>
+<p name="threshold3aInterFreq">70</p>
+<p name="a3OffsetRsrpInterFreq">50</p>
+<p name="a3ReportIntervalRsrpInterFreq">120ms</p>
+<p name="a3TimeToTriggerRsrpInterFreq">480ms</p>
+<p name="thresholdRsrpIFLBFilter">-100</p>
+<p name="thresholdRsrqIFLBFilter">-100</p>
+<p name="hysA3OffsetRsrpInterFreq">6</p>
+</managedObject>

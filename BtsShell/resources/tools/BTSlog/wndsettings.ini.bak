@@ -1,0 +1,30 @@
+[BTSLog]
+normalposition=524,278,1087,134
+showcommand=1
+columnwidths=
+[Nodes and Filters]
+normalposition=870,313,1327,87
+showcommand=0
+columnwidths=70,70,70,70,70,70,70,70,70,70,
+[Real Time1]
+normalposition=1209,193,1578,507
+showcommand=1
+columnwidths=104,150,1100,|42,70,70,70,70,70,70,70,70,|0,84,118,161,161,161,
+usertitle=Real Time1
+[Real Time2]
+normalposition=1209,193,1578,507
+showcommand=1
+columnwidths=104,150,1100,|42,70,70,70,70,70,70,70,70,|0,84,118,161,161,161,
+usertitle=Real Time2 RRC_
+[Real Time3]
+normalposition=928,848,2130,325
+showcommand=1
+columnwidths=105,144,1069,|42,70,70,70,70,70,70,70,70,|0,84,118,161,161,161,
+usertitle=Real Time3
+[Real Time4]
+normalposition=1061,-290,1084,445
+showcommand=0
+columnwidths=132,197,1140,|42,70,70,70,70,70,70,70,70,|0,84,118,294,161,161,
+usertitle=Real Time4
+[GENERAL_SETTINGS]
+Main control expanded=TRUE

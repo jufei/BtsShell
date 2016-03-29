@@ -1,0 +1,16 @@
+#specific parameters
+#this parameters are different
+db_LocalMatrixpath C:/Pegasus/workspaceLTE/TDLTE_Inc21/Tests/RACH/TC_19_003_RACHSetup_13km_cell/TDLTE_PARAMETERS_INC21.xls
+db_LocalMatrixpath1 none
+db_LocalMatrixpath2 none
+db_UDPLogCheckCondition C:/Pegasus/workspaceLTE/TDLTE_Inc21/Tests/RACH/TC_19_003_RACHSetup_13km_cell/UDPLog_checkcondition.txt
+db_casename TC_19_003_RACHSetup_13km_cell
+
+#LMGTS
+db_userID 1
+db_LMGTS_PacketSize 1024
+db_LMGTS_OperatingPeriod 4
+db_LMGTS_NumberOfPackets 0
+db_LMGTS_NumberOfBurstPackets 4
+db_NumberOfContinuousBurstPackets 1
+db_LMGTS_BurstDelay 3e6

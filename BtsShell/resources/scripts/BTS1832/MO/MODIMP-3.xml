@@ -1,0 +1,24 @@
+<managedObject class="MODIMP" distName="MRBTS-1832/LNBTS-1832/MODPR-0/MODIMP-3" operation="create" version="LNT5.0">
+<list name="dlCarFrqEutL">
+<item>
+<p name="dlCarFrqEut">38100</p>
+<p name="idleLBEutCelResWeight">100</p>
+</item>
+<item>
+<p name="dlCarFrqEut">37900</p>
+<p name="idleLBEutCelResWeight">20</p>
+</item>
+</list>
+<list name="utrFddCarFrqL">
+<item>
+<p name="utrFddCarFrq">10713</p>
+<p name="idleLBUtraFddCelResWeight">100</p>
+</item>
+</list>
+<list name="utrTddCarFrqL">
+<item>
+<p name="utrTddCarFrq">10067</p>
+<p name="idleLBUtraTddCelResWeight">100</p>
+</item>
+</list>
+</managedObject>

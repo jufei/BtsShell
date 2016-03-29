@@ -1,0 +1,229 @@
+###################################
+# File name: swconfig.txt
+# Description: Used for OAM team testing only
+# Version: V1.4
+# Author: TDLTE OAM testing team: https://workspaces.emea.nsn-net.net/sites/tdlteoamtesting/default.aspx
+# Content: 1. Other debug tag
+#          2. TRS debug tag
+#          3. CCS debug tag
+#          4. HWAPI debug tag
+#          5. BTSOM debug tag
+#          6. RROM debug tag
+#          7. UEC debug tag
+#          8. CELLC debug tag
+#          9. ENBC debug tag
+#          10. ULPHY debug tag
+####################################
+
+#==================1. Other debug tag
+#OAM_DBG_RP3BM_PRN, /* OAM RP3 Bus Master prints */
+0x190003=1
+#OAM_DBG_RP301_LINK_SPEED: 1=4x 2=8x,  /* LTE544b1 : Enable RP3-01 link speed definition: 4x or 8x */
+#0x19000C=2
+#OAM_DBG_CM_OMS_CCN_CONNECTION_TM,  /* Timeout for OMS connection in CCN service in seconds, default is 180 */
+0x190020=1
+
+
+
+#==================2. TRS debug tag
+#enable UDP logging after BTS start (after ~60s instead of 180s)
+0x1A0020=1
+
+
+
+#==================3. CCS debug tag
+#ERadCcs_PrintAaSysTimeBcn,  /**< AaSysTime BCN Sync debug print */
+0x1003B=1
+#ERadCcs_AaSysLogInputLevel, /**< Prints stored to RAM (postmortem): 0 = disable 1 = debug 2 = info 3 = warning 4 = error 5 = vip 6 = disable */
+0x1003F=1
+#ERadCcs_AaSysLogOutputLevel, /**< Prints forwarded to output devices: 0 = disable 1 = debug 2 = info 3 = warning 4 = error 5 = vip 6 = disable */
+0x10040=1
+#ERadCcs_AaSysLogOutputMode, /**< Output mode which devices prints are forwarded: 0 = none 1 = all 2 = udp 3 = sic 4 = standard output 5 = local 6 = remote 7 = not valid */
+0x10041=5
+#ERadCcs_AaSysLogUdpAddress, /**< IP address where prints are forwarded, broadcast and unicast are supported: A.B.C.D -> 0xAABBCCDD *
+#0x10042=0xC0A8FF7E
+#ERadCcs_AaSysLogUdpPort,  /**< IP port where prints are forwarded */
+#0x10043=51000
+#ERadCcs_AaProWDRebootDisable, /**< 1 = disable system resets, 0 = system resets are enabled */
+0x10077=1
+#ERadCcs_AaErrorCoreDump, /**< CoreDump: 0 = disabled, >0 size of compressed core dump in kbytes */
+0x10079=300000
+
+
+
+
+#==================4. HWAPI debug tag
+#ERadHwapi_PrintAdetTask    /* Autodetection Task debug print */ 
+0x20001=1
+#ERadHwapi_PrintSwdlTask,     /* SW DL Task debug print */
+0x20003=1
+#ERadHwapi_PrintResetTask   /* Reset Service task print */
+0x20006=1
+#ERadHwapi_PrintSumTask,     /* SUM Service task print */
+0x20008=1
+#ERadHwapi_PrintClockService,    /* Enables Clock Service common printouts */
+0x2003F=1
+#ERadHwapi_PrintRaml,   /* RAML parser print */
+#0x20066=1
+
+
+
+#==================5. BTSOM debug tag
+#FEAT_DBG_RawAlarm,      /* DBG: 1 - Raw Alarms are printed, 2 - more prints, 3 - message conversion prints */
+#5=3
+#FEAT_DBG_PrintFilter,   /* DBG: 0 = None, 1 = No debug severity to RAM, 2 = No debug to RAM & UDP, 3 = All to RAM , 4 = All to RAM & No debug to UDP, 5 = All to RAM & UDP */
+6=5
+#FEAT_DBG_Sw_dl,  /* DBG: 1- enable SW download prints */
+7=1
+#FEAT_DBG_Adet,  /* DBG: 1- enable Autodetection prints */
+9=1
+#FEAT_DBG_Tune, /* DBG: 1- enable Tune prints, 2 - enable sample prints, 3 - enable sample prints and disable DACword update */
+#13=2
+#FEAT_DBG_FaultDiagnostics, /* DBG: 1 - enable Fault Diagnostics prints  2 - FD Tracing 3 - even more prints 8 - Raw alarm history disabled 9 - FD disabled */
+15=3
+#FEAT_DBG_Clic, /* DBG: 1 - enable climate control prints*/
+#16=2
+#FEAT_DBG_DB_Change_Log, /* 0 = Disabled, 1 = Enabled storing DB changes into ram file, 2 = Enabled storing DB changes into ram file and UDP print */
+48=2
+#FEAT_DBG_Conf,  /* DBG: 0: Prints disabled, 1: Prints enabled */
+56=1
+#FEAT_DBG_Stup,   /* DBG: 0: Prints disabled, 1: Prints enabled */
+62=1
+#FEAT_DBG_HGW,  /* 1 - enables HGW debug prints */
+#65=1
+#FEAT_DBG_Excess,     /* 1 = Enable excessive prints */
+#109=1
+#FEAT_DBG_Swmg,   /* DBG: 0: Prints disabled, 1: Prints enabled */
+136=3
+#FEAT_DBG_Widm, /* DBG: 0: Prints disabled, 1: Prints enabled */
+#137=1
+#FEAT_DBG_BLOC,    /* DBG: 0: Prints disabled, 1: Prints enabled */
+#143=1
+#FEAT_DBG_FORE_SM, /* DBG: 0: Prints disabled, 1: Prints enabled */
+144=1
+#FEAT_DBG_TechRep,                /* 1 = printing enabled */
+#149=2
+#FEAT_DBG_RAR_Reset_tm,   /* time in seconds after which recovery reset counter is cleared. default is 3600. */
+#211=3600
+#FEAT_DBG_RAR_Reset_cnt,  /* allowed recovery reset count. default is 3. */
+#212=3
+#FEAT_DBG_Para, /*For PARA and Dummy PARA prints*/
+#222=1
+#FEAT_DBG_AUTH_DISABLED,  /* 0- feature enabled, 1- feature disabled */
+#244=1
+#FEAT_DBG_Rpmag,  /* 1 = enable RPMAG prints */
+245=1
+#FEAT_DBG_ADSER,  /* 1 = enable ADSER prints */
+247=1
+#FEAT_DBG_SWMAG,  /* 1 = enable SWMAG debug prints */
+249=2
+#FEAT_DBG_BTSOM_Enable_SoapTrace, /* 0 = (defaul) trace file is not created. Else this flag describes max size of trace file */
+250=6000000
+#FEAT_DBG_BTSOM_APW,   /* 1 = enable APW debug prints 0 = (defaul) APW debug prints are not printed*/
+#252=1
+#FEAT_DBG_PM,  /* 0 = disabled, 1 = enable PM prints */
+#271=1
+#FEAT_DBG_BTSOM_BBC,   /* 0 = disabled (default value), 1 = enable BBC prints. */
+275=1
+#FEAT_DBG_BTSOM_OPT_Enabled,  /* 1 -enable Licence and Option Management feature */
+#291=0
+#FEAT_DBG_BTSOM_HWAPI_IF_PRN,   /* 0 = disabled 1 = enabled */
+307=1
+#FEAT_DBG_BTSOM_FUM_PRN,             /* 0 = disabled 1 = enabled */
+310=1
+#FEAT_DBG_BTSOM_FSM_Creator_PRN,     /* 0 = disabled 1 = enabled */
+311=1
+#FEAT_DBG_BTSOM_SPMAG_PRN,  /* 0 = disabled (default value), 1 = enabled*/
+312=1
+#FEAT_DBG_BTSOM_ALMAG,    /* 1 = enable ALMAG prints   */
+317=1
+#FEAT_DBG_BTSOM_DSP_IF_PRN,  /* 0 = disabled (default value), 1 =enabled */
+#319=5
+#FEAT_DBG_CLOCK_PRN,   /* 0=disabled(default), 1=enabled */
+330=1
+#FEAT_DBG_BTSOM_EAC_PRN,             /* 1 = EAC prints enabled */
+#343=1
+#FEAT_DBG_BOOTCORESWDL_ENABLED,  /* 0=disabled=BC will not be downloaded to FSPA/WSPC, 1=BC downloading enabled */
+#385=1
+#FEAT_DBG_BTSOM_GAIN_PRN,   /* 1 = enable GAIN debug prints */
+#389=1
+#FEAT_DBG_BTSOM_RAMLH_PRN,      /* 1 = enable RAMLH prints, 2 = more RAMLH prints, 3 = prints for exceptional errors*/
+#422=1
+#FEAT_DBG_BTSOM_GPS_PRN,   /*1= enable BTS OM GPS specific prints*/
+#428=1
+#FEAT_DBG_BTSOM_Mediator_PRN,   /* 1 - Enable mediator prints */
+434=1
+#FEAT_DBG_BTSOM_RROM_PRN,      /* 1 = RROM_adapter prints enabled, 2 = more detailed prints enabled */
+451=2
+#FEAT_DBG_BBOAM_SWMG_Enabled,       /* 1 -enabled */
+#460=1
+#FEAT_DBG_BBOAM_FM_Enabled
+461=1
+#FEAT_DBG_BTSOM_PRN_GPW,     /* 1 = Enable GPW debug prints */
+#544=1
+#FEAT_DBG_BTSOM_PRN_Conf_Validator,       /* 1 = Enable CONF_Validator debug prints */
+545=1
+#FEAT_DBG_BTSOM_OXF_PRN,     /* debugging level (0=disable prints, 1, 2) for Rhapsody OXF */
+#547=1
+#FEAT_DBG_BTSOM_CFM_PRN,    /* 1 = enable CFM debug prints */
+548=1
+#FEAT_DBG_BTSOM_CDM_PRN,    /* 1 = enable CDM debug prints */
+549=1
+
+
+
+#==================6. RROM debug tag
+#TRromRadDebugLogEnabledGlobal
+0x00120004 = 1 
+#TRromRadDebugLogEnabledRrom
+0x00120005 = 1
+#TRromRadDebugLogEnabledCommon
+0x00120006 = 1
+
+
+
+#==================7. UEC debug tag
+##TUecRadDebugLogEnabledCommon
+#0x0013001E = 1
+##TUecRadDebugLogEnabledCommonCodec
+#0x0013001F = 1
+##TUecRadDebugLogEnabledGlobal
+#0x00130020 = 1
+##TUecRadDebugLogEnabledUec
+#0x00130021 = 1
+
+
+
+#==================8. CELLC debug tag
+##TCellcRadDebugLogEnabledCommon
+#0xf0010 = 1
+##TCellcRadDebugLogEnabledCommonCodec
+#0xf0011 = 1 
+##TCellcRadDebugLogEnabledGlobal
+#0xf000e = 1 
+##TCellcRadDebugLogEnabledCellc
+#0xf000f = 1
+
+
+
+#==================9. ENBC debug tag
+##TEnbcRadDebugLogEnabledCommon
+#0x110003 = 1
+##TEnbcRadDebugLogEnabledCommonCodec
+#0x110004 = 1
+##TEnbcRadDebugLogEnabledGlobal
+#0x110001 = 1
+##TEnbcRadDebugLogEnabledEnbc
+#0x110002 = 1 
+
+
+
+#==================10. ULPHY debug tag
+#PBCH Print
+0x16000F=1
+#calibration switch
+0x160011 = 1
+#calibration print
+0x160013 = 1  
+
+0x20009=1

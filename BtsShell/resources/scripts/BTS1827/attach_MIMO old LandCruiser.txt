@@ -1,0 +1,225 @@
+# TMA Child Script
+
+######################################
+# Test Step: Configure Uplink Timing #
+######################################
+
+#----------------------------------------------
+# Configure uplink timing adjustment operation
+#----------------------------------------------
+# PARAMETERS
+# 1. UL timing operation
+#----------------------------------------------
+#                          1
+#                          |
+forw mte PhyConfigUlTiming 0
+#----------------------------------------------
+
+###############################
+# Test Step: Raw Text Command #
+###############################
+
+#--
+setp RRC_TEST_IGNORE_IRLC_ERROR_IND 1
+#--
+
+###############################
+# Test Step: Raw Text Command #
+###############################
+
+#--
+SETP RRC_PUCCH_CLOSE_LOOP_POWER_CONTROL 0
+#--
+
+###############################
+# Test Step: Raw Text Command #
+###############################
+
+#--
+setp NAS_TEST_IGNORE_RXD_PTI 1
+#--
+
+###############################
+# Test Step: Raw Text Command #
+###############################
+
+#--
+SETP RRC_NUM_DL_ANTENNAS 2
+#--
+
+###############################
+# Test Step: Raw Text Command #
+###############################
+
+#--
+setp RRC_TEST_ENABLE_UL_TIME_ALIGN_TIMER  0
+#--
+
+###############################
+# Test Step: Raw Text Command #
+###############################
+
+#--
+SETP RRC_TEST_UL_DELIVERY_INDS_REQUIRED 0
+#--
+
+#########################################
+# Test Step: Configure PHY Capabilities #
+#########################################
+
+#-------------------------------------------
+# Configure the physical layer capabilities
+#-------------------------------------------
+# PARAMETERS
+# 1. Number of UE downlink antennae
+# 2. DL UE category
+# 3. UL UE category
+#-------------------------------------------
+#                        1 2 3
+#                        | | |
+forw mte PhyConfigSysCap 2 4 4
+#-------------------------------------------
+
+############################
+# Test Step: Configure TDD #
+############################
+
+#-----------------------
+# Set TDD Configuration
+#-----------------------
+# PARAMETERS
+# 1. Subframe Assignment
+# 2. Special Subframe Patterns
+#-----------------------
+#                     1 2
+#                     | |
+forw mte PhySetTDDCfg 1 7
+#-----------------------
+
+#############################
+# Test Step: Configure USIM #
+#############################
+
+#---------------------
+# Configures the USIM
+#---------------------
+# PARAMETERS
+# 1. USIM Type
+# 2. IMSI
+# 3. MNC Length
+# 4. Authentication Key
+#---------------------
+#                   1  2               3                      4                                
+#                   |  |               |                      |                                
+forw mte UsimConfig 1([262030020000082 2] [] [] [] []) [] [] [A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5]
+#---------------------
+
+#####################################
+# Test Step: Activate Configuration #
+#####################################
+
+#--------------------------------
+# Activate pending configuration
+#--------------------------------
+# PARAMETERS
+# 1. Timing Type
+#--------------------------------
+#                 1 
+#                 | 
+forw mte Activate -1
+#--------------------------------
+
+###########################################
+# Test Step: Configure NAS PLMN Selection #
+###########################################
+
+#----------------------------------------------
+# Configures the NAS to select a specific PLMN
+#----------------------------------------------
+# PARAMETERS
+# 1. Force PLMN
+#----------------------------------------------
+#                                  1    
+#                                  |    
+forw mte NasAptConfigPlmnSelection 26203
+#----------------------------------------------
+
+#########################################
+# Test Step: Configure NAS Capabilities #
+#########################################
+
+#--------------------------------------------------------------------------------
+# Configures the NAS capabilities, including authentication and security options
+#--------------------------------------------------------------------------------
+#                              
+forw mte NasAptConfigCapability
+#--------------------------------------------------------------------------------
+
+#####################################
+# Test Step: Configure NAS Register #
+#####################################
+
+#------------------------------------------
+# Configures the NAS to register on a PLMN
+#------------------------------------------
+# PARAMETERS
+# 1. Selection Mode
+# 2. PDN Identity
+#------------------------------------------
+#                             1 2                 
+#                             | |                 
+forw mte NasConfigEmmRegister 0(0 [] [] [] [] [] )
+#------------------------------------------
+
+#########################################
+# Test Step: Configure RRC Capabilities #
+#########################################
+
+#-------------------------------------------------------------
+# Configures the RRC capabilities, including security options
+#-------------------------------------------------------------
+#                              
+forw mte RrcAptConfigCapability
+#-------------------------------------------------------------
+
+###########################################
+# Test Step: Configure RRC Cell Selection #
+###########################################
+
+#----------------------------------------------
+# Configures the RRC to select a specific cell
+#----------------------------------------------
+# PARAMETERS
+# 1. Downlink Carrier Frequency
+#----------------------------------------------
+#                                  1    
+#                                  |    
+forw mte RrcAptConfigCellSelection 25950
+#----------------------------------------------
+
+#####################################
+# Test Step: Activate Configuration #
+#####################################
+
+#--------------------------------
+# Activate pending configuration
+#--------------------------------
+# PARAMETERS
+# 1. Timing Type
+#--------------------------------
+#                 1 
+#                 | 
+forw mte Activate -1
+#--------------------------------
+
+#--------------------------
+# Wait for set of messages
+#--------------------------
+# PARAMETERS
+# 1. Message
+#--------------------------
+#        1         
+#        |         
+# WAIT FOR "ACTIVATE"
+#--------------------------
+

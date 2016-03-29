@@ -1,0 +1,14 @@
+<managedObject class="UFFIM" distName="MRBTS-1821/LNBTS-1821/LNCEL-5377/UFFIM-1" operation="create" version="LNT5.0">
+<p name="tResUtra">7</p>
+<list name="utrFddCarFrqL">
+<item>
+<p name="uCelResPrio">4</p>
+<p name="dlCarFrqUtra">1500</p>
+<p name="utraFrqThrH">32</p>
+<p name="utraFrqThrL">30</p>
+<p name="pMaxUtra">33</p>
+<p name="qQualMinUtra">-12</p>
+<p name="qRxLevMinUtra">-117</p>
+</item>
+</list>
+</managedObject>

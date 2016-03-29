@@ -1,0 +1,13 @@
+  <managedObject class="GNFL" distName="MRBTS-1857/LNBTS-1857/LNCEL-14593/GFIM-1/GNFL-2" operation="create" version="LNT4.0">
+   <p name="bandInd">gsm1800</p>
+   <p name="gerFrqThrH">60</p>
+   <p name="gerFrqThrL">42</p>
+   <p name="qRxLevMinGer">-105</p>
+   <p name="nccperm">0</p>
+   <p name="gCelResPrio">7</p>
+   <p name="pMaxGer">37</p>
+   <p name="idleLBGeranCelResWeight">20</p>
+   <list name="gerArfcnVal">
+    <p>999</p>
+   </list>
+  </managedObject>

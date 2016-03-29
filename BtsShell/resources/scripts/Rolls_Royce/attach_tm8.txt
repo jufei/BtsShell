@@ -1,0 +1,12 @@
+forw mte PhyConfigSysCap 2 4 4
+forw mte NasAptConfigPlmnSelection 26203
+SETP RRC_NUM_DL_ANTENNAS 2
+forw mte PhySetTDDCfg 1 7                       
+forw mte UsimConfig 1([262030020000008 2] [] [] [] []) [] [] [A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5]      
+forw mte NasConfigEmmRegister 0(0 [] [] [] [] [] )
+forw mte NasAptConfigCapability        
+forw mte RrcAptConfigCapability
+forw mte RrcAptConfigCellSelection 25950
+FORW L1 SETRFRXGAIN 1 -28
+forw mte Activate -1
+

@@ -1,0 +1,1 @@
+This SCF is specially modified(add 4 cell and so on...) for case :LTE654-a Alarms _Generated Alarm in Start Up_IncoherencyCellConfigurationAl ._xiangkang

@@ -1,0 +1,37 @@
+# TMA Child Script
+
+############################################
+# TEST STEP: Trigger RRC Measurement Event #
+############################################
+
+#------------------------------
+# Triggers a measurement event
+#------------------------------
+# PARAMETERS
+# 1. Override EUTRA results
+# 2. MeasId
+# 3. Report amount
+# 4. RSRP Serv Cell
+# 5. RSRQ Serv Cell
+#------------------------------
+#                               1 2 3  4    5  
+#                               | | |  |    |  
+forw mte RrcAptTriggerMeasEvent 1 7 0 [50] [10]
+#------------------------------
+
+#####################################
+# TEST STEP: Activate Configuration #
+#####################################
+
+#--------------------------------
+# Activate pending configuration
+#--------------------------------
+# PARAMETERS
+# 1. Timing Type
+#--------------------------------
+#                 1 
+#                 | 
+forw mte Activate -1
+#--------------------------------
+
+

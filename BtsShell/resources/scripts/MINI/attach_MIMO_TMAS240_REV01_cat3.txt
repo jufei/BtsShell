@@ -1,0 +1,20 @@
+forw mte SetUEContext 0
+setp rrc_test_disable_max_sr_transmissions 1
+SETP RRC_NUM_DL_ANTENNAS 2
+SETP RRC_PUCCH_CLOSE_LOOP_POWER_CONTROL 0
+forw mte DeConfigEpsBearer 6 5
+forw mte DeConfigPneAttrib 6 2 [0] [0] [0] [-1]
+forw mte DeConfigPngAttrib 6 2 [0]
+forw mte DeConfigUlDataProfile 6 0
+forw mte DeAddUlDataProfileEntry 6 1{1 125 1}
+forw mte PhySetTDDCfg 1 7
+forw mte PhyConfigSysCap 2 4 4
+forw mte UsimConfig 1([262030020000170 2]) [] [0] [A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5]
+forw mte NasAptConfigCapability [3] [224] [224]
+forw mte NasAptConfigPlmnSelection 26203
+forw mte PhyConfigUlPowerOffset 32{0 80 75 [75],1 80 75 [75],2 80 75 [75],3 80 75 [75],4 80 75 [75],5 80 75 [75],6 80 75 [75],7 80 75 [75],8 80 75 [75],9 80 75 [75],10 80 75 [75],11 80 75 [75],12 80 75 [75],13 80 75 [75],14 80 75 [75],15 80 75 [75],16 80 75 [75],17 80 75 [75],18 80 75 [75],19 80 75 [75],20 80 75 [75],21 80 75 [75],22 80 75 [75],23 80 75 [75],24 80 75 [75],25 80 75 [75],26 80 75 [75],27 80 75 [75],28 80 75 [75],29 80 75 [75],30 80 75 [75],31 80 75 [75]}
+SETP RRC_OVERRIDE_FREQUENCY_BAND 40
+forw mte RrcAptConfigCellSelection 23500 [108]
+forw mte NasConfigEmmRegister 0(0 [0] [0] [0])
+forw mte RrcAptConfigCapability [2]
+forw mte Activate -1 [] [1]

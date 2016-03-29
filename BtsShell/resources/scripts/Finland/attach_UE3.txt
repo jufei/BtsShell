@@ -1,0 +1,336 @@
+# TMA Child Script
+
+#########################
+# Test Step: Select UEs #
+#########################
+
+# Subsequent commands are repeated as necesary for UEs
+# 3
+
+###############################
+# Test Step: Raw Text Command #
+###############################
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 3
+#----------------------------
+
+#--
+SETP RRC_NUM_DL_ANTENNAS 2
+#--
+
+#############################
+# Test Step: Configure USIM #
+#############################
+
+#---------------------
+# Configures the USIM
+#---------------------
+# PARAMETERS
+# 1. USIM Type
+# 2. IMSI
+# 3. MNC Length
+# 4. Authentication Key
+#---------------------
+#                   1  2               3                      4                                
+#                   |  |               |                      |                                
+forw mte UsimConfig 1([262030020000254 2] [] [] [] []) [] [] [A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5]
+#---------------------
+
+###############################
+# Test Step: Raw Text Command #
+###############################
+
+#--
+SETP RRC_TEST_DISABLE_MAX_SR_TRANSMISSIONS 1
+#--
+
+###########################################
+# Test Step: Configure NAS PLMN Selection #
+###########################################
+
+#----------------------------------------------
+# Configures the NAS to select a specific PLMN
+#----------------------------------------------
+# PARAMETERS
+# 1. Force PLMN
+#----------------------------------------------
+#                                  1    
+#                                  |    
+forw mte NasAptConfigPlmnSelection 26203
+#----------------------------------------------
+
+############################################
+# Test Step: Configure Uplink Power Offset #
+############################################
+
+#-----------------------------------------------
+# Set the uplink power offsets for multiple UEs
+#-----------------------------------------------
+# PARAMETERS
+# 1. Number of UEs
+# 2. UE Context Id
+# 3. PUCCH Power Offset
+# 4. PRACH Power Offset
+# 5. PUSCH Power Offset
+# 6. SRS Power Offset
+#-----------------------------------------------
+#                               1 2 3  4   5      
+#                               | | |  |   |      
+forw mte PhyConfigUlPowerOffset 1{3 80 80 [80] []}
+#-----------------------------------------------
+
+#########################################
+# Test Step: Configure NAS Capabilities #
+#########################################
+
+#--------------------------------------------------------------------------------
+# Configures the NAS capabilities, including authentication and security options
+#--------------------------------------------------------------------------------
+#                              
+forw mte NasAptConfigCapability
+#--------------------------------------------------------------------------------
+
+#####################################
+# Test Step: Configure NAS Register #
+#####################################
+
+#------------------------------------------
+# Configures the NAS to register on a PLMN
+#------------------------------------------
+# PARAMETERS
+# 1. Selection Mode
+# 2. PDN Identity
+#------------------------------------------
+#                             1 2                 
+#                             | |                 
+forw mte NasConfigEmmRegister 0(0 [] [] [] [] [] )
+#------------------------------------------
+
+#########################################
+# Test Step: Configure PHY Capabilities #
+#########################################
+
+#-------------------------------------------
+# Configure the physical layer capabilities
+#-------------------------------------------
+# PARAMETERS
+# 1. Number of UE downlink antennae
+# 2. DL UE category
+# 3. UL UE category
+#-------------------------------------------
+#                        1 2 3
+#                        | | |
+forw mte PhyConfigSysCap 2 4 4
+#-------------------------------------------
+
+#######################################
+# Test Step: Override EPS Bearer Data #
+#######################################
+
+#-------------------------------------
+# Configure an EPS bearer data entity
+#-------------------------------------
+# PARAMETERS
+# 1. Data entity Id
+# 2. EPS bearer Id
+#-------------------------------------
+#                          1 2
+#                          | |
+forw mte DeConfigEpsBearer 5 5
+#-------------------------------------
+
+#----------------------------------------------------------------
+# Configure a pseudo noise evaluator attribute for a data entity
+#----------------------------------------------------------------
+# PARAMETERS
+# 1. Data Entity Id
+# 2. Sequence Type
+#----------------------------------------------------------------
+#                          1 2
+#                          | |
+forw mte DeConfigPneAttrib 5 2
+#----------------------------------------------------------------
+
+#-----------------------------------------------------
+# Configure a UDP/IP port attribute for a data entity
+#-----------------------------------------------------
+# PARAMETERS
+# 1. Data Entity Id
+# 2. Destination IP address
+# 3. Destination UDP port number
+# 4. Source UDP port number
+# 5. Maximum source UDP packet size
+#-----------------------------------------------------
+#                          1 2       3 4    5   
+#                          | |       | |    |   
+forw mte DeConfigUdiAttrib 5 0.0.0.0 0 5441 1024
+#-----------------------------------------------------
+
+#-------------------------------------
+# Configure an EPS bearer data entity
+#-------------------------------------
+# PARAMETERS
+# 1. Data entity Id
+# 2. EPS bearer Id
+#-------------------------------------
+#                          1 2
+#                          | |
+forw mte DeConfigEpsBearer 6 6
+#-------------------------------------
+
+#----------------------------------------------------------------
+# Configure a pseudo noise evaluator attribute for a data entity
+#----------------------------------------------------------------
+# PARAMETERS
+# 1. Data Entity Id
+# 2. Sequence Type
+#----------------------------------------------------------------
+#                          1 2
+#                          | |
+forw mte DeConfigPneAttrib 6 2
+#----------------------------------------------------------------
+
+#-----------------------------------------------------
+# Configure a UDP/IP port attribute for a data entity
+#-----------------------------------------------------
+# PARAMETERS
+# 1. Data Entity Id
+# 2. Destination IP address
+# 3. Destination UDP port number
+# 4. Source UDP port number
+# 5. Maximum source UDP packet size
+#-----------------------------------------------------
+#                          1 2       3 4    5   
+#                          | |       | |    |   
+forw mte DeConfigUdiAttrib 6 0.0.0.0 0 5442 1024
+#-----------------------------------------------------
+
+#-------------------------------------
+# Configure an EPS bearer data entity
+#-------------------------------------
+# PARAMETERS
+# 1. Data entity Id
+# 2. EPS bearer Id
+#-------------------------------------
+#                          1 2
+#                          | |
+forw mte DeConfigEpsBearer 7 7
+#-------------------------------------
+
+#----------------------------------------------------------------
+# Configure a pseudo noise evaluator attribute for a data entity
+#----------------------------------------------------------------
+# PARAMETERS
+# 1. Data Entity Id
+# 2. Sequence Type
+#----------------------------------------------------------------
+#                          1 2
+#                          | |
+forw mte DeConfigPneAttrib 7 2
+#----------------------------------------------------------------
+
+#-----------------------------------------------------
+# Configure a UDP/IP port attribute for a data entity
+#-----------------------------------------------------
+# PARAMETERS
+# 1. Data Entity Id
+# 2. Destination IP address
+# 3. Destination UDP port number
+# 4. Source UDP port number
+# 5. Maximum source UDP packet size
+#-----------------------------------------------------
+#                          1 2       3 4    5   
+#                          | |       | |    |   
+forw mte DeConfigUdiAttrib 7 0.0.0.0 0 5443 1024
+#-----------------------------------------------------
+
+#-------------------------------------
+# Configure an EPS bearer data entity
+#-------------------------------------
+# PARAMETERS
+# 1. Data entity Id
+# 2. EPS bearer Id
+#-------------------------------------
+#                          1 2
+#                          | |
+forw mte DeConfigEpsBearer 8 8
+#-------------------------------------
+
+#----------------------------------------------------------------
+# Configure a pseudo noise evaluator attribute for a data entity
+#----------------------------------------------------------------
+# PARAMETERS
+# 1. Data Entity Id
+# 2. Sequence Type
+#----------------------------------------------------------------
+#                          1 2
+#                          | |
+forw mte DeConfigPneAttrib 8 2
+#----------------------------------------------------------------
+
+#-----------------------------------------------------
+# Configure a UDP/IP port attribute for a data entity
+#-----------------------------------------------------
+# PARAMETERS
+# 1. Data Entity Id
+# 2. Destination IP address
+# 3. Destination UDP port number
+# 4. Source UDP port number
+# 5. Maximum source UDP packet size
+#-----------------------------------------------------
+#                          1 2       3 4    5   
+#                          | |       | |    |   
+forw mte DeConfigUdiAttrib 8 0.0.0.0 0 5444 1024
+#-----------------------------------------------------
+
+#########################################
+# Test Step: Configure RRC Capabilities #
+#########################################
+
+#-------------------------------------------------------------
+# Configures the RRC capabilities, including security options
+#-------------------------------------------------------------
+#                              
+forw mte RrcAptConfigCapability
+#-------------------------------------------------------------
+
+###########################################
+# Test Step: Configure RRC Cell Selection #
+###########################################
+
+#----------------------------------------------
+# Configures the RRC to select a specific cell
+#----------------------------------------------
+# PARAMETERS
+# 1. Downlink Carrier Frequency
+# 2. Cell Id
+#----------------------------------------------
+#                                  1      2  
+#                                  |      |  
+forw mte RrcAptConfigCellSelection 25950 [482]
+#----------------------------------------------
+
+#####################################
+# Test Step: Activate Configuration #
+#####################################
+
+#--------------------------------
+# Activate pending configuration
+#--------------------------------
+# PARAMETERS
+# 1. Timing Type
+# 2. Activate on Frame Boundary
+#--------------------------------
+#                 1      2 
+#                 |      | 
+forw mte Activate -1 [] [1]
+#--------------------------------
+

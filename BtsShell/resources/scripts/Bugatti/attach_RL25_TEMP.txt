@@ -1,0 +1,14 @@
+forw mte SetUEContext 0
+SETP L2_MAC_DISABLE_SR_INIT_RACH_IF_SR_NOT_CFG 1
+SETP RRC_NUM_DL_ANTENNAS 2
+forw mte PhySetTDDCfg 1 7
+forw mte PhyConfigSysCap 2 4 4
+forw mte UsimConfig 1([262030020000850 2]) [] [] [A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5]
+forw mte NasAptConfigCapability [] [224] [224]
+forw mte NasAptConfigPlmnSelection 26203
+forw mte NasConfigEmmRegister 0(0)
+forw mte RrcAptConfigCellSelection 25950 [1]
+forw mte RrcAptConfigCapability
+forw mte PhyConfigUlPowerOffset 32{0 100 100 [100],1 100 100 [100],2 100 100 [100],3 100 100 [100],4 100 100 [100],5 100 100 [100],6 100 100 [100],7 100 100 [100],8 100 100 [100],9 100 100 [100],10 80 80 [80],11 80 80 [80],12 80 80 [80],13 80 80 [80],14 80 80 [80],15 80 80 [80],16 80 80 [80],17 80 80 [80],18 80 80 [80],19 80 80 [80],20 80 80 [80],21 80 80 [80],22 80 80 [80],23 80 80 [80],24 80 80 [80],25 80 80 [80],26 80 80 [80],27 80 80 [80],28 80 80 [80],29 80 80 [80],30 80 80 [80],31 80 80 [80]}
+forw mte Activate -1 [] [1]
+

@@ -1,0 +1,91 @@
+0x19000C=2
+# enable UDP log(default is disable)
+#ERadCcs_AaSysLogOutputMode, /**< Output mode which devices prints are forwarded: 0 = none 1 = all 2 = udp 3 = sic 4 = standard output 5 = local 6 = remote 7 = not valid */
+0x10041=5
+#ERadCcs_AaSysLogUdpPort,  /**< IP port where prints are forwarded */
+0x10043=51000
+#ERadCcs_AaSysLogOutputLevel, /**< Prints forwarded to output devices: 0 = disable 1 = debug 2 = info 3 = warning 4 = error 5 = vip 6 = disable */
+0x10040=1
+#ERadCcs_AaSysLogInputLevel, /**< Prints stored to RAM (postmortem): 0 = disable 1 = debug 2 = info 3 = warning 4 = error 5 = vip 6 = disable */
+0x1003F=1 
+##--------------------------------------------------------
+## Debug Logging UEC
+##--------------------------------------------------------
+## TUecRadDebugLogEnabledGlobal
+0x00130020 = 1
+# 
+## TUecRadDebugLogEnabledUec
+0x00130021 = 1
+# 
+##TUecRadDebugLogEnabledCommon
+0x0013001E = 1
+# 
+##TUecRadDebugLogEnabledCommonCodec
+0x0013001F = 1 
+# 
+##--------------------------------------------------------
+## Debug Logging CELLC
+##--------------------------------------------------------
+## TCellcRadDebugLogEnabledCommon
+0xf0010 = 1
+# 
+## TCellcRadDebugLogEnabledCommonCodec
+0xf0011 = 1
+# 
+##TCellcRadDebugLogEnabledGlobal
+0xf000e = 1
+# 
+##TCellcRadDebugLogEnabledCellc
+0xf000f = 1 
+# 
+##--------------------------------------------------------
+## Debug Logging ENBC
+##--------------------------------------------------------
+## TEnbcRadDebugLogEnabledCommon
+0x110003 = 1
+# 
+## TEnbcRadDebugLogEnabledCommonCodec
+0x110004 = 1
+# 
+##TEnbcRadDebugLogEnabledGlobal
+0x110001 = 1
+# 
+##TEnbcRadDebugLogEnabledEnbc
+0x110002 = 1 
+# 
+##--------------------------------------------------------
+## Debug Logging RROM
+##--------------------------------------------------------
+## TRromRadDebugLogEnabledGlobal
+0x00120004 = 1
+# 
+## TRromRadDebugLogEnabledRrom
+0x00120005 = 1
+# 
+## TRromRadDebugLogEnabledCommon
+0x00120006 = 1
+# 
+#--------------------------------------------------------
+# Debug Logging TUPC
+#--------------------------------------------------------
+## TTupcRadDebugLogEnabledGlobal
+0x00150001 = 1
+# 
+## TTupcRadDebugLogEnabledTupc
+0x00150002 = 1
+# 
+## TTupcRadDebugLogEnabledCommon
+0x00150004 = 1
+# 
+## TTupcRadDebugLogEnabledCommonCodec
+0x00150003 = 1
+
+#ERadULPHY_CalibrationLog
+0x00160011 = 1
+#ERadCcs_AaErrorCoreDump                = RAD_CCS(121), /**< CoreDump: 0 = disabled, >0 size of core dump in kbytes */
+0x10079=50000
+#ERadCcs_AaProWDRebootDisable (needed if BTS resets and core file is truncated)   
+0x10077=1
+0x1A0020=1
+
+0x3A0001=1

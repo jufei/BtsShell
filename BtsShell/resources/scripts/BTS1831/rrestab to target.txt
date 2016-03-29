@@ -1,0 +1,34 @@
+# TMA Child Script
+
+#####################################################
+# test step: trigger rrc connection reestablishment #
+#####################################################
+
+#-----------------------------------------
+# Trigger RRC Connection Re-establishment
+#-----------------------------------------
+# PARAMETERS
+# 1. Re-establishment Cause
+# 2. Trigger event
+# 3. Re-establishment on Cell ID
+#-----------------------------------------
+#                                                     1   2      3
+#                                                     |   |      |
+forw mte RrcAptTriggerRrcReestablishmentReq [] [] [] [2] [0] [] [410]
+#-----------------------------------------
+
+#####################################
+# test step: activate configuration #
+#####################################
+
+#--------------------------------
+# Activate pending configuration
+#--------------------------------
+# PARAMETERS
+# 1. Timing Type
+#--------------------------------
+#                 1
+#                 |
+forw mte Activate -1
+#--------------------------------
+

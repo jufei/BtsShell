@@ -1,0 +1,1573 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+html {
+  font-family: Arial,Helvetica,sans-serif;
+  background-color: white;
+  color: black;
+}
+table {
+  border-collapse: collapse;
+  empty-cells: show;
+  margin: 1em 0em;
+  border: 1px solid black;
+}
+th, td {
+  border: 1px solid black;
+  padding: 0.1em 0.2em;
+  height: 1.5em;
+  width: 12em;
+}
+td.colspan4, th.colspan4 {
+    width: 48em;
+}
+td.colspan3, th.colspan3 {
+    width: 36em;
+}
+td.colspan2, th.colspan2 {
+    width: 24em;
+}
+th {
+  background-color: rgb(192, 192, 192);
+  color: black;
+  height: 1.7em;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+td.name {
+  background-color: rgb(240, 240, 240);
+  letter-spacing: 0.1em;
+}
+td.name, th.name {
+  width: 10em;
+}
+</style>
+<title>Log resources</title>
+</head>
+<body>
+<h1>Log resources</h1>
+<table border="1" id="setting">
+<tr>
+<th class="name" colspan="5">Setting</th>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>Collections</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>String</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table border="1" id="keyword">
+<tr>
+<th class="name" colspan="5">Keyword</th>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TM500 Log Stop and Fetch">TM500 Log Stop and Fetch</a></td>
+<td>[Arguments]</td>
+<td>${log_tag}=TM500_Log</td>
+<td>${convert_timeout}=300</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword stop tm500 log, copy to local.\n<br>
+\n<br>
+Step:\n<br>
+| 1 | Stop TM500 logging |\n<br>
+| 2 | Convert TM500 log to text |\n<br>
+| 3 | Get the log dir and copy to local dir |\n<br>
+| 4 | Compress the log folder to gz file for A2A, and default will be "tm500.tar.gz" |\n<br>
+\n<br>
+\n<br>
+Arguments:\n<br>
+| Input Parameters \ | Man. | Description | \ \n<br>
+| ${log_tag} | No | TM500 log tag |\n<br>
+| ${convert_timeout} | No | Convert Timeout |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${TM500_CONNECTION}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>TM500 Stop Logging</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>3 sec</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>TM500 Convert To Text</td>
+<td>3</td>
+<td>${convert_timeout}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>3 sec</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${TM500_Control_PC_Connection}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${last_modified_session}=</td>
+<td>Get Last Modified Directory</td>
+<td>${TM500_LOGGED_DATA_DIR}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${last_modified}=</td>
+<td>Get Last Modified Directory</td>
+<td>${last_modified_session}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${Driver}</td>
+<td>${ftp_folder}</td>
+<td>path_split_driver</td>
+<td>${last_modified}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${BTS_Control_PC_Connection}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Create Directory</td>
+<td>${TEST_LOG_DIRECTORY}${/}${log_tag}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>ftp download</td>
+<td>${TM500_Control_PC_LAN}</td>
+<td>21</td>
+<td>TA_LOG</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${None}</td>
+<td>${TEST_LOG_DIRECTORY}${/}${log_tag}</td>
+<td>.*.csv</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${ftp_folder}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Execute Shell Command Without Check</td>
+<td>cd /D "${TEST_LOG_DIRECTORY}"</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${log_tar}=</td>
+<td>Convert To String</td>
+<td>${log_tag}.tar</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Execute Shell Command Without Check</td>
+<td>tar -cvf ${log_tar} ${log_tag}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Execute Shell Command Without Check</td>
+<td>gzip -f ${log_tar}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Start UDP Log">Start UDP Log</a></td>
+<td>[Arguments]</td>
+<td>${log_tag}=UDP</td>
+<td>${tool}=Btslog</td>
+<td>${connection}=${BTS CONTROL PC CONNECTION}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${log_type}=UDP</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword starts collecting UDP logs via btslog.exe or 7up.exe.\n<br>
+\n<br>
+Description:\n<br>
+| 1 | Default tool is btslog.exe |\n<br>
+| 2 | ${log_tag} use by A2A tool. |\n<br>
+\n<br>
+\n<br>
+\n<br>
+Arguments:\n<br>
+| Input Parameters \ | Man. | Description | \ \n<br>
+| ${log_tag} | No | UDP log tag |\n<br>
+| ${tool} | No | btslog.exe or 7up.exe, default is btslog.exe |\n<br>
+| ${connection} | No | Default is \ ${BTS_CONTROL_PC_CONNECTION} |\n<br>
+| ${log_type} | No | Default is UDP |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${UdpSwitch}</td>
+<td>set variable</td>
+<td>true</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${TraceSwitch}</td>
+<td>set variable</td>
+<td>false</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${faraday_core}</td>
+<td>set variable</td>
+<td>null</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${timestamp}</td>
+<td>Get timestamp</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${Logfile}</td>
+<td>set variable</td>
+<td>${timestamp}_${log_tag}.log</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Get Target Log Directory</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${connection}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>'${tool}' == 'Btslog'</td>
+<td>_Use_Btslog</td>
+<td>${log_type}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>'${tool}' == '7up'</td>
+<td>_Use_7Up</td>
+<td>${Logfile}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${TARGET LOG DIRECTORY}</td>
+<td>${faraday_core}</td>
+<td>${TraceSwitch}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${UdpSwitch}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword__Use_Btslog">_Use_Btslog</a></td>
+<td>[Arguments]</td>
+<td>${log_type}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Stop BTSLog</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Start BTSLog</td>
+<td>${BTSLOG_EXE_DIR}</td>
+<td>${log_type}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword__Use_7Up">_Use_7Up</a></td>
+<td>[Arguments]</td>
+<td>${Logfile}</td>
+<td>${logDirectory}</td>
+<td>${faraday_core}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${TraceSwitch}</td>
+<td>${UdpSwitch}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Kill Process</td>
+<td>7up.exe</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>SevenUp Start</td>
+<td>${Logfile}</td>
+<td>${logDirectory}</td>
+<td>${faraday_core}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${TraceSwitch}</td>
+<td>${UdpSwitch}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${BTS log backup dir}</td>
+<td>Set Variable</td>
+<td>${logDirectory}${/}${Logfile}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Set Suite Variable</td>
+<td>\${BTS log backup dir}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Stop UDP Log">Stop UDP Log</a></td>
+<td>[Arguments]</td>
+<td>${log_tag}=UDP</td>
+<td>${tool}=Btslog</td>
+<td>${connection}=${BTS_CONTROL_PC_CONNECTION}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${btslog_path}=${BTSLOG_DIR}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">stop collecting UDP log</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${connection}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${timestamp}=</td>
+<td>Get timestamp</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${LogTag}</td>
+<td>set variable</td>
+<td>${timestamp}_${LogTag}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${BTS log save name}</td>
+<td>_Stop BTSLog and copy to Log Dir</td>
+<td>${LogTag}</td>
+<td>${connection}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>btslog_path=${btslog_path}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Return]</td>
+<td>${BTS log save name}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword__Stop BTSLog and copy to Log Dir">_Stop BTSLog and copy to Log Dir</a></td>
+<td>[Arguments]</td>
+<td>${LogTag}</td>
+<td>${connection}</td>
+<td>${stop log flag}=1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${btslog_path}=${BTSLOG_DIR}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${connection}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>1==${stop log flag}</td>
+<td>Stop BTSLog</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${latest_file} =</td>
+<td>Get Last Modified File</td>
+<td>${btslog_path}</td>
+<td>LOG</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${path}</td>
+<td>${file_name}</td>
+<td>split path</td>
+<td>${latest_file}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Get Target Log Directory</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>'${connection.host}' != '${BTS CONTROL PC LAB}'</td>
+<td>Switch Host Connection</td>
+<td>${BTS CONTROL PC CONNECTION}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>'${connection.host}' != '${BTS CONTROL PC LAB}'</td>
+<td>Copyfile2Local</td>
+<td>${connection.host}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${connection.user}</td>
+<td>${connection.password}</td>
+<td>${latest_file}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${TARGET LOG DIRECTORY}${/}${LogTag}_btslog.LOG</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>'${connection.host}' == '${BTS CONTROL PC LAB}'</td>
+<td>file_copy</td>
+<td>${latest_file}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${TARGET LOG DIRECTORY}${/}${LogTag}_btslog.LOG</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${BTS log backup dir}</td>
+<td>Set Variable</td>
+<td>${TARGET LOG DIRECTORY}${/}${LogTag}_btslog.LOG</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Set Suite Variable</td>
+<td>\${BTS log backup dir}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Return]</td>
+<td>${TARGET LOG DIRECTORY}${/}${LogTag}_btslog.LOG</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword__Stop 7Up and copy Log">_Stop 7Up and copy Log</a></td>
+<td>Kill Process</td>
+<td>7up.exe</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Swith Conn And Start Tshark">Swith Conn And Start Tshark</a></td>
+<td>[Arguments]</td>
+<td>${connection}</td>
+<td>${file_dir}</td>
+<td>${interface}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${filter}=ip</td>
+<td>${duration}=3600</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword start tshark\n<br>
+\n<br>
+Step:\n<br>
+| 1 | Switch to tshark connection |\n<br>
+| 2 | Start tshark as saved log type(pcap or txt) |\n<br>
+\n<br>
+\n<br>
+Example:\n<br>
+| 1 | Swith Conn And Start Tshark | ${conn} | /home/test._tshark.pcap | eth1 |\n<br>
+| 2 | Swith Conn And Start Tshark | ${conn} | c:\\tshark.txt | eth1 |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>'${connection.type}'=='TELNET'</td>
+<td>Switch Host Connection</td>
+<td>${connection}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>'${connection.type}'!='TELNET'</td>
+<td>Switch Ssh Connection</td>
+<td>${connection}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${conn_type}</td>
+<td>Set Variable If</td>
+<td>'${connection.type}'=='TELNET'</td>
+<td>telnet</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ssh</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${pid1}=</td>
+<td>Run Keyword If</td>
+<td>'.txt' in '${file_dir}'</td>
+<td>start tshark</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${file_dir}</td>
+<td>${interface}</td>
+<td>${duration}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${filter}</td>
+<td>${conn_type}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${pid2}=</td>
+<td>Run Keyword If</td>
+<td>'.pcap' in '${file_dir}'</td>
+<td>tshark capture pcap log</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${file_dir}</td>
+<td>${interface}</td>
+<td>${filter}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${duration}</td>
+<td>${conn_type}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${START_WIRESHARK_PID}</td>
+<td>evaluate</td>
+<td>${pid1} or ${pid2}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Set Suite Variable</td>
+<td>${START_WIRESHARK_PID}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Return]</td>
+<td>${START_WIRESHARK_PID}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Switch Conn And Stop Tshark">Switch Conn And Stop Tshark</a></td>
+<td>[Arguments]</td>
+<td>${connection}</td>
+<td>${remote_file}</td>
+<td>${local_file_name}=Tshark.txt</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${local_file_dir}=${TEST_LOG_DIRECTORY}</td>
+<td>${local_connection}=${BTS CONTROL PC CONNECTION}</td>
+<td>${copy_log_timeout}=60</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword stop tshark.\n<br>
+\n<br>
+Step:\n<br>
+| 1 | Switch tshark connection |\n<br>
+| 2 | Stop tshark |\n<br>
+| 3 | Copy the tshark result log file to local |\n<br>
+\n<br>
+\n<br>
+\n<br>
+Example:\n<br>
+| 1 | Switch Conn And Stop Tshark | ${conn} | /home/test._tshark.txt | tshark.txt |\n<br>
+| 2 | Switch Conn And Stop Tshark | ${conn} | c:\\tshark.txt | tshark.txt |\n<br>
+| 3 | Switch Conn And Stop Tshark | ${conn} | /home/test._tshark.pcap | tshark.pcap |\n<br>
+| 4 | Switch Conn And Stop Tshark | ${conn} | c:\\tshark.pcap | tshark.pcap |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${timestamp} =</td>
+<td>Get timestamp</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>'${connection.type}'=='TELNET'</td>
+<td>Switch Host Connection</td>
+<td>${connection}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>'${connection.type}'!='TELNET'</td>
+<td>Switch Ssh Connection</td>
+<td>${connection}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${logintype}</td>
+<td>Set Variable If</td>
+<td>'${connection.type}'=='TELNET'</td>
+<td>telnet</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ssh</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>${START_WIRESHARK_PID} != None</td>
+<td>stop_tshark</td>
+<td>${logintype}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${START_WIRESHARK_PID}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>${START_WIRESHARK_PID} == None</td>
+<td>stop_tshark</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${local_connection}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${Local_file}</td>
+<td>Catenate</td>
+<td>SEPARATOR=${/}</td>
+<td>${local_file_dir}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${timestamp}_${local_file_name}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>CopyFile2Local</td>
+<td>${connection.host}</td>
+<td>${connection.user}</td>
+<td>${connection.password}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${remote_file}</td>
+<td>${local_file}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Return]</td>
+<td>${Local_file}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_IdaTraceLog Start">IdaTraceLog Start</a></td>
+<td>[Arguments]</td>
+<td>${dsp_core}</td>
+<td>${log_tag}=IDA</td>
+<td>${connection}=${BTS CONTROL PC CONNECTION}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">DEPRECATED DO not support ida log capure. NO replace tool till to now, maybe waiting for Emil could be automated.\n<br>
+\n<br>
+\n<br>
+Use 7up.exe to get Ida log.\n<br>
+\n<br>
+Arguments:\n<br>
+| Input Parameters | Man. | Description |\n<br>
+| ${dsp_core} | Yes | Faraday core |\n<br>
+| ${log_tag} | No | Ida tag |\n<br>
+| ${connection} | No | Default is \ ${BTS_CONTROL_PC_CONNECTION} |\n<br>
+\n<br>
+\n<br>
+\n<br>
+Example:\n<br>
+| IdaTraceLog Start | 1431:210b |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>fail</td>
+<td>DO not support ida log capure. NO replace tool till to now, maybe waiting for Emil could be automated.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${connection}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Enable R&amp;D Port</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Kill Process</td>
+<td>7up.exe</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Get Target Log Directory</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${Log_name}</td>
+<td>set variable</td>
+<td>${log_tag}.log</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>SevenUp_Start</td>
+<td>${Log_name}</td>
+<td>${TARGET LOG DIRECTORY}</td>
+<td>${dsp_core}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_IdaTraceLog Stop&amp;Decode">IdaTraceLog Stop&amp;Decode</a></td>
+<td>[Arguments]</td>
+<td>${log_tag}=IDA</td>
+<td>${connection}=${BTS CONTROL PC CONNECTION}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">DEPRECATED DO not support ida log capure. NO replace tool till to now, maybe waiting for Emil could be automated.\n<br>
+\n<br>
+\n<br>
+Use fled.exe and sack file to decode log into text type.\n<br>
+\n<br>
+Arguments:\n<br>
+| Input Parameters | Man. | Description |\n<br>
+| ${log_tag} | No | Ida tag |\n<br>
+| ${connection} | No | Default is \ ${BTS_CONTROL_PC_CONNECTION} |\n<br>
+\n<br>
+\n<br>
+\n<br>
+Example:\n<br>
+| IdaTraceLog Stop&amp;Decode |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>fail</td>
+<td>DO not support ida log capure. NO replace tool till to now, maybe waiting for Emil could be automated.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${connection}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>kill_process</td>
+<td>7up.exe</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${BigEndian_Sack}</td>
+<td>${LowEndian_Sack} =</td>
+<td>Get Sack File</td>
+<td>10.68.152.98</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>21</td>
+<td>TDLTE</td>
+<td>tdlte</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>/DSPi/SW_Build/7up_Sack</td>
+<td>${TARGET LOG DIRECTORY}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${Log_name}</td>
+<td>set variable</td>
+<td>${log_tag}.log</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Fled_Start</td>
+<td>${Log_name}</td>
+<td>${TARGET LOG DIRECTORY}</td>
+<td>${BigEndian_Sack}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${LowEndian_Sack}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TtiTrace Download">TtiTrace Download</a></td>
+<td>[Arguments]</td>
+<td>${log_tag}=TTITRACE</td>
+<td>${dsp_id_dl}=1231</td>
+<td>${dsp_id_ul}=1234</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${tool}=7up</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Get TTI Trace log</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${BTS CONTROL PC CONNECTION}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Enable R&amp;D Port</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Get Target Log Directory</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${dl_dat_name}</td>
+<td>set variable</td>
+<td>${TARGET LOG DIRECTORY}${/}${log_tag}_ttiTraceDL.dat</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${ul_dat_name}</td>
+<td>set variable</td>
+<td>${TARGET LOG DIRECTORY}${/}${log_tag}_ttiTraceUL.dat</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>get mac ttitrace</td>
+<td>${dsp_id_dl}</td>
+<td>${dsp_id_ul}</td>
+<td>${dl_dat_name}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${ul_dat_name}</td>
+<td>${tool}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TtiTrace Decode">TtiTrace Decode</a></td>
+<td>[Arguments]</td>
+<td>${log_tag}=TTITRACE</td>
+<td>${connection}=${BTS CONTROL PC CONNECTION}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Decode TTI Trace log</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${connection}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Get Target Log Directory</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${return}</td>
+<td>Run Keyword And Ignore Error</td>
+<td>Variable Should Exist</td>
+<td>${MAC_VERSION}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>'${return[0]}'=='PASS'</td>
+<td>Get Tti Trace Tools</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${dl_result_name}</td>
+<td>set variable</td>
+<td>${log_tag}_ttiTraceDL.csv</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${ul_result_name}</td>
+<td>set variable</td>
+<td>${log_tag}_ttiTraceUL.csv</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${dl_dat_name}</td>
+<td>set variable</td>
+<td>${TARGET LOG DIRECTORY}${/}${log_tag}_ttiTraceDL.dat</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${ul_dat_name}</td>
+<td>set variable</td>
+<td>${TARGET LOG DIRECTORY}${/}${log_tag}_ttiTraceUL.dat</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>ttitrace decoder</td>
+<td>${dl_dat_name}</td>
+<td>${dl_result_name}</td>
+<td>${TARGET LOG DIRECTORY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>ttitrace decoder</td>
+<td>${ul_dat_name}</td>
+<td>${ul_result_name}</td>
+<td>${TARGET LOG DIRECTORY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_A2A Log Check">A2A Log Check</a></td>
+<td>[Arguments]</td>
+<td>${check_type}</td>
+<td>${ini_file_path}</td>
+<td>${log_name}=a2a.log</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${modify_list}=${None}</td>
+<td>${Source_log_dir}=${None}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword is for a2a log check merge some common step into this keyword\n<br>
+\n<br>
+| Input Parameters \ | Man. | Description | \ \n<br>
+| Check_type | Yes | a2a log check type |\n<br>
+| ini_file_path | Yes | ini file full path |\n<br>
+| log_name | No | a2a log name |\n<br>
+| modify_list | No \ | only modify LOGDIR or some else you want to modify |\n<br>
+\n<br>
+Example 1:\n<br>
+| a2a Log Check | uw | ${CURDIR}${/}a2a.ini |\n<br>
+\n<br>
+Example 2:\n<br>
+| ${modify} | create list | UDPLOG_TAG_1: *local_*.LOG | UDPLOG_TAG_2: *target_*.LOG |\n<br>
+| A2A LOG Check | uw | ${CURDIR}${/}a2a.ini | test.log \ | ${modify} |\n<br>
+\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Get Target Log Directory</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${modify_log_save_path}</td>
+<td>Set Variable If</td>
+<td>'${None}'=='${Source_log_dir}'</td>
+<td>LOGDIR: ${TARGET LOG DIRECTORY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>LOGDIR: \ ${Source_log_dir}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>modify_a2a_ini_file</td>
+<td>${ini_file_path}</td>
+<td>${modify_log_save_path}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>modify_a2a_ini_file</td>
+<td>${ini_file_path}</td>
+<td>${modify_list}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Automatic Analysis</td>
+<td>${ini_file_path}</td>
+<td>${TARGET LOG DIRECTORY}${/}${log_name}</td>
+<td>${check_type}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Memory Dump">Memory Dump</a></td>
+<td>[Arguments]</td>
+<td>${dsp_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword get memory dump.</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Enable Bts Ssh</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Get Target Log Directory</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Mem Dumper</td>
+<td>${dsp_list}</td>
+<td>${TARGET LOG DIRECTORY}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Capture Logs">Capture Logs</a></td>
+<td>[Arguments]</td>
+<td>${options}=${None}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword capture logs type as ttitrace, rf, core_file(if exist), sm, site_conf, soap, configure_file, lfs, trs..\n<br>
+\n<br>
+| Input Parameters \ | Man. | Description | \ \n<br>
+| ${options} | No | default as ${None} |\n<br>
+\n<br>
+${options} detail:\n<br>
+| -e | capture all logs except some log type | -e ttitrace,rf,core_file,sm,site_conf,soap,configure_file,lfs,trs |\n<br>
+| -t | capture ttitrace log on special address | -t 1231,1234;1331,1334;1431,1434 |\n<br>
+| -r | capture RRU log on special RRU IP address | -r 192.168.254.137,192.168.254.141 |\n<br>
+\n<br>
+Example\n<br>
+| Capture Logs | \n<br>
+| Capture Logs | -e rf,ttitrace |\n<br>
+| Capture Logs | -e rf -t 1231,1234 |\n<br>
+| Capture Logs | -r 192.168.254.129,192.168.254.141 -t 1231,1234;1331,1334 |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Get Target Log Directory</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Create Directory</td>
+<td>${TARGET_LOG_DIRECTORY}${/}one_key_capture_logs</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${old timeout}</td>
+<td>set shell timeout</td>
+<td>20 min</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>execute shell command without check</td>
+<td>${resource_path[0]}:</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>execute shell command</td>
+<td>cd ${resource_path}${/}tools${/}capture_log</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>execute shell command without check</td>
+<td>capture_log.exe -d \"${TARGET_LOG_DIRECTORY}${/}one_key_capture_logs\" ${options}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>set shell timeout</td>
+<td>${old timeout}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Get Sack File">Get Sack File</a></td>
+<td>[Arguments]</td>
+<td>${FTP_SERVER}</td>
+<td>${FTP_SERVER_PORT}</td>
+<td>${FTP_SERVER_USER}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${FTP_SERVER_PASSWORD}</td>
+<td>${HOST_DIR}</td>
+<td>${LOCAL_DIR}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Get sack file to local from 99 server according to sw version ${FTP_SERVER}: ftp server ip ${FTP_SERVER_PORT}: ftp server port ${FTP_SERVER_PASSWORD}: ftp server password ${HOST_DIR}: directory of host, e.g. /DSPi/SW_Build/7up_Sack</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>enable bts ssh</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${SW_VERSION}</td>
+<td>Get Active SW Version</td>
+<td>${BTS_FILEDIRECTORY_DIR}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Set Test Variable</td>
+<td>\${SW_VERSION}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Ftp Download</td>
+<td>${FTP_SERVER}</td>
+<td>${FTP_SERVER_PORT}</td>
+<td>${FTP_SERVER_USER}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${FTP_SERVER_PASSWORD}</td>
+<td>${LOCAL_DIR}${/}LowEndian_${SW_VERSION}.sack</td>
+<td>LowEndian_${SW_VERSION}.sack</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${HOST_DIR}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Ftp Download</td>
+<td>${FTP_SERVER}</td>
+<td>${FTP_SERVER_PORT}</td>
+<td>${FTP_SERVER_USER}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${FTP_SERVER_PASSWORD}</td>
+<td>${LOCAL_DIR}${/}BigEndian_${SW_VERSION}.sack</td>
+<td>BigEndian_${SW_VERSION}.sack</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${HOST_DIR}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Return]</td>
+<td>BigEndian_${SW_VERSION}.sack</td>
+<td>LowEndian_${SW_VERSION}.sack</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Get Tti Trace Tools">Get Tti Trace Tools</a></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Get Tti Trace tools from svn according to sw version</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Directory Remove</td>
+<td>${CURDIR}${/}tools${/}TTITrace${/}TraceConverter</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Directory Remove</td>
+<td>${CURDIR}${/}tools${/}TTITrace${/}BinaryFileParser</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Download Ttitrace Tool From Svn</td>
+<td>${MAC_VERSION}</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</body>
+</html>

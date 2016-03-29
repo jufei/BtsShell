@@ -1,0 +1,344 @@
+# *********************************************************************
+#
+#  Copyright (c) Nokia 2005. All rights reserved.
+#
+# *********************************************************************/
+$CVOPS_init$
+.. Startup macro for the system. Not used by the user.
+path add ../../share/inc/
+r
+
+macro open ../../../../macros/general.mac
+macro EndAndRun
+
+$CVOPS_after_init$
+.. Startup macro for the system. User can define the default trace level here.
+.. set tr all sp Mmapi5
+set tr sgsna3g* sp Mmapi5
+set tr s1ap* sp Mmapi5
+set tr dia* sp Mmapi5
+set tr saenas* sp Mmapi5
+set tr gtp* sp Mmapi5
+macro EndAndRun
+
+$authrej$
+.. Returns Authentication Reject for the UE 1
+set sgsna3g.con_.1 variable auth_fail 1
+
+ma E
+
+$csfb$
+.. Initiated CSFB procedure from MME.
+saenas saenas_cs_service_notification
+1
+1
+
+ma E
+
+$dbr$
+sgsna3g.con_.1 sgsna3gusr_bearer_release_request_ind
+2
+1
+y
+6
+n
+n
+n
+n
+n
+n
+n
+
+ma E
+
+$dbrwrongebi$
+.. Returns  Reject (ESM) for the UE 1
+set sgsna3g.con_.1 variable dbr_wrong_ebi 1
+
+ma E
+
+$det$
+.. Starts NW initited Detach procedure for UE 1.
+sgsna3g.con_.1 sgsna3gusr_nw_detach_req
+y
+1
+y
+17
+
+macro EndAndRun
+
+$emmfail$
+.. Returns Attach Reject (EMM) for the UE 1
+set sgsna3g.con_.1 variable att_fail 1
+
+ma E
+
+$esmfail$
+.. Returns Attach Reject (ESM) for the UE 1
+set sgsna3g.con_.1 variable att_fail 2
+
+ma E
+
+$gutirealloc$
+sgsna3g sg_guti_reallocation
+1
+
+ma E
+
+$ident$
+saenas saenas_ident_req
+1
+y
+3
+
+ma E
+
+$locctr$
+s1ap s1ap_cn_location_reporting_control_req
+
+1	.. MME-UE-S1AP-ID
+216	.. eNB-UE-S1AP-ID
+0	.. requestType.eventType
+0	.. requestType.reportArea
+n
+
+macro EndAndRun
+
+$mmeup$
+s1ap s1ap_cn_mme_configuration_update_req
+
+y
+y
+nsn	..MME Name
+y
+y
+y
+234	.. servedGUMMEIs.elem[0].servedPLMNs.elem[0]
+n
+y
+23	.. servedGroupIDs.elem[0]
+n
+y
+1	.. servedMMECs.elem[0]
+n
+n
+n
+y
+9	..relativeMMECapacity
+
+macro EndAndRun
+
+$s1causeoff$
+.. unset s1 cause
+set sgsna3g variable cust_s1_cause 0
+
+ma E
+
+$s1causeon$
+.. set s1 cause
+set sgsna3g variable cust_s1_cause 1
+set sgsna3g variable s1_cause_type 1
+set sgsna3g variable s1_cause_elem 1
+
+ma E
+
+$s1corroff$
+.. turn off 'corrupt S1 ASN.1 PDU'
+set s1ap variable s1_bad_pdu 0
+
+ma E
+
+$s1corron$
+.. turn on 'corrupt S1 ASN.1 PDU'
+set s1ap variable s1_bad_pdu 1
+
+ma E
+
+$s1err$
+sgsna3g sgsna3gusr_lte_error_indication
+
+1
+y
+1
+n
+y
+n
+n
+n
+n
+y
+0
+n
+
+macro EndAndRun
+
+$s1rel$
+.. NW initiated S1 ctx release.
+set sgsna3g.con_.1 variable cust_s1_cause 1
+set sgsna3g.con_.1 variable s1_cause_type 2
+set sgsna3g.con_.1 variable s1_cause_elem 2
+sgsna3g.con_.1 sgsna3gusr_s1_ctx_rel
+
+macro EndAndRun
+
+$s1reset$
+.. Resets all S1-interfaces.
+sgsna3g sgsna3gusr_lte_reset
+
+1
+y
+1
+y
+0
+n
+
+macro EndAndRun
+
+$s1resetpart$
+.. Resets partially S1-interfaces.
+.. setup s1 cause
+set sgsna3g variable cust_s1_cause 1
+set sgsna3g variable s1_cause_type 0
+set sgsna3g variable s1_cause_elem 1
+send to sgsna3g sgsna3gusr_lte_reset
+
+1    .. enb-id
+y
+1
+n
+y
+y
+y
+1    .. mME-UE-S1AP-ID
+y
+1    .. eNB-UE-S1AP-ID
+N
+
+ma E
+
+$sctpdown$
+sctp.con_.1 sctp_terminate
+1				.. the association id of this SCTP connection, normally eNB 1 has association id 1, etc
+
+macro EndAndRun
+
+$serrej$
+.. Returns  Reject (ESM) for the UE 1
+set sgsna3g.con_.1 variable ser_fail 1
+
+ma E
+
+$status$
+sgsna3g sg_ue_status_imsi_mmo
+
+
+ma E
+
+$statussimple$
+sgsna3g sg_ue_status_imsi_mms
+
+
+ma E
+
+$pdndel$
+sgsna3g.con_.1 sgsna3gusr_pdn_disconnect_ind
+y
+6
+y
+6
+y
+5
+
+ma E
+
+$trini$
+set  sgsna3g.con_.1 variable tracestart 1
+set  sgsna3g.con_.1 variable traceRecording 10
+
+macro EndAndRun
+
+$trstart$
+sgsna3g.con_.1 sgsna3gusr_trace_start
+
+macro EndAndRun
+
+$trstop$
+sgsna3g.con_.1 sgsna3gusr_deact_trace
+
+macro EndAndRun
+
+$loc$
+sgsna3g.con_.1 sgsna3gusr_location_reporting_control
+1
+1
+216
+1
+0
+
+
+macro EndAndRun
+
+$nue_lppa$
+sgsna3g sgsna3gusr_downlink_nonuessociated_lppatransport
+0	
+1	..enbID
+123	..routing-id
+\xffff	..LPPA PDU
+
+macro EndAndRun
+
+$ue_lppa$
+sgsna3g.con_.1 sgsna3gusr_downlink_uessociated_lppatransport
+1	..enbID
+1	..mme_ue_id
+216	..enb_ue_id
+55	..routing-id
+\xffffff	..LPPA PDU
+
+macro EndAndRun
+
+$wr_warn$
+sgsna3g sgsna3gusr_write_replace_warning_req
+0
+1	..enbID
+\x1100	..MessageIdentifier
+\x0001	..SerialNumber
+n
+5	..RepetitionPeriod
+
+2	..NumberofBroadcastRequest
+y
+\x0180	..WarningType
+y
+\x1180100000000	..WarningSecurityInfo
+n
+n
+n
+
+macro EndAndRun
+
+$killr$
+sgsna3g sgsna3gusr_kill_request_req
+0
+1	..enbID
+\x1100	..MessageIdentifier
+\x0001	..SerialNumber
+n
+
+macro EndAndRun
+
+$lpppad$
+saenas.con_.1 saenas_downlink_generic_nas_transport
+1
+\xF000000604E0000000002000000000
+
+macro EndAndRun
+
+
+$lpppl$
+saenas.con_.1 saenas_downlink_generic_nas_transport
+1
+\xF00000080440
+
+macro EndAndRun
+

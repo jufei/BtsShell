@@ -1,0 +1,529 @@
+ *********************************************************************
+#
+#  Copyright (c) Nokia 2005. All rights reserved.
+#
+# *********************************************************************/
+$CVOPS_init$
+.. Startup macro for the system. Not used by the user.
+path add ../../share/inc/
+r
+
+macro open ../macros/generic_macros.mac 
+macro open ../macros/ggsn_macros.mac 
+macro EndAndRun
+ 
+$CVOPS_after_init$
+.. Startup macro for the system. Not used by the user.
+. set tr all sp Mmapi5
+. set tr gtp* sp i5
+. set tr gtp* sp mapi5
+. l o upe.log
+macro EndAndRun
+
+$tr$ 
+.. Turns on the full trace for all tasks.
+set tr all sp Mmapi5
+ma EndAndRun
+ 
+$troff$
+.. Turns off all tracing.
+set tr all off
+ma E 
+
+$log$
+.. Opens the log file upe.log for writing.
+l o upe.log
+ma E 
+
+$logoff$ 
+.. Closes the log file upe.log.
+l c
+ma E 
+
+
+$cr$
+. for internal testing only
+gtp_upe DOWN.udpif_rx_ind
+1
+\x 48 20 00 D6 00 00 00 00 00 01 00 00 01 00 08 00 85 78 11 00 02 00 00 F1 4C 00 00 00 56 00 08 00 10 85 F8 17 FF 81 FC A0 53 00 03 00 12 34 56 52 00 01 00 06 4D 00 02 00 00 04 57 00 09 00 8A 00 00 00 47 0A 7D 0A 42 57 00 09 01 87 00 00 00 00 7F 00 00 01 47 00 00 00 80 00 01 00 FD 63 00 01 00 01 4F 00 05 00 01 00 00 00 00 7F 00 01 00 01 48 00 08 00 00 00 01 00 00 00 00 00 4E 00 32 00 80 80 21 0A 01 01 00 0A 81 06 00 00 00 00 80 21 0A 01 02 00 0A 83 06 00 00 00 00 C2 23 09 01 03 00 09 03 05 C2 23 05 C0 23 08 01 04 00 08 03 04 C0 23 5D 00 1F 00 49 00 01 00 00 50 00 16 00 00 87 00 87 00 00 00 00 87 00 00 00 00 87 00 00 00 00 87 00 00 00 03 00 01 00 01
+
+10.140.67.62
+
+ma E
+
+
+$ur$
+. for internal testing only
+gtp_upe DOWN.udpif_rx_ind
+1
+\x 48 22 00 31 00 00 00 05 00 02 00 00 4D 00 02 00 00 00 57 00 09 00 8A 00 00 00 47 0A 7D 0A 42 5D 00 12 00 49 00 01 00 00 57 00 09 00 80 00 00 00 01 FF FF FF FF
+
+10.140.67.62
+
+ma E
+
+$rr$
+. for internal testing only
+gtp_upe DOWN.udpif_rx_ind
+1
+\x48 AA 00 08 00 00 00 05 00 03 00 00
+
+10.140.67.62
+
+ma E
+
+$ur2$
+. for internal testing only
+gtp_upe DOWN.udpif_rx_ind
+1
+\x48 22 00 30 00 00 00 05 00 04 00 00 52 00 01 00 06 57 00 09 00 8A 05 04 03 02 0A 7D 0A 42 5D 00 12 00 49 00 01 00 05 57 00 09 00 80 00 00 00 01 0A 7D 0A 36
+
+10.140.67.62
+
+ma E
+
+$ba$
+. for internal testing only
+gtp_upe DOWN.udpif_rx_ind
+
+\x 48 44 00 5F 00 00 00 04 00 00 05 00 49 00 01 00 05 64 00 01 00 00 51 00 15 00 05 00 00 00 05 00 00 00 00 0A 00 00 00 00 05 00 00 00 00 0A 00 55 00 13 00 21 30 00 0F 10 0A 2C 23 28 FF FF FF 00 40 13 C4 50 13 C4 53 00 03 00 55 F5 01 56 00 0D 00 18 55 F5 01 00 01 55 F5 01 00 00 00 0B 49 00 01 01 05
+
+1.1.1.1
+
+ma E
+
+
+$ul_data$
+. for internal testing only
+gtp.con_upe.1 mtdata
+
+macro EndAndRun
+
+$dl_data$
+.. Sends dummy ping frame DL direction..
+.. Then MME starts paging procedure.
+gtp.con_upe.1 RES2.udpif_rx_ind
+1
+\x45 00 00 54 00 00 40 00 40 01 B6 C1 C0 A8 01 01 C0 A8 01 96 08 00 BB B4 A6 3C 00 01 F7 F9 31 4A 00 00 00 00 AD F6 00 00 00 00 00 00 10 11 12 13 14 15 16 17 18 19 1A 1B 1C 1D 1E 1F 20 21 22 23 24 25 26 27 28 29 2A 2B 2C 2D 2E 2F 30 31 32 33 34 35 36 37
+
+192.168.1.1
+
+ma E
+
+
+$ul_data_t$
+.. Sends dummy ping frame UL direction..
+.. Only for internal testing
+gtp_upe RES3.udpif_rx_ind
+1
+\x30 FF 00 EB 00 00 00 01 45 00 00 EB DE 48 00 00 80 11 B2 4B 0A 8E 43 27 0A 8E 43 FF 00 8A 00 8A 00 D7 2F F9 11 0E 81 C6 AC 28 28 1E 00 8A 00 C1 00 00 20 45 45 45 46 45 4F 45 42 45 4D 45 4A 43 41 43 41 43 41 43 41 43 41 43 41 43 41 43 41 43 41 41 41 00 20 41 42 41 43 46 50 46 50 45 4E 46 44 45 43 46 43 45 50 46 48 46 44 45 46 46 50 46 50 41 43 41 42 00 FF 53 4D 42 25 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 11 00 00 27 00 00 00 00 00 00 00 00 00 E8 03 00 00 00 00 00 00 00 00 27 00 56 00 03 00 01 00 01 00 02 00 38 00 5C 4D 41 49 4C 53 4C 4F 54 5C 42 52 4F 57 53 45 00 0C 00 60 EA 00 00 52 44 4E 45 54 2D 55 4C 4D 00 10 28 B6 02 00 80 03 0A 00 10 00 80 00 80 F8 7F 44 45 4E 41 4C 49 00
+
+192.168.1.2
+
+ma E
+
+
+$ubr_qos$
+. To trigger the dedicated bearer modification with QoS change
+gtp_upe gtp_modify_pdp
+
+
+2	. The Ctask number for the bearer which needs to be modified 
+0	. 0 - without TFT change	1 - with TFT change
+1	. 0 - without QoS change	1 - with QoS change
+1	. Pre-emption Vulnerability: 0 or 1 	
+1	. Priority Level: 0 - 15 
+1	. Pre-emption Capability: 0 or 1 
+1	. QCI: 1 - 9 
+1	. noGBR or GBR
+500	. MaxBitrateUL in kbps
+400     . MaxBitrateDL in kbps
+300	. GuaranteedBitrateUL in kbps 
+200	. GuaranteedBitrateDL in kbps
+100	. aggregateMaximumBitRateUl in kbps
+150	. aggregateMaximumBitRateDl in kbps
+
+ma E
+
+$ubr_tft$
+. To trigger the dedicated bearer modification without QoS change and with TFT change
+gtp_upe gtp_modify_pdp
+
+
+2	. The Ctask number for the bearer which needs to be modified
+1	. 0 - without TFT change	1 - with TFT change
+4	. TFT Operation Code: 4 - replace in TFT 
+1	. Number of TFT Packet Filters
+1	. TFT Packet Filter Identitfier  
+2	. TFT Packet Filter Evaluation Procedence for Packet Filter 1
+1	. Number of TFT Packet Filter Component
+16	. TFT Packet Filter Component Type 1 for Packet Filter 1, 16 - IPv4 remote address type
+10.140.67.59	. TFT IPv4 address
+255.255.255.255 . TFT IPv4 netmask
+0	. 0 - without QoS change	1 - with QoS change
+1001	. aggregateMaximumBitRateUL in kbps
+2002    . aggregateMaximumBitRateDL in kbps
+
+ma E
+
+
+$mcbr$
+.. To trigger the dedicated bearer activation with one bearer only  
+gtp_upe gtp_create_pdp
+
+1	. The Ctask number for the default bearer which is linked bearer for the dedicated bearer
+0	. INTERFACE, 0 - S11, 4 - S4 
+5	. linked EBI
+1	. BEARER NUMBERS needs to be activated 
+1	. Pre-emption Vulnerability
+1	. Priority Level
+1	. Pre-emption Capability
+6	. QCI
+1	. no GBR
+1	. Number of TFT Packet Filters
+1	. TFT Packet Filter Identifier
+1	. TFT Packet Filter Evaluation Procedence
+1	. Number of TFT Packet Filter Component
+16	. TFT Packet Filter Component Type 16 - IPv4 remote address type
+10.68.152.65	. TFT IPv4 address
+255.255.255.255	. TFT IPv4 netmask
+
+macro EndAndRun
+
+$mcbr_pdn$
+.. To trigger the dedicated bearer activation with one bearer only in case srcCEPid is asked from CVOPS
+gtp_upe gtp_create_pdp
+
+
+1	. The Ctask number for the default bearer which is linked bearer for the dedicated bearer
+0	. INTERFACE, 0 - S11, 4 - S4 
+5	. linked EBI
+1	. BEARER NUMBERS needs to be activated 
+1	. Pre-emption Vulnerability
+1	. Priority Level
+1	. Pre-emption Capability
+5	. QCI
+1	. GBR or noGBR
+1	. Number of TFT Packet Filters
+1	. TFT Packet Filter Identifier
+1	. TFT Packet Filter Evaluation Procedence
+1	. Number of TFT Packet Filter Component
+16	. TFT Packet Filter Component Type 16 - IPv4 remote address type
+10.140.67.60	. TFT IPv4 address
+255.255.255.255	. TFT IPv4 netmask
+
+macro EndAndRun
+
+$mcbr_pdn_em$
+.. To trigger the dedicated bearer activation with one bearer only in case srcCEPid is asked from CVOPS
+gtp_upe gtp_create_pdp
+
+
+
+2	. The Ctask number for the default bearer which is linked bearer for the dedicated bearer
+0	. INTERFACE, 0 - S11, 4 - S4 
+6	. linked EBI
+1	. BEARER NUMBERS needs to be activated 
+1	. Pre-emption Vulnerability
+1	. Priority Level
+1	. Pre-emption Capability
+5	. QCI
+1	. GBR or noGBR
+1	. Number of TFT Packet Filters
+1	. TFT Packet Filter Identifier
+1	. TFT Packet Filter Evaluation Procedence
+1	. Number of TFT Packet Filter Component
+16	. TFT Packet Filter Component Type 16 - IPv4 remote address type
+10.140.67.60	. TFT IPv4 address
+255.255.255.255	. TFT IPv4 netmask
+
+macro EndAndRun
+
+$mcbr_2b$
+.. To trigger the dedicated bearer activation with two bearers 
+gtp_upe gtp_create_pdp
+
+1	. The Ctask number for the default bearer which is linked bearer for the dedicated bearer
+0	. INTERFACE, 0 - S11, 4 - S4
+5	. linked EBI
+2	. BEARER NUMBERS needs to be activated
+1	. Pre-emption Vulnerability
+1	. Priority Level
+1	. Pre-emption Capability
+5	. QCI
+1	. GBR or noGBR
+1	. Number of TFT Packet Filters
+1	. TFT Packet Filter Identifier
+1	. TFT Packet Filter Evaluation Procedence
+1	. Number of TFT Packet Filter Component
+16	. TFT Packet Filter Component Type 16 - IPv4 remote address type
+10.140.67.60	. TFT IPv4 address
+255.255.255.255	. TFT IPv4 netmask
+2	. Pre-emption Vulnerability
+2	. Priority Level
+2	. Pre-emption Capability
+6	. QCI
+1	. GBR or noGBR
+1	. Number of TFT Packet Filters
+2	. TFT Packet Filter Identifier
+2	. TFT Packet Filter Evaluation Procedence
+1	. Number of TFT Packet Filter Component
+16	. TFT Packet Filter Component Type 16 - IPv4 remote address type
+10.140.67.59	. TFT IPv4 address
+255.255.255.255	. TFT IPv4 netmask
+
+macro EndAndRun
+
+$mcbr_2b_pdn$
+.. To trigger the dedicated bearer activation with two bearers in case the srcCEPid is asked from CVOPS 
+gtp_upe gtp_create_pdp
+
+
+1	. The Ctask number for the default bearer which is linked bearer for the dedicated bearer
+0	. INTERFACE, 0 - S11, 4 - S4
+5	. linked EBI
+2	. BEARER NUMBERS needs to be activated
+1	. Pre-emption Vulnerability
+1	. Priority Level
+1	. Pre-emption Capability
+5	. QCI
+1	. noGBR or GBR
+1	. Number of TFT Packet Filters
+1	. TFT Packet Filter Identifier
+1	. TFT Packet Filter Evaluation Procedence
+1	. Number of TFT Packet Filter Component
+16	. TFT Packet Filter Component Type 16 - IPv4 remote address type
+10.140.67.60	. TFT IPv4 address
+255.255.255.255	. TFT IPv4 netmask
+2	. Pre-emption Vulnerability
+2	. Priority Level
+2	. Pre-emption Capability
+6	. QCI
+1	. noGBR or GBR
+1	. Number of TFT Packet Filters
+2	. TFT Packet Filter Identifier
+2	. TFT Packet Filter Evaluation Procedence
+1	. Number of TFT Packet Filter Component
+16	. TFT Packet Filter Component Type 16 - IPv4 remote address type
+10.140.67.59	. TFT IPv4 address
+255.255.255.255	. TFT IPv4 netmask
+
+macro EndAndRun
+
+$mdbr$
+.. To trigger the dedicated deletion 
+gtp_upe gtp_delete_pdp
+
+1	. The Ctask number of the bearer which the deleted bearer is linked to 
+0	. 0 - to delete default bearer, 1 - to delete dedicated bearer
+5	. The linked bearer ID
+6	. The bearer ID of the deleted bearer
+
+macro EndAndRun
+
+$mdbr_default$
+.. To trigger the deletion of the default bearer
+gtp_upe gtp_delete_pdp
+
+1	. The Ctask number of the bearer which the deleted bearer is linked to
+1	. 0 - to delete default bearer, 1 - to delete dedicated bearer
+5	. The bearer ID of the deleted default bearer
+
+macro EndAndRun
+
+$mdbr2$
+.. To trigger the deletion of the second dedicated bearer if there are more than one dedicated bearer activated
+gtp_upe gtp_delete_pdp
+
+1	. The Ctask number of the bearer which the deleted bearer is linked to 
+0	. 0 - to delete default bearer, 1 - to delete dedicated bearer
+5	. The linked bearer ID
+7	. The bearer ID of the deleted bearer
+
+macro EndAndRun
+
+
+$attach_db$
+.. To trigger the dedicated bearer activation during attach
+.. The macro mcbr will be used to trigger the dedicated bearer activation 
+msgHandler gtp -m gtp_connrsp -a
+mcbr
+macro EndAndRun
+
+$attach_db2$
+.. To trigger the dedicated bearer activation during attach
+.. The macro ,cbr_2b will be used to trigger the dedicated bearer activation 
+msgHandler gtp -m gtp_connrsp -a
+mcbr_2b
+macro EndAndRun
+
+
+$mcbr12$
+.. To trigger the dedicated bearer activation with one bearer only  
+gtp_upe gtp_create_pdp
+
+
+1	. The Ctask number for the default bearer which is linked bearer for the dedicated bearer
+0	. INTERFACE, 0 - S11, 4 - S4 
+5	. linked EBI
+1	. BEARER NUMBERS needs to be activated 
+1	. Pre-emption Vulnerability
+1	. Priority Level
+1	. Pre-emption Capability
+8	. QCI
+1	. no GBR
+1	. Number of TFT Packet Filters
+1	. TFT Packet Filter Identifier
+2	. TFT Packet Filter Evaluation Procedence
+1	. Number of TFT Packet Filter Component
+16	. TFT Packet Filter Component Type 16 - IPv4 remote address type
+10.68.152.66	. TFT IPv4 address
+255.255.255.255	. TFT IPv4 netmask
+
+macro EndAndRun
+
+
+$mcbr13$
+.. To trigger the dedicated bearer activation with one bearer only  
+gtp_upe gtp_create_pdp
+
+
+1	. The Ctask number for the default bearer which is linked bearer for the dedicated bearer
+0	. INTERFACE, 0 - S11, 4 - S4 
+5	. linked EBI
+1	. BEARER NUMBERS needs to be activated 
+1	. Pre-emption Vulnerability
+1	. Priority Level
+1	. Pre-emption Capability
+9	. QCI
+1	. no GBR
+1	. Number of TFT Packet Filters
+1	. TFT Packet Filter Identifier
+3	. TFT Packet Filter Evaluation Procedence
+1	. Number of TFT Packet Filter Component
+16	. TFT Packet Filter Component Type 16 - IPv4 remote address type
+10.68.152.53	. TFT IPv4 address
+255.255.255.255	. TFT IPv4 netmask
+
+macro EndAndRun
+
+
+$mcbr21$		; The macro name changed, 21 means the first DRB for second UE.
+gtp gtp_create_pdp
+		; Intentionally empty, it is used for "dstCEPid :"
+1		; srcCEPid :1
+2		; Ctask #: 1 Identify first attached UE, if used for the second UE, it should be 2
+0		; Give INTERFACE: S11 - 0, S4 - 4 : 0
+5		; Give linked EBI: (5) : 5
+1		; Give BEARER NUMBERS: (1-8) : 1
+1		; PVI (Pre-emption Vulnerability)(0 or 1):       1
+1		; PL (Priority Level)(0 - 15):   1
+1		; PCI (Pre-emption Capability)(0 or 1):  1
+6		; QCI value  QCI (1 - 9):    5
+1		; Number of TFT Packet Filters:  1
+1		; Input TFT Packet Filter Identifier 1 : 1
+1		; TFT Packet Filter Evaluation Procedence for Packet Filter 1 :  For different DRB of same UE, the number should be different.
+1		; Number of TFT Packet Filter Component:  1
+16		; IPv4 remote address type
+10.68.152.65	; Input TFT IPv4 address: which IP will use this DRB
+255.255.255.255	; Input TFT IPv4 netmask
+
+macro EndAndRun
+
+
+$mcbr22$		; The macro name changed, 22 means the second DRB for second UE.
+gtp gtp_create_pdp
+		; Intentionally empty, it is used for "dstCEPid :"
+1		; srcCEPid :1
+2		; Ctask #: 1 Identify first attached UE, if used for the second UE, it should be 2
+0		; Give INTERFACE: S11 - 0, S4 - 4 : 0
+5		; Give linked EBI: (5) : 5
+1		; Give BEARER NUMBERS: (1-8) : 1
+1		; PVI (Pre-emption Vulnerability)(0 or 1):       1
+1		; PL (Priority Level)(0 - 15):   1
+1		; PCI (Pre-emption Capability)(0 or 1):  1
+8		; QCI value  QCI (1 - 9):    5
+1		; Number of TFT Packet Filters:  1
+1		; Input TFT Packet Filter Identifier 1 : 1
+2		; TFT Packet Filter Evaluation Procedence for Packet Filter 1 :  For different DRB of same UE, the number should be different.
+1		; Number of TFT Packet Filter Component:  1
+16		; IPv4 remote address type
+10.68.152.66	; Input TFT IPv4 address: which IP will use this DRB
+255.255.255.255	; Input TFT IPv4 netmask
+
+macro EndAndRun
+
+
+$mcbr23$		; The macro name changed, 23 means the third DRB for second UE.
+gtp gtp_create_pdp
+		; Intentionally empty, it is used for "dstCEPid :"
+1		; srcCEPid :1
+2		; Ctask #: 1 Identify first attached UE, if used for the second UE, it should be 2
+0		; Give INTERFACE: S11 - 0, S4 - 4 : 0
+5		; Give linked EBI: (5) : 5
+1		; Give BEARER NUMBERS: (1-8) : 1
+1		; PVI (Pre-emption Vulnerability)(0 or 1):       1
+1		; PL (Priority Level)(0 - 15):   1
+1		; PCI (Pre-emption Capability)(0 or 1):  1
+9		; QCI value  QCI (1 - 9):    5
+1		; Number of TFT Packet Filters:  1
+1		; Input TFT Packet Filter Identifier 1 : 1
+3		; TFT Packet Filter Evaluation Procedence for Packet Filter 1 :  For different DRB of same UE, the number should be different.
+1		; Number of TFT Packet Filter Component:  1
+16		; IPv4 remote address type
+10.68.152.53	; Input TFT IPv4 address: which IP will use this DRB
+255.255.255.255	; Input TFT IPv4 netmask
+
+macro EndAndRun
+
+
+$qci5$		; The macro name changed, 22 means the second DRB for second UE.
+gtp gtp_create_pdp
+		; Intentionally empty, it is used for "dstCEPid :"
+1		; srcCEPid :1
+1		; Ctask #: 1 Identify first attached UE, if used for the second UE, it should be 2
+0		; Give INTERFACE: S11 - 0, S4 - 4 : 0
+5		; Give linked EBI: (5) : 5
+1		; Give BEARER NUMBERS: (1-8) : 1
+1		; PVI (Pre-emption Vulnerability)(0 or 1):       1
+1		; PL (Priority Level)(0 - 15):   1
+1		; PCI (Pre-emption Capability)(0 or 1):  1
+5		; QCI value  QCI (1 - 9):    5
+1		; Number of TFT Packet Filters:  1
+1		; Input TFT Packet Filter Identifier 1 : 1
+12		; TFT Packet Filter Evaluation Procedence for Packet Filter 1 :  For different DRB of same UE, the number should be different.
+1		; Number of TFT Packet Filter Component:  1
+16		; IPv4 remote address type
+10.68.152.65	; Input TFT IPv4 address: which IP will use this DRB
+255.255.255.255	; Input TFT IPv4 netmask
+
+macro EndAndRun
+
+
+$qci1$		; The macro name changed, 23 means the third DRB for second UE.
+gtp gtp_create_pdp
+		; Intentionally empty, it is used for "dstCEPid :"
+1		; srcCEPid :1
+1		; Ctask #: 1 Identify first attached UE, if used for the second UE, it should be 2
+0		; Give INTERFACE: S11 - 0, S4 - 4 : 0
+5		; Give linked EBI: (5) : 5
+1		; Give BEARER NUMBERS: (1-8) : 1
+1		; PVI (Pre-emption Vulnerability)(0 or 1):       1
+2		; PL (Priority Level)(0 - 15):   1
+1		; PCI (Pre-emption Capability)(0 or 1):  1
+1		; QCI value  QCI (1 - 9):    5
+45
+45
+30
+30
+1		; Number of TFT Packet Filters:  1
+1		; Input TFT Packet Filter Identifier 1 : 1
+11		; TFT Packet Filter Evaluation Procedence for Packet Filter 1 :  For different DRB of same UE, the number should be different.
+1		; Number of TFT Packet Filter Component:  1
+16		; IPv4 remote address type
+10.68.152.66	; Input TFT IPv4 address: which IP will use this DRB
+255.255.255.255	; Input TFT IPv4 netmask
+
+macro EndAndRun
+
+

@@ -1,0 +1,12 @@
+<managedObject class="IRFIM" distName="MRBTS-1831/LNBTS-1831/LNCEL-7937/IRFIM-2" operation="create" version="TL15A">
+<p name="measBdw">6mbw</p>
+<p name="interTResEut">0</p>
+<p name="qOffFrq">0 dB</p>
+<p name="dlCarFrqEut">37900</p>
+<p name="interFrqThrH">0</p>
+<p name="interFrqThrL">0</p>
+<p name="interPresAntP">false</p>
+<p name="qRxLevMinInterF">-140</p>
+<p name="eutCelResPrio">2</p>
+<p name="idleLBEutCelResWeight">20</p>
+</managedObject>

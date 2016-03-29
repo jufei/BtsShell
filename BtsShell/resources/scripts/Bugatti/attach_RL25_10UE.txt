@@ -1,0 +1,1641 @@
+# TMA Child Script
+
+#########################
+# Test Step: Select UEs #
+#########################
+
+# Subsequent commands are repeated as necesary for UEs
+# 0,1,2,3,4,5,6,7,8,9
+
+###############################
+# Test Step: Raw Text Command #
+###############################
+
+#--
+setp rrc_test_disable_max_sr_transmissions 1
+#--
+
+###############################
+# Test Step: Raw Text Command #
+###############################
+
+#--
+SETP RRC_NUM_DL_ANTENNAS 2
+#--
+
+###############################
+# Test Step: Raw Text Command #
+###############################
+
+#--
+SETP RRC_PUCCH_CLOSE_LOOP_POWER_CONTROL 0
+#--
+
+###############################
+# Test Step: Raw Text Command #
+###############################
+
+#--
+setp RRC_TEST_IGNORE_IRLC_ERROR_IND 1
+#--
+
+###############################
+# Test Step: Raw Text Command #
+###############################
+
+#--
+forw mte PhySetTDDCfg 1 7
+#--
+
+#########################################
+# Test Step: Configure PHY Capabilities #
+#########################################
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 0
+#----------------------------
+
+#-------------------------------------------
+# Configure the physical layer capabilities
+#-------------------------------------------
+# PARAMETERS
+# 1. Number of UE downlink antennae
+# 2. DL UE category
+# 3. UL UE category
+#-------------------------------------------
+#                        1 2 3
+#                        | | |
+forw mte PhyConfigSysCap 2 4 4
+#-------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 1
+#----------------------------
+
+#-------------------------------------------
+# Configure the physical layer capabilities
+#-------------------------------------------
+# PARAMETERS
+# 1. Number of UE downlink antennae
+# 2. DL UE category
+# 3. UL UE category
+#-------------------------------------------
+#                        1 2 3
+#                        | | |
+forw mte PhyConfigSysCap 2 4 4
+#-------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 2
+#----------------------------
+
+#-------------------------------------------
+# Configure the physical layer capabilities
+#-------------------------------------------
+# PARAMETERS
+# 1. Number of UE downlink antennae
+# 2. DL UE category
+# 3. UL UE category
+#-------------------------------------------
+#                        1 2 3
+#                        | | |
+forw mte PhyConfigSysCap 2 4 4
+#-------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 3
+#----------------------------
+
+#-------------------------------------------
+# Configure the physical layer capabilities
+#-------------------------------------------
+# PARAMETERS
+# 1. Number of UE downlink antennae
+# 2. DL UE category
+# 3. UL UE category
+#-------------------------------------------
+#                        1 2 3
+#                        | | |
+forw mte PhyConfigSysCap 2 4 4
+#-------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 4
+#----------------------------
+
+#-------------------------------------------
+# Configure the physical layer capabilities
+#-------------------------------------------
+# PARAMETERS
+# 1. Number of UE downlink antennae
+# 2. DL UE category
+# 3. UL UE category
+#-------------------------------------------
+#                        1 2 3
+#                        | | |
+forw mte PhyConfigSysCap 2 4 4
+#-------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 5
+#----------------------------
+
+#-------------------------------------------
+# Configure the physical layer capabilities
+#-------------------------------------------
+# PARAMETERS
+# 1. Number of UE downlink antennae
+# 2. DL UE category
+# 3. UL UE category
+#-------------------------------------------
+#                        1 2 3
+#                        | | |
+forw mte PhyConfigSysCap 2 4 4
+#-------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 6
+#----------------------------
+
+#-------------------------------------------
+# Configure the physical layer capabilities
+#-------------------------------------------
+# PARAMETERS
+# 1. Number of UE downlink antennae
+# 2. DL UE category
+# 3. UL UE category
+#-------------------------------------------
+#                        1 2 3
+#                        | | |
+forw mte PhyConfigSysCap 2 4 4
+#-------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 7
+#----------------------------
+
+#-------------------------------------------
+# Configure the physical layer capabilities
+#-------------------------------------------
+# PARAMETERS
+# 1. Number of UE downlink antennae
+# 2. DL UE category
+# 3. UL UE category
+#-------------------------------------------
+#                        1 2 3
+#                        | | |
+forw mte PhyConfigSysCap 2 4 4
+#-------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 8
+#----------------------------
+
+#-------------------------------------------
+# Configure the physical layer capabilities
+#-------------------------------------------
+# PARAMETERS
+# 1. Number of UE downlink antennae
+# 2. DL UE category
+# 3. UL UE category
+#-------------------------------------------
+#                        1 2 3
+#                        | | |
+forw mte PhyConfigSysCap 2 4 4
+#-------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 9
+#----------------------------
+
+#-------------------------------------------
+# Configure the physical layer capabilities
+#-------------------------------------------
+# PARAMETERS
+# 1. Number of UE downlink antennae
+# 2. DL UE category
+# 3. UL UE category
+#-------------------------------------------
+#                        1 2 3
+#                        | | |
+forw mte PhyConfigSysCap 2 4 4
+#-------------------------------------------
+
+#############################
+# Test Step: Configure USIM #
+#############################
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 0
+#----------------------------
+
+#---------------------
+# Configures the USIM
+#---------------------
+# PARAMETERS
+# 1. USIM Type
+# 2. IMSI
+# 3. MNC Length
+# 4. Authentication Key
+#---------------------
+#                   1  2               3                      4                                
+#                   |  |               |                      |                                
+forw mte UsimConfig 1([262030020000850 2] [] [] [] []) [] [] [A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5]
+#---------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 1
+#----------------------------
+
+#---------------------
+# Configures the USIM
+#---------------------
+# PARAMETERS
+# 1. USIM Type
+# 2. IMSI
+# 3. MNC Length
+# 4. Authentication Key
+#---------------------
+#                   1  2               3                      4                                
+#                   |  |               |                      |                                
+forw mte UsimConfig 1([262030020000851 2] [] [] [] []) [] [] [A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5]
+#---------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 2
+#----------------------------
+
+#---------------------
+# Configures the USIM
+#---------------------
+# PARAMETERS
+# 1. USIM Type
+# 2. IMSI
+# 3. MNC Length
+# 4. Authentication Key
+#---------------------
+#                   1  2               3                      4                                
+#                   |  |               |                      |                                
+forw mte UsimConfig 1([262030020000852 2] [] [] [] []) [] [] [A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5]
+#---------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 3
+#----------------------------
+
+#---------------------
+# Configures the USIM
+#---------------------
+# PARAMETERS
+# 1. USIM Type
+# 2. IMSI
+# 3. MNC Length
+# 4. Authentication Key
+#---------------------
+#                   1  2               3                      4                                
+#                   |  |               |                      |                                
+forw mte UsimConfig 1([262030020000853 2] [] [] [] []) [] [] [A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5]
+#---------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 4
+#----------------------------
+
+#---------------------
+# Configures the USIM
+#---------------------
+# PARAMETERS
+# 1. USIM Type
+# 2. IMSI
+# 3. MNC Length
+# 4. Authentication Key
+#---------------------
+#                   1  2               3                      4                                
+#                   |  |               |                      |                                
+forw mte UsimConfig 1([262030020000854 2] [] [] [] []) [] [] [A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5]
+#---------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 5
+#----------------------------
+
+#---------------------
+# Configures the USIM
+#---------------------
+# PARAMETERS
+# 1. USIM Type
+# 2. IMSI
+# 3. MNC Length
+# 4. Authentication Key
+#---------------------
+#                   1  2               3                      4                                
+#                   |  |               |                      |                                
+forw mte UsimConfig 1([262030020000855 2] [] [] [] []) [] [] [A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5]
+#---------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 6
+#----------------------------
+
+#---------------------
+# Configures the USIM
+#---------------------
+# PARAMETERS
+# 1. USIM Type
+# 2. IMSI
+# 3. MNC Length
+# 4. Authentication Key
+#---------------------
+#                   1  2               3                      4                                
+#                   |  |               |                      |                                
+forw mte UsimConfig 1([262030020000856 2] [] [] [] []) [] [] [A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5]
+#---------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 7
+#----------------------------
+
+#---------------------
+# Configures the USIM
+#---------------------
+# PARAMETERS
+# 1. USIM Type
+# 2. IMSI
+# 3. MNC Length
+# 4. Authentication Key
+#---------------------
+#                   1  2               3                      4                                
+#                   |  |               |                      |                                
+forw mte UsimConfig 1([262030020000857 2] [] [] [] []) [] [] [A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5]
+#---------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 8
+#----------------------------
+
+#---------------------
+# Configures the USIM
+#---------------------
+# PARAMETERS
+# 1. USIM Type
+# 2. IMSI
+# 3. MNC Length
+# 4. Authentication Key
+#---------------------
+#                   1  2               3                      4                                
+#                   |  |               |                      |                                
+forw mte UsimConfig 1([262030020000858 2] [] [] [] []) [] [] [A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5]
+#---------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 9
+#----------------------------
+
+#---------------------
+# Configures the USIM
+#---------------------
+# PARAMETERS
+# 1. USIM Type
+# 2. IMSI
+# 3. MNC Length
+# 4. Authentication Key
+#---------------------
+#                   1  2               3                      4                                
+#                   |  |               |                      |                                
+forw mte UsimConfig 1([262030020000859 2] [] [] [] []) [] [] [A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5]
+#---------------------
+
+#########################################
+# Test Step: Configure NAS Capabilities #
+#########################################
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 0
+#----------------------------
+
+#--------------------------------------------------------------------------------
+# Configures the NAS capabilities, including authentication and security options
+#--------------------------------------------------------------------------------
+#                              
+forw mte NasAptConfigCapability
+#--------------------------------------------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 1
+#----------------------------
+
+#--------------------------------------------------------------------------------
+# Configures the NAS capabilities, including authentication and security options
+#--------------------------------------------------------------------------------
+#                              
+forw mte NasAptConfigCapability
+#--------------------------------------------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 2
+#----------------------------
+
+#--------------------------------------------------------------------------------
+# Configures the NAS capabilities, including authentication and security options
+#--------------------------------------------------------------------------------
+#                              
+forw mte NasAptConfigCapability
+#--------------------------------------------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 3
+#----------------------------
+
+#--------------------------------------------------------------------------------
+# Configures the NAS capabilities, including authentication and security options
+#--------------------------------------------------------------------------------
+#                              
+forw mte NasAptConfigCapability
+#--------------------------------------------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 4
+#----------------------------
+
+#--------------------------------------------------------------------------------
+# Configures the NAS capabilities, including authentication and security options
+#--------------------------------------------------------------------------------
+#                              
+forw mte NasAptConfigCapability
+#--------------------------------------------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 5
+#----------------------------
+
+#--------------------------------------------------------------------------------
+# Configures the NAS capabilities, including authentication and security options
+#--------------------------------------------------------------------------------
+#                              
+forw mte NasAptConfigCapability
+#--------------------------------------------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 6
+#----------------------------
+
+#--------------------------------------------------------------------------------
+# Configures the NAS capabilities, including authentication and security options
+#--------------------------------------------------------------------------------
+#                              
+forw mte NasAptConfigCapability
+#--------------------------------------------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 7
+#----------------------------
+
+#--------------------------------------------------------------------------------
+# Configures the NAS capabilities, including authentication and security options
+#--------------------------------------------------------------------------------
+#                              
+forw mte NasAptConfigCapability
+#--------------------------------------------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 8
+#----------------------------
+
+#--------------------------------------------------------------------------------
+# Configures the NAS capabilities, including authentication and security options
+#--------------------------------------------------------------------------------
+#                              
+forw mte NasAptConfigCapability
+#--------------------------------------------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 9
+#----------------------------
+
+#--------------------------------------------------------------------------------
+# Configures the NAS capabilities, including authentication and security options
+#--------------------------------------------------------------------------------
+#                              
+forw mte NasAptConfigCapability
+#--------------------------------------------------------------------------------
+
+###########################################
+# Test Step: Configure NAS PLMN Selection #
+###########################################
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 0
+#----------------------------
+
+#----------------------------------------------
+# Configures the NAS to select a specific PLMN
+#----------------------------------------------
+# PARAMETERS
+# 1. Force PLMN
+#----------------------------------------------
+#                                  1    
+#                                  |    
+forw mte NasAptConfigPlmnSelection 26203
+#----------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 1
+#----------------------------
+
+#----------------------------------------------
+# Configures the NAS to select a specific PLMN
+#----------------------------------------------
+# PARAMETERS
+# 1. Force PLMN
+#----------------------------------------------
+#                                  1    
+#                                  |    
+forw mte NasAptConfigPlmnSelection 26203
+#----------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 2
+#----------------------------
+
+#----------------------------------------------
+# Configures the NAS to select a specific PLMN
+#----------------------------------------------
+# PARAMETERS
+# 1. Force PLMN
+#----------------------------------------------
+#                                  1    
+#                                  |    
+forw mte NasAptConfigPlmnSelection 26203
+#----------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 3
+#----------------------------
+
+#----------------------------------------------
+# Configures the NAS to select a specific PLMN
+#----------------------------------------------
+# PARAMETERS
+# 1. Force PLMN
+#----------------------------------------------
+#                                  1    
+#                                  |    
+forw mte NasAptConfigPlmnSelection 26203
+#----------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 4
+#----------------------------
+
+#----------------------------------------------
+# Configures the NAS to select a specific PLMN
+#----------------------------------------------
+# PARAMETERS
+# 1. Force PLMN
+#----------------------------------------------
+#                                  1    
+#                                  |    
+forw mte NasAptConfigPlmnSelection 26203
+#----------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 5
+#----------------------------
+
+#----------------------------------------------
+# Configures the NAS to select a specific PLMN
+#----------------------------------------------
+# PARAMETERS
+# 1. Force PLMN
+#----------------------------------------------
+#                                  1    
+#                                  |    
+forw mte NasAptConfigPlmnSelection 26203
+#----------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 6
+#----------------------------
+
+#----------------------------------------------
+# Configures the NAS to select a specific PLMN
+#----------------------------------------------
+# PARAMETERS
+# 1. Force PLMN
+#----------------------------------------------
+#                                  1    
+#                                  |    
+forw mte NasAptConfigPlmnSelection 26203
+#----------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 7
+#----------------------------
+
+#----------------------------------------------
+# Configures the NAS to select a specific PLMN
+#----------------------------------------------
+# PARAMETERS
+# 1. Force PLMN
+#----------------------------------------------
+#                                  1    
+#                                  |    
+forw mte NasAptConfigPlmnSelection 26203
+#----------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 8
+#----------------------------
+
+#----------------------------------------------
+# Configures the NAS to select a specific PLMN
+#----------------------------------------------
+# PARAMETERS
+# 1. Force PLMN
+#----------------------------------------------
+#                                  1    
+#                                  |    
+forw mte NasAptConfigPlmnSelection 26203
+#----------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 9
+#----------------------------
+
+#----------------------------------------------
+# Configures the NAS to select a specific PLMN
+#----------------------------------------------
+# PARAMETERS
+# 1. Force PLMN
+#----------------------------------------------
+#                                  1    
+#                                  |    
+forw mte NasAptConfigPlmnSelection 26203
+#----------------------------------------------
+
+############################################
+# Test Step: Configure Uplink Power Offset #
+############################################
+
+#-----------------------------------------------
+# Set the uplink power offsets for multiple UEs
+#-----------------------------------------------
+# PARAMETERS
+# 1. Number of UEs
+# 2. UE Context Id
+# 3. PUCCH Power Offset
+# 4. PRACH Power Offset
+# 5. PUSCH Power Offset
+# 6. SRS Power Offset
+#-----------------------------------------------
+#                               1  2 3  4   5      2 3  4   5      2 3  4   5      2 3  4   5      2 3  4   5      2 3  4   5      2 3  4   5      2 3  4   5      2 3  4   5      2 3  4   5      2  3  4   5      2  3  4   5      2  3  4   5      2  3  4   5      2  3  4   5      2  3  4   5      2  3  4   5      2  3  4   5      2  3  4   5      2  3  4   5      2  3  4   5      2  3  4   5      2  3  4   5      2  3  4   5      2  3  4   5      2  3  4   5      2  3  4   5      2  3  4   5      2  3  4   5      2  3  4   5      2  3  4   5      2  3  4   5      
+#                               |  | |  |   |      | |  |   |      | |  |   |      | |  |   |      | |  |   |      | |  |   |      | |  |   |      | |  |   |      | |  |   |      | |  |   |      |  |  |   |      |  |  |   |      |  |  |   |      |  |  |   |      |  |  |   |      |  |  |   |      |  |  |   |      |  |  |   |      |  |  |   |      |  |  |   |      |  |  |   |      |  |  |   |      |  |  |   |      |  |  |   |      |  |  |   |      |  |  |   |      |  |  |   |      |  |  |   |      |  |  |   |      |  |  |   |      |  |  |   |      |  |  |   |      
+forw mte PhyConfigUlPowerOffset 32{0 70 70 [70] [],1 70 70 [70] [],2 70 70 [70] [],3 70 70 [70] [],4 70 70 [70] [],5 70 70 [70] [],6 70 70 [70] [],7 70 70 [70] [],8 70 70 [70] [],9 70 70 [70] [],10 70 70 [70] [],11 70 70 [70] [],12 70 70 [70] [],13 70 70 [70] [],14 70 70 [70] [],15 70 70 [70] [],16 70 70 [70] [],17 70 70 [70] [],18 70 70 [70] [],19 70 70 [70] [],20 70 70 [70] [],21 70 70 [70] [],22 70 70 [70] [],23 70 70 [70] [],24 70 70 [70] [],25 70 70 [70] [],26 70 70 [70] [],27 70 70 [70] [],28 70 70 [70] [],29 70 70 [70] [],30 70 70 [70] [],31 70 70 [70] []}
+#-----------------------------------------------
+
+###########################################
+# Test Step: Configure RRC Cell Selection #
+###########################################
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 0
+#----------------------------
+
+#----------------------------------------------
+# Configures the RRC to select a specific cell
+#----------------------------------------------
+# PARAMETERS
+# 1. Downlink Carrier Frequency
+# 2. Cell Id
+#----------------------------------------------
+#                                  1      2 
+#                                  |      | 
+forw mte RrcAptConfigCellSelection 25950 [1]
+#----------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 1
+#----------------------------
+
+#----------------------------------------------
+# Configures the RRC to select a specific cell
+#----------------------------------------------
+# PARAMETERS
+# 1. Downlink Carrier Frequency
+# 2. Cell Id
+#----------------------------------------------
+#                                  1      2 
+#                                  |      | 
+forw mte RrcAptConfigCellSelection 25950 [1]
+#----------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 2
+#----------------------------
+
+#----------------------------------------------
+# Configures the RRC to select a specific cell
+#----------------------------------------------
+# PARAMETERS
+# 1. Downlink Carrier Frequency
+# 2. Cell Id
+#----------------------------------------------
+#                                  1      2 
+#                                  |      | 
+forw mte RrcAptConfigCellSelection 25950 [1]
+#----------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 3
+#----------------------------
+
+#----------------------------------------------
+# Configures the RRC to select a specific cell
+#----------------------------------------------
+# PARAMETERS
+# 1. Downlink Carrier Frequency
+# 2. Cell Id
+#----------------------------------------------
+#                                  1      2 
+#                                  |      | 
+forw mte RrcAptConfigCellSelection 25950 [1]
+#----------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 4
+#----------------------------
+
+#----------------------------------------------
+# Configures the RRC to select a specific cell
+#----------------------------------------------
+# PARAMETERS
+# 1. Downlink Carrier Frequency
+# 2. Cell Id
+#----------------------------------------------
+#                                  1      2 
+#                                  |      | 
+forw mte RrcAptConfigCellSelection 25950 [1]
+#----------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 5
+#----------------------------
+
+#----------------------------------------------
+# Configures the RRC to select a specific cell
+#----------------------------------------------
+# PARAMETERS
+# 1. Downlink Carrier Frequency
+# 2. Cell Id
+#----------------------------------------------
+#                                  1      2 
+#                                  |      | 
+forw mte RrcAptConfigCellSelection 25950 [1]
+#----------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 6
+#----------------------------
+
+#----------------------------------------------
+# Configures the RRC to select a specific cell
+#----------------------------------------------
+# PARAMETERS
+# 1. Downlink Carrier Frequency
+# 2. Cell Id
+#----------------------------------------------
+#                                  1      2 
+#                                  |      | 
+forw mte RrcAptConfigCellSelection 25950 [1]
+#----------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 7
+#----------------------------
+
+#----------------------------------------------
+# Configures the RRC to select a specific cell
+#----------------------------------------------
+# PARAMETERS
+# 1. Downlink Carrier Frequency
+# 2. Cell Id
+#----------------------------------------------
+#                                  1      2 
+#                                  |      | 
+forw mte RrcAptConfigCellSelection 25950 [1]
+#----------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 8
+#----------------------------
+
+#----------------------------------------------
+# Configures the RRC to select a specific cell
+#----------------------------------------------
+# PARAMETERS
+# 1. Downlink Carrier Frequency
+# 2. Cell Id
+#----------------------------------------------
+#                                  1      2 
+#                                  |      | 
+forw mte RrcAptConfigCellSelection 25950 [1]
+#----------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 9
+#----------------------------
+
+#----------------------------------------------
+# Configures the RRC to select a specific cell
+#----------------------------------------------
+# PARAMETERS
+# 1. Downlink Carrier Frequency
+# 2. Cell Id
+#----------------------------------------------
+#                                  1      2 
+#                                  |      | 
+forw mte RrcAptConfigCellSelection 25950 [1]
+#----------------------------------------------
+
+#####################################
+# Test Step: Configure NAS Register #
+#####################################
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 0
+#----------------------------
+
+#------------------------------------------
+# Configures the NAS to register on a PLMN
+#------------------------------------------
+# PARAMETERS
+# 1. Selection Mode
+# 2. PDN Identity
+#------------------------------------------
+#                             1 2                 
+#                             | |                 
+forw mte NasConfigEmmRegister 0(0 [] [] [] [] [] )
+#------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 1
+#----------------------------
+
+#------------------------------------------
+# Configures the NAS to register on a PLMN
+#------------------------------------------
+# PARAMETERS
+# 1. Selection Mode
+# 2. PDN Identity
+#------------------------------------------
+#                             1 2                 
+#                             | |                 
+forw mte NasConfigEmmRegister 0(0 [] [] [] [] [] )
+#------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 2
+#----------------------------
+
+#------------------------------------------
+# Configures the NAS to register on a PLMN
+#------------------------------------------
+# PARAMETERS
+# 1. Selection Mode
+# 2. PDN Identity
+#------------------------------------------
+#                             1 2                 
+#                             | |                 
+forw mte NasConfigEmmRegister 0(0 [] [] [] [] [] )
+#------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 3
+#----------------------------
+
+#------------------------------------------
+# Configures the NAS to register on a PLMN
+#------------------------------------------
+# PARAMETERS
+# 1. Selection Mode
+# 2. PDN Identity
+#------------------------------------------
+#                             1 2                 
+#                             | |                 
+forw mte NasConfigEmmRegister 0(0 [] [] [] [] [] )
+#------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 4
+#----------------------------
+
+#------------------------------------------
+# Configures the NAS to register on a PLMN
+#------------------------------------------
+# PARAMETERS
+# 1. Selection Mode
+# 2. PDN Identity
+#------------------------------------------
+#                             1 2                 
+#                             | |                 
+forw mte NasConfigEmmRegister 0(0 [] [] [] [] [] )
+#------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 5
+#----------------------------
+
+#------------------------------------------
+# Configures the NAS to register on a PLMN
+#------------------------------------------
+# PARAMETERS
+# 1. Selection Mode
+# 2. PDN Identity
+#------------------------------------------
+#                             1 2                 
+#                             | |                 
+forw mte NasConfigEmmRegister 0(0 [] [] [] [] [] )
+#------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 6
+#----------------------------
+
+#------------------------------------------
+# Configures the NAS to register on a PLMN
+#------------------------------------------
+# PARAMETERS
+# 1. Selection Mode
+# 2. PDN Identity
+#------------------------------------------
+#                             1 2                 
+#                             | |                 
+forw mte NasConfigEmmRegister 0(0 [] [] [] [] [] )
+#------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 7
+#----------------------------
+
+#------------------------------------------
+# Configures the NAS to register on a PLMN
+#------------------------------------------
+# PARAMETERS
+# 1. Selection Mode
+# 2. PDN Identity
+#------------------------------------------
+#                             1 2                 
+#                             | |                 
+forw mte NasConfigEmmRegister 0(0 [] [] [] [] [] )
+#------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 8
+#----------------------------
+
+#------------------------------------------
+# Configures the NAS to register on a PLMN
+#------------------------------------------
+# PARAMETERS
+# 1. Selection Mode
+# 2. PDN Identity
+#------------------------------------------
+#                             1 2                 
+#                             | |                 
+forw mte NasConfigEmmRegister 0(0 [] [] [] [] [] )
+#------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 9
+#----------------------------
+
+#------------------------------------------
+# Configures the NAS to register on a PLMN
+#------------------------------------------
+# PARAMETERS
+# 1. Selection Mode
+# 2. PDN Identity
+#------------------------------------------
+#                             1 2                 
+#                             | |                 
+forw mte NasConfigEmmRegister 0(0 [] [] [] [] [] )
+#------------------------------------------
+
+#########################################
+# Test Step: Configure RRC Capabilities #
+#########################################
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 0
+#----------------------------
+
+#-------------------------------------------------------------
+# Configures the RRC capabilities, including security options
+#-------------------------------------------------------------
+#                              
+forw mte RrcAptConfigCapability
+#-------------------------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 1
+#----------------------------
+
+#-------------------------------------------------------------
+# Configures the RRC capabilities, including security options
+#-------------------------------------------------------------
+#                              
+forw mte RrcAptConfigCapability
+#-------------------------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 2
+#----------------------------
+
+#-------------------------------------------------------------
+# Configures the RRC capabilities, including security options
+#-------------------------------------------------------------
+#                              
+forw mte RrcAptConfigCapability
+#-------------------------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 3
+#----------------------------
+
+#-------------------------------------------------------------
+# Configures the RRC capabilities, including security options
+#-------------------------------------------------------------
+#                              
+forw mte RrcAptConfigCapability
+#-------------------------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 4
+#----------------------------
+
+#-------------------------------------------------------------
+# Configures the RRC capabilities, including security options
+#-------------------------------------------------------------
+#                              
+forw mte RrcAptConfigCapability
+#-------------------------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 5
+#----------------------------
+
+#-------------------------------------------------------------
+# Configures the RRC capabilities, including security options
+#-------------------------------------------------------------
+#                              
+forw mte RrcAptConfigCapability
+#-------------------------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 6
+#----------------------------
+
+#-------------------------------------------------------------
+# Configures the RRC capabilities, including security options
+#-------------------------------------------------------------
+#                              
+forw mte RrcAptConfigCapability
+#-------------------------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 7
+#----------------------------
+
+#-------------------------------------------------------------
+# Configures the RRC capabilities, including security options
+#-------------------------------------------------------------
+#                              
+forw mte RrcAptConfigCapability
+#-------------------------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 8
+#----------------------------
+
+#-------------------------------------------------------------
+# Configures the RRC capabilities, including security options
+#-------------------------------------------------------------
+#                              
+forw mte RrcAptConfigCapability
+#-------------------------------------------------------------
+
+#----------------------------
+# Set the current UE context
+#----------------------------
+# PARAMETERS
+# 1. UE context Id
+#----------------------------
+#                     1
+#                     |
+forw mte SetUEContext 9
+#----------------------------
+
+#-------------------------------------------------------------
+# Configures the RRC capabilities, including security options
+#-------------------------------------------------------------
+#                              
+forw mte RrcAptConfigCapability
+#-------------------------------------------------------------
+
+#####################################
+# Test Step: Activate Configuration #
+#####################################
+
+#--------------------------------
+# Activate pending configuration
+#--------------------------------
+# PARAMETERS
+# 1. Timing Type
+# 2. Activate on Frame Boundary
+#--------------------------------
+#                 1      2 
+#                 |      | 
+forw mte Activate -1 [] [1]

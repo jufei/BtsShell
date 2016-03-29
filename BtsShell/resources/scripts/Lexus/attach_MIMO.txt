@@ -1,0 +1,16 @@
+SETP RRC_PUCCH_CLOSE_LOOP_POWER_CONTROL 0
+FORW MTE PHYCONFIGULTIMING 0                              
+forw mte UsimConfig 1([262030020000610 2]) [] [0] [A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5]
+setp NAS_TEST_IGNORE_RXD_PTI 1
+SETP RRC_NUM_DL_ANTENNAS 2
+setp RRC_TEST_ENABLE_UL_TIME_ALIGN_TIMER  0
+SETP RRC_TEST_UL_DELIVERY_INDS_REQUIRED 0
+forw mte PhyConfigSysCap 2 4 4
+forw mte PhySetTDDCfg 1 7   
+forw mte NasAptConfigPlmnSelection 26203
+forw mte NasAptConfigCapability [3] [224] [224]
+forw mte NasConfigEmmRegister 0(0 [0])
+forw mte RrcAptConfigCapability [2]
+SETP RRC_OVERRIDE_FREQUENCY_BAND 40
+forw mte RrcAptConfigCellSelection 23500 [1]
+forw mte Activate -1

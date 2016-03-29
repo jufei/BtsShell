@@ -1,0 +1,1 @@
+"C:\Python25\Lib\site-packages\BtsShell\resources\tools\silent\silentdsp.exe" -b 0x12 -n 0x40

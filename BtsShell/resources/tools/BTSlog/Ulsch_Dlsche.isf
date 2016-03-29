@@ -1,0 +1,27 @@
+FILTER
+
+  PROPERTIES
+    Title   = "";
+    TypeId  = "BTS message";
+  ENDPROPERTIES
+
+  SCRIPT
+  //Add filter criterias here
+
+      if( :harqFeedbackList.crnti[0]  <> 0x00000000)
+
+           //Shows object matching if rule
+           show
+
+      endif
+
+  ENDSCRIPT
+
+
+ENDFILTER                                                                                 
+
+                                                                                                                                                                               
+                                                                                                                                                                              
+
+                                                                                                                                                                             
+

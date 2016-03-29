@@ -1,0 +1,20 @@
+setp rrc_test_disable_max_sr_transmissions 1
+forw mte SetUEContext 0
+setp RRC_TEST_IGNORE_IRLC_ERROR_IND 1
+SETP RRC_NUM_DL_ANTENNAS 2
+SETP RRC_TEST_UL_DELIVERY_INDS_REQUIRED 0
+SETP RRC_PUCCH_CLOSE_LOOP_POWER_CONTROL 0
+forw mte PhySetTDDCfg 1 7
+forw mte PhyConfigSysCap 2 4 4
+forw mte UsimConfig 1([262030020000230 2] [] [0]) [] [0] [A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5]
+forw mte NasAptConfigPlmnSelection 26203
+forw mte PhyConfigUlPowerOffset 4{0 80 90 [80],1 80 90 [80],2 80 90 [80],3 80 90 [80]}
+forw mte NasAptConfigCapability [3] [224] [224]
+forw mte DeConfigEpsBearer 6 5
+forw mte DeConfigPneAttrib 6 2 [0] [0] [0] [-1]
+forw mte DeConfigUdiAttrib 6 0.0.0.0 0 5410 1000 [] [] [0] [0]
+SETP RRC_OVERRIDE_FREQUENCY_BAND 40
+forw mte RrcAptConfigCellSelection 23500 [1]
+forw mte NasConfigEmmRegister 0(0 [0] [0] [0] [0])
+forw mte RrcAptConfigCapability [2]
+forw mte Activate -1 [] [1]

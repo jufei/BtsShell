@@ -1,0 +1,5 @@
+# Addresses must each be on its own line with format [IP address] [username] [password]
+# Username and password are optional and it is not recommended to include them into this file
+# Use commandline option "-pw [username]:[password],[username]:[password],..." instead
+# Address below is just an example for testing purposes
+127.0.0.1 username password

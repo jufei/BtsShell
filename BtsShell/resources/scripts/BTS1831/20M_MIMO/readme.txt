@@ -1,0 +1,1 @@
+idleLBCapThresh change to 99 as PR issue(it should be 100).

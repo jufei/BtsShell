@@ -1,0 +1,1280 @@
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-0" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.0</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-1" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.1</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-2" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.2</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-3" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.3</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-4" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.4</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-5" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.5</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-6" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.6</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-7" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.7</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-8" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.8</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-9" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.9</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-10" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.10</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-11" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.11</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-12" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.12</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-13" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.13</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-14" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.14</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-15" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.15</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-16" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.16</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-17" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.17</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-18" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.18</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-19" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.19</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-20" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.20</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-21" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.21</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-22" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.22</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-23" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.23</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-24" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.24</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-25" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.25</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-26" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.26</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-27" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.27</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-28" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.28</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-29" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.29</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-30" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.30</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-31" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.31</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-32" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.32</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-33" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.33</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-34" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.34</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-35" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.35</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-36" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.36</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-37" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.37</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-38" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.38</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-39" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.39</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-40" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.40</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-41" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.41</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-42" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.42</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-43" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.43</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-44" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.44</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-45" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.45</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-46" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.46</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-47" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.47</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-48" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.48</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-49" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.49</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-50" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.50</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-51" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.51</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-52" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.52</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-53" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.53</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-54" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.54</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-55" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.55</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-56" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.56</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-57" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.57</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-58" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.58</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-59" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.59</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-60" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.60</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-61" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.61</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-62" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.62</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-63" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.63</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-64" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.64</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-65" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.65</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-66" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.66</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-67" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.67</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-68" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.68</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-69" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.69</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-70" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.70</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-71" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.71</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-72" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.72</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-73" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.73</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-74" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.74</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-75" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.75</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-76" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.76</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-77" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.77</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-78" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.78</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-79" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.79</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-80" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.80</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-81" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.81</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-82" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.82</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-83" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.83</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-84" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.84</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-85" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.85</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-86" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.86</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-87" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.87</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-88" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.88</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-89" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.89</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-90" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.90</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-91" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.91</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-92" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.92</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-93" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.93</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-94" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.94</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-95" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.95</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-96" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.96</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-97" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.97</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-98" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.98</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-99" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.99</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-100" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.100</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-101" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.101</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-102" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.102</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-103" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.103</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-104" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.104</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-105" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.105</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-106" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.106</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-107" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.107</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-108" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.108</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-109" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.109</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-110" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.110</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-111" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.111</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-112" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.112</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-113" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.113</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-114" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.114</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-115" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.115</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-116" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.116</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-117" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.117</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-118" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.118</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-119" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.119</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-120" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.120</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-121" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.121</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-122" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.122</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-123" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.123</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-124" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.124</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-125" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.125</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-126" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.126</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-127" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.127</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-128" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.128</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-129" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.129</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-130" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.130</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-131" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.131</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-132" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.132</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-133" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.133</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-134" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.134</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-135" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.135</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-136" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.136</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-137" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.137</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-138" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.138</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-139" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.139</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-140" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.140</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-141" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.141</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-142" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.142</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-143" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.143</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-144" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.144</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-145" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.145</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-146" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.146</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-147" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.147</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-148" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.148</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-149" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.149</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-150" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.150</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-151" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.151</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-152" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.152</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-153" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.153</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-154" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.154</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-155" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.155</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-156" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.156</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-157" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.157</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-158" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.158</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-159" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.159</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-160" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.160</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-161" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.161</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-162" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.162</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-163" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.163</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-164" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.164</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-165" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.165</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-166" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.166</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-167" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.167</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-168" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.168</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-169" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.169</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-170" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.170</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-171" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.171</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-172" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.172</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-173" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.173</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-174" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.174</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-175" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.175</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-176" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.176</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-177" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.177</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-178" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.178</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-179" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.179</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-180" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.180</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-181" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.181</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-182" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.182</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-183" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.183</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-184" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.184</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-185" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.185</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-186" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.186</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-187" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.187</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-188" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.188</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-189" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.189</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-190" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.190</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-191" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.191</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-192" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.192</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-193" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.193</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-194" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.194</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-195" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.195</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-196" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.196</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-197" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.197</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-198" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.198</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-199" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.199</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-200" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.200</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-201" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.201</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-202" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.202</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-203" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.203</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-204" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.204</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-205" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.205</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-206" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.206</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-207" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.207</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-208" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.208</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-209" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.209</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-210" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.210</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-211" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.211</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-212" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.212</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-213" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.213</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-214" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.214</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-215" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.215</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-216" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.216</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-217" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.217</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-218" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.218</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-219" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.219</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-220" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.220</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-221" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.221</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-222" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.222</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-223" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.223</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-224" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.224</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-225" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.225</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-226" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.226</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-227" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.227</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-228" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.228</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-229" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.229</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-230" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.230</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-231" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.231</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-232" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.232</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-233" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.233</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-234" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.234</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-235" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.235</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-236" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.236</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-237" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.237</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-238" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.238</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-239" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.239</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-240" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.240</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-241" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.241</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-242" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.242</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-243" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.243</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-244" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.244</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-245" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.245</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-246" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.246</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-247" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.247</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-248" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.248</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-249" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.249</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-250" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.250</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-251" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.251</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-252" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.252</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-253" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.253</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-254" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.254</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>
+<managedObject class="LNADJ" distName="MRBTS-1823/LNBTS-1823/LNADJ-255" operation="create" version="LNT4.0">
+<p name="cPlaneIpAddrCtrl">oamControlled</p>
+<p name="cPlaneIpAddr">1.1.1.255</p>
+<p name="x2LinkStatus">unavailable</p>
+</managedObject>

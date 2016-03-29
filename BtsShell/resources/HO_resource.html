@@ -1,0 +1,1257 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+html {
+  font-family: Arial,Helvetica,sans-serif;
+  background-color: white;
+  color: black;
+}
+table {
+  border-collapse: collapse;
+  empty-cells: show;
+  margin: 1em 0em;
+  border: 1px solid black;
+}
+th, td {
+  border: 1px solid black;
+  padding: 0.1em 0.2em;
+  height: 1.5em;
+  width: 12em;
+}
+td.colspan4, th.colspan4 {
+    width: 48em;
+}
+td.colspan3, th.colspan3 {
+    width: 36em;
+}
+td.colspan2, th.colspan2 {
+    width: 24em;
+}
+th {
+  background-color: rgb(192, 192, 192);
+  color: black;
+  height: 1.7em;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+td.name {
+  background-color: rgb(240, 240, 240);
+  letter-spacing: 0.1em;
+}
+td.name, th.name {
+  width: 10em;
+}
+</style>
+<title>HO resource</title>
+</head>
+<body>
+<h1>HO resource</h1>
+<table border="1" id="setting">
+<tr>
+<th class="name" colspan="5">Setting</th>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>BtsShell</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table border="1" id="keyword">
+<tr>
+<th class="name" colspan="5">Keyword</th>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Upload SCF File">Upload SCF File</a></td>
+<td>[Arguments]</td>
+<td>${configuration}</td>
+<td>${parameter_list}=${EMPTY}</td>
+<td>${new_file_name}=${SCF FILE NAME}_1_TEMP.xml</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${conn}=${BTS_CONTROL_PC_CONNECTION}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword Upload SCF file to BTS FCM /flash/config to make different configuration\n<br>
+\ \ \ | Input Parameters \ | Man. | Description | \ \ \ \n<br>
+\ \ \ | ${configuration} | Yes \ | SCF base configuratoin such as 20M_MIMO 10M_TXDIV aslo folder name in scripts \ |\n<br>
+\ \ \ | ${parameter_list} \ | No \ \ | parameter need to modify, string or list or ${None} |\n<br>
+\ \ \ | ${new_file_name} \ \ | No \ \ | the modified scf file name if you want it special |\n<br>
+\ \ \ | ${conn} \ \ | No \ \ | in local BTS it should be defaule, in HO PC should be ${TARGET_BTS_CONTROL_PC_CONNECTION} |\n<br>
+\n<br>
+\n<br>
+\ \ \ Example\n<br>
+\ \ \ | Upload Scf File \ | 20M_MIMO \ | | \n<br>
+\ \ \ | Upload Scf File \ | 20M_MIMO \ | \ iniMcsUl:10 | \n<br>
+\ \ \ | ${modify_list} \ \ | create list \ \ \ | \ iniMcsUl:10 | iniMcsDl:8 | \n<br>
+\ \ \ | Upload Scf File \ | 20M_MIMO \ | ${modify_list} |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>change scf</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${time}</td>
+<td>Get Timestamp</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${time}</td>
+<td>set variable</td>
+<td>${time[8:]}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${target log dir}</td>
+<td>Get Target Log Directory</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${target file path}</td>
+<td>Set Variable</td>
+<td>${TARGET LOG DIRECTORY}${/}${time}_${conn.host[10:]}_${new_file_name}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${TMP_BTSNAME}</td>
+<td>Set Variable If</td>
+<td>"${conn.host}" == "${BTS CONTROL PC LAB}"</td>
+<td>${BTS_NAME}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${TARGET_BTS_NAME}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${TMP_FILDTDIR}</td>
+<td>Set Variable If</td>
+<td>"${conn.host}" == "${BTS CONTROL PC LAB}"</td>
+<td>${BTS_FILEDIRECTORY_DIR}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${TARGET_BTS_FILEDIRECTORY_DIR}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${TMP_BTSSCFDIR}</td>
+<td>Set Variable If</td>
+<td>"${conn.host}" == "${BTS CONTROL PC LAB}"</td>
+<td>${BTS_SCF_DIR}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${TARGET_BTS_SCF_DIR}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${TMP_powerbreak_port}</td>
+<td>Set Variable If</td>
+<td>"${conn.host}" == "${BTS CONTROL PC LAB}"</td>
+<td>${BTS_POWERBREAK_PORT}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${TARGET_BTS_POWERBREAK_PORT}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Change_xml_file</td>
+<td>${CURDIR}${/}scripts${/}${TMP_BTSNAME}${/}${configuration}${/}${SCF_FILE_NAME}_1.xml</td>
+<td>${target file path}</td>
+<td>${parameter_list}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>check local or remote scf version by filedirectory</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${conn}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>enable bts ssh</td>
+<td>${BTS_FTM_USERNAME}</td>
+<td>${BTS_FTM_PASSWORD}</td>
+<td>${TMP_powerbreak_port}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${file directory path}</td>
+<td>Set Variable</td>
+<td>${TARGET LOG DIRECTORY}${/}${time}_${conn.host[10:]}_filed.xml</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${btsshell_path}</td>
+<td>Get Btsshell Path</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${sftp path}</td>
+<td>Set Variable</td>
+<td>${btsshell_path}${/}application_lib${/}sftp.py</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>"${conn.host}" == "${BTS_CONTROL_PC_CONNECTION.host}"</td>
+<td>Sftp Download</td>
+<td>${BTS FCM}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>22</td>
+<td>${FCMD_USERNAME}</td>
+<td>${FCMD_PASSWORD}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${file directory path}</td>
+<td>FileDirectory.xml</td>
+<td>${TMP_FILDTDIR}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>"${conn.host}" != "${BTS_CONTROL_PC_CONNECTION.host}"</td>
+<td>Execute Shell Command</td>
+<td>python ${sftp path} -d dl -i ${BTS FCM} -p 22 -u ${FCMD_USERNAME} -w ${FCMD_PASSWORD} -l C:\\${time}_FileDirectory.xml -f FileDirectory.xml -r ${TMP_FILDTDIR}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>"${conn.host}" != "${BTS_CONTROL_PC_CONNECTION.host}"</td>
+<td>Switch Host Connection</td>
+<td>${BTS_CONTROL_PC_CONNECTION}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>"${conn.host}" != "${BTS_CONTROL_PC_CONNECTION.host}"</td>
+<td>Copyfile2Local</td>
+<td>${conn.host}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${conn.user}</td>
+<td>${conn.password}</td>
+<td>C:\\${time}_FileDirectory.xml</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${file directory path}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${active scf version}</td>
+<td>check scf version</td>
+<td>${file directory path}</td>
+<td>${SCF_FILE_NAME}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${vendor file version}</td>
+<td>Get Vendor Version</td>
+<td>${file directory path}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Set Suite Variable</td>
+<td>${vendor file version}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>upload scf file</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>"${conn.host}" == "${BTS_CONTROL_PC_CONNECTION.host}"</td>
+<td>Sftp Upload</td>
+<td>${BTS FCM}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>22</td>
+<td>${FCMD_USERNAME}</td>
+<td>${FCMD_PASSWORD}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${target file path}</td>
+<td>${active scf version}</td>
+<td>${TMP_BTSSCFDIR}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>"${conn.host}" != "${BTS_CONTROL_PC_CONNECTION.host}"</td>
+<td>Switch Host Connection</td>
+<td>${BTS_CONTROL_PC_CONNECTION}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>"${conn.host}" != "${BTS_CONTROL_PC_CONNECTION.host}"</td>
+<td>copyfile2remote</td>
+<td>${conn.host}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${conn.user}</td>
+<td>${conn.password}</td>
+<td>C:\\${time}_${conn.host}_scf.xml</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${target file path}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>"${conn.host}" != "${BTS_CONTROL_PC_CONNECTION.host}"</td>
+<td>Switch Host Connection</td>
+<td>${conn}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>"${conn.host}" != "${BTS_CONTROL_PC_CONNECTION.host}"</td>
+<td>Execute Shell Command</td>
+<td>python ${sftp path} -d ul -i ${BTS FCM} -p 22 -u ${FCMD_USERNAME} -w ${FCMD_PASSWORD} -l C:\\${time}_${conn.host}_scf.xml -f ${active scf version} -r ${TMP_BTSSCFDIR}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>"${conn.host}" != "${BTS_CONTROL_PC_CONNECTION.host}"</td>
+<td>Execute Shell Command Without Check</td>
+<td>rm "C:\\${time}_${conn.host}_scf.xml" "C:\\${time}_FileDirectory.xml"</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Restart BTS By Power Break">Restart BTS By Power Break</a></td>
+<td>[Arguments]</td>
+<td>${bts_pb_port}=${BTS_POWERBREAK_PORT}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword restart BTS by powerbreaker.\n<br>
+\n<br>
+Description: there are two types powerbreaker:\n<br>
+| 1 | NSN powerbreaker |\n<br>
+| 2 | Facom powerbreaker |\n<br>
+\n<br>
+\n<br>
+Arguments:\n<br>
+| Input Parameters \ | Man. | Description |\n<br>
+| ${bts_pb_port} | No | Default is ${BTS_POWERBREAK_PORT}, defined in BTSname.py |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Power Off</td>
+<td>${bts_pb_port}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>5 sec</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Power On</td>
+<td>${bts_pb_port}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Modify and Upload BTS Configuration File">Modify and Upload BTS Configuration File</a></td>
+<td>[Arguments]</td>
+<td>${configuration}</td>
+<td>${BtsName}=${BTS_NAME}</td>
+<td>${parameter_list}=${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${Bts_scf_location}=${BTS_SCF_DIR}</td>
+<td>${Host}=${BTS_CONTROL_PC_LAB}</td>
+<td>${username}=${BTS_CONTROL_PC_USERNAME}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${passwd}=${BTS_CONTROL_PC_PASSWORD}</td>
+<td>${connection}=${BTS_CONTROL_PC_CONNECTION}</td>
+<td>${new_file_name}=${SCF_FILE_NAME}_1_TMP.xml</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${SCF_template}=${SCF_FILE_NAME}_1.xml</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td>deprecate keyword, "Upload Scf File" is recommended.\n<br>
+\ \ \ | Input Parameters \ | Man. | Description | \ \ \ \n<br>
+\ \ \ | ${configuration} | Yes \ | SCF base configuratoin such as 20M_MIMO 10M_TXDIV aslo folder name in scripts \ |\n<br>
+\ \ \ | ${BtsName} \ | No \ \ | ${BTS_NAME} or ${TARGET_BTS_NAME} |\n<br>
+\ \ \ | ${parameter_list} \ | No \ \ | parameter need to modify, string or list or ${None} |\n<br>
+\ \ \ | ${bts_scf_location} \ | No \ \ | SCF location |\n<br>
+\ \ \ | ${host} \ | No \ \ | SCF location |\n<br>
+\ \ \ | ${username} \ | No \ \ | SCF location |\n<br>
+\ \ \ | ${password} \ | No \ \ | SCF location |\n<br>
+\ \ \ | ${new_file_name} \ \ | No \ \ | the modified scf file name if you want it special |\n<br>
+\ \ \ | ${conn} \ \ | No \ \ | in local BTS it should be defaule, in HO PC should be ${TARGET_BTS_CONTROL_PC_CONNECTION} |\n<br>
+\n<br>
+\n<br>
+\n<br>
+\n<br>
+\n<br>
+\n<br>
+\n<br>
+\n<br>
+\n<br>
+\n<br>
+\n<br>
+\n<br>
+\n<br>
+\n<br>
+\n<br>
+\n<br>
+\n<br>
+\n<br>
+\n<br>
+\n<br>
+\n<br>
+\n<br>
+\n<br>
+\n<br>
+\n<br>
+\n<br>
+\n<br>
+\n<br>
+\n<br>
+</td>
+<td># Switch Host Connection</td>
+<td>${BTS_CONTROL_PC_CONNECTION}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>#Change_xml_file</td>
+<td>${CURDIR}${/}scripts${/}${BtsName}${/}${configuration}${/}${SCF_template}</td>
+<td>${CURDIR}${/}scripts${/}${BtsName}${/}${configuration}${/}${new_file_name}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>#${parameter_list}</td>
+<td>sleep</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>#copyfile2remote</td>
+<td>${Host}</td>
+<td>${username}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>#${passwd}</td>
+<td>${TEMPDIR}${/}${new_file_name}</td>
+<td>${CURDIR}${/}scripts${/}${BtsName}${/}${configuration}${/}${new_file_name}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>#Remove File</td>
+<td>${CURDIR}${/}scripts${/}${BtsName}${/}${configuration}${/}${new_file_name}</td>
+<td>Switch Host Connection</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>#${connection}</td>
+<td>copyfile2remote</td>
+<td>${BTS_FCM}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>#${FCMD_USERNAME}</td>
+<td>${FCMD_PASSWORD}</td>
+<td>${Bts_scf_location}/${SCF_FILE_NAME}_1.xml</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>#${TEMPDIR}${/}${new_file_name}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Upload SCF File</td>
+<td>${configuration}</td>
+<td>${parameter_list}</td>
+<td>${new_file_name}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${connection}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_BTS Restart Wait OnAir Two BTS">BTS Restart Wait OnAir Two BTS</a></td>
+<td>[Arguments]</td>
+<td>${BTS_Configure}=20M_SISO</td>
+<td>${TARGET_BTS_Configure}=20M_SISO</td>
+<td>${Local_paralist}=${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${Remote_paralist}=${EMPTY}</td>
+<td>${TMA_DIR}=${TM500_APPLICATION_DIR}</td>
+<td>${tm500_restart_flag}=1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword restart two BTS, wait two BTS on air.\n<br>
+| 1 | Upload two BTS SCF file |\n<br>
+| 2 | Restart two BTS, wait two BTS onair |\n<br>
+\n<br>
+\n<br>
+Arguments:\n<br>
+| Input Parameters \ | Man. | Description |\n<br>
+| ${BTS_Configure} | No | Local BTS configuration, default is 20M_SISO |\n<br>
+| ${TARGET_BTS_Configure} | No | Target BTS configuration, default is 20M_SISO |\n<br>
+| ${Local_paralist} | No | Local BTS parameter list, default is ${EMPTY} |\n<br>
+| ${Remote_paralist} | No | Target BTS parameter list, default is ${EMPTY} |\n<br>
+| ${TMA_DIR} | No | TM500 application directory, default is ${TM500_APPLICATION_DIR} |\n<br>
+| ${tm500_restart_flag} | No | 1, restart tm500; other, don't restart tm500. Default is 1 |\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Get Target Log Directory</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Upload SCF File</td>
+<td>${BTS_Configure}</td>
+<td>${Local_paralist}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Upload SCF File</td>
+<td>${TARGET_BTS_Configure}</td>
+<td>${Remote_paralist}</td>
+<td>SCFC_1_TMP.xml</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${TARGET BTS CONTROL PC CONNECTION}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Set Suite Variable</td>
+<td>${local_channel_bandwidth}</td>
+<td>${BTS_Configure[:2]}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Set Suite Variable</td>
+<td>${target_channel_bandwidth}</td>
+<td>${TARGET_BTS_Configure[:2]}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${local_log_save_path}</td>
+<td>${target_log_save_path}</td>
+<td>Restart Two BTS Without Upload SCF</td>
+<td>${tm500_restart_flag}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${TMA_DIR}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Return]</td>
+<td>${local_log_save_path}</td>
+<td>${target_log_save_path}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword__Calibration Handover">_Calibration Handover</a></td>
+<td>[Arguments]</td>
+<td>${local_channel_bandwidth}=20</td>
+<td>${target_channel_bandwidth}=20</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Calibration for handover.</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>3 min</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Start UDP Log</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Start UDP Log</td>
+<td>UDP</td>
+<td>Btslog</td>
+<td>${TARGET_BTS_CONTROL_PC_CONNECTION}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>1 min</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Stop UDP Log</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Stop UDP Log</td>
+<td>UDP</td>
+<td>Btslog</td>
+<td>${TARGET_BTS_CONTROL_PC_CONNECTION}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>file copy</td>
+<td>${BTS log backup dir}</td>
+<td>${TARGET LOG DIRECTORY}${/}local_calibration_udp.LOG</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${BTS_CONTROL_PC_CONNECTION}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>copyfile2local</td>
+<td>${TARGET_BTS_CONTROL_PC_LAB}</td>
+<td>${TARGET_BTS_CONTROL_PC_USERNAME}</td>
+<td>${TARGET_BTS_CONTROL_PC_PASSWORD}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${BTS log backup dir}</td>
+<td>${TARGET LOG DIRECTORY}${/}Target_calibration_udp.LOG</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Calibration Check</td>
+<td>${TARGET LOG DIRECTORY}${/}local_calibration_udp.LOG</td>
+<td>${local_channel_bandwidth}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Calibration Check</td>
+<td>${TARGET LOG DIRECTORY}${/}Target_calibration_udp.LOG</td>
+<td>${target_channel_bandwidth}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Restart Two BTS Without Upload SCF">Restart Two BTS Without Upload SCF</a></td>
+<td>[Arguments]</td>
+<td>${tm500_restart_flag}=1</td>
+<td>${TMA_DIR}=${TM500_APPLICATION_DIR}</td>
+<td>${wait_onair_time}=900</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${get_log_interval}=60</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword restart two BTS without upload SCF file, wait two BTS on air.\n<br>
+\n<br>
+| 1 | Restart local and target BTS |\n<br>
+| 2 | Check on air |\n<br>
+| 3 | Check calibration |\n<br>
+\n<br>
+\n<br>
+Arguments:\n<br>
+| Input Parameters \ | Man. | Description |\n<br>
+| ${tm500_restart_flag} | No | 1, restart tm500; other, don't restart tm500. Default is 1 |\n<br>
+| ${TMA_DIR} | No | TM500 application directory, default is ${TM500_APPLICATION_DIR} |\n<br>
+| ${wait_onair_time} | No | Default is 900 sec |\n<br>
+| ${get_log_interval} | No | Default is 180 sec |\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${TARGET_BTS_CONTROL_PC_CONNECTION}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Restart BTS By Power Break</td>
+<td>${TARGET_BTS_POWERBREAK_PORT}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${BTS_CONTROL_PC_CONNECTION}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Restart BTS By Power Break</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Start UDP Log</td>
+<td>local</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Start UDP Log</td>
+<td>target</td>
+<td>Btslog</td>
+<td>${TARGET_BTS_CONTROL_PC_CONNECTION}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${BTS_CONTROL_PC_CONNECTION}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>'${tm500_restart_flag}'=='1'</td>
+<td>TM500 Restart Base on Version</td>
+<td>${TMA_DIR}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check Two Bts Onair</td>
+<td>${False}</td>
+<td>${False}</td>
+<td>${wait_onair_time}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${get_log_interval}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${local_log_save_path}</td>
+<td>Stop UDP Log</td>
+<td>local</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${target_log_save_path}</td>
+<td>Stop UDP Log</td>
+<td>target</td>
+<td>Btslog</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${TARGET_BTS_CONTROL_PC_CONNECTION}</td>
+<td>${TARGET_BTSLOG_DIR}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${BTS_CONTROL_PC_CONNECTION}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>execute shell command</td>
+<td>${resource_path}\\tools\\wget --user=Nemuadmin --password=nemuuser --no-check-certificate <a href="https://${BTS_FTM}/protected/enableSsh.cgi">https://${BTS_FTM}/protected/enableSsh.cgi</a> -t 1 --timeout=10 -q -O -</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${TARGET_BTS_CONTROL_PC_CONNECTION}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>execute shell command</td>
+<td>${resource_path}\\tools\\wget --user=Nemuadmin --password=nemuuser --no-check-certificate <a href="https://${BTS_FTM}/protected/enableSsh.cgi">https://${BTS_FTM}/protected/enableSsh.cgi</a> -t 1 --timeout=10 -q -O -</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${status1}</td>
+<td>${value}</td>
+<td>Run Keyword And Ignore Error</td>
+<td>Variable Should Exist</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${check_calibration}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${status2}</td>
+<td>Run Keyword If</td>
+<td>'${status1}'=='PASS'</td>
+<td>Set Variable If</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>'${check_calibration}'=='yes'</td>
+<td>ok</td>
+<td>no</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>'${status1}'=='PASS' and '${status2}'=='ok'</td>
+<td>_Calibration Handover</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Return]</td>
+<td>${local_log_save_path}</td>
+<td>${target_log_save_path}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Download SCF File">Download SCF File</a></td>
+<td>[Arguments]</td>
+<td>${Bak_Version}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword Download SCF file from BTS FCM /flash/config and save to Resrource/scripts/Ford/GConfig folder\n<br>
+\ \ \ | Input Parameters \ | Man. | Description | \ \ \ \n<br>
+\ \ \ | ${Bak_Version} | Yes \ | backup folder name \ |\n<br>
+\n<br>
+Example:\n<br>
+\ \ \ | Download Scf File \ | LNT3.0_ENB_1208_012_00 \ | \ \n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${GConfig_folder}</td>
+<td>Set Variable</td>
+<td>${CURDIR}${/}scripts${/}${BTS_NAME}${/}GConfig</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${backup_folder}</td>
+<td>Set Variable</td>
+<td>${GConfig_folder}${/}${Bak_Version}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Create Directory</td>
+<td>${backup_folder}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${active scf version}</td>
+<td>_get_active_scf_version</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>log many</td>
+<td>${active scf version}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>SFTP Download</td>
+<td>${BTS_FCM}</td>
+<td>22</td>
+<td>${FCMD_USERNAME}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${FCMD_PASSWORD}</td>
+<td>${backup_folder}${/}${SCF_FILE_NAME}_1.xml</td>
+<td>${active scf version}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${BTS_SCF_DIR}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>File Copy</td>
+<td>${backup_folder}${/}${SCF_FILE_NAME}_1.xml</td>
+<td>${GConfig_folder}${/}${SCF_FILE_NAME}_1.xml</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Restart Target BTS and Check OnAir">Restart Target BTS and Check OnAir</a></td>
+<td>[Arguments]</td>
+<td>${TARGET_BTS_Configure}=20M_SISO</td>
+<td>${Remote_paralist}=${EMPTY}</td>
+<td>${wait_onair_time}=900</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${get_log_interval}=60</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Get Target Log Directory</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Upload SCF File</td>
+<td>${TARGET_BTS_Configure}</td>
+<td>${Remote_paralist}</td>
+<td>SCFC_1_TMP.xml</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${TARGET BTS CONTROL PC CONNECTION}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${TARGET_BTS_CONTROL_PC_CONNECTION}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Restart BTS By Power Break</td>
+<td>${TARGET_BTS_POWERBREAK_PORT}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${BTS_CONTROL_PC_CONNECTION}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Start UDP Log</td>
+<td>target_UDP</td>
+<td>Btslog</td>
+<td>${TARGET_BTS_CONTROL_PC_CONNECTION}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${BTS_CONTROL_PC_CONNECTION}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check Two Bts Onair</td>
+<td>${True}</td>
+<td>${False}</td>
+<td>${wait_onair_time}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${get_log_interval}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${save_log_path}</td>
+<td>Stop UDP Log</td>
+<td>UDP</td>
+<td>Btslog</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${TARGET_BTS_CONTROL_PC_CONNECTION}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${TARGET_BTS_CONTROL_PC_CONNECTION}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>execute shell command</td>
+<td>${resource_path}\\tools\\wget --user=Nemuadmin --password=nemuuser --no-check-certificate <a href="https://${BTS_FTM}/protected/enableSsh.cgi">https://${BTS_FTM}/protected/enableSsh.cgi</a> -t 1 --timeout=10 -q -O -</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${status1}</td>
+<td>${value}</td>
+<td>Run Keyword And Ignore Error</td>
+<td>Variable Should Exist</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${check_calibration}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${status2}</td>
+<td>Run Keyword If</td>
+<td>'${status1}'=='PASS'</td>
+<td>Set Variable If</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>'${check_calibration}'=='yes'</td>
+<td>ok</td>
+<td>no</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>'${status1}'=='PASS' and '${status2}'=='ok'</td>
+<td>_Calibration Handover</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Return]</td>
+<td>${save_log_path}</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,154 @@
+$CVOPS_init$
+path add ../../rrc39/src
+path add ../../eranap/src
+path add ../../ernsap/src
+path add ../../egtp_rrm/src
+path add ../../rrm39/src
+path add ../../../x2ap/src
+path add ../../rrcdriver39/src
+path add ../../s1cdriver/src
+path add ../../x2cdriver/src
+path add ../../../mac39/src
+path add ../../../l1emu39/src
+path add ../../../socket/socket/src
+path add ../../../gprs3gemulator/udpif
+path add ../../../m3ua_mod/sctp/src
+path add ../../../m3ua_mod/ipif/src/
+path add ../../../gtpu_mod/vudp/src/
+path add ../../../pdcp39/src/
+path add ../../../el3_cvops/s1ap_enb/src/
+
+path add ../src
+
+r
+
+macro open ../../../../macros/general.mac
+macro EndAndRun
+
+$CVOPS_after_init$
+.. Startup macro for the system. User can define the default trace level here.
+set tr rrc* sp mapi5
+set tr rrc39driver* sp mapi5
+set tr s1ap* sp mapi5
+set tr rrm39* sp mapi5
+set tr all sp Mmapi5
+delx2setrsp
+x2errind
+eutranmode
+macro EndAndRun
+
+$anrho1$
+rrm39 rrc39_bs_measurement_report_ind
+0
+1
+
+macro EndAndRun
+
+$anrho2$
+rrm39 rrc39_bs_measurement_report_ind
+0
+2
+
+macro EndAndRun
+
+$chmme$
+.. Reselects MME.
+rrm39 s1ap_change_mmeId
+
+macro EndAndRun
+
+$s1err$
+.. Sends S1AP Error Indication to MME
+rrm39 s1ap_errorInd
+
+macro EndAndRun
+
+
+$s1ho1$
+.. Triggers the S1 handover.
+rrm39 s1_trigger_ho
+
+1
+0
+
+macro EndAndRun
+
+
+$s1reset$
+.. Resets S1 interface
+rrm39 s1ap_reset
+
+macro EndAndRun
+
+
+$s1resetpart$
+.. Resets partially S1-interfaces.
+rrm39 s1ap_reset_partly
+0
+
+1    .. mme-ueid
+
+
+ma E
+
+$s1setup$
+rrm39 s1_setup_trigger
+
+macro EndAndRun
+
+
+$x2ho1$
+.. Triggers the inter-eNB handover 
+rrm39 trigger_ho
+
+1
+
+macro EndAndRun
+
+$x2ho2$
+.. Triggers the inter-eNB handover 
+rrm39 trigger_ho
+
+2
+
+macro EndAndRun
+
+
+$intraho1$
+.. Triggers the S1 handover.
+rrm39 s1_trigger_ho
+
+1
+1
+
+macro EndAndRun
+
+
+
+$delx2setrsp$
+.. x2_setup_response discarded
+msgHandle x2ap -m x2ap_x2_setup_response_rsp -n delx2setrsp
+msgHandle mdelete
+
+macro EndAndRun
+
+
+
+$x2setfail$
+msgHandle x2ap -m x2ap_x2_setup_response_rsp
+rrm39 {x2ap_x2_setup_failure_rsp}
+
+macro EndAndRun
+
+
+
+$x2errind$
+msgHandle x2ap -m x2ap_x2_setup_response_rsp
+rrm39 {x2ap_error_indication_req}
+
+macro EndAndRun
+
+
+$eutranmode$
+set rrm39 variable eutranMode 1
+macro EndAndRun

@@ -1,0 +1,109 @@
+
+0x1A0020=1
+#8x=2 4x=1
+0x19000C=2
+
+0x2003f=0
+0x1003f=1
+0x10040=1
+#0x10042=0x0A691891
+#0x10042=0xC0A8FF7E
+#0x10043=51000
+
+
+##--------------------------------------------------------
+## Debug Logging UEC
+##--------------------------------------------------------
+## TUecRadDebugLogEnabledGlobal
+0x00130020 = 1
+# 
+## TUecRadDebugLogEnabledUec
+0x00130021 = 1
+# 
+##TUecRadDebugLogEnabledCommon
+0x0013001E = 1
+# 
+##TUecRadDebugLogEnabledCommonCodec
+0x0013001F = 1 
+# 
+##--------------------------------------------------------
+## Debug Logging CELLC
+##--------------------------------------------------------
+## TCellcRadDebugLogEnabledCommon
+0xf0010 = 1
+# 
+## TCellcRadDebugLogEnabledCommonCodec
+0xf0011 = 1
+# 
+##TCellcRadDebugLogEnabledGlobal
+0xf000e = 1
+# 
+##TCellcRadDebugLogEnabledCellc
+0xf000f = 1 
+# 
+##--------------------------------------------------------
+## Debug Logging ENBC
+##--------------------------------------------------------
+## TEnbcRadDebugLogEnabledCommon
+0x110003 = 1
+# 
+## TEnbcRadDebugLogEnabledCommonCodec
+0x110004 = 1
+# 
+##TEnbcRadDebugLogEnabledGlobal
+0x110001 = 1
+# 
+##TEnbcRadDebugLogEnabledEnbc
+0x110002 = 1 
+# 
+##--------------------------------------------------------
+## Debug Logging RROM
+##--------------------------------------------------------
+## TRromRadDebugLogEnabledGlobal
+0x00120004 = 1
+# 
+## TRromRadDebugLogEnabledRrom
+0x00120005 = 1
+# 
+## TRromRadDebugLogEnabledCommon
+0x00120006 = 1
+# 
+#--------------------------------------------------------
+# Debug Logging TUPC
+#--------------------------------------------------------
+## TTupcRadDebugLogEnabledGlobal
+0x00150001 = 1
+# 
+## TTupcRadDebugLogEnabledTupc
+0x00150002 = 1
+# 
+## TTupcRadDebugLogEnabledCommon
+0x00150004 = 1
+# 
+## TTupcRadDebugLogEnabledCommonCodec
+0x00150003 = 1
+
+#ERadULPHY_CalibrationLog
+0x00160011 = 1
+
+##calibration print
+0x00160013 = 1
+
+##UlCombineMode (PBCH Print)
+0x16000F = 1
+0x010041 = 5
+
+0x10041=1
+0x10040=1
+0x1003F=1
+# eth port sec disabled
+0x19000A=1
+# eth port sec disabled
+0x20041 = 1
+#Bartek Kaminski BTSOM
+0x10079=5000000
+0x10077=1
+# ERadCcs_PrintAaSysLog System Logging debug print 
+0x10001 = 1
+0x32000c=1
+

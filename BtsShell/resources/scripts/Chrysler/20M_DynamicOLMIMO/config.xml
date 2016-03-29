@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<raml version="2.1" xmlns="raml21.xsd">
+  <cmData type="actual" scope="all" domain="FlexiBtsTrsPlan" adaptationVersionMajor="LN1.0" >
+    <header>
+      <log dateTime="2004-01-01T01:05:34" action="created" user="root" >Created by Flexi Transport</log>
+    </header>
+
+    <managedObject class="FTM" operation="update" distName="LNBTS-1/FTM-1" version="LN1.0">
+      <p name="adaptationVersionMajor">LN1.0</p>
+      <p name="locationName"></p>
+      <p name="softwareReleaseVersion">FTM_L10_167.00</p>
+      <p name="systemTitle"></p>
+      <p name="userLabel"></p>
+    </managedObject>
+
+    <managedObject class="UNIT" operation="update" distName="LNBTS-1/FTM-1/UNIT-1" version="LN1.0">
+      <p name="unitTypeActual">471984A</p>
+      <p name="unitTypeExpected">471984A</p>
+    </managedObject>
+
+    <managedObject class="PPTT" operation="update" distName="LNBTS-1/FTM-1/PPTT-1-4" version="LN1.0">
+      <p name="administrativeState">locked</p>
+      <p name="pdhLbo">PDH_LBO_0</p>
+      <p name="pdhLineType">PDH_LINE_TYPE_MULTI_FRAME_G704</p>
+    </managedObject>
+
+    <managedObject class="PPTT" operation="update" distName="LNBTS-1/FTM-1/PPTT-1-3" version="LN1.0">
+      <p name="administrativeState">locked</p>
+      <p name="pdhLbo">PDH_LBO_0</p>
+      <p name="pdhLineType">PDH_LINE_TYPE_MULTI_FRAME_G704</p>
+    </managedObject>
+
+    <managedObject class="PPTT" operation="update" distName="LNBTS-1/FTM-1/PPTT-1-2" version="LN1.0">
+      <p name="administrativeState">locked</p>
+      <p name="pdhLbo">PDH_LBO_0</p>
+      <p name="pdhLineType">PDH_LINE_TYPE_MULTI_FRAME_G704</p>
+    </managedObject>
+
+    <managedObject class="PPTT" operation="update" distName="LNBTS-1/FTM-1/PPTT-1-1" version="LN1.0">
+      <p name="administrativeState">locked</p>
+      <p name="pdhLbo">PDH_LBO_0</p>
+      <p name="pdhLineType">PDH_LINE_TYPE_MULTI_FRAME_G704</p>
+    </managedObject>
+
+    <managedObject class="ETHLK" operation="update" distName="LNBTS-1/FTM-1/ETHLK-1-1" version="LN1.0">
+      <p name="administrativeState">locked</p>
+      <p name="speedAndDuplex">AUTODETECT</p>
+    </managedObject>
+
+    <managedObject class="ETHLK" operation="update" distName="LNBTS-1/FTM-1/ETHLK-1-2" version="LN1.0">
+      <p name="administrativeState">unlocked</p>
+      <p name="speedAndDuplex">AUTODETECT</p>
+    </managedObject>
+
+    <managedObject class="ETHLK" operation="update" distName="LNBTS-1/FTM-1/ETHLK-1-3" version="LN1.0">
+      <p name="administrativeState">locked</p>
+      <p name="speedAndDuplex">AUTODETECT</p>
+    </managedObject>
+
+    <managedObject class="IPNO" operation="update" distName="LNBTS-44/FTM-1/IPNO-1" version="LN1.0">
+      <p name="btsId">44</p>
+      <p name="cPlaneIpAddress">10.68.160.44</p>
+      <p name="ftmBtsSubnetAddress">0.0.0.0</p>
+      <p name="ftmBtsSubnetMask">0.0.0.0</p>
+      <p name="icmpResponseEnabled">true</p>
+      <p name="mPlaneIpAddress">10.68.160.44</p>
+      <p name="oamIpAddr">10.200.87.100</p>
+      <p name="omsTls">probing</p>
+      <p name="sPlaneIpAddress">10.68.160.44</p>
+      <p name="uPlaneIpAddress">10.68.160.44</p>
+    </managedObject>
+
+    <managedObject class="IEIF" operation="update" distName="LNBTS-1/FTM-1/IPNO-1/IEIF-1" version="LN1.0">
+      <p name="localIpAddr">10.68.160.44</p>
+      <p name="mtu">1500</p>
+      <p name="netmask">255.255.255.0</p>
+      <p name="qosEnabled">true</p>
+      <p name="sbs">1522</p>
+      <p name="sbsTotal">1522</p>
+      <p name="sir">1000000</p>
+      <p name="sirTotal">1000000</p>
+      <p name="trafficPathShapingEnable">TPS_PATH</p>
+      <p name="upperLayerShaping">false</p>
+      <p name="wfqSchedQueueWeight">1</p>
+    </managedObject>
+
+    <managedObject class="TOPIK" operation="update" distName="LNBTS-1/FTM-1/IPNO-1/TOPIK-1" version="LN1.0">
+      <p name="administrativeState">locked</p>
+      <p name="logMeanSyncValue">-3</p>
+      <p name="masterIpAddr">0.0.0.0</p>
+    </managedObject>
+
+    <managedObject class="QOS" operation="update" distName="LNBTS-1/FTM-1/IPNO-1/QOS-1" version="LN1.0">
+      <list name="dscpMap">
+        <item>
+          <p name="pHB">expeditedForwarding</p>
+          <p name="vlanPrio">6</p>
+          <p name="dscp">46</p>
+        </item>
+        <item>
+          <p name="pHB">assuredForwardingClass43</p>
+          <p name="vlanPrio">5</p>
+          <p name="dscp">38</p>
+        </item>
+        <item>
+          <p name="pHB">assuredForwardingClass42</p>
+          <p name="vlanPrio">5</p>
+          <p name="dscp">36</p>
+        </item>
+        <item>
+          <p name="pHB">assuredForwardingClass41</p>
+          <p name="vlanPrio">5</p>
+          <p name="dscp">34</p>
+        </item>
+        <item>
+          <p name="pHB">assuredForwardingClass33</p>
+          <p name="vlanPrio">4</p>
+          <p name="dscp">30</p>
+        </item>
+        <item>
+          <p name="pHB">assuredForwardingClass32</p>
+          <p name="vlanPrio">4</p>
+          <p name="dscp">28</p>
+        </item>
+        <item>
+          <p name="pHB">assuredForwardingClass31</p>
+          <p name="vlanPrio">4</p>
+          <p name="dscp">26</p>
+        </item>
+        <item>
+          <p name="pHB">assuredForwardingClass23</p>
+          <p name="vlanPrio">3</p>
+          <p name="dscp">22</p>
+        </item>
+        <item>
+          <p name="pHB">assuredForwardingClass22</p>
+          <p name="vlanPrio">3</p>
+          <p name="dscp">20</p>
+        </item>
+        <item>
+          <p name="pHB">assuredForwardingClass21</p>
+          <p name="vlanPrio">3</p>
+          <p name="dscp">18</p>
+        </item>
+        <item>
+          <p name="pHB">assuredForwardingClass13</p>
+          <p name="vlanPrio">1</p>
+          <p name="dscp">14</p>
+        </item>
+        <item>
+          <p name="pHB">assuredForwardingClass12</p>
+          <p name="vlanPrio">1</p>
+          <p name="dscp">12</p>
+        </item>
+        <item>
+          <p name="pHB">assuredForwardingClass11</p>
+          <p name="vlanPrio">1</p>
+          <p name="dscp">10</p>
+        </item>
+        <item>
+          <p name="pHB">bestEffort</p>
+          <p name="vlanPrio">0</p>
+          <p name="dscp">0</p>
+        </item>
+      </list>
+      <list name="perHopBehaviourWeightList">
+        <item>
+          <p name="assuredForwardingClass4">10000</p>
+          <p name="assuredForwardingClass3">1000</p>
+          <p name="assuredForwardingClass2">100</p>
+          <p name="assuredForwardingClass1">10</p>
+          <p name="bestEffort">1</p>
+        </item>
+      </list>
+      <list name="trafficTypesMap">
+        <item>
+          <p name="trafficType">CPLANE</p>
+          <p name="dscp">46</p>
+        </item>
+        <item>
+          <p name="trafficType">MPLANE</p>
+          <p name="dscp">34</p>
+        </item>
+        <item>
+          <p name="trafficType">SPLANE</p>
+          <p name="dscp">46</p>
+        </item>
+        <item>
+          <p name="trafficType">ICMP</p>
+          <p name="dscp">10</p>
+        </item>
+        <item>
+          <p name="trafficType">IKE</p>
+          <p name="dscp">34</p>
+        </item>
+      </list>
+    </managedObject>
+
+    <managedObject class="SYNC" operation="update" distName="LNBTS-1/FTM-1/SYNC-1" version="LN1.0">
+    </managedObject>
+
+    <managedObject class="STPG" operation="update" distName="LNBTS-1/FTM-1/SYNC-1/STPG-1" version="LN1.0">
+      <list name="synchroSourceList">
+      </list>
+    </managedObject>
+
+    <managedObject class="IPRT" operation="update" distName="LNBTS-1/FTM-1/IPNO-1/IPRT-1" version="LN1.0">
+      <list name="staticRoutes">
+        <item>
+          <p name="destIpAddr">0.0.0.0</p>
+          <p name="netmask">0.0.0.0</p>
+          <p name="gateway">10.68.160.62</p>
+        </item>
+      </list>
+    </managedObject>
+
+    <managedObject class="INTP" operation="update" distName="LNBTS-1/FTM-1/IPNO-1/INTP-1" version="LN1.0">
+      <list name="ntpServers">
+        <p>10.29.1.171</p>
+      </list>
+    </managedObject>
+
+    <managedObject class="IPRM" operation="update" distName="LNBTS-1/FTM-1/IPNO-1/IPRM-1" version="LN1.0">
+      <list name="RmExceptions">
+      </list>
+    </managedObject>
+
+    <managedObject class="IHCP" operation="update" distName="LNBTS-1/FTM-1/IPNO-1/IHCP-1" version="LN1.0">
+    </managedObject>
+
+    <managedObject class="AMGR" operation="update" distName="LNBTS-1/FTM-1/AMGR-1" version="LN1.0">
+      <p name="ldapConnectionType">TLS</p>
+      <p name="primaryLdapPort">389</p>
+      <p name="primaryLdapServer">0.0.0.0</p>
+    </managedObject>
+
+    <managedObject class="IPSECC" operation="update" distName="LNBTS-1/FTM-1/IPSECC-1" version="LN1.0">
+      <p name="ipSecEnabled">false</p>
+      <list name="securityPolicies">
+      </list>
+    </managedObject>
+
+    <managedObject class="CERTH" operation="update" distName="LNBTS-1/FTM-1/CERTH-1" version="LN1.0">
+      <p name="btsCertificateUpdateTime">30</p>
+      <p name="caCertificateUpdateTime">30</p>
+      <p name="caSubjectName">C=de, O=NSN DUS, CN=NSN DUS Test Root CA</p>
+      <p name="cmpServerIpAddress">0.0.0.0</p>
+      <p name="cmpServerPort">1024</p>
+      <p name="crlUpdatePeriod">24</p>
+    </managedObject>
+
+  </cmData>
+
+</raml>
+

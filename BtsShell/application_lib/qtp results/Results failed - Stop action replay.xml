@@ -1,0 +1,796 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE Report
+[
+<!ELEMENT Report (General ,(Doc|BPT)) >
+<!ATTLIST Report ver CDATA #REQUIRED tmZone CDATA #REQUIRED>
+
+<!ELEMENT General ( DocLocation ) >
+<!ATTLIST General productName CDATA #REQUIRED productVer CDATA #REQUIRED os CDATA #REQUIRED host CDATA #REQUIRED>
+
+<!ELEMENT BPT (DName,Res,DVer?,TSet?,TInst?,NodeArgs,AdditionalInfo*,Doc*) >
+<!ATTLIST BPT rID ID #REQUIRED >
+
+<!ELEMENT Doc (DName,Res,DVer?,TSet?,TInst?,RunType?,DT?,AdditionalInfo*,Step*,DIter*,Step*,Action*,Summary?,TestMaintenanceSummary*,NodeArgs?) >
+<!ATTLIST Doc rID ID #REQUIRED type (Test|BC) "Test" productName CDATA #REQUIRED BCIter CDATA #IMPLIED >
+
+<!ELEMENT RunType ( #PCDATA )>
+<!ATTLIST RunType fmStep (False|True) "False" batch (False|True) "False" upDesc (False|True) "False" upChk (False|True) "False" upAS (False|True) "False">
+
+<!ELEMENT DName ( #PCDATA ) >
+
+<!ELEMENT Res ( #PCDATA ) >
+
+<!ELEMENT AdditionalInfo (AdditionalDataName,AdditionalDataValue ) >
+
+<!ELEMENT AdditionalDataName ( #PCDATA ) >
+
+<!ELEMENT AdditionalDataValue ( #PCDATA ) >
+
+<!ELEMENT DVer ( #PCDATA ) >
+
+<!ELEMENT TSet ( #PCDATA ) >
+
+<!ELEMENT TInst ( #PCDATA ) >
+
+<!ELEMENT DIter (Step?,Action+,Summary?,NodeArgs)>
+<!ATTLIST DIter rID ID #REQUIRED iterID CDATA #REQUIRED>
+
+<!ELEMENT DocLocation ( #PCDATA )>
+
+<!ELEMENT Action (AName,AIter*,(Step|HtmlStep|Action)*,Summary,ActionMaintenanceSummary*,NodeArgs ) >
+<!ATTLIST Action rID ID #REQUIRED>
+
+<!ELEMENT AIter ((Step|HtmlStep|Action)*,Summary?,NodeArgs) >
+<!ATTLIST AIter rID ID #REQUIRED iterID CDATA #REQUIRED>
+
+<!ELEMENT AName ( #PCDATA ) >
+
+<!ELEMENT TestMaintenanceSummary (ActionMaintenanceSummary) >
+<!ATTLIST TestMaintenanceSummary ObjectsAdded CDATA #REQUIRED ObjectsUpdated CDATA #REQUIRED StepsUpdated CDATA #REQUIRED StepsComments CDATA #REQUIRED><!ELEMENT ActionMaintenanceSummary (ObjectChange* ) >
+<!ATTLIST ActionMaintenanceSummary Action CDATA #REQUIRED Objects CDATA #REQUIRED Updated CDATA #REQUIRED LinesTotal CDATA #REQUIRED Added CDATA #REQUIRED LinesUpdated CDATA #REQUIRED>
+
+<!ELEMENT ObjectChange  (Hierarchy, PropertyChangeList* ) >
+<!ATTLIST ObjectChange Operation CDATA #IMPLIED OriginalRepository CDATA #IMPLIED>
+
+<!ELEMENT PropertyChangeList (PropertyDef) >
+
+<!ELEMENT PropertyDef (OriginalValue, NewValue) >
+<!ATTLIST PropertyDef PropName CDATA #REQUIRED OriginRegularExpression (True|False) "False" NewRegularExpression (True|False) "False" >
+
+<!ELEMENT OriginalValue ( #PCDATA )>
+
+<!ELEMENT NewValue ( #PCDATA )>
+
+<!ELEMENT Hierarchy  (ObjectName, Hierarchy*) >
+<!ATTLIST Hierarchy MicClass CDATA #REQUIRED>
+
+<!ELEMENT ObjectName  ( #PCDATA ) >
+
+<!ELEMENT Step (Obj,Details,Time,(Step|HtmlStep|Doc)*,NodeArgs) >
+<!ATTLIST Step rID ID #REQUIRED retval CDATA #IMPLIED>
+
+<!ELEMENT HtmlStep (HTML,(Step|HtmlStep|Doc)*,NodeArgs) >
+<!ATTLIST HtmlStep rID ID #REQUIRED >
+
+<!ELEMENT Obj ( #PCDATA ) >
+<!ATTLIST Obj plainTxt (False|True) "True">
+
+<!ELEMENT Details ( #PCDATA ) >
+<!ATTLIST Details plainTxt (False|True) "True">
+
+<!ELEMENT Time ( #PCDATA ) >
+
+<!ELEMENT HTML ( #PCDATA ) >
+
+<!ELEMENT Disp ( #PCDATA ) >
+
+<!ELEMENT NodeArgs (Disp,TopPane?,BtmPane?)>
+<!ATTLIST NodeArgs eType CDATA #REQUIRED icon CDATA #REQUIRED nRep CDATA #REQUIRED filter (False|True) "True">
+<!ATTLIST NodeArgs status (Passed|Failed|Done|Warning|Information) "Done">
+<!ATTLIST NodeArgs iconSel CDATA #IMPLIED nType CDATA #IMPLIED MovieMarker CDATA "">
+
+<!ELEMENT TopPane (Path)>
+
+<!ELEMENT BtmPane ( (Path|WR)?,ASHilite?)>
+<!ATTLIST BtmPane vType CDATA "HTML">
+
+<!ELEMENT Path ( #PCDATA ) >
+
+<!ELEMENT ASHilite ( #PCDATA ) >
+
+<!ELEMENT WR ( #PCDATA ) >
+
+<!ELEMENT DT (NodeArgs) >
+<!ATTLIST DT rID ID #REQUIRED>
+
+<!ELEMENT Summary (Param*)>
+<!ATTLIST Summary sTime CDATA #IMPLIED eTime CDATA #IMPLIED passed CDATA #IMPLIED failed CDATA #IMPLIED warnings CDATA #IMPLIED retval CDATA #IMPLIED stopped (False|True) "False" >
+
+<!ELEMENT Param (ParamName,ParamVal)+ >
+<!ATTLIST Param paramInOut (In|Out) "In">
+
+<!ELEMENT ParamName ( #PCDATA ) >
+
+<!ELEMENT ParamVal ( #PCDATA ) >
+
+]
+>
+<Report ver="2.0" tmZone="China Standard Time">
+<General productName="QuickTest Professional" productVer="9.5" os="Windows XP" host="D3VGFQ2X"><DocLocation><![CDATA[D:\chenjin\qtp\Login]]></DocLocation></General>
+<Doc rID="T1"   productName= "QuickTest Professional"  >
+<DName><![CDATA[Login]]></DName>
+<Res><![CDATA[qtp_log20120409162557]]></Res>
+<DT rID="T2">
+<NodeArgs eType="Table" icon="2" nRep="5" filter="False" >
+<Disp><![CDATA[Run-Time Data Table]]></Disp>
+<BtmPane vType="Table">
+<Path><![CDATA[Default.xls]]></Path>
+</BtmPane>
+</NodeArgs>
+</DT>
+<Step rID="T3">
+<Obj plainTxt="False" ><![CDATA[AlwaysValidateCertificate]]></Obj>
+<Details plainTxt="False" ><![CDATA[<SPAN class=text><div align=left><b><u>Scenario</u>:</b> AlwaysValidateCertificate<br><b><u>Defined in</u>:</b> SiteMan\SitemMan_Recover.qrs<br><b><u>Loading failed with error</u>:</b> ( 80030003 )</div></SPAN>]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:18]]></Time>
+<NodeArgs eType="Replay" icon="3" nRep="6" status="Warning" nType="Recovery" >
+<Disp><![CDATA[AlwaysValidateCertificate]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T4">
+<Obj plainTxt="False" ><![CDATA[CannotReconnect_Exit]]></Obj>
+<Details plainTxt="False" ><![CDATA[<SPAN class=text><div align=left><b><u>Scenario</u>:</b> CannotReconnect_Exit<br><b><u>Defined in</u>:</b> SiteMan\SitemMan_Recover.qrs<br><b><u>Loading failed with error</u>:</b> ( 80030003 )</div></SPAN>]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:18]]></Time>
+<NodeArgs eType="Replay" icon="3" nRep="7" status="Warning" nType="Recovery" >
+<Disp><![CDATA[CannotReconnect_Exit]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T5">
+<Obj plainTxt="False" ><![CDATA[Continue_Continue]]></Obj>
+<Details plainTxt="False" ><![CDATA[<SPAN class=text><div align=left><b><u>Scenario</u>:</b> Continue_Continue<br><b><u>Defined in</u>:</b> SiteMan\SitemMan_Recover.qrs<br><b><u>Loading failed with error</u>:</b> ( 80030003 )</div></SPAN>]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:18]]></Time>
+<NodeArgs eType="Replay" icon="3" nRep="8" status="Warning" nType="Recovery" >
+<Disp><![CDATA[Continue_Continue]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T6">
+<Obj plainTxt="False" ><![CDATA[SetMode]]></Obj>
+<Details plainTxt="False" ><![CDATA[<SPAN class=text><div align=left><b><u>Scenario</u>:</b> SetMode<br><b><u>Defined in</u>:</b> SiteMan\SitemMan_Recover.qrs<br><b><u>Loading failed with error</u>:</b> ( 80030003 )</div></SPAN>]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:18]]></Time>
+<NodeArgs eType="Replay" icon="3" nRep="9" status="Warning" nType="Recovery" >
+<Disp><![CDATA[SetMode]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T7">
+<Obj plainTxt="False" ><![CDATA[CommissioningIntroductionUnsupportedModules]]></Obj>
+<Details plainTxt="False" ><![CDATA[<SPAN class=text><div align=left><b><u>Scenario</u>:</b> CommissioningIntroductionUnsupportedModules<br><b><u>Defined in</u>:</b> SiteMan\SitemMan_Recover.qrs<br><b><u>Loading failed with error</u>:</b> ( 80030003 )</div></SPAN>]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:18]]></Time>
+<NodeArgs eType="Replay" icon="3" nRep="10" status="Warning" nType="Recovery" >
+<Disp><![CDATA[CommissioningIntroductionUnsupportedModules]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T8">
+<Obj plainTxt="False" ><![CDATA[Connect_CannotReconnectToLTEBTS]]></Obj>
+<Details plainTxt="False" ><![CDATA[<SPAN class=text><div align=left><b><u>Scenario</u>:</b> Connect_CannotReconnectToLTEBTS<br><b><u>Defined in</u>:</b> SiteMan\SitemMan_Recover.qrs<br><b><u>Loading failed with error</u>:</b> ( 80030003 )</div></SPAN>]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:18]]></Time>
+<NodeArgs eType="Replay" icon="3" nRep="11" status="Warning" nType="Recovery" >
+<Disp><![CDATA[Connect_CannotReconnectToLTEBTS]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T9">
+<Obj plainTxt="False" ><![CDATA[Connect_UnexpectedErrorInConnectionToBTS]]></Obj>
+<Details plainTxt="False" ><![CDATA[<SPAN class=text><div align=left><b><u>Scenario</u>:</b> Connect_UnexpectedErrorInConnectionToBTS<br><b><u>Defined in</u>:</b> SiteMan\SitemMan_Recover.qrs<br><b><u>Loading failed with error</u>:</b> ( 80030003 )</div></SPAN>]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:18]]></Time>
+<NodeArgs eType="Replay" icon="3" nRep="12" status="Warning" nType="Recovery" >
+<Disp><![CDATA[Connect_UnexpectedErrorInConnectionToBTS]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T10">
+<Obj plainTxt="False" ><![CDATA[Connect_UpdateRecommended]]></Obj>
+<Details plainTxt="False" ><![CDATA[<SPAN class=text><div align=left><b><u>Scenario</u>:</b> Connect_UpdateRecommended<br><b><u>Defined in</u>:</b> SiteMan\SitemMan_Recover.qrs<br><b><u>Loading failed with error</u>:</b> ( 80030003 )</div></SPAN>]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:18]]></Time>
+<NodeArgs eType="Replay" icon="3" nRep="13" status="Warning" nType="Recovery" >
+<Disp><![CDATA[Connect_UpdateRecommended]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T11">
+<Obj plainTxt="False" ><![CDATA[UpdateSWtoBTSSite_SWUpdateCompleted]]></Obj>
+<Details plainTxt="False" ><![CDATA[<SPAN class=text><div align=left><b><u>Scenario</u>:</b> UpdateSWtoBTSSite_SWUpdateCompleted<br><b><u>Defined in</u>:</b> SiteMan\SitemMan_Recover.qrs<br><b><u>Loading failed with error</u>:</b> ( 80030003 )</div></SPAN>]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:18]]></Time>
+<NodeArgs eType="Replay" icon="3" nRep="14" status="Warning" nType="Recovery" >
+<Disp><![CDATA[UpdateSWtoBTSSite_SWUpdateCompleted]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T12">
+<Obj plainTxt="False" ><![CDATA[UpdateSWtoBTSSite_SWUpdateInProgress]]></Obj>
+<Details plainTxt="False" ><![CDATA[<SPAN class=text><div align=left><b><u>Scenario</u>:</b> UpdateSWtoBTSSite_SWUpdateInProgress<br><b><u>Defined in</u>:</b> SiteMan\SitemMan_Recover.qrs<br><b><u>Loading failed with error</u>:</b> ( 80030003 )</div></SPAN>]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:18]]></Time>
+<NodeArgs eType="Replay" icon="3" nRep="15" status="Warning" nType="Recovery" >
+<Disp><![CDATA[UpdateSWtoBTSSite_SWUpdateInProgress]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T13">
+<Obj plainTxt="False" ><![CDATA[Commisioning_FYGAFound]]></Obj>
+<Details plainTxt="False" ><![CDATA[<SPAN class=text><div align=left><b><u>Scenario</u>:</b> Commisioning_FYGAFound<br><b><u>Defined in</u>:</b> SiteMan\SitemMan_Recover.qrs<br><b><u>Loading failed with error</u>:</b> ( 80030003 )</div></SPAN>]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:18]]></Time>
+<NodeArgs eType="Replay" icon="3" nRep="16" status="Warning" nType="Recovery" >
+<Disp><![CDATA[Commisioning_FYGAFound]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T14">
+<Obj plainTxt="False" ><![CDATA[Commisioning_FYGALost]]></Obj>
+<Details plainTxt="False" ><![CDATA[<SPAN class=text><div align=left><b><u>Scenario</u>:</b> Commisioning_FYGALost<br><b><u>Defined in</u>:</b> SiteMan\SitemMan_Recover.qrs<br><b><u>Loading failed with error</u>:</b> ( 80030003 )</div></SPAN>]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:18]]></Time>
+<NodeArgs eType="Replay" icon="3" nRep="17" status="Warning" nType="Recovery" >
+<Disp><![CDATA[Commisioning_FYGALost]]></Disp>
+</NodeArgs>
+</Step>
+<DIter rID="T15" iterID="1" >
+<Action rID="T16">
+<AName><![CDATA[Action1]]></AName>
+<Step rID="T17">
+<Obj plainTxt="False" ><![CDATA[[ JavaCheckBox ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:19]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="23" >
+<Disp><![CDATA[[ JavaCheckBox ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T18">
+<Obj plainTxt="False" ><![CDATA[Login_BTSSiteManager]]></Obj>
+<Details plainTxt="False" ><![CDATA[JavaWindow]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:19]]></Time>
+<Step rID="T19">
+<Obj plainTxt="False" ><![CDATA[Connect.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:19]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="27" >
+<Disp><![CDATA[Connect.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T20">
+<Obj plainTxt="False" ><![CDATA[Login_BTSSiteManager.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:23]]></Time>
+<NodeArgs eType="Replay" icon="7" nRep="29" >
+<Disp><![CDATA[Login_BTSSiteManager.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T21">
+<Obj plainTxt="False" ><![CDATA[Login_BTSSiteManager.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:24]]></Time>
+<NodeArgs eType="Replay" icon="7" nRep="31" >
+<Disp><![CDATA[Login_BTSSiteManager.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T22">
+<Obj plainTxt="False" ><![CDATA[Login_BTSSiteManager.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:25]]></Time>
+<NodeArgs eType="Replay" icon="7" nRep="33" >
+<Disp><![CDATA[Login_BTSSiteManager.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T23">
+<Obj plainTxt="False" ><![CDATA[Login_BTSSiteManager.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:26]]></Time>
+<NodeArgs eType="Replay" icon="7" nRep="35" >
+<Disp><![CDATA[Login_BTSSiteManager.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T24">
+<Obj plainTxt="False" ><![CDATA[Login_BTSSiteManager.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:27]]></Time>
+<NodeArgs eType="Replay" icon="7" nRep="36" >
+<Disp><![CDATA[Login_BTSSiteManager.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="7" nRep="26" >
+<Disp><![CDATA[Login_BTSSiteManager]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T25">
+<Obj ><![CDATA[Save Image]]></Obj>
+<Details ><![CDATA[d:\chenjin\run\logs\Copy Of Qtp Test\Test Qtp_162556\2012-04-09_16-26-27.bmp]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:27]]></Time>
+<NodeArgs eType="User" icon="9" nRep="37" status="Passed" >
+<Disp><![CDATA[Save Image]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T26">
+<Obj plainTxt="False" ><![CDATA[BTSSiteManager]]></Obj>
+<Details plainTxt="False" ><![CDATA[JavaWindow]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:27]]></Time>
+<Step rID="T27">
+<Obj plainTxt="False" ><![CDATA[[ JavaCheckBox ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:27]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="40" >
+<Disp><![CDATA[[ JavaCheckBox ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="7" nRep="39" >
+<Disp><![CDATA[BTSSiteManager]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T28">
+<Obj plainTxt="False" ><![CDATA[Login_BTSSiteManager]]></Obj>
+<Details plainTxt="False" ><![CDATA[JavaWindow]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:27]]></Time>
+<Step rID="T29">
+<Obj plainTxt="False" ><![CDATA[Login_BTSSiteManager.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:27]]></Time>
+<NodeArgs eType="Replay" icon="7" nRep="42" >
+<Disp><![CDATA[Login_BTSSiteManager.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T30">
+<Obj plainTxt="False" ><![CDATA[[ User name:(st) ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:27]]></Time>
+<NodeArgs eType="Replay" icon="10" nRep="43" >
+<Disp><![CDATA[[ User name:(st) ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T31">
+<Obj plainTxt="False" ><![CDATA[[ Password:(st) ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:27]]></Time>
+<NodeArgs eType="Replay" icon="10" nRep="44" >
+<Disp><![CDATA[[ Password:(st) ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T32">
+<Obj plainTxt="False" ><![CDATA[IP address:.Select]]></Obj>
+<Details plainTxt="False" ><![CDATA["Local"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:28]]></Time>
+<NodeArgs eType="Replay" icon="11" nRep="46" >
+<Disp><![CDATA[IP address:.Select]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T33">
+<Obj plainTxt="False" ><![CDATA[UserName.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["Nemuadm=in"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:28]]></Time>
+<NodeArgs eType="Replay" icon="12" nRep="48" >
+<Disp><![CDATA[UserName.Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T34">
+<Obj plainTxt="False" ><![CDATA[Password.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["nemuuser"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:28]]></Time>
+<NodeArgs eType="Replay" icon="12" nRep="50" >
+<Disp><![CDATA[Password.Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T35">
+<Obj plainTxt="False" ><![CDATA[Connect.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA["LEFT"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:28]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="52" >
+<Disp><![CDATA[Connect.Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T36">
+<Obj plainTxt="False" ><![CDATA[[ JavaButton ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:29]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="54" >
+<Disp><![CDATA[[ JavaButton ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="7" nRep="41" >
+<Disp><![CDATA[Login_BTSSiteManager]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T37">
+<Obj plainTxt="False" ><![CDATA[BTSSiteManager]]></Obj>
+<Details plainTxt="False" ><![CDATA[JavaWindow]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:29]]></Time>
+<Step rID="T38">
+<Obj plainTxt="False" ><![CDATA[Connect]]></Obj>
+<Details plainTxt="False" ><![CDATA[JavaDialog]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:29]]></Time>
+<Step rID="T39">
+<Obj plainTxt="False" ><![CDATA[Connect.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:29]]></Time>
+<NodeArgs eType="Replay" icon="13" nRep="58" >
+<Disp><![CDATA[Connect.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="13" nRep="57" >
+<Disp><![CDATA[Connect]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T40">
+<Obj plainTxt="False" ><![CDATA[[ JavaCheckBox ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:29]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="60" >
+<Disp><![CDATA[[ JavaCheckBox ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T41">
+<Obj plainTxt="False" ><![CDATA[[ JavaButton ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:30]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="62" >
+<Disp><![CDATA[[ JavaButton ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T42">
+<Obj plainTxt="False" ><![CDATA[Connect]]></Obj>
+<Details plainTxt="False" ><![CDATA[JavaDialog]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:30]]></Time>
+<Step rID="T43">
+<Obj plainTxt="False" ><![CDATA[Connect.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:30]]></Time>
+<NodeArgs eType="Replay" icon="13" nRep="65" >
+<Disp><![CDATA[Connect.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="13" nRep="64" >
+<Disp><![CDATA[Connect]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T44">
+<Obj plainTxt="False" ><![CDATA[[ JavaCheckBox ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:30]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="67" >
+<Disp><![CDATA[[ JavaCheckBox ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T45">
+<Obj plainTxt="False" ><![CDATA[[ JavaButton ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:31]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="69" >
+<Disp><![CDATA[[ JavaButton ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T46">
+<Obj plainTxt="False" ><![CDATA[Connect]]></Obj>
+<Details plainTxt="False" ><![CDATA[JavaDialog]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:31]]></Time>
+<Step rID="T47">
+<Obj plainTxt="False" ><![CDATA[Connect.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:31]]></Time>
+<NodeArgs eType="Replay" icon="13" nRep="72" >
+<Disp><![CDATA[Connect.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="13" nRep="71" >
+<Disp><![CDATA[Connect]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T48">
+<Obj plainTxt="False" ><![CDATA[[ JavaCheckBox ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:31]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="74" >
+<Disp><![CDATA[[ JavaCheckBox ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T49">
+<Obj plainTxt="False" ><![CDATA[[ JavaButton ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:32]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="76" >
+<Disp><![CDATA[[ JavaButton ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T50">
+<Obj plainTxt="False" ><![CDATA[Connect]]></Obj>
+<Details plainTxt="False" ><![CDATA[JavaDialog]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:32]]></Time>
+<Step rID="T51">
+<Obj plainTxt="False" ><![CDATA[Connect.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:32]]></Time>
+<NodeArgs eType="Replay" icon="13" nRep="79" >
+<Disp><![CDATA[Connect.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="13" nRep="78" >
+<Disp><![CDATA[Connect]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T52">
+<Obj plainTxt="False" ><![CDATA[[ JavaCheckBox ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:32]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="81" >
+<Disp><![CDATA[[ JavaCheckBox ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T53">
+<Obj plainTxt="False" ><![CDATA[[ JavaButton ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:33]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="83" >
+<Disp><![CDATA[[ JavaButton ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T54">
+<Obj plainTxt="False" ><![CDATA[Connect]]></Obj>
+<Details plainTxt="False" ><![CDATA[JavaDialog]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:33]]></Time>
+<Step rID="T55">
+<Obj plainTxt="False" ><![CDATA[Connect.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:33]]></Time>
+<NodeArgs eType="Replay" icon="13" nRep="86" >
+<Disp><![CDATA[Connect.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="13" nRep="85" >
+<Disp><![CDATA[Connect]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T56">
+<Obj plainTxt="False" ><![CDATA[[ JavaCheckBox ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:33]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="88" >
+<Disp><![CDATA[[ JavaCheckBox ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T57">
+<Obj plainTxt="False" ><![CDATA[[ JavaButton ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:34]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="90" >
+<Disp><![CDATA[[ JavaButton ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T58">
+<Obj plainTxt="False" ><![CDATA[Connect]]></Obj>
+<Details plainTxt="False" ><![CDATA[JavaDialog]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:34]]></Time>
+<Step rID="T59">
+<Obj plainTxt="False" ><![CDATA[Connect.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:34]]></Time>
+<NodeArgs eType="Replay" icon="13" nRep="93" >
+<Disp><![CDATA[Connect.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="13" nRep="92" >
+<Disp><![CDATA[Connect]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T60">
+<Obj plainTxt="False" ><![CDATA[[ JavaCheckBox ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:34]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="95" >
+<Disp><![CDATA[[ JavaCheckBox ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T61">
+<Obj plainTxt="False" ><![CDATA[[ JavaButton ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:35]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="97" >
+<Disp><![CDATA[[ JavaButton ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T62">
+<Obj plainTxt="False" ><![CDATA[Connect]]></Obj>
+<Details plainTxt="False" ><![CDATA[JavaDialog]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:35]]></Time>
+<Step rID="T63">
+<Obj plainTxt="False" ><![CDATA[Connect.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:36]]></Time>
+<NodeArgs eType="Replay" icon="13" nRep="100" >
+<Disp><![CDATA[Connect.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="13" nRep="99" >
+<Disp><![CDATA[Connect]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T64">
+<Obj plainTxt="False" ><![CDATA[[ JavaCheckBox ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:36]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="102" >
+<Disp><![CDATA[[ JavaCheckBox ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T65">
+<Obj plainTxt="False" ><![CDATA[[ JavaButton ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:37]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="104" >
+<Disp><![CDATA[[ JavaButton ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T66">
+<Obj plainTxt="False" ><![CDATA[Connect]]></Obj>
+<Details plainTxt="False" ><![CDATA[JavaDialog]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:37]]></Time>
+<Step rID="T67">
+<Obj plainTxt="False" ><![CDATA[Connect.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:37]]></Time>
+<NodeArgs eType="Replay" icon="13" nRep="107" >
+<Disp><![CDATA[Connect.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="13" nRep="106" >
+<Disp><![CDATA[Connect]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T68">
+<Obj plainTxt="False" ><![CDATA[[ JavaCheckBox ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:37]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="109" >
+<Disp><![CDATA[[ JavaCheckBox ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T69">
+<Obj plainTxt="False" ><![CDATA[[ JavaButton ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:38]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="111" >
+<Disp><![CDATA[[ JavaButton ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T70">
+<Obj plainTxt="False" ><![CDATA[Connect]]></Obj>
+<Details plainTxt="False" ><![CDATA[JavaDialog]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:38]]></Time>
+<Step rID="T71">
+<Obj plainTxt="False" ><![CDATA[Connect.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:38]]></Time>
+<NodeArgs eType="Replay" icon="13" nRep="114" >
+<Disp><![CDATA[Connect.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="13" nRep="113" >
+<Disp><![CDATA[Connect]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T72">
+<Obj plainTxt="False" ><![CDATA[[ JavaCheckBox ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:38]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="116" >
+<Disp><![CDATA[[ JavaCheckBox ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T73">
+<Obj plainTxt="False" ><![CDATA[[ JavaButton ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:39]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="118" >
+<Disp><![CDATA[[ JavaButton ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T74">
+<Obj plainTxt="False" ><![CDATA[Connect]]></Obj>
+<Details plainTxt="False" ><![CDATA[JavaDialog]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:39]]></Time>
+<Step rID="T75">
+<Obj plainTxt="False" ><![CDATA[Connect.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:39]]></Time>
+<NodeArgs eType="Replay" icon="13" nRep="121" >
+<Disp><![CDATA[Connect.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="13" nRep="120" >
+<Disp><![CDATA[Connect]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T76">
+<Obj plainTxt="False" ><![CDATA[[ JavaCheckBox ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:39]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="123" >
+<Disp><![CDATA[[ JavaCheckBox ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T77">
+<Obj plainTxt="False" ><![CDATA[[ JavaButton ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:40]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="125" >
+<Disp><![CDATA[[ JavaButton ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T78">
+<Obj plainTxt="False" ><![CDATA[Connect]]></Obj>
+<Details plainTxt="False" ><![CDATA[JavaDialog]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:40]]></Time>
+<Step rID="T79">
+<Obj plainTxt="False" ><![CDATA[Connect.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:40]]></Time>
+<NodeArgs eType="Replay" icon="13" nRep="128" >
+<Disp><![CDATA[Connect.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="13" nRep="127" >
+<Disp><![CDATA[Connect]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T80">
+<Obj plainTxt="False" ><![CDATA[[ JavaCheckBox ].Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:40]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="130" >
+<Disp><![CDATA[[ JavaCheckBox ].Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="7" nRep="56" >
+<Disp><![CDATA[BTSSiteManager]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T81">
+<Obj ><![CDATA[ SaveImage]]></Obj>
+<Details ><![CDATA[ to d:\chenjin\run\logs\Copy Of Qtp Test\Test Qtp_162556\2012-04-09_16-26-40.bmp]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:40]]></Time>
+<NodeArgs eType="User" icon="9" nRep="131" status="Failed" >
+<Disp><![CDATA[ SaveImage]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T82">
+<Obj ><![CDATA[Login_BTSSiteManager]]></Obj>
+<Details ><![CDATA[ Login BTS Site Manager fail.No checkbox BTSHardware in window. Time out 60 seconds]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:40]]></Time>
+<NodeArgs eType="User" icon="9" nRep="132" status="Failed" >
+<Disp><![CDATA[Login_BTSSiteManager]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T83" retval="1">
+<Obj plainTxt="False" ><![CDATA[Stop action replay]]></Obj>
+<Details plainTxt="False" ><![CDATA[Run stopped by user.]]></Details>
+<Time><![CDATA[4/9/2012 - 16:26:40]]></Time>
+<NodeArgs eType="General" icon="14" nRep="133" >
+<Disp><![CDATA[Stop action replay]]></Disp>
+</NodeArgs>
+</Step>
+<Summary sTime="4/9/2012 - 16:26:19" eTime="4/9/2012 - 16:26:40" passed="1" failed="2" warnings="0" retval="1" ><Param ><ParamName><![CDATA[IPAddress]]></ParamName><ParamVal><![CDATA[Local]]></ParamVal>
+</Param>
+<Param ><ParamName><![CDATA[UserName]]></ParamName><ParamVal><![CDATA[Nemuadm=in]]></ParamVal>
+</Param>
+<Param ><ParamName><![CDATA[Password]]></ParamName><ParamVal><![CDATA[nemuuser]]></ParamVal>
+</Param>
+<Param ><ParamName><![CDATA[LogPath]]></ParamName><ParamVal><![CDATA[d:\chenjin\run\logs\Copy Of Qtp Test\Test Qtp_162556\]]></ParamVal>
+</Param>
+</Summary>
+<NodeArgs eType="StartAction" icon="5" nRep="20" status="Failed" >
+<Disp><![CDATA[Action1 Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="4" nRep="19" status="Failed" >
+<Disp><![CDATA[Login Iteration 1 (Row 1)]]></Disp>
+</NodeArgs>
+</DIter>
+<Summary sTime="4/9/2012 - 16:26:18" eTime="4/9/2012 - 16:26:40" passed="1" failed="2" warnings="12" ><Param ><ParamName><![CDATA[IPAddress]]></ParamName><ParamVal><![CDATA[Local]]></ParamVal>
+</Param>
+<Param ><ParamName><![CDATA[UserName]]></ParamName><ParamVal><![CDATA[Nemuadm=in]]></ParamVal>
+</Param>
+<Param ><ParamName><![CDATA[Password]]></ParamName><ParamVal><![CDATA[nemuuser]]></ParamVal>
+</Param>
+<Param ><ParamName><![CDATA[LogPath]]></ParamName><ParamVal><![CDATA[d:\chenjin\run\logs\Copy Of Qtp Test\Test Qtp_162556\]]></ParamVal>
+</Param>
+</Summary>
+<NodeArgs eType="StartTest" icon="1" nRep="4" status="Failed" >
+<Disp><![CDATA[Test Login Summary]]></Disp>
+</NodeArgs>
+</Doc>
+</Report>

@@ -1,0 +1,84 @@
+PARAM	str,$LIBRARY_PATH,"C:\Users\AHTI\TDLTE_DSPi_Library\"
+PARAM	merge,$HW_CONFIG_TEST_PATH,$LIBRARY_PATH,"Tests\COMMON\FLEXI_HW_CONFIG\"
+
+********************************************************************************
+********************************************************************************
+
+PARAM	str,$RM_IP_ADDR1,"192.168.255.69"
+PARAM	str,$RM_IP_ADDR2,"192.168.255.73"
+PARAM	str,$RM_IP_ADDR3,"192.168.255.77"
+* Possible values of the field "to" in SOAP messages.
+PARAM	str,$RF_MODULE1,"FR1/LTX"
+PARAM	str,$RF_MODULE2,"FR2/LTX"
+PARAM	str,$RF_MODULE3,"FR3/LTX"
+* SOAP receive port in RF modules (0x332C in hexadecimal, 13100 in decimal)
+PARAM	hex,$soapSendPort,332C
+PARAM	str,$LTE_Mode,"TDD"
+PARAM	hex,$MUKSU2_SYS_IN_USE,1
+
+
+* Muksu Params 10M
+PARAM	hex,$Muksu_DLPi_10M,3FE87D
+PARAM	hex,$Muksu_ULPi_10M,12AE
+
+* Muksu Params 20M
+PARAM	hex,$Muksu_DLPi_20M,3FE87D
+PARAM	hex,$Muksu_ULPi_20M,3FF4BE
+
+
+* params for RRH specific
+*Sector 1
+PARAM	str,$delta1,"5262"
+*Sector 2
+PARAM	str,$delta2,"5262"
+*Sector 3
+PARAM	str,$delta3,"5262"
+
+* RP3 node address
+* RF 1
+PARAM	hex,$antennaNodeAddress_1,121    //RF1, antenna 1, DL
+PARAM	hex,$antennaNodeAddress_1ul,121  //RF1, antenna 1, UL
+PARAM	hex,$antennaNodeAddress_2,122    //RF1, antenna 2, DL
+PARAM	hex,$antennaNodeAddress_2ul,122  //RF1, antenna 2, UL
+* RF 2
+PARAM	hex,$antennaNodeAddress_3,141    //RF2, antenna 1, DL
+PARAM	hex,$antennaNodeAddress_3ul,141  //RF2, antenna 1, UL
+PARAM	hex,$antennaNodeAddress_4,142    //RF2, antenna 2, DL
+PARAM	hex,$antennaNodeAddress_4ul,142  //RF2, antenna 2, UL
+* RF 3
+PARAM	hex,$antennaNodeAddress_5,1E1    //RF3, antenna 1, DL
+PARAM	hex,$antennaNodeAddress_5ul,1E1  //RF3, antenna 1, UL
+PARAM	hex,$antennaNodeAddress_6,1E2    //RF3, antenna 2, DL
+PARAM	hex,$antennaNodeAddress_6ul,1E2  //RF3, antenna 2, UL
+
+********************************************************************************
+********************************************************************************
+
+PARAM	hex,$dlMimoMode,1	//0=SISO, 1=TX diversity, 2=MIMO
+
+PARAM	hex,$SECTOR1_IN_USE,1		//If(FSP3 used)1, else 0
+PARAM	hex,$SECTOR2_IN_USE,0		//If(FSP2 used)1, else 0
+PARAM	hex,$SECTOR3_IN_USE,0		//If(FSP1 used)1, else 0
+
+PARAM	str,$RMVariant1,"FYRN"		//RM1 type, "FYRN" or "FRGH" or "RPT07"
+PARAM	str,$RMVariant2,"FYRN"		//RM2 type, "FYRN" or "FRGH" or "RPT07"
+PARAM	str,$RMVariant3,"FYRN"		//RM3 type, "FYRN" or "FRGH" or "RPT07"
+
+PARAM	str,$CHANNEL_BANDWIDTH_1,"10"	//Channel bandwidth in sector 1
+PARAM	str,$CHANNEL_BANDWIDTH_2,"10"	//Channel bandwidth in sector 2
+PARAM	str,$CHANNEL_BANDWIDTH_3,"10"	//Channel bandwidth in sector 3
+
+PARAM	str,$RMcontrol1,"OSE_shell"	//RRH control in sector 1, SOAP or OSE_shell
+PARAM	str,$RMcontrol2,"OSE_shell"	//RRH control in sector 2, SOAP or OSE_shell
+PARAM	str,$RMcontrol3,"OSE_shell"	//RRH control in sector 3, SOAP or OSE_shell
+
+PARAM	str,$RM1_TX_Frequency,"2.35"	//RRH TX freq in sector 1, in GHz
+PARAM	str,$RM2_TX_Frequency,"2.35"	//RRH TX freq in sector 2, in GHz
+PARAM	str,$RM3_TX_Frequency,"2.35"	//RRH TX freq in sector 3, in GHz
+
+PARAM	str,$ptxMax1,"25"		//Max. TX power in sector 1, in dBm
+PARAM	str,$ptxMax2,"25"		//Max. TX power in sector 2, in dBm
+PARAM	str,$ptxMax3,"25"		//Max. TX power in sector 3, in dBm
+
+
+END	*

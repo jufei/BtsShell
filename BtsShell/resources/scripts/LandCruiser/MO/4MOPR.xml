@@ -1,0 +1,29 @@
+<managedObject class="MOPR" distName="MRBTS-1852/LNBTS-1852/MOPR-1" operation="create" version="LNT4.0">
+<p name="idleLBPercentageOfUes">100</p>
+<list name="freqLayListLte">
+<p>1500</p>
+<p>38700</p>
+<p>38100</p>
+</list>
+</managedObject>
+<managedObject class="MOPR" distName="MRBTS-1852/LNBTS-1852/MOPR-2" operation="create" version="LNT4.0">
+<p name="idleLBPercentageOfUes">100</p>
+<list name="freqLayListLte">
+<p>1500</p>
+<p>38100</p>
+</list>
+</managedObject>
+<managedObject class="MOPR" distName="MRBTS-1852/LNBTS-1852/MOPR-3" operation="create" version="LNT4.0">
+<p name="idleLBPercentageOfUes">100</p>
+<list name="freqLayListLte">
+<p>1500</p>
+<p>38700</p>
+</list>
+</managedObject>
+<managedObject class="MOPR" distName="MRBTS-1852/LNBTS-1852/MOPR-4" operation="create" version="LNT4.0">
+<p name="idleLBPercentageOfUes">100</p>
+<list name="freqLayListLte">
+<p>38700</p>
+<p>38100</p>
+</list>
+</managedObject>

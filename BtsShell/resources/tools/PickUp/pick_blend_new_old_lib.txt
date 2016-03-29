@@ -1,0 +1,1 @@
+python "D:\SVN\src_RL55\BtsShell\resources\tools\PickUp\pick.py" -r "D:\\test\a" -p "D:\test\SuiteMapping_pickup.csv" -b "D:\test\Ford.py" -d "D:\test\run" -t "d:\\test\Ford.py" --new_btsfile "d:\test\new.py" --new_target "d:\test\new.py"

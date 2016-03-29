@@ -1,0 +1,2305 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+html {
+  font-family: Arial,Helvetica,sans-serif;
+  background-color: white;
+  color: black;
+}
+table {
+  border-collapse: collapse;
+  empty-cells: show;
+  margin: 1em 0em;
+  border: 1px solid black;
+}
+th, td {
+  border: 1px solid black;
+  padding: 0.1em 0.2em;
+  height: 1.5em;
+  width: 12em;
+}
+td.colspan4, th.colspan4 {
+    width: 48em;
+}
+td.colspan3, th.colspan3 {
+    width: 36em;
+}
+td.colspan2, th.colspan2 {
+    width: 24em;
+}
+th {
+  background-color: rgb(192, 192, 192);
+  color: black;
+  height: 1.7em;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+td.name {
+  background-color: rgb(240, 240, 240);
+  letter-spacing: 0.1em;
+}
+td.name, th.name {
+  width: 10em;
+}
+</style>
+<title>CellSetup resources</title>
+</head>
+<body>
+<h1>CellSetup resources</h1>
+<table border="1" id="setting">
+<tr>
+<th class="name" colspan="5">Setting</th>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>Collections</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>Telnet</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table border="1" id="variable">
+<tr>
+<th class="name" colspan="5">Variable</th>
+</tr>
+<tr>
+<td class="name">${Filezilla_remote_file}</td>
+<td>C:\\Program\\ Files\\FileZilla\\ Server\\FileZilla\\ Server.xml</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${Filezilla_local_file}</td>
+<td>C:\\FileZilla Server.xml</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">@{list_10M}</td>
+<td>chBw:10 MHz</td>
+<td>iniPrbsUl:50</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">@{list_20M}</td>
+<td>chBw:20 MHz</td>
+<td>iniPrbsUl:100</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">@{list_TM1}</td>
+<td>numOfTxPorts:1</td>
+<td>syncSigTxMode:SingleTx</td>
+<td>dlMimoMode:SingleTX</td>
+<td>dlInterferenceSpatialMode:SingleTX</td>
+</tr>
+<tr>
+<td class="name">@{list_TM2}</td>
+<td>numOfTxPorts:2</td>
+<td>syncSigTxMode:TxDiv</td>
+<td>dlMimoMode:TXDiv</td>
+<td>dlInterferenceSpatialMode:TXDiv</td>
+</tr>
+<tr>
+<td class="name">@{list_TM3}</td>
+<td>numOfTxPorts:2</td>
+<td>syncSigTxMode:TxDiv</td>
+<td>dlMimoMode:Dynamic Open Loop MIMO</td>
+<td>dlInterferenceSpatialMode:TXDiv</td>
+</tr>
+<tr>
+<td class="name">@{list_TM4}</td>
+<td>numOfTxPorts:2</td>
+<td>syncSigTxMode:TxDiv</td>
+<td>dlMimoMode:Closed Loop Mimo</td>
+<td>dlInterferenceSpatialMode:TXDiv</td>
+</tr>
+<tr>
+<td class="name">@{list_TM7}</td>
+<td>numOfTxPorts:2</td>
+<td>syncSigTxMode:TxDiv</td>
+<td>dlMimoMode:Single Stream Beamforming</td>
+<td>dlInterferenceSpatialMode:TXDiv</td>
+</tr>
+<tr>
+<td class="name">@{list_TM8}</td>
+<td>numOfTxPorts:2</td>
+<td>syncSigTxMode:TxDiv</td>
+<td>dlMimoMode:Dual Stream Beamforming</td>
+<td>dlInterferenceSpatialMode:TXDiv</td>
+</tr>
+<tr>
+<td class="name">@{list_15}</td>
+<td>tddFrameConf:1</td>
+<td>tddSpecSubfConf:5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">@{list_17}</td>
+<td>tddFrameConf:1</td>
+<td>tddSpecSubfConf:7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">@{list_25}</td>
+<td>tddFrameConf:2</td>
+<td>tddSpecSubfConf:5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">@{list_27}</td>
+<td>tddFrameConf:2</td>
+<td>tddSpecSubfConf:7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table border="1" id="keyword">
+<tr>
+<th class="name" colspan="5">Keyword</th>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Create BTS Configuration List">Create BTS Configuration List</a></td>
+<td>[Arguments]</td>
+<td>${bandwidth mode frameconf}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td>This keyword return the specifical bts configuartion modify list. Support configuration as follow: bandwidth 10M and 20M, mode TM1, TM2, TM3, TM4, TM5, TM6, frameconf 15 25 17 27\n<br>
+\n<br>
+| Input Parameters \ | Man. | Description | \ \n<br>
+| ${bandwith mode frameconf} | Yes \ | see it's name \ |\n<br>
+\n<br>
+Return \n<br>
+| Configure List |\n<br>
+\n<br>
+Example\n<br>
+| ${Modify_list} | Create BTS Configuration List | 10M_TM1_15 |\n<br>
+</td>
+<td># Example: ${scf_modify_list}</td>
+<td>Create BTS Configuration List</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>#20M_TM1_15; 10M_TM2_27; 20M_TM7_25; etc...</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{tmp}=</td>
+<td>evaluate</td>
+<td>'${bandwidth mode frameconf}'.split('_')</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${mode dict}</td>
+<td>Create Dictionary</td>
+<td>'10M'</td>
+<td>${list_10M}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>'20M'</td>
+<td>${list_20M}</td>
+<td>'TM1'</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${list_TM1}</td>
+<td>'TM2'</td>
+<td>${list_TM2}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>'TM3'</td>
+<td>${list_TM3}</td>
+<td>'TM4'</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${list_TM4}</td>
+<td>'TM7'</td>
+<td>${list_TM7}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>'TM8'</td>
+<td>${list_TM8}</td>
+<td>'15'</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${list_15}</td>
+<td>'25'</td>
+<td>${list_25}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>'17'</td>
+<td>${list_17}</td>
+<td>'27'</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${list_27}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${ret_list}</td>
+<td>Create List</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>: FOR</td>
+<td>${mode}</td>
+<td>IN</td>
+<td>@{tmp}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td>${tmp}</td>
+<td>Get From Dictionary</td>
+<td>${mode dict}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td>...</td>
+<td>'${mode}'</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td>${ret_list}</td>
+<td>Combine Lists</td>
+<td>${ret_list}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td>...</td>
+<td>${tmp}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Return]</td>
+<td>${ret_list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Get Timestamp">Get Timestamp</a></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword return the timestamp format as: yyyymmddhhmmss\n<br>
+\n<br>
+\n<br>
+| Input Parameters \ | Man. | Description | \ \n<br>
+| No | No | No \ |\n<br>
+\n<br>
+Return \n<br>
+| current timstamp |\n<br>
+\n<br>
+Example\n<br>
+| ${timestamp} | Get Timestamp |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${time} =</td>
+<td>Get Time</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${timestamp} =</td>
+<td>Evaluate</td>
+<td>'${time}'.replace('-', '').replace(':', '').replace(' ', '')</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Return]</td>
+<td>${timestamp}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_L3 Call With TM500">L3 Call With TM500</a></td>
+<td>[Arguments]</td>
+<td>${configuration}</td>
+<td>${modified commands}=${EMPTY}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">1. Telnet to TM500 with port 5003, send commands to do UE attach and start PPPoE from TM500 control PC 2. Ping BTS control PC from TM500 control PC to test reachability\n<br>
+\n<br>
+| Input Parameters \ | Man. | Description | \ \n<br>
+| ${configuration} | Yes | The configuration of attach script, can be MIMO SISO |\n<br>
+| ${modified_command} | No | The command you need modified in you attach script |\n<br>
+Return \n<br>
+| No |\n<br>
+\n<br>
+Example\n<br>
+| L3 Call With TM500 | MIMO |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Initial Connection With TM500</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Connect To TM500 With NAS_MODE And Start Logging</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>UE Attach</td>
+<td>${configuration}</td>
+<td>${TM500_CONNECTION}</td>
+<td>${modified_commands}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>10 sec</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Test PPPoE Connection</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Select Logging and L3 Call With TM500">Select Logging and L3 Call With TM500</a></td>
+<td>[Arguments]</td>
+<td>${configuration}</td>
+<td>${modified commands}=${EMPTY}</td>
+<td>${log_types}=${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${number_of_ue}=0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">1. Telnet to TM500 with port 5003, send commands to do UE attach and start PPPoE from TM500 control PC 2, Select tm500 logging type 3. Ping BTS control PC from TM500 control PC to test reachability\n<br>
+\n<br>
+| Input Parameters \ | Man. | Description | \ \n<br>
+| ${configuration} | Yes | The configuration of attach script, can be MIMO SISO |\n<br>
+| ${modified_command} | No | The command you need modified in you attach script |\n<br>
+| ${log_types} | No | The log types you need collect from TM500, should be a list |\n<br>
+| ${number_of_ue} | No | The UE numbers |\n<br>
+Return \n<br>
+| No |\n<br>
+\n<br>
+Example\n<br>
+| Select Logging and L3 Call With TM500 | MIMO |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Initial Connection With TM500</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Connect To TM500 With NAS_MODE</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select TM500 Logging Types</td>
+<td>${log_types}</td>
+<td>${number_of_ue}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Tm500 Start Logging</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>UE Attach</td>
+<td>${configuration}</td>
+<td>${TM500_CONNECTION}</td>
+<td>${modified_commands}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>10 sec</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Test PPPoE Connection</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_L3 Call With TM500 Without Logging">L3 Call With TM500 Without Logging</a></td>
+<td>[Arguments]</td>
+<td>${configuration}</td>
+<td>${modified commands}=${EMPTY}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">1. Telnet to TM500 with port 5003, send commands to do UE attach and start PPPoE from TM500 control PC 2. Ping BTS control PC from TM500 control PC to test reachability\n<br>
+\n<br>
+| Input Parameters \ | Man. | Description | \ \n<br>
+| ${configuration} | Yes | The configuration of attach script, can be MIMO SISO |\n<br>
+| ${modified_command} | No | The command you need modified in you attach script |\n<br>
+\n<br>
+Return \n<br>
+| No |\n<br>
+\n<br>
+Example\n<br>
+| L3 Call With TM500 Without Logging | MIMO |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Initial Connection With TM500</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Connect To TM500 With NAS_MODE</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>UE Attach</td>
+<td>${configuration}</td>
+<td>${TM500_CONNECTION}</td>
+<td>${modified_commands}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>5 sec</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Test PPPoE Connection</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_L3 Call With TM500 SISO">L3 Call With TM500 SISO</a></td>
+<td>[Arguments]</td>
+<td>${configuration}=SISO</td>
+<td>${modified commands}=${EMPTY}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">L3 Call With TM500 SISO\n<br>
+\n<br>
+| Input Parameters \ | Man. | Description | \ \n<br>
+| ${configuration} | Yes | The configuration of attach script, can be MIMO SISO |\n<br>
+| ${modified_command} | No | The command you need modified in you attach script |\n<br>
+\n<br>
+Return \n<br>
+| No |\n<br>
+\n<br>
+Example\n<br>
+| L3 Call With TM500 SISO |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>L3 Call With TM500</td>
+<td>SISO</td>
+<td>${modified commands}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_L3 Call With TM500 MIMO">L3 Call With TM500 MIMO</a></td>
+<td>[Arguments]</td>
+<td>${configuration}=MIMO</td>
+<td>${modified commands}=${EMPTY}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">L3 Call With TM500 MIMO\n<br>
+\n<br>
+| Input Parameters \ | Man. | Description | \ \n<br>
+| ${configuration} | Yes | The configuration of attach script, can be MIMO SISO |\n<br>
+| ${modified_command} | No | The command you need modified in you attach script |\n<br>
+\n<br>
+Return \n<br>
+| No |\n<br>
+\n<br>
+Example\n<br>
+| L3 Call With TM500 MIMO |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>L3 Call With TM500</td>
+<td>MIMO</td>
+<td>${modified commands}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Test PPPoE Connection">Test PPPoE Connection</a></td>
+<td>[Arguments]</td>
+<td>${connection}=${TM500 CONTROL PC CONNECTION}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">1. Start PPPoE connection from TM500 control PC 2. Ping BTS control PC from TM500 control PC to test reachability\n<br>
+\n<br>
+| Input Parameters \ | Man. | Description | \ \n<br>
+| ${connection} | Yes | The connection object |\n<br>
+\n<br>
+Return \n<br>
+| No |\n<br>
+\n<br>
+Example\n<br>
+| Test PPPoE Connection |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${connection}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Start PPPoE Connection</td>
+<td>${PPPoE_CONNECTION}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>5 sec</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${ping_result} =</td>
+<td>Ping Remote System</td>
+<td>${BTS_CONTROL_PC_LAB}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be True</td>
+<td>"${ping_result[0][-1]}"=="0" or ("${ping_result[0][-1]}"=="1" and "${ping_result[-1][0]}"=="0")</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Stop PPPoE Connection And Disconnect From TM500">Stop PPPoE Connection And Disconnect From TM500</a></td>
+<td>[Arguments]</td>
+<td>${tm500 control pc connection}=${TM500 CONTROL PC CONNECTION}</td>
+<td>${tm500 connection}=${TM500_CONNECTION}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">1. Stop PPPoE connection from TM500 control PC 2. Run UE detach script 3. Send '#$$STOP_LOGGING' to TM500 4. Send '#$$DISCONNECT' to TM500\n<br>
+\n<br>
+| Input Parameters \ | Man. | Description | \ \n<br>
+| ${tm500 control pc connection} | Yes | The configuration of attach script, can be MIMO SISO |\n<br>
+| ${tm500 connection} | No | TM500 connection |\n<br>
+\n<br>
+Return \n<br>
+| No |\n<br>
+\n<br>
+Example\n<br>
+| Stop PPPoE Connection And Disconnect From TM500 |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${tm500 control pc connection}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Stop PPPoE Connection</td>
+<td>${PPPoE_CONNECTION}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>UE Detach</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>TM500 Stop Logging</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>TM500 Disconnect</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Check Latest UDP Log">Check Latest UDP Log</a></td>
+<td>[Arguments]</td>
+<td>${connection}</td>
+<td>${keyword}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Get latest UDP log file and check whether specified keywords exist\n<br>
+\n<br>
+| Input Parameters \ | Man. | Description | \ \n<br>
+| ${connection} | Yes | Connection object |\n<br>
+| ${keyword} | Yes | The keyword need check |\n<br>
+\n<br>
+Return \n<br>
+| No |\n<br>
+\n<br>
+Example\n<br>
+| Check Latest UDP Log | ${BTS_CONTROL_PC_CONNECTION} | OnAir |\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${connection}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${latest_file} =</td>
+<td>Get Last Modified File</td>
+<td>${BTSLOG_DIR}</td>
+<td>LOG</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${search_keywords} =</td>
+<td>Create List</td>
+<td>PBCH</td>
+<td>${keyword}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>UDP Log Should Contain</td>
+<td>${latest_file}</td>
+<td>${search_keywords}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Connect To TM500 With NAS_MODE And Start Logging">Connect To TM500 With NAS_MODE And Start Logging</a></td>
+<td>[Arguments]</td>
+<td>${connection}=${TM500_CONNECTION}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Send TM500 commands to connect to TM500, start logging and get version\n<br>
+\n<br>
+| Input Parameters \ | Man. | Description | \ \n<br>
+| ${connection} | Yes | Connection object |\n<br>
+\n<br>
+Return \n<br>
+| No |\n<br>
+\n<br>
+Example\n<br>
+| Connect To TM500 With NAS_MODE And Start Logging | ${BTS_CONTROL_PC_CONNECTION} |\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Connect To TM500 With NAS_MODE</td>
+<td>${connection}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>TM500 Start Logging</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_UE Attach">UE Attach</a></td>
+<td>[Arguments]</td>
+<td>${configuration}</td>
+<td>${connection}=${TM500_CONNECTION}</td>
+<td>${modified commands}=${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${modified script name}=attach_new.txt</td>
+<td>${pause_time}=${None}</td>
+<td>${last_command_pause_time}=${None}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Send TM500 commands to do UE attach\n<br>
+\n<br>
+| Input Parameters \ | Man. | Description | \ \n<br>
+| ${configuration} | Yes | The configure of attach script, should be MIMO or SISO |\n<br>
+| ${connection} | No | Connection object |\n<br>
+| ${modified commands} | No | \ Commands from script need modied |\n<br>
+| ${modified script name} | No | Modified attach script name |\n<br>
+| ${pause time} | No | Send attach script commmand pause time |\n<br>
+| ${last cmd pause time} | No | The pause time of last command in attach script |\n<br>
+\n<br>
+\n<br>
+Return \n<br>
+| No |\n<br>
+\n<br>
+Example\n<br>
+| UE Attach | MIMO |\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${connection}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Change TM500 Script File</td>
+<td>${CURDIR}${/}scripts${/}${BTS NAME}${/}attach_${configuration}.txt</td>
+<td>${modified script name}</td>
+<td>${modified commands}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${ret} =</td>
+<td>Execute TM500 File Without Check</td>
+<td>${CURDIR}${/}scripts${/}${BTS NAME}${/}${modified script name}</td>
+<td>${pause_time}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${last_command_pause_time}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Remove File</td>
+<td>${CURDIR}${/}scripts${/}${BTS NAME}${/}${modified script name}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Contain</td>
+<td>${ret}</td>
+<td>L2 RANDOM ACCESS COMPLETE</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Contain</td>
+<td>${ret}</td>
+<td>ACCESS POINT NAME</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Return]</td>
+<td>${ret}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_UE Attach Without Checking">UE Attach Without Checking</a></td>
+<td>[Arguments]</td>
+<td>${configuration}</td>
+<td>${connection}=${TM500_CONNECTION}</td>
+<td>${modified commands}=${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${modified script name}=attach_new.txt</td>
+<td>${pause_time}=${None}</td>
+<td>${last_command_pause_time}=${None}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Send TM500 commands to do UE attach without checking the attach result.\n<br>
+\n<br>
+| Input Parameters \ | Man. | Description | \ \n<br>
+| ${configuration} | Yes | The configure of attach script, should be MIMO or SISO |\n<br>
+| ${connection} | No | Connection object |\n<br>
+| ${modified commands} | No | \ Commands from script need modied |\n<br>
+| ${modified script name} | No | Modified attach script name |\n<br>
+| ${pause time} | No | Send attach script commmand pause time |\n<br>
+| ${last cmd pause time} | No | The pause time of last command in attach script |\n<br>
+\n<br>
+\n<br>
+Return \n<br>
+| No |\n<br>
+\n<br>
+Example\n<br>
+| UE Attach Without Checking | MIMO |\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${connection}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Change TM500 Script File</td>
+<td>${CURDIR}${/}scripts${/}${BTS NAME}${/}attach_${configuration}.txt</td>
+<td>${modified script name}</td>
+<td>${modified commands}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${ret} =</td>
+<td>Execute TM500 File Without Check</td>
+<td>${CURDIR}${/}scripts${/}${BTS NAME}${/}${modified script name}</td>
+<td>${pause_time}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${last_command_pause_time}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Remove File</td>
+<td>${CURDIR}${/}scripts${/}${BTS NAME}${/}${modified script name}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Return]</td>
+<td>${ret}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_UE Detach">UE Detach</a></td>
+<td>[Arguments]</td>
+<td>${modified commands}=${EMPTY}</td>
+<td>${connection}=${TM500_CONNECTION}</td>
+<td>${modified script name}=detach_new.txt</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Send TM500 commands to do UE detach\n<br>
+\n<br>
+| Input Parameters \ | Man. | Description | \ \n<br>
+| ${configuration} | Yes | The configure of attach script, should be MIMO or SISO |\n<br>
+| ${connection} | No | Connection object |\n<br>
+| ${modified commands} | No | \ Commands from script need modied |\n<br>
+| ${modified script name} | No | Modified attach script name |\n<br>
+\n<br>
+Return \n<br>
+| No |\n<br>
+\n<br>
+Example\n<br>
+| UE Detach |\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${connection}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Change TM500 Script File</td>
+<td>${CURDIR}${/}scripts${/}${BTS NAME}${/}detach.txt</td>
+<td>${modified script name}</td>
+<td>${modified commands}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Execute TM500 File Without Check</td>
+<td>${CURDIR}${/}scripts${/}${BTS NAME}${/}${modified script name}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Remove File</td>
+<td>${CURDIR}${/}scripts${/}${BTS NAME}${/}${modified script name}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Select TM500 Logging Types">Select TM500 Logging Types</a></td>
+<td>[Arguments]</td>
+<td>${types}=${EMPTY}</td>
+<td>${number_of_ue}=0</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Select tm500 logging types\n<br>
+\n<br>
+\n<br>
+| Input Parameters \ | Man. | Description | \ \n<br>
+| ${types} | No | The list of log types you want collect |\n<br>
+| ${number_of_ue} | No | Ue numbers |\n<br>
+\n<br>
+\n<br>
+Return \n<br>
+| No |\n<br>
+\n<br>
+Example\n<br>
+| Select TM500 Logging Types |\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${TM500_CONNECTION}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>tm500_logging_select</td>
+<td>${types}</td>
+<td>${number_of_ue}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Connect To TM500 With NAS_MODE">Connect To TM500 With NAS_MODE</a></td>
+<td>[Arguments]</td>
+<td>${connection}=${TM500_CONNECTION}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Send TM500 commands to connect to TM500, start logging and get version\n<br>
+\n<br>
+| Input Parameters \ | Man. | Description | \ \n<br>
+| ${connection} | No | Connection object |\n<br>
+\n<br>
+Return \n<br>
+| No |\n<br>
+\n<br>
+Example\n<br>
+| Connect To TM500 With NAS_MODE |\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${connection}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>TM500 Disconnect</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${return}</td>
+<td>Run Keyword And Ignore Error</td>
+<td>Variable Should Exist</td>
+<td>${radio_card_select }</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>'${return[0]}'=='FAIL'</td>
+<td>TM500 connect</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>'${return[0]}'=='PASS'</td>
+<td>TM500 connect</td>
+<td>${radio_card_select }</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>tm500 data log folder</td>
+<td>${TM500_LOGGED_DATA_DIR}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_kill TMA and check tm500 port status">kill TMA and check tm500 port status</a></td>
+<td>[Arguments]</td>
+<td>${TM500_IP_PORT}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword used to kill TMA GUI and check clean the TMA port.\n<br>
+\n<br>
+| Input Parameters \ | Man. | Description | \ \n<br>
+| ${TM500_IP_PORT} | Yes | The TM500 port |\n<br>
+\n<br>
+\n<br>
+\n<br>
+Return \n<br>
+| No |\n<br>
+\n<br>
+Example\n<br>
+| Kill TMA and check tm500 port status | 192.168.255.100:5003 |\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Kill Process</td>
+<td>TmaApplication.exe</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${port_status}</td>
+<td>execute shell command</td>
+<td>netstat -ano</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${tmp}</td>
+<td>Get Lines Matching Regexp</td>
+<td>${port_status}</td>
+<td>.*${TM500_IP_PORT}.*LISTENING.*</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run keyword If</td>
+<td>'${tmp}'</td>
+<td>_get port pid and kill</td>
+<td>${tmp}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword__get port pid and kill">_get port pid and kill</a></td>
+<td>[Arguments]</td>
+<td>${string_contain_pid}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${tmp}</td>
+<td>split string</td>
+<td>${string_contain_pid}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>execute shell command</td>
+<td>ntsd -c q -p ${tmp[-1]}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${ret}</td>
+<td>execute shell command</td>
+<td>netstat -ano</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${result}</td>
+<td>Get Lines Matching Regexp</td>
+<td>${ret}</td>
+<td>.*${TM500_IP_PORT}.*LISTENING.*</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run keyword If</td>
+<td>'${result}'</td>
+<td>Fail</td>
+<td>'${TM500_IP_PORT}' is still exist!</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword__TM500 Soft Restart">_TM500 Soft Restart</a></td>
+<td>[Arguments]</td>
+<td>${TMA_DIR}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">TM500 restart by send command "RBOT"</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${TM500_CONTROL_PC_CONNECTION}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>kill TMA and check tm500 port status</td>
+<td>0.0.0.0:5003</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>20 sec</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>execute shell command without check</td>
+<td>${CURDIR}\\tools\\Server_Client\\client.exe localhost \"${TMA_DIR}\"</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>30 sec</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${TM500_CONNECTION} =</td>
+<td>Connect To TM500 External Port</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${TM500_CONNECTION}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${status}</td>
+<td>${value}=</td>
+<td>Run Keyword And Ignore Error</td>
+<td>TM500 Reboot</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>5 sec</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>disconnect from host</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Return]</td>
+<td>${value}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword__TM500 Restart Soft And Hard BAK">_TM500 Restart Soft And Hard BAK</a></td>
+<td>[Arguments]</td>
+<td>${TMA_DIR}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">TM500 restart: soft frist,if fail,using power break to hard restart</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${status1}</td>
+<td>${value}=</td>
+<td>Run Keyword And Ignore Error</td>
+<td>_TM500 Soft Restart</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${TMA_DIR}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${status2}</td>
+<td>${ret} =</td>
+<td>Run Keyword And Ignore Error</td>
+<td>Should Not Contain</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${value}</td>
+<td>failed</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>'${status1}'=='FAIL' or '${status2}'=='FAIL'</td>
+<td>Tm500 Hardware Restart</td>
+<td>${TMA_DIR}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${BTS_CONTROL_PC_CONNECTION}</td>
+<td>${TM500_CONTROL_PC_CONNECTION}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>5 sec</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_TM500 Restart Base on Version">TM500 Restart Base on Version</a></td>
+<td>[Arguments]</td>
+<td>${TMA_DIR}=${TM500_APPLICATION_DIR}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">TM500 restart base on if need to change TM500 version\n<br>
+\n<br>
+\n<br>
+| Input Parameters \ | Man. | Description | \ \n<br>
+| ${TMA_DIR} | Yes | The TMA install dir |\n<br>
+\n<br>
+Return \n<br>
+| No |\n<br>
+\n<br>
+Example\n<br>
+| TM500 Restart Base on Version | C:\\TMA |\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Get Target Log Directory</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${TM500_CONTROL_PC_CONNECTION}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${ret}</td>
+<td>execute shell command without check</td>
+<td>python -c "import platform;print platform.platform()"</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${result}</td>
+<td>Run Keyword And Ignore Error</td>
+<td>Should Match Regexp</td>
+<td>${ret}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>(Windows-XP.*)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${Filezilla_path}</td>
+<td>set variable if</td>
+<td>'${result[0]}'=='PASS'</td>
+<td>C:\\Program\\ Files\\FileZilla\\ Server\\FileZilla\\ server</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>C:\\Program\\ Files\\ (x86)\\FileZilla\\ Server\\FileZilla\\ server</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${Filezilla_exe_path}</td>
+<td>set variable if</td>
+<td>'${result[0]}'=='PASS'</td>
+<td>C:\\Program Files\\FileZilla Server\\FileZilla server.exe</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>C:\\Program Files (x86)\\FileZilla Server\\FileZilla server.exe</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${BTS_CONTROL_PC_CONNECTION}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>copyfile2local</td>
+<td>${TM500_CONTROL_PC_LAB}</td>
+<td>${TM500_CONTROL_PC_USERNAME}</td>
+<td>${TM500_CONTROL_PC_PASSWORD}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${Filezilla_path}.xml</td>
+<td>${TARGET LOG DIRECTORY}${/}FileZilla Server src.xml</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${fz_restart_flag1}</td>
+<td>Filezilla Server Check User</td>
+<td>${TM500_LOGGED_DATA_DIR}</td>
+<td>${TARGET LOG DIRECTORY}${/}FileZilla Server src.xml</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${fz_restart_flag2}</td>
+<td>Filezilla Server Check Tma Version</td>
+<td>${TMA_DIR}</td>
+<td>${TARGET LOG DIRECTORY}${/}FileZilla Server src.xml</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>${fz_restart_flag1} or ${fz_restart_flag2}</td>
+<td>copyfile2remote</td>
+<td>${TM500_CONTROL_PC_LAB}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${TM500_CONTROL_PC_USERNAME}</td>
+<td>${TM500_CONTROL_PC_PASSWORD}</td>
+<td>${Filezilla_path}.xml</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${TARGET LOG DIRECTORY}${/}FileZilla Server src.xml</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>${fz_restart_flag1} or ${fz_restart_flag2}</td>
+<td>Filezilla Server Restart</td>
+<td>${TM500_CONTROL_PC_CONNECTION}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${Filezilla_exe_path}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>'${TM500_POWERBREAK_PORT}'==''</td>
+<td>tm500_reboot_by_serial</td>
+<td>${TM500_CONTROL_PC_CONNECTION}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>'${TM500_POWERBREAK_PORT}'==''</td>
+<td>restart_tma</td>
+<td>${TMA_DIR}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${TM500_CONTROL_PC_CONNECTION}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>'${TM500_POWERBREAK_PORT}'!=''</td>
+<td>Tm500 Hardware Restart</td>
+<td>${TMA_DIR}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${BTS_CONTROL_PC_CONNECTION}</td>
+<td>${TM500_CONTROL_PC_CONNECTION}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Run Keyword If</td>
+<td>not ${fz_restart_flag2} and '${TM500_POWERBREAK_PORT}'!=''</td>
+<td>_TM500 Restart Soft And Hard BAK</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${TMA_DIR}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Set Suite Variable</td>
+<td>${tm500_restart_ok_tag}</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Get Current Active SW Version">Get Current Active SW Version</a></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Get Current Active SW Version,contain steps: 1.enable bts ssh 2.get active sw version 3.if get active sw version fail,restart BTS and get again. Using this keyword replace get active sw vesion\\n\n<br>
+| Input Parameters \ | Man. | Description | \ \n<br>
+| NO |\n<br>
+\n<br>
+\n<br>
+Return \n<br>
+| No |\n<br>
+\n<br>
+Example\n<br>
+| Get Current Active SW Version |\n<br>
+</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>switch_host_connection</td>
+<td>${BTS_CONTROL_PC_CONNECTION}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>enable bts ssh</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${result}</td>
+<td>${value}</td>
+<td>Run Keyword And Ignore Error</td>
+<td>_get sw version</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>'${result}'=='FAIL'</td>
+<td>_restart BTS and get sw version again</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword__get sw version">_get sw version</a></td>
+<td>[Timeout]</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Get Target Log Directory</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${version}</td>
+<td>Get Build Version</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword And Ignore Error</td>
+<td>Get BBU INFO</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword And Ignore Error</td>
+<td>Get RRU INFO</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>GET Optical fiber mode</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword And Ignore Error</td>
+<td>Get bts config info</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword__restart BTS and get sw version again">_restart BTS and get sw version again</a></td>
+<td>Restart BTS By Power Break</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>60 sec</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>enable bts ssh</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword And Ignore Error</td>
+<td>_get sw version</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Get BBU INFO">Get BBU INFO</a></td>
+<td>Get Target Log Directory</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#download /proc/device-tree/module-identity/unit-id and parse content as BBU info</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sftp download</td>
+<td>${BTS_FCM}</td>
+<td>22</td>
+<td>${FCMD_USERNAME}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${FCMD_PASSWORD}</td>
+<td>${TARGET LOG DIRECTORY}${/}unit-id</td>
+<td>unit-id</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>/proc/device-tree/module-identity</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${ret}</td>
+<td>File Read</td>
+<td>${TARGET LOG DIRECTORY}${/}unit-id</td>
+<td>string</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>print_log_console</td>
+<td>\n<br>
+****Current BTS BBU version is '${ret}'*****\n<br>
+</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Return]</td>
+<td>${ret}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Get RRU INFO">Get RRU INFO</a></td>
+<td>Get Target Log Directory</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sftp download</td>
+<td>${BTS_FCM}</td>
+<td>22</td>
+<td>${FCMD_USERNAME}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${FCMD_PASSWORD}</td>
+<td>${TARGET LOG DIRECTORY}${/}hwf.bin</td>
+<td>hwf.bin</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>/flash/config</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${file_content}</td>
+<td>File Read</td>
+<td>${TARGET LOG DIRECTORY}${/}hwf.bin</td>
+<td>string</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>rb</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${group}</td>
+<td>${ret}</td>
+<td>Should Match Regexp</td>
+<td>${file_content}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>.*(FZ\\w\\w).*</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>print_log_console</td>
+<td>\n<br>
+****Current BTS RRU version is '${ret}'*****\n<br>
+</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Return]</td>
+<td>${ret}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_GET Optical fiber mode">GET Optical fiber mode</a></td>
+<td>Get Target Log Directory</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sftp download</td>
+<td>${BTS_FCM}</td>
+<td>22</td>
+<td>${FCMD_USERNAME}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${FCMD_PASSWORD}</td>
+<td>${TARGET LOG DIRECTORY}${/}swconfig.txt</td>
+<td>swconfig.txt</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>/flash</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${read}</td>
+<td>Create List</td>
+<td>575</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${value}</td>
+<td>Read Swconfig</td>
+<td>${TARGET LOG DIRECTORY}${/}swconfig.txt</td>
+<td>${read}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${fiber_mode}</td>
+<td>Set Variable If</td>
+<td>${value[0]}==1</td>
+<td>dual mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>single mode</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>print_log_console</td>
+<td>\n<br>
+****CurrentOpticalfiberMode:${fiber_mode}*****\n<br>
+</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>print_log_console</td>
+<td>\n<br>
+****CurrentSWRelease:${SW_RELEASE}*****\n<br>
+</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Return]</td>
+<td>${fiber_mode}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Get Build Version">Get Build Version</a></td>
+<td>Connect To BTS FCM</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${name}</td>
+<td>Execute Ssh Command Without Check</td>
+<td>ls /flash</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${group}</td>
+<td>${version}</td>
+<td>should match regexp</td>
+<td>${name}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>TargetBD_(.*).xml</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Disconnect From Ssh</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>print_log_console</td>
+<td>\n<br>
+****Current BTS version is '${version}' *****\n<br>
+</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>log</td>
+<td>activeBuildVersion=${version}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Return]</td>
+<td>${version}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Request TM500 resource">Request TM500 resource</a></td>
+<td>[Arguments]</td>
+<td>${max_wait_time}=45</td>
+<td>${use_time}=10</td>
+<td>${prority}=1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Get Tm500 resource use in TM500 share mode, this kw send request to tm500 server and wait until get tm500 resource. if timeout this kw failed\n<br>
+| Input Parameters \ | Man. | Description | \ \n<br>
+| ${max wait time} | Yes | if timeout stop waiting for tm500 resource, unit as minutes |\n<br>
+| ${use time} | Yes | if get tm500 resource, max use time, unit as minutes |\n<br>
+| ${priority} | Yes | this case's priority, range in (0-9) |\n<br>
+\n<br>
+Return \n<br>
+| \ True | meas get tm500 resource |\n<br>
+\n<br>
+\n<br>
+Example\n<br>
+| Request Tm500 resource | 20 | 10 | 9 |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${status}</td>
+<td>${value}</td>
+<td>Run Keyword And Ignore Error</td>
+<td>Variable Should Exist</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${Share_Mode}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>'${status}'=='PASS'</td>
+<td>Run Keyword If</td>
+<td>'${Share Mode}'=='ON'</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>send_req_and_wait_receive_ok</td>
+<td>${TM500_CONTROL_PC_LAB}</td>
+<td>888</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>request:${use_time}:${prority}</td>
+<td>${max_wait_time}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Release TM500 Resource">Release TM500 Resource</a></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Release Tm500 resource use in TM500 share mode, this kw send release to tm500 server\n<br>
+\n<br>
+\n<br>
+\n<br>
+Example\n<br>
+| Release Tm500 resource | |</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${status}</td>
+<td>${value}</td>
+<td>Run Keyword And Ignore Error</td>
+<td>Variable Should Exist</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${Share Mode}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>'${status}'=='PASS'</td>
+<td>run keyword if</td>
+<td>'${Share Mode}'=='ON'</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>send release to tm500 server</td>
+<td>${TM500_CONTROL_PC_LAB}</td>
+<td>888</td>
+</tr>
+</table>
+</body>
+</html>

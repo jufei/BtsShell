@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<raml version="2.1" xmlns="raml21.xsd">
+  <cmData type="actual" scope="all" domain="FlexiBtsTrsPlan" adaptationVersionMajor="LN5.0" >
+    <header>
+      <log dateTime="2013-09-25T13:36:33" action="created" user="root" >Created by Flexi Transport</log>
+    </header>
+
+    <managedObject class="FTM" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1" version="LNT3.0">
+      <p name="locationName"></p>
+      <p name="softwareReleaseVersion">FTM_R3_LN50_LNT30_285.06</p>
+      <p name="systemTitle">SAIL</p>
+      <p name="userLabel"></p>
+    </managedObject>
+
+    <managedObject class="UNIT" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/UNIT-1" version="LNT3.0">
+      <p name="enableRP301Interface">false</p>
+      <p name="unitTypeActual">472311A</p>
+      <p name="unitTypeExpected">472311A</p>
+    </managedObject>
+
+    <managedObject class="PPTT" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/PPTT-1-2" version="LNT3.0">
+      <p name="administrativeState">locked</p>
+      <p name="pdhLbo">PDH_LBO_0</p>
+      <p name="pdhLineType">PDH_LINE_TYPE_MULTI_FRAME_G704</p>
+    </managedObject>
+
+    <managedObject class="PPTT" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/PPTT-1-3" version="LNT3.0">
+      <p name="administrativeState">locked</p>
+      <p name="pdhLbo">PDH_LBO_0</p>
+      <p name="pdhLineType">PDH_LINE_TYPE_MULTI_FRAME_G704</p>
+    </managedObject>
+
+    <managedObject class="PPTT" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/PPTT-1-4" version="LNT3.0">
+      <p name="administrativeState">locked</p>
+      <p name="pdhLbo">PDH_LBO_0</p>
+      <p name="pdhLineType">PDH_LINE_TYPE_MULTI_FRAME_G704</p>
+    </managedObject>
+
+    <managedObject class="PPTT" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/PPTT-1-5" version="LNT3.0">
+      <p name="administrativeState">locked</p>
+      <p name="pdhLbo">PDH_LBO_0</p>
+      <p name="pdhLineType">PDH_LINE_TYPE_MULTI_FRAME_G704</p>
+    </managedObject>
+
+    <managedObject class="PPTT" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/PPTT-1-6" version="LNT3.0">
+      <p name="administrativeState">locked</p>
+      <p name="pdhLbo">PDH_LBO_0</p>
+      <p name="pdhLineType">PDH_LINE_TYPE_MULTI_FRAME_G704</p>
+    </managedObject>
+
+    <managedObject class="PPTT" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/PPTT-1-7" version="LNT3.0">
+      <p name="administrativeState">locked</p>
+      <p name="pdhLbo">PDH_LBO_0</p>
+      <p name="pdhLineType">PDH_LINE_TYPE_MULTI_FRAME_G704</p>
+    </managedObject>
+
+    <managedObject class="PPTT" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/PPTT-1-8" version="LNT3.0">
+      <p name="administrativeState">locked</p>
+      <p name="pdhLbo">PDH_LBO_0</p>
+      <p name="pdhLineType">PDH_LINE_TYPE_MULTI_FRAME_G704</p>
+    </managedObject>
+
+    <managedObject class="PPTT" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/PPTT-1-1" version="LNT3.0">
+      <p name="administrativeState">locked</p>
+      <p name="pdhLbo">PDH_LBO_0</p>
+      <p name="pdhLineType">PDH_LINE_TYPE_MULTI_FRAME_G704</p>
+    </managedObject>
+
+    <managedObject class="ETHLK" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/ETHLK-1-4" version="LNT3.0">
+      <p name="acceptableFrameTypes">ADMIT_ALL</p>
+      <p name="administrativeState">locked</p>
+      <p name="l2BurstSize">0</p>
+      <p name="l2IngressRate">RT_LINE_RATE</p>
+      <p name="l2ShaperRate">RT_LINE_RATE</p>
+      <list name="l2VlanIdList">
+      </list>
+      <p name="linkOAMEnabled">false</p>
+      <p name="linkOAMProfile"></p>
+      <p name="macAddr">00:0f:bb:68:fd:94</p>
+      <p name="portDefaultPriority">0</p>
+      <p name="portDefaultVlanId">1</p>
+      <p name="speedAndDuplex">AUTODETECT</p>
+    </managedObject>
+
+    <managedObject class="ETHLK" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/ETHLK-1-3" version="LNT3.0">
+      <p name="acceptableFrameTypes">ADMIT_ALL</p>
+      <p name="administrativeState">unlocked</p>
+      <p name="l2BurstSize">0</p>
+      <p name="l2IngressRate">RT_LINE_RATE</p>
+      <p name="l2ShaperRate">RT_LINE_RATE</p>
+      <list name="l2VlanIdList">
+      </list>
+      <p name="linkOAMEnabled">false</p>
+      <p name="linkOAMProfile"></p>
+      <p name="macAddr">00:0f:bb:68:fd:96</p>
+      <p name="portDefaultPriority">0</p>
+      <p name="portDefaultVlanId">1</p>
+      <p name="speedAndDuplex">AUTODETECT</p>
+    </managedObject>
+
+    <managedObject class="ETHLK" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/ETHLK-1-2" version="LNT3.0">
+      <p name="acceptableFrameTypes">ADMIT_ALL</p>
+      <p name="administrativeState">locked</p>
+      <p name="l2BurstSize">0</p>
+      <p name="l2IngressRate">RT_LINE_RATE</p>
+      <p name="l2ShaperRate">RT_LINE_RATE</p>
+      <list name="l2VlanIdList">
+      </list>
+      <p name="linkOAMEnabled">false</p>
+      <p name="linkOAMProfile"></p>
+      <p name="macAddr">00:0f:bb:68:fd:94</p>
+      <p name="portDefaultPriority">0</p>
+      <p name="portDefaultVlanId">1</p>
+      <p name="speedAndDuplex">AUTODETECT</p>
+    </managedObject>
+
+    <managedObject class="ETHLK" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/ETHLK-1-1" version="LNT3.0">
+      <p name="acceptableFrameTypes">ADMIT_ALL</p>
+      <p name="administrativeState">locked</p>
+      <p name="l2BurstSize">0</p>
+      <p name="l2IngressRate">RT_LINE_RATE</p>
+      <p name="l2ShaperRate">RT_LINE_RATE</p>
+      <list name="l2VlanIdList">
+      </list>
+      <p name="linkOAMEnabled">false</p>
+      <p name="linkOAMProfile"></p>
+      <p name="macAddr">00:0f:bb:68:fd:96</p>
+      <p name="portDefaultPriority">0</p>
+      <p name="portDefaultVlanId">1</p>
+      <p name="speedAndDuplex">AUTODETECT</p>
+    </managedObject>
+
+    <managedObject class="ETHLK" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/ETHLK-0-2" version="LNT3.0">
+      <p name="acceptableFrameTypes">ADMIT_ALL</p>
+      <p name="administrativeState">locked</p>
+      <p name="l2BurstSize">0</p>
+      <p name="l2IngressRate">RT_LINE_RATE</p>
+      <p name="l2ShaperRate">RT_LINE_RATE</p>
+      <list name="l2VlanIdList">
+      </list>
+      <p name="linkOAMEnabled">false</p>
+      <p name="linkOAMProfile"></p>
+      <p name="macAddr">00:0f:bb:68:fd:96</p>
+      <p name="portDefaultPriority">0</p>
+      <p name="portDefaultVlanId">1</p>
+      <p name="speedAndDuplex">AUTODETECT</p>
+    </managedObject>
+
+    <managedObject class="ETHLK" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/ETHLK-0-1" version="LNT3.0">
+      <p name="acceptableFrameTypes">ADMIT_ALL</p>
+      <p name="administrativeState">locked</p>
+      <p name="l2BurstSize">0</p>
+      <p name="l2IngressRate">RT_LINE_RATE</p>
+      <p name="l2ShaperRate">RT_LINE_RATE</p>
+      <list name="l2VlanIdList">
+      </list>
+      <p name="linkOAMEnabled">false</p>
+      <p name="linkOAMProfile"></p>
+      <p name="macAddr">00:0f:bb:68:fd:95</p>
+      <p name="portDefaultPriority">0</p>
+      <p name="portDefaultVlanId">1</p>
+      <p name="speedAndDuplex">AUTODETECT</p>
+    </managedObject>
+
+    <managedObject class="IPNO" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/IPNO-1" version="LNT3.0">
+      <p name="actFastIpRerouting">false</p>
+      <p name="actIpTnlMeasure">false</p>
+      <p name="actSeparationRanSharing">false</p>
+      <list name="addTransportNwIpAddrList">
+      </list>
+      <p name="bfdHoldUpTime">0</p>
+      <p name="btsId">1899</p>
+      <p name="cPlaneIpAddress">10.69.70.145</p>
+      <p name="enableSoam">true</p>
+      <p name="ftmBtsSubnetAddress">0.0.0.0</p>
+      <p name="ftmBtsSubnetMask">0.0.0.0</p>
+      <p name="icmpResponseEnabled">true</p>
+      <p name="linkOAMLoopbackSupport">false</p>
+      <p name="mPlaneIpAddress">10.69.70.145</p>
+      <p name="mainTransportNwId">0</p>
+      <p name="oamIpAddr">10.68.160.200</p>
+      <p name="oamTlvReply">false</p>
+      <p name="omsTls">off</p>
+      <p name="sPlaneIpAddress">0.0.0.0</p>
+      <p name="secOmsIpAddr">0.0.0.0</p>
+      <p name="servingOms">none</p>
+      <p name="servingOmsAdminSetting">automatic</p>
+      <list name="twampFlag">
+      </list>
+      <p name="twampMessageRate">RATE_10</p>
+      <p name="twampReflectorPort">5000</p>
+      <p name="uPlaneIpAddress">10.69.70.145</p>
+      <p name="wfqSchedOamWeight">10</p>
+    </managedObject>
+
+    <managedObject class="IEIF" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/IPNO-1/IEIF-1" version="LNT3.0">
+      <p name="localIpAddr">0.0.0.0</p>
+      <p name="mtu">1500</p>
+      <p name="netmask">0.0.0.0</p>
+      <p name="qosEnabled">false</p>
+      <p name="sbs">4000</p>
+      <p name="sbsTotal">4000</p>
+      <p name="sir">1000000</p>
+      <p name="sirTotal">1000000</p>
+      <p name="trafficPathShapingEnable">TPS_PATH</p>
+      <p name="upperLayerShaping">true</p>
+      <p name="wfqSchedQueueWeight">1000</p>
+    </managedObject>
+
+    <managedObject class="QOS" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/IPNO-1/QOS-1" version="LNT3.0">
+      <list name="dscpMap">
+        <item>
+          <p name="dscp">46</p>
+          <p name="pHB">expeditedForwarding</p>
+          <p name="vlanPrio">6</p>
+        </item>
+        <item>
+          <p name="dscp">38</p>
+          <p name="pHB">assuredForwardingClass43</p>
+          <p name="vlanPrio">5</p>
+        </item>
+        <item>
+          <p name="dscp">36</p>
+          <p name="pHB">assuredForwardingClass42</p>
+          <p name="vlanPrio">5</p>
+        </item>
+        <item>
+          <p name="dscp">34</p>
+          <p name="pHB">assuredForwardingClass41</p>
+          <p name="vlanPrio">5</p>
+        </item>
+        <item>
+          <p name="dscp">30</p>
+          <p name="pHB">assuredForwardingClass33</p>
+          <p name="vlanPrio">4</p>
+        </item>
+        <item>
+          <p name="dscp">28</p>
+          <p name="pHB">assuredForwardingClass32</p>
+          <p name="vlanPrio">4</p>
+        </item>
+        <item>
+          <p name="dscp">26</p>
+          <p name="pHB">assuredForwardingClass31</p>
+          <p name="vlanPrio">4</p>
+        </item>
+        <item>
+          <p name="dscp">22</p>
+          <p name="pHB">assuredForwardingClass23</p>
+          <p name="vlanPrio">3</p>
+        </item>
+        <item>
+          <p name="dscp">20</p>
+          <p name="pHB">assuredForwardingClass22</p>
+          <p name="vlanPrio">3</p>
+        </item>
+        <item>
+          <p name="dscp">18</p>
+          <p name="pHB">assuredForwardingClass21</p>
+          <p name="vlanPrio">3</p>
+        </item>
+        <item>
+          <p name="dscp">14</p>
+          <p name="pHB">assuredForwardingClass13</p>
+          <p name="vlanPrio">1</p>
+        </item>
+        <item>
+          <p name="dscp">12</p>
+          <p name="pHB">assuredForwardingClass12</p>
+          <p name="vlanPrio">1</p>
+        </item>
+        <item>
+          <p name="dscp">10</p>
+          <p name="pHB">assuredForwardingClass11</p>
+          <p name="vlanPrio">1</p>
+        </item>
+        <item>
+          <p name="dscp">0</p>
+          <p name="pHB">bestEffort</p>
+          <p name="vlanPrio">0</p>
+        </item>
+      </list>
+      <p name="enablePhbCounters">false</p>
+      <list name="perHopBehaviourWeightList">
+        <item>
+          <p name="assuredForwardingClass1">10</p>
+          <p name="assuredForwardingClass2">100</p>
+          <p name="assuredForwardingClass3">1000</p>
+          <p name="assuredForwardingClass4">10000</p>
+          <p name="bestEffort">1</p>
+        </item>
+      </list>
+      <p name="sseDscpOverwrite">false</p>
+      <list name="trafficTypesMap">
+        <item>
+          <p name="trafficType">CPLANE</p>
+          <p name="dscp">46</p>
+        </item>
+        <item>
+          <p name="trafficType">MPLANE</p>
+          <p name="dscp">34</p>
+        </item>
+        <item>
+          <p name="trafficType">SPLANE</p>
+          <p name="dscp">46</p>
+        </item>
+        <item>
+          <p name="trafficType">ICMP</p>
+          <p name="dscp">10</p>
+        </item>
+        <item>
+          <p name="trafficType">IKE</p>
+          <p name="dscp">34</p>
+        </item>
+        <item>
+          <p name="trafficType">SSE</p>
+          <p name="dscp">10</p>
+        </item>
+        <item>
+          <p name="trafficType">BFD1</p>
+          <p name="dscp">34</p>
+        </item>
+        <item>
+          <p name="trafficType">BFD2</p>
+          <p name="dscp">34</p>
+        </item>
+        <item>
+          <p name="trafficType">BFD3</p>
+          <p name="dscp">34</p>
+        </item>
+        <item>
+          <p name="trafficType">BFD4</p>
+          <p name="dscp">34</p>
+        </item>
+        <item>
+          <p name="trafficType">BFD5</p>
+          <p name="dscp">34</p>
+        </item>
+        <item>
+          <p name="trafficType">BFD6</p>
+          <p name="dscp">34</p>
+        </item>
+        <item>
+          <p name="trafficType">BFD7</p>
+          <p name="dscp">34</p>
+        </item>
+        <item>
+          <p name="trafficType">BFD8</p>
+          <p name="dscp">34</p>
+        </item>
+        <item>
+          <p name="trafficType">BFD9</p>
+          <p name="dscp">34</p>
+        </item>
+        <item>
+          <p name="trafficType">BFD10</p>
+          <p name="dscp">34</p>
+        </item>
+        <item>
+          <p name="trafficType">BFD11</p>
+          <p name="dscp">34</p>
+        </item>
+        <item>
+          <p name="trafficType">BFD12</p>
+          <p name="dscp">34</p>
+        </item>
+        <item>
+          <p name="trafficType">BFD13</p>
+          <p name="dscp">34</p>
+        </item>
+        <item>
+          <p name="trafficType">BFD14</p>
+          <p name="dscp">34</p>
+        </item>
+        <item>
+          <p name="trafficType">BFD15</p>
+          <p name="dscp">34</p>
+        </item>
+        <item>
+          <p name="trafficType">BFD16</p>
+          <p name="dscp">34</p>
+        </item>
+      </list>
+    </managedObject>
+
+    <managedObject class="SYNC" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/SYNC-1" version="LNT3.0">
+    </managedObject>
+
+    <managedObject class="STPG" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/SYNC-1/STPG-1" version="LNT3.0">
+      <list name="synchroSourceList">
+      </list>
+    </managedObject>
+
+    <managedObject class="INTP" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/IPNO-1/INTP-1" version="LNT3.0">
+      <list name="ntpServers">
+        <p>10.56.126.22</p>
+      </list>
+    </managedObject>
+
+    <managedObject class="IPRM" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/IPNO-1/IPRM-1" version="LNT3.0">
+      <list name="RmExceptions">
+      </list>
+    </managedObject>
+
+    <managedObject class="IHCP" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/IPNO-1/IHCP-1" version="LNT3.0">
+    </managedObject>
+
+    <managedObject class="AMGR" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/AMGR-1" version="LNT3.0">
+      <p name="ldapConnectionType">TLS_OR_PLAIN_TEXT</p>
+      <p name="primaryLdapPort">389</p>
+      <p name="primaryLdapServer">0.0.0.0</p>
+    </managedObject>
+
+    <managedObject class="IVIF" operation="create" distName="MRBTS-1899/LNBTS-1899/FTM-1/IPNO-1/IEIF-1/IVIF-1" version="LNT3.0">
+      <p name="localIpAddr">10.69.70.145</p>
+      <p name="netmask">255.255.255.224</p>
+      <p name="qosEnabled">true</p>
+      <p name="sbs">4000</p>
+      <p name="sir">1000000</p>
+      <p name="vlanId">500</p>
+      <p name="wfqSchedQueueWeight">1000</p>
+    </managedObject>
+
+    <managedObject class="IPSECC" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/IPSECC-1" version="LNT3.0">
+      <p name="ipSecEnabled">false</p>
+      <list name="securityPolicies">
+      </list>
+    </managedObject>
+
+    <managedObject class="BFDGRP" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/IPNO-1/BFDGRP-1" version="LNT3.0">
+    </managedObject>
+
+    <managedObject class="BFDGRP" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/IPNO-1/BFDGRP-2" version="LNT3.0">
+    </managedObject>
+
+    <managedObject class="BFDGRP" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/IPNO-1/BFDGRP-3" version="LNT3.0">
+    </managedObject>
+
+    <managedObject class="BFDGRP" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/IPNO-1/BFDGRP-4" version="LNT3.0">
+    </managedObject>
+
+    <managedObject class="BFDGRP" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/IPNO-1/BFDGRP-8" version="LNT3.0">
+    </managedObject>
+
+    <managedObject class="BFDGRP" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/IPNO-1/BFDGRP-7" version="LNT3.0">
+    </managedObject>
+
+    <managedObject class="BFDGRP" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/IPNO-1/BFDGRP-6" version="LNT3.0">
+    </managedObject>
+
+    <managedObject class="BFDGRP" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/IPNO-1/BFDGRP-5" version="LNT3.0">
+    </managedObject>
+
+    <managedObject class="IPRT" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/IPNO-1/IPRT-1" version="LNT3.0">
+      <list name="staticRoutes">
+        <item>
+          <p name="destIpAddr">0.0.0.0</p>
+          <p name="netmask">0.0.0.0</p>
+          <p name="gateway">10.69.70.129</p>
+          <p name="bfdId">0</p>
+          <p name="preference">1</p>
+        </item>
+      </list>
+    </managedObject>
+
+    <managedObject class="CERTH" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/CERTH-1" version="LNT3.0">
+      <p name="btsCertificateUpdateTime">30</p>
+      <p name="caCertificateUpdateTime">180</p>
+      <p name="caSubjectName"></p>
+      <p name="cmpDirectory">pkix/</p>
+      <p name="cmpServerIpAddress">0.0.0.0</p>
+      <p name="cmpServerPort">1024</p>
+      <p name="crlUpdatePeriod">24</p>
+    </managedObject>
+
+    <managedObject class="PMTNL" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/PMTNL-1" version="LNT3.0">
+      <p name="lte_ETHIF_Stats_Interval">15min</p>
+      <p name="lte_Ethernet_Link_Interval">15min</p>
+      <p name="lte_IPSec_Interval">15min</p>
+      <p name="lte_IP_Filtering_Interval">15min</p>
+      <p name="lte_IP_Stats_Interval">15min</p>
+      <p name="lte_PHB_Stats_Interval">15min</p>
+      <p name="lte_TAC_Statistics_Interval">15min</p>
+      <p name="lte_TOP_FreqSync_Stats_Interval">15min</p>
+      <p name="lte_TWAMP_Stats_Interval">15min</p>
+      <p name="lte_VLAN_IP_Stats_Interval">15min</p>
+      <p name="lte_VLAN_PHB_Stats_Interval">15min</p>
+      <p name="lte_VLAN_Stats_Interval">15min</p>
+    </managedObject>
+
+    <managedObject class="IDNS" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/IPNO-1/IDNS-1" version="LNT3.0">
+      <p name="serverIpAddress">0.0.0.0</p>
+      <p name="serverIpAddress2">0.0.0.0</p>
+    </managedObject>
+
+    <managedObject class="L2SWI" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/L2SWI-1" version="LNT3.0">
+      <list name="dscpMap">
+        <item>
+          <p name="dscp">0</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">1</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">2</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">3</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">4</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">5</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">6</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">7</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">8</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">9</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">10</p>
+          <p name="priorityQueue">4</p>
+        </item>
+        <item>
+          <p name="dscp">11</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">12</p>
+          <p name="priorityQueue">4</p>
+        </item>
+        <item>
+          <p name="dscp">13</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">14</p>
+          <p name="priorityQueue">4</p>
+        </item>
+        <item>
+          <p name="dscp">15</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">16</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">17</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">18</p>
+          <p name="priorityQueue">4</p>
+        </item>
+        <item>
+          <p name="dscp">19</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">20</p>
+          <p name="priorityQueue">4</p>
+        </item>
+        <item>
+          <p name="dscp">21</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">22</p>
+          <p name="priorityQueue">4</p>
+        </item>
+        <item>
+          <p name="dscp">23</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">24</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">25</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">26</p>
+          <p name="priorityQueue">3</p>
+        </item>
+        <item>
+          <p name="dscp">27</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">28</p>
+          <p name="priorityQueue">3</p>
+        </item>
+        <item>
+          <p name="dscp">29</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">30</p>
+          <p name="priorityQueue">3</p>
+        </item>
+        <item>
+          <p name="dscp">31</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">32</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">33</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">34</p>
+          <p name="priorityQueue">2</p>
+        </item>
+        <item>
+          <p name="dscp">35</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">36</p>
+          <p name="priorityQueue">2</p>
+        </item>
+        <item>
+          <p name="dscp">37</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">38</p>
+          <p name="priorityQueue">2</p>
+        </item>
+        <item>
+          <p name="dscp">39</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">40</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">41</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">42</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">43</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">44</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">45</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">46</p>
+          <p name="priorityQueue">1</p>
+        </item>
+        <item>
+          <p name="dscp">47</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">48</p>
+          <p name="priorityQueue">1</p>
+        </item>
+        <item>
+          <p name="dscp">49</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">50</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">51</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">52</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">53</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">54</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">55</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">56</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">57</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">58</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">59</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">60</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">61</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">62</p>
+          <p name="priorityQueue">6</p>
+        </item>
+        <item>
+          <p name="dscp">63</p>
+          <p name="priorityQueue">6</p>
+        </item>
+      </list>
+      <p name="enableLayer2Switching">false</p>
+      <p name="l2PriorityQueueWeight2">8</p>
+      <p name="l2PriorityQueueWeight3">4</p>
+      <p name="l2PriorityQueueWeight4">1</p>
+      <p name="l2PriorityQueueWeight5">1</p>
+      <p name="l2PriorityQueueWeight6">1</p>
+      <p name="portDefaultPriority">0</p>
+      <p name="portDefaultVlanId">1</p>
+      <p name="priorityQueueNonIP">1</p>
+      <p name="priorityQueuePcp0">6</p>
+      <p name="priorityQueuePcp1">4</p>
+      <p name="priorityQueuePcp2">4</p>
+      <p name="priorityQueuePcp3">4</p>
+      <p name="priorityQueuePcp4">3</p>
+      <p name="priorityQueuePcp5">3</p>
+      <p name="priorityQueuePcp6">2</p>
+      <p name="priorityQueuePcp7">1</p>
+      <p name="priorityQueueUntagged">1</p>
+      <p name="qosClassification">DSCP</p>
+      <p name="vlanAwareSwitch">false</p>
+    </managedObject>
+
+    <managedObject class="TAC" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/TAC-1" version="LNT3.0">
+    </managedObject>
+
+    <managedObject class="LTAC" operation="create" distName="MRBTS-1899/LNBTS-1899/FTM-1/TAC-1/LTAC-1" version="LNT3.0">
+      <p name="qci2AvPacketSize">200</p>
+      <p name="qci3AvPacketSize">80</p>
+      <p name="qci4AvPacketSize">300</p>
+      <p name="tacActivityFactor">100</p>
+      <p name="tacExludeL2Overhead">false</p>
+      <p name="tacLimitGbrEmergency">1000000</p>
+      <p name="tacLimitGbrHandover">1000000</p>
+      <p name="tacLimitGbrNormal">1000000</p>
+      <p name="transportNwId">0</p>
+    </managedObject>
+
+    <managedObject class="TOPB" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/TOPB-1" version="LNT3.0">
+    </managedObject>
+
+    <managedObject class="TOPF" operation="update" distName="MRBTS-1899/LNBTS-1899/FTM-1/TOPB-1/TOPF-1" version="LNT3.0">
+      <p name="actTopFreqSynch">false</p>
+      <p name="logMeanSyncValue">-4</p>
+      <p name="masterIpAddr">0.0.0.0</p>
+    </managedObject>
+
+  </cmData>
+
+</raml>
+

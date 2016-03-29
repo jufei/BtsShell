@@ -1,0 +1,31 @@
+# TMA Child Script
+
+############################################
+# TEST STEP: Send Extended Service Request #
+############################################
+
+#------------------------------------
+# Initiates Extended Service Request
+#------------------------------------
+# PARAMETERS
+# 1. Service Type
+#------------------------------------
+#                                       1
+#                                       |
+forw mte NasAptTriggerExtServiceRequest 0
+#------------------------------------
+
+#####################################
+# TEST STEP: Activate Configuration #
+#####################################
+
+#--------------------------------
+# Activate pending configuration
+#--------------------------------
+# PARAMETERS
+# 1. Timing Type
+#--------------------------------
+#                 1 
+#                 | 
+forw mte Activate -1
+#--------------------------------
